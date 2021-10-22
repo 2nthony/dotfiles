@@ -1,4 +1,4 @@
-![](./images/cover.png)
+![](./images/cover.jpg)
 
 ## 2nthony's dotfiles
 
