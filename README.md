@@ -41,4 +41,4 @@ Please follow https://github.com/craftzdog/dotfiles-public#how-to-use
 
 ## About
 
-> GitHub [2nthony](https://github.com/evillt) Twitter [2nthony](https://twitter.com/evillt)
+> GitHub([2nthony](https://github.com/evillt)) · Twitter([2nthony](https://twitter.com/evillt))
