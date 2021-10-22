@@ -43,6 +43,11 @@ Please follow https://github.com/craftzdog/dotfiles-public#how-to-use
 
 ## Differents
 
+### vim-plug
+
+- `completion-nvim` -> `hrsh7th/nvim-cmp`
+- `glepnir/lspsaga.nvim` -> `tami5/lspsaga.nvim`
+
 ### tmux
 
 - Use `C-b` as prefix key
