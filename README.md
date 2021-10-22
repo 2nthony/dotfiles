@@ -4,11 +4,12 @@
 
 **Warning**: Use it with your own risk!
 
-This is a modified dotfiles settings from https://github.com/craftzdog/dotfiles-public .
+This is a **MODIFIED** version from https://github.com/craftzdog/dotfiles-public .
 
 ## Contents
 
-- (Neo)VIM config
+- NeoVIM config
+  - Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug)
 - tmux config
 - git config
 - fish config
