@@ -1,8 +1,12 @@
+[hub]
+	protocol = https
+[http "https://github.com"]
+  # proxy = socks5://127.0.0.1:7891
+[https "https://github.com"]
+  # proxy = socks5://127.0.0.1:7891
 [core]
 	excludesfile = ~/.gitignore
-	editor = nvim
-[push]
-  default = simple
+  # editor = nvim
 [color]
   status = auto
   diff = auto
@@ -34,11 +38,6 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-
-[hub]
-  protocol = https
-[github]
-	user = craftzdog
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
@@ -52,5 +51,3 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[ghq]
-  root = ~/.ghq
