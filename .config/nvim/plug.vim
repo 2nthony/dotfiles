@@ -26,7 +26,11 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
+  Plug 'sbdchd/neoformat'
 endif
+
+Plug 'wakatime/vim-wakatime'
 
 Plug 'rhysd/accelerated-jk'
 Plug 'jiangmiao/auto-pairs'
@@ -34,4 +38,5 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'groenewege/vim-less', { 'for': 'less' }
 
 call plug#end()
+
 
