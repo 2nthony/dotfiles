@@ -56,6 +56,15 @@ Please follow https://github.com/craftzdog/dotfiles-public#how-to-use
 
 - Use `C-b` as prefix key
 
+### peco
+
+Modify the file `.config/fish/user-config.fish`:
+
+```fish
+# which means `$HOME/dev` for peco to list git repos
+export WORKSPACE="dev"
+```
+
 ## About
 
 > GitHub([2nthony](https://github.com/evillt)) · Twitter([2nthony](https://twitter.com/evillt))
