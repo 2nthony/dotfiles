@@ -16,6 +16,16 @@ require('telescope').setup{
         ["q"] = actions.close
       },
     },
+    -- https://github.com/nvim-telescope/telescope.nvim/issues/522#issuecomment-777384452
+    file_ignore_patterns = {
+      "node_modules",
+      ".git",
+    },
+  },
+  pickers = {
+    find_files = {
+      hidden = true
+    },
   }
 }
 EOF
