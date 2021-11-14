@@ -33,7 +33,7 @@ endif
 Plug 'wakatime/vim-wakatime'
 
 Plug 'rhysd/accelerated-jk'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
 
