@@ -1,9 +1,9 @@
 [hub]
 	protocol = https
 [http "https://github.com"]
-  # proxy = socks5://127.0.0.1:7891
+	proxy = socks5://127.0.0.1:7891
 [https "https://github.com"]
-  # proxy = socks5://127.0.0.1:7891
+	proxy = socks5://127.0.0.1:7891
 [core]
 	excludesfile = ~/.gitignore
   # editor = nvim
@@ -17,7 +17,7 @@
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   d = diff
-  co = checkout
+  s = switch
   ci = commit
   ca = commit -a
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
