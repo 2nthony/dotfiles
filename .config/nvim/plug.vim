@@ -28,12 +28,13 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
   Plug 'sbdchd/neoformat'
+  Plug 'windwp/nvim-autopairs'
+  Plug 'tanvirtin/vgit.nvim'
 endif
 
 Plug 'wakatime/vim-wakatime'
 
 Plug 'rhysd/accelerated-jk'
-Plug 'windwp/nvim-autopairs'
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
 
