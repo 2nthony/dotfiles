@@ -7,8 +7,8 @@ lua << EOF
   vgit.setup({
       debug = false, -- Only enable this to trace issues related to the app,
       keymaps = {
-          ['n <leader>k'] = 'hunk_up',
-          ['n <leader>j'] = 'hunk_down',
+          ['n gk'] = 'hunk_up',
+          ['n gj'] = 'hunk_down',
           ['n <leader>g'] = 'actions',
           ['n <leader>gs'] = 'buffer_hunk_stage',
           ['n <leader>gr'] = 'buffer_hunk_reset',
