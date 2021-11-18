@@ -29,6 +29,7 @@ if has("nvim")
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
   Plug 'sbdchd/neoformat'
   Plug 'windwp/nvim-autopairs'
+  Plug 'windwp/nvim-spectre'
   Plug 'tanvirtin/vgit.nvim'
   Plug 'tpope/vim-commentary'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
