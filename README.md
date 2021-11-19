@@ -30,6 +30,8 @@ Requires Neovim (>= 0.5)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder over lists
   - Install [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) dependency: `brew install ripgrep`
 
+More to see [plug.vim](.config/nvim/plug.vim).
+
 ## Shell setup
 
 - [Fish shell](https://fishshell.com/)
@@ -40,6 +42,18 @@ Requires Neovim (>= 0.5)
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
 - [peco](https://github.com/peco/peco) - Interactive filtering
+- [fnm](https://github.com/Schniz/fnm) - NVM alternative
+
+## LSP setup
+
+Requires nvim-lspconfig
+
+- TypeScript(tsserver)
+- Vue(Volar)
+- Svelte
+- Rust
+- Go
+- Tailwindcss
 
 ## How to use
 
