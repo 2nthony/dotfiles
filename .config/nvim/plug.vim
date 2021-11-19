@@ -39,8 +39,4 @@ Plug 'wakatime/vim-wakatime'
 
 Plug 'rhysd/accelerated-jk'
 
-Plug 'groenewege/vim-less', { 'for': 'less' }
-
 call plug#end()
-
-
