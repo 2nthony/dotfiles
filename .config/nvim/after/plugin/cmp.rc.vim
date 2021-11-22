@@ -6,7 +6,6 @@ lua <<EOF
   -- Setup nvim-cmp.
   local nvim_lsp = require'lspconfig'
   local cmp = require'cmp'
-  local lspkind = require'lspkind'
 
   cmp.setup({
     snippet = {
@@ -44,9 +43,6 @@ lua <<EOF
       -- { name = 'ultisnips' },
 
       { name = 'buffer' },
-    },
-    formatting = {
-      format = lspkind.cmp_format()
     }
   })
 EOF
