@@ -1,0 +1,13 @@
+nmap <silent> gD :lua vim.lsp.buf.declaration()<CR>
+nmap <silent> gd :lua vim.lsp.buf.definition()<CR>
+nmap <silent> gi :lua vim.lsp.buf.implementation()<CR>
+nmap <silent> gr :lua vim.lsp.buf.references()<CR>
+nmap <silent> <space>wa :lua vim.lsp.buf.add_workspace_folder()<CR>
+nmap <silent> <space>wr :lua vim.lsp.buf.remove_workspace_folder()<CR>
+nmap <silent> <space>wl :lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
+nmap <silent> <space>rn :lua vim.lsp.buf.rename()<CR>
+nmap <silent> <space>ca :lua vim.lsp.buf.code_action()<CR>
+nmap <silent> <space>D :lua vim.lsp.buf.type_definition()<CR>
+nmap <silent> <space>e :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nmap <silent> <space>q :lua vim.lsp.diagnostic.set_loclist()<CR>
+nmap <silent> <space>f :lua vim.lsp.buf.formatting()<CR>
