@@ -34,6 +34,7 @@ if has("nvim")
   Plug 'tanvirtin/vgit.nvim'
   Plug 'tpope/vim-commentary'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  Plug 'folke/todo-comments.nvim'
 endif
 
 Plug 'wakatime/vim-wakatime'
