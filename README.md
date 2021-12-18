@@ -1,4 +1,4 @@
-![cover](./images/cover.jpg)
+![cover](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/YThN7QEsDMLt.png)
 
 ## 2nthony's dotfiles
 
