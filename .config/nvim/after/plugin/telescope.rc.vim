@@ -18,8 +18,8 @@ require('telescope').setup{
     },
     -- https://github.com/nvim-telescope/telescope.nvim/issues/522#issuecomment-777384452
     file_ignore_patterns = {
-      "node_modules",
-      ".git",
+      "node_modules/",
+      ".git/",
     },
   },
   pickers = {
