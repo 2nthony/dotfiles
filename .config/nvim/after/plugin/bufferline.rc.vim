@@ -3,8 +3,8 @@ local status, bufferline = pcall(require, 'bufferline')
 if (not status) then return end
 
 local set_keymap = require'helpers.set_keymap'
-set_keymap('n', 'b]', ':BufferLineCycleNext<CR>')
-set_keymap('n', 'b[', ':BufferLineCyclePrev<CR>')
+set_keymap('n', ']]', ':BufferLineCycleNext<CR>')
+set_keymap('n', '[[', ':BufferLineCyclePrev<CR>')
 
 bufferline.setup{
   options = {
