@@ -1,0 +1,15 @@
+local set_keymap = require'helpers.set_keymap'
+
+set_keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
+set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
+set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
+set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
+set_keymap('n', '<space>wa', ':lua vim.lsp.buf.add_workspace_folder()<CR>')
+set_keymap('n', '<space>wr', ':lua vim.lsp.buf.remove_workspace_folder()<CR>')
+set_keymap('n', '<space>wl', ':lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
+set_keymap('n', '<space>rn', ':lua vim.lsp.buf.rename()<CR>')
+set_keymap('n', '<space>ca', ':lua vim.lsp.buf.code_action()<CR>')
+set_keymap('n', '<space>D', ':lua vim.lsp.buf.type_definition()<CR>')
+set_keymap('n', '<space>e', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+set_keymap('n', '<space>q', ':lua vim.lsp.diagnostic.set_loclist()<CR>')
+set_keymap('n', '<space>f', ':lua vim.lsp.buf.formatting()<CR>')

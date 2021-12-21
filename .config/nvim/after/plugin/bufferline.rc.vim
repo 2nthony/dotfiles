@@ -2,10 +2,9 @@ lua << EOF
 local status, bufferline = pcall(require, 'bufferline')
 if (not status) then return end
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-map('n', 'b]', ':BufferLineCycleNext<CR>', opts)
-map('n', 'b[', ':BufferLineCyclePrev<CR>', opts)
+local set_keymap = require'helpers.set_keymap'
+set_keymap('n', 'b]', ':BufferLineCycleNext<CR>')
+set_keymap('n', 'b[', ':BufferLineCyclePrev<CR>')
 
 bufferline.setup{
   options = {
