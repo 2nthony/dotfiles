@@ -31,6 +31,7 @@ if has("nvim")
   Plug 'sbdchd/neoformat'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-spectre'
+  Plug 'windwp/nvim-ts-autotag'
   Plug 'tanvirtin/vgit.nvim'
   Plug 'tpope/vim-commentary'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
