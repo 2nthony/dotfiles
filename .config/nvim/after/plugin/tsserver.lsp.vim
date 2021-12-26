@@ -12,7 +12,6 @@ local capabilities = require'helpers.capabilities'
 lsp.tsserver.setup {
   --filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   capabilities = capabilities,
-  root_dir = lsp.util.root_pattern("package.json"),
 }
 
 EOF
