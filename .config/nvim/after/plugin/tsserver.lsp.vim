@@ -1,3 +1,8 @@
+if !executable("tsserver")
+  echo "[tsserver] npm i -g typescript typescript-language-server"
+  finish
+endif
+
 lua << EOF
 local lsp = require('lspconfig')
 local cmp_lsp = require'cmp_nvim_lsp'

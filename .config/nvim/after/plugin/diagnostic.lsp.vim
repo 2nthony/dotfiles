@@ -1,3 +1,8 @@
+if !executable("diagnostic-languageserver")
+  echo "[diagnostic-languageserver] npm i -g diagnostic-languageserver"
+  finish
+endif
+
 lua << EOF
 local lsp = require('lspconfig')
 local cmp_lsp = require'cmp_nvim_lsp'

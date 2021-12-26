@@ -1,3 +1,8 @@
+if !executable("svelteserver")
+  echo "[svelteserver] npm i -g svelte-language-server"
+  finish
+endif
+
 let g:vim_svelte_plugin_use_typescript = 1
 
 lua << EOF
