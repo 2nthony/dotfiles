@@ -2,8 +2,6 @@ lua << EOF
   local status, vgit = pcall(require, 'vgit')
   if (not status) then return end
 
-  local utils = require('vgit.utils')
-
   vgit.setup({
     keymaps = {
       ['n gk'] = 'hunk_up',
