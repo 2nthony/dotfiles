@@ -38,6 +38,7 @@ if has("nvim")
   Plug 'folke/todo-comments.nvim'
   Plug 'akinsho/bufferline.nvim'
   Plug 'p00f/nvim-ts-rainbow'
+  Plug 'weilbith/nvim-code-action-menu'
 endif
 
 Plug 'wakatime/vim-wakatime'
