@@ -6,10 +6,6 @@
 
 This is a **MODIFIED** version from https://github.com/craftzdog/dotfiles-public .
 
-## Sponsor
-
-##### [Don Café](https://don-cafe.aotunote.com) - A web-widget to collect your all donation links in one button.
-
 ## Contents
 
 - NeoVIM config
