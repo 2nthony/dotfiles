@@ -40,6 +40,7 @@ if has("nvim")
   Plug 'p00f/nvim-ts-rainbow'
   Plug 'weilbith/nvim-code-action-menu'
   Plug 'TimUntersberger/neogit'
+  Plug 'sindrets/diffview.nvim'
   Plug 'gelguy/wilder.nvim', { 'do': ':let &rtp=&rtp && :UpdateRemotePlugins' }
 endif
 
