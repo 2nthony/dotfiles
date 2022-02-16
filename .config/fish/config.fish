@@ -1,7 +1,6 @@
 set fish_greeting ""
 
 set -gx TERM xterm-256color
-
 # user config file
 source $HOME/.config/fish/user-config.fish
 
@@ -26,6 +25,7 @@ set -gx EDITOR nvim
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH /opt/local/bin /opt/local/sbin $PATH
 
 switch (uname)
     case Darwin
