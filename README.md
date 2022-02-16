@@ -77,4 +77,4 @@ export WORKSPACE="dev"
 
 ## About
 
-> GitHub([2nthony](https://github.com/evillt)) · Twitter([2nthony](https://twitter.com/evillt))
+> GitHub([2nthony](https://github.com/2nthony)) · Twitter([2nthony](https://twitter.com/2nthony))
