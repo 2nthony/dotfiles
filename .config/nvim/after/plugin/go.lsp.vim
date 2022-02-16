@@ -1,5 +1,5 @@
 if !executable("gopls")
-  echo "[gopls] not detected"
+  echo "gopls: go install golang.org/x/tools/gopls@latest"
   finish
 endif
 
