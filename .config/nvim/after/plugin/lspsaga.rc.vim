@@ -20,3 +20,5 @@ nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 nnoremap <silent> <leader>ca <Cmd>Lspsaga code_action<CR>
 vnoremap <silent> <leader>ca <Cmd><C-U>Lspsaga range_code_action<CR>
 nnoremap <silent> rn <Cmd>Lspsaga rename<CR>
+nnoremap <silent> <C-f> <cmd> lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+nnoremap <silent> <C-b> <cmd> lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
