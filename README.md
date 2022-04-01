@@ -45,11 +45,17 @@ More to see [plug.vim](.config/nvim/plug.vim).
 Requires nvim-lspconfig
 
 - TypeScript(tsserver)
+  - `npm i -g typescript typescript-language-server diagnostic-languageserver`
 - Vue(Volar)
+  - `npm i -g @volar/server`
 - Svelte
+  - `npm i -g svelte-language-server`
 - Rust
+  - `rustup component add rust-analysis`
+  - `rustup component add rust-src`
 - Go
 - Tailwindcss
+  - `npm i -g @tailwindcss/language-server`
 
 ## How to use
 
