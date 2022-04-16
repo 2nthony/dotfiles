@@ -41,6 +41,7 @@ if has("nvim")
   Plug 'TimUntersberger/neogit'
   Plug 'sindrets/diffview.nvim'
   Plug 'gelguy/wilder.nvim', { 'do': ':let &rtp=&rtp && :UpdateRemotePlugins' }
+  Plug 'simrat39/rust-tools.nvim'
 endif
 
 Plug 'wakatime/vim-wakatime'
