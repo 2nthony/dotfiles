@@ -5,10 +5,12 @@ endif
 
 lua << EOF
 local lsp = require'lspconfig'
+local on_attach = require'helpers.on_attach'
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lsp.jsonls.setup {
+  on_attach = on_attach,
   capabilities = capablities,
   settings = {
     json = {

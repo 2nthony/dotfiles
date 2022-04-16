@@ -6,10 +6,11 @@ endif
 lua << EOF
 local lsp = require('lspconfig')
 local cmp_lsp = require'cmp_nvim_lsp'
-local protocol = require'vim.lsp.protocol'
+local on_attach = require'helpers.on_attach'
 local capabilities = require'helpers.capabilities'
 
 lsp.diagnosticls.setup {
+  on_attach = on_attach,
   filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
   init_options = {
     linters = {
