@@ -20,7 +20,7 @@ lua <<EOF
         -- vim.fn["UltiSnips#Anon"](args.body)
       end,
     },
-    mapping = {
+    mapping = cmp.mapping.preset.insert({
       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
@@ -29,21 +29,16 @@ lua <<EOF
         behavior = cmp.ConfirmBehavior.Replace,
         select = true
       }),
-    },
-    sources = {
+    }),
+    sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-
-      -- For vsnip user.
-      { name = 'vsnip' },
-
-      -- For luasnip user.
-      -- { name = 'luasnip' },
-
-      -- For ultisnips user.
-      -- { name = 'ultisnips' },
-
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
       { name = 'buffer' },
-    }
+    })
   })
 EOF
 
