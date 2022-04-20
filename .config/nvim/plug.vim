@@ -44,6 +44,7 @@ if has("nvim")
   Plug 'simrat39/rust-tools.nvim'
 endif
 
+Plug 'github/copilot.vim'
 Plug 'wakatime/vim-wakatime'
 
 Plug 'rhysd/accelerated-jk'
