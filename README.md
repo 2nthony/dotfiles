@@ -69,10 +69,6 @@ Please follow https://github.com/craftzdog/dotfiles-public#how-to-use
 - `completion-nvim` -> `hrsh7th/nvim-cmp`
 - `glepnir/lspsaga.nvim` -> `tami5/lspsaga.nvim`
 
-### tmux
-
-- Use `C-b` as prefix key
-
 ### peco
 
 Modify the file `.config/fish/user-config.fish`:
