@@ -39,6 +39,7 @@ More to see [plug.vim](.config/nvim/plug.vim).
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
 - [peco](https://github.com/peco/peco) - Interactive filtering
 - [fnm](https://github.com/Schniz/fnm) - NVM alternative
+- [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
 
 ## LSP setup
 
