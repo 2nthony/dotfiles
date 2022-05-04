@@ -42,6 +42,7 @@ if has("nvim")
   Plug 'sindrets/diffview.nvim'
   Plug 'gelguy/wilder.nvim', { 'do': ':let &rtp=&rtp && :UpdateRemotePlugins' }
   Plug 'simrat39/rust-tools.nvim'
+  Plug 'norcalli/nvim-colorizer.lua'
 endif
 
 Plug 'github/copilot.vim'
