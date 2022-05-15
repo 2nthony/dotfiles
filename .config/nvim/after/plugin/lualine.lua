@@ -55,8 +55,9 @@ local file_name = {
 
 local filetype = {
   "filetype",
-  icons_enabled = false,
-  icon = nil,
+  colored = true,
+  icons_enabled = true,
+  icon_only = true,
 }
 
 local branch = {
