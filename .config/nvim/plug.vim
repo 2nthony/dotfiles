@@ -4,50 +4,63 @@ endif
 
 call plug#begin()
 
-Plug 'tpope/vim-fugitive'
+Plug 'rhysd/accelerated-jk'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'github/copilot.vim'
 
 if has("nvim")
+  Plug 'lewis6991/impatient.nvim'
   Plug 'hoob3rt/lualine.nvim'
+  Plug 'akinsho/bufferline.nvim'
+
+  " lsp
   Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/nvim-lsp-installer'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/nvim-cmp'
-  Plug 'hrsh7th/cmp-vsnip'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'onsails/lspkind-nvim'
-  Plug 'tami5/lspsaga.nvim'
+  " Plug 'onsails/lspkind-nvim'
+  " Plug 'tami5/lspsaga.nvim'
   Plug 'folke/lsp-colors.nvim'
+  Plug 'RRethy/vim-illuminate'
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'rafamadriz/friendly-snippets' " for LuaSnip
+  Plug 'ray-x/lsp_signature.nvim'
+  Plug 'stevearc/aerial.nvim'
+
+  " git
+  Plug 'lewis6991/gitsigns.nvim', { 'tag': 'v0.4' }
+  Plug 'sindrets/diffview.nvim'
+
+  " theme
+  Plug 'lunarvim/colorschemes'
+
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install', 'for': ['md', 'markdown'], 'tag': 'v0.0.10' }
   Plug 'sbdchd/neoformat'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-spectre'
   Plug 'windwp/nvim-ts-autotag'
-  Plug 'tanvirtin/vgit.nvim'
-  Plug 'tpope/vim-commentary'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'folke/todo-comments.nvim'
-  Plug 'akinsho/bufferline.nvim'
   Plug 'p00f/nvim-ts-rainbow'
-  Plug 'weilbith/nvim-code-action-menu'
-  Plug 'TimUntersberger/neogit'
-  Plug 'sindrets/diffview.nvim'
-  Plug 'gelguy/wilder.nvim', { 'do': ':let &rtp=&rtp && :UpdateRemotePlugins' }
-  Plug 'simrat39/rust-tools.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'folke/which-key.nvim'
+  Plug 'akinsho/toggleterm.nvim', { 'tag': 'v1.0.0' }
+  " Plug 'simrat39/rust-tools.nvim'
+  " Plug 'zbirenbaum/copilot.lua'
+  " Plug 'zbirenbaum/copilot-cmp'
 endif
 
-Plug 'github/copilot.vim'
 Plug 'wakatime/vim-wakatime'
-
-Plug 'rhysd/accelerated-jk'
 
 call plug#end()

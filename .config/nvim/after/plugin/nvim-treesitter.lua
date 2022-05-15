@@ -1,10 +1,9 @@
-if !exists('g:loaded_nvim_treesitter')
-  echom "Not loaded treesitter"
-  finish
-endif
+local status_nvim_treesitter_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_nvim_treesitter_ok then
+  return
+end
 
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
+configs.setup {
   highlight = {
     enable = true,
     disable = {},
@@ -29,4 +28,3 @@ require'nvim-treesitter.configs'.setup {
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
-EOF
