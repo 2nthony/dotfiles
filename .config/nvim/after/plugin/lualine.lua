@@ -92,7 +92,7 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "solarized_dark",
+    theme = "catppuccin",
     component_separators = { left = "", right = "" },
     -- section_separators = { left = "", right = "" },
     -- component_separators = { left = "", right = "" },
@@ -112,7 +112,7 @@ lualine.setup({
     lualine_a = {},
     lualine_b = {},
     lualine_c = { file_name },
-    lualine_x = { "location" },
+    lualine_x = { location },
     lualine_y = {},
     lualine_z = {},
   },

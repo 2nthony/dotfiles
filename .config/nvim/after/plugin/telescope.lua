@@ -38,9 +38,14 @@ telescope.setup{
     },
     ['ui-select'] = {
       require("telescope.themes").get_dropdown {}
+    },
+    media_files = {
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      find_cmd = "rg" -- find command (defaults to `fd`)
     }
   }
 }
 
 telescope.load_extension('fzf')
 telescope.load_extension('ui-select')
+telescope.load_extension('media_files')
