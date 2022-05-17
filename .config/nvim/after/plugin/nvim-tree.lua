@@ -39,6 +39,9 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 
+local status_nvim_tree_ok, nvim_tree = pcall(require, 'nvim-tree')
+if (not status_nvim_tree_ok) then return end
+
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
@@ -59,9 +62,6 @@ vim.g.nvim_tree_icons = {
     symlink = "",
   },
 }
-
-local status_nvim_tree_ok, nvim_tree = pcall(require, 'nvim-tree')
-if (not status_nvim_tree_ok) then return end
 
 nvim_tree.setup{
   view = {
