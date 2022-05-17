@@ -65,6 +65,7 @@ if has("nvim")
   " Plug 'simrat39/rust-tools.nvim'
   " Plug 'zbirenbaum/copilot.lua'
   " Plug 'zbirenbaum/copilot-cmp'
+  Plug 'phaazon/hop.nvim'
 endif
 
 Plug 'wakatime/vim-wakatime'

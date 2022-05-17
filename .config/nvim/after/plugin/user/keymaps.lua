@@ -105,3 +105,11 @@ local status_which_key_ok = pcall(require, "which-key")
 if status_which_key_ok then
   keymap('n', '<space>k', ':WhichKey<CR><space>', opts)
 end
+
+-- hop
+local status_hop_ok = pcall(require, "hop")
+if status_hop_ok then
+  keymap('n', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
+  keymap('v', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
+  keymap('o', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", opts)
+end
