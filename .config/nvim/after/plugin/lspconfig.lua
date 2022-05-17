@@ -229,21 +229,9 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
--- icon
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---   vim.lsp.diagnostic.on_publish_diagnostics, {
---     underline = true,
---     -- This sets the spacing and the prefix, obviously.
---     virtual_text = {
---       spacing = 4,
---       prefix = ''
---     }
---   }
--- )
-
 vim.diagnostic.config({
   -- disable virtual text
-  virtual_text = false,
+  virtual_text = true,
   -- show signs
   signs = {
     active = signs,
@@ -260,6 +248,18 @@ vim.diagnostic.config({
     prefix = "",
   },
 })
+
+-- virtual text icon
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This sets the spacing and the prefix, obviously.
+    virtual_text = {
+      spacing = 4,
+      prefix = ''
+    }
+  }
+)
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",
