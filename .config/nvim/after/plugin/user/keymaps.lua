@@ -109,7 +109,12 @@ end
 -- hop
 local status_hop_ok = pcall(require, "hop")
 if status_hop_ok then
-  keymap('n', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
-  keymap('v', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
-  keymap('o', 'fw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", opts)
+  -- word
+  keymap('n', 'gw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
+  keymap('v', 'gw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
+  keymap('o', 'gw', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", opts)
+  -- line
+  keymap('n', 'gl', ':HopLine<cr>', opts)
+  keymap('v', 'gl', ':HopLine<cr>', opts)
+  keymap('o', 'gl', ':HopLine<cr>', opts)
 end
