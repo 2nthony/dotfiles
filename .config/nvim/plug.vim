@@ -32,6 +32,7 @@ if has("nvim")
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'stevearc/aerial.nvim'
   Plug 'folke/trouble.nvim'
+  Plug 'rmagatti/goto-preview'
 
   " telescope
   Plug 'nvim-telescope/telescope.nvim'

@@ -118,3 +118,16 @@ if status_hop_ok then
   keymap('v', 'gl', ':HopLine<cr>', opts)
   keymap('o', 'gl', ':HopLine<cr>', opts)
 end
+
+-- goto-preview
+local status_goto_preview_ok = pcall(require, 'goto-preview')
+if status_goto_preview_ok then
+  keymap('n', 'gpd', "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)
+  keymap('n', 'gpi', "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", opts)
+  keymap('n', 'gP', "<cmd>lua require('goto-preview').close_all_win()<cr>", opts)
+
+  local status_telescope_ok = pcall(require, 'telescope')
+  if status_telescope_ok then
+    keymap('n', 'gpr', "<cmd>lua require('goto-preview').goto_preview_references()<cr>", opts)
+  end
+end
