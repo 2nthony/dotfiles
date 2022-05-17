@@ -88,21 +88,6 @@ endif
 
 "}}}
 
-" File types "{{{
-" ---------------------------------------------------------------------
-" JavaScript
-au BufNewFile,BufRead *.es6 set javascript
-" TypeScript
-au BufNewFile,BufRead *.tsx set typescriptreact
-" Markdown
-au BufNewFile,BufRead *.md set filetype=markdown
-
-set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.md
-
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-
-"}}}
-
 " Imports "{{{
 " ---------------------------------------------------------------------
 runtime ./plug.vim
