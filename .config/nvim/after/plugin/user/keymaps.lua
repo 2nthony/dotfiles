@@ -67,37 +67,24 @@ keymap('n', '<C-down>', '<C-w>+', opts)
 -- telescope
 local status_telescope_ok = pcall(require, 'telescope')
 if status_telescope_ok then
-  keymap('n', ';f', ':Telescope find_files<CR>', opts)
-  keymap('n', ';r', ':Telescope live_grep<CR>', opts)
-  keymap('n', ';b', ':Telescope buffers<CR>', opts)
-  keymap('n', ';;', ':Telescope help_tags<CR>', opts)
-end
-
--- lspsaga
-local status_lspsaga_ok = pcall(require, "lspsaga")
-if (status_lspsaga_ok) then
-  --[[ keymap('n', '<C-j>', ':Lspsaga diagnostic_jump_next<CR>', opts)
-  keymap('n', 'K', ':Lspsaga hover_doc<CR>', opts)
-  keymap('n', '<C-k>', ':Lspsaga signature_help<CR>', opts)
-  keymap('n', 'gh', ':Lspsaga lsp_finder<CR>', opts)
-  keymap('n', ';ca', ':Lspsaga code_action<CR>', opts)
-  keymap('n', 'rn', ':Lspsaga rename<CR>', opts) ]]
-  -- keymap('n', '<C-f>', ': lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>', opts)
-  -- keymap('n', '<C-d>', ': lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>', opts)
+  keymap('n', 'ff', ':Telescope find_files<CR>', opts)
+  keymap('n', 'fr', ':Telescope live_grep<CR>', opts)
+  keymap('n', 'fb', ':Telescope buffers<CR>', opts)
+  keymap('n', 'f;', ':Telescope help_tags<CR>', opts)
 end
 
 -- nvim-tree
 local status_nvim_tree_ok = pcall(require, 'nvim-tree')
 if (status_nvim_tree_ok) then
-  keymap('n', 'sf', ':NvimTreeToggle<cr>', opts)
+  keymap('n', 'fe', ':NvimTreeToggle<cr>', opts)
   keymap('n', '<space>f', ':NvimTreeFindFile<cr>', opts)
 end
 
 -- bufferline
 local status_bufferline_ok = pcall(require, 'bufferline')
 if (status_bufferline_ok) then
-  keymap('n', ';e', ':BufferLineCycleNext<CR>', opts)
-  keymap('n', ';w', ':BufferLineCyclePrev<CR>', opts)
+  keymap('n', 'te', ':BufferLineCycleNext<CR>', opts)
+  keymap('n', 'tw', ':BufferLineCyclePrev<CR>', opts)
 end
 
 -- nvim-spectre
