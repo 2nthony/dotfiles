@@ -21,6 +21,7 @@ configs.setup {
     "yaml",
     "html",
     "scss",
+    "css",
     "vue",
     "svelte"
   },
