@@ -1,10 +1,7 @@
-local status_nvim_treesitter_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_nvim_treesitter_ok then
+local status_nvim_ts_autotag_ok, autotag = pcall(require, "nvim-ts-autotag")
+if not status_nvim_ts_autotag_ok then
   return
 end
 
-configs.setup {
-  autotag = {
-    enable = true,
-  }
-}
+autotag.setup{}
+

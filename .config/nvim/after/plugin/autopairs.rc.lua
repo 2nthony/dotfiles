@@ -1,16 +1,12 @@
-local status, autopairs = pcall(require, "nvim-autopairs")
-if (not status) then return end
+local status_autopairs_ok, autopairs = pcall(require, "nvim-autopairs")
+if (not status_autopairs_ok) then return end
 
-autopairs.setup({
-  disable_filetype = { "TelescopePrompt", "vim" },
-})
+autopairs.setup{}
 
-local cmp = require'cmp'
-if (cmp) then
+local status_cmp_ok, cmp = pcall(require, "cmp")
+if status_cmp_ok then
   local cmp_autopairs = require'nvim-autopairs.completion.cmp'
   cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({
-    map_char = {
-      tex = ''
-    }
+    map_char = { tex = '' }
   }))
 end
