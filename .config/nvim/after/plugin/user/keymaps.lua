@@ -77,7 +77,7 @@ end
 local status_nvim_tree_ok = pcall(require, 'nvim-tree')
 if (status_nvim_tree_ok) then
   keymap('n', 'fe', ':NvimTreeToggle<cr>', opts)
-  keymap('n', '<space>f', ':NvimTreeFindFile<cr>', opts)
+  keymap('n', 'fd', ':NvimTreeFindFile<cr>', opts)
 end
 
 -- bufferline
