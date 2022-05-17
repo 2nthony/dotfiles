@@ -35,9 +35,9 @@ if has("nvim")
 
   " telescope
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-ui-select.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-telescope/telescope-media-files.nvim'
+  Plug 'stevearc/dressing.nvim' " ui select enhancement
 
   " treesitter
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
