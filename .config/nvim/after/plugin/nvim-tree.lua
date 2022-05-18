@@ -82,7 +82,7 @@ nvim_tree.setup{
 
 --
 -- with relative path
-require "nvim-tree.events".on_file_created(function(file) vim.cmd("edit " .. file.fname) end)
+-- require "nvim-tree.events".on_file_created(function(file) vim.cmd("edit " .. file.fname) end)
 -- with absolute path
 -- require"nvim-tree.events".on_file_created(function(file) vim.cmd("edit "..vim.fn.fnamemodify(file.fname, ":p")) end)
 
