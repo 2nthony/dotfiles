@@ -69,7 +69,7 @@ nvim_tree.setup{
       custom_only = false,
       list = {
         -- user mappings go here
-        { key = { "l", "<CR>", "o" }, action = "edit" },
+        { key = { "<CR>", "o" }, action = "edit" },
         { key = "h", action = "close_node" },
         { key = "v", action = "vsplit" },
         { key = "O", action = "cd" },
