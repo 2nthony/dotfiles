@@ -16,6 +16,7 @@ if has("nvim")
   Plug 'akinsho/bufferline.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
+  Plug 'nathom/filetype.nvim'
 
   " lsp
   Plug 'neovim/nvim-lspconfig'
