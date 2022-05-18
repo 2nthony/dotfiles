@@ -39,12 +39,6 @@ keymap("n", "q", "<Nop>", opts)
 -- no highlight
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 
---[[ Tab ]]
-
--- Buffer
-keymap('n', '<leader>q', ':bdelete<cr>', opts)
-keymap('n', '<leader>Q', ':bdelete!<cr>', opts)
-
 --[[ Window ]]
 
 -- Split window
@@ -80,11 +74,27 @@ if (status_nvim_tree_ok) then
   keymap('n', 'fd', ':NvimTreeFindFile<cr>', opts)
 end
 
--- bufferline
-local status_bufferline_ok = pcall(require, 'bufferline')
-if (status_bufferline_ok) then
-  keymap('n', 'te', ':BufferLineCycleNext<CR>', opts)
-  keymap('n', 'tw', ':BufferLineCyclePrev<CR>', opts)
+-- barbar.nvim
+local status_barbar_ok = pcall(require, 'bufferline.nvim')
+if status_barbar_ok then
+  keymap('n', ';w', ':BufferPrevious<CR>', opts)
+  keymap('n', ';e', ':BufferNext<CR>', opts)
+  -- Goto buffer in position...
+  keymap('n', ';1', ':BufferGoto 1<CR>', opts)
+  keymap('n', ';2', ':BufferGoto 2<CR>', opts)
+  keymap('n', ';3', ':BufferGoto 3<CR>', opts)
+  keymap('n', ';4', ':BufferGoto 4<CR>', opts)
+  keymap('n', ';5', ':BufferGoto 5<CR>', opts)
+  keymap('n', ';6', ':BufferGoto 6<CR>', opts)
+  keymap('n', ';7', ':BufferGoto 7<CR>', opts)
+  keymap('n', ';8', ':BufferGoto 8<CR>', opts)
+  keymap('n', ';9', ':BufferGoto 9<CR>', opts)
+  keymap('n', ';0', ':BufferLast<CR>', opts)
+  -- Close buffer
+  keymap('n', ';q', ':BufferClose<CR>', opts)
+  keymap('n', ';Q', ':BufferClose!<CR>', opts)
+  -- Magic buffer-picking mode
+  keymap('n', ';bp', ':BufferPick<CR>', opts)
 end
 
 -- nvim-spectre

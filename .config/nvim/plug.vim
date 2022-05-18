@@ -17,6 +17,7 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nathom/filetype.nvim'
+  Plug 'romgrk/barbar.nvim'
 
   " lsp
   Plug 'neovim/nvim-lspconfig'
