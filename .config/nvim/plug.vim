@@ -13,7 +13,6 @@ Plug 'github/copilot.vim'
 if has("nvim")
   Plug 'lewis6991/impatient.nvim'
   Plug 'hoob3rt/lualine.nvim'
-  Plug 'akinsho/bufferline.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nathom/filetype.nvim'
