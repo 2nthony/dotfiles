@@ -70,7 +70,6 @@ nvim_tree.setup{
       list = {
         -- user mappings go here
         { key = { "<CR>", "o" }, action = "edit" },
-        { key = "h", action = "close_node" },
         { key = "v", action = "vsplit" },
         { key = "O", action = "cd" },
         { key = "s", action = "" },
