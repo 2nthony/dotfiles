@@ -95,6 +95,9 @@ if status_barbar_ok then
   keymap('n', ';Q', ':BufferClose!<CR>', opts)
   -- Magic buffer-picking mode
   keymap('n', ';bp', ':BufferPick<CR>', opts)
+  -- Re-order to previous/next
+  keymap('n', ';b[', ':BufferMovePrevious<CR>', opts)
+  keymap('n', ';b]', ':BufferMoveNext<CR>', opts)
 end
 
 -- nvim-spectre
