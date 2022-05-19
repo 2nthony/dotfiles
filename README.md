@@ -1,4 +1,4 @@
-![cover](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/YThN7QEsDMLt.png)
+![cover](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/nvim-coverIUEXyP.png)
 
 ## 2nthony's dotfiles
 
