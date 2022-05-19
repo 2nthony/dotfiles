@@ -25,7 +25,7 @@ vim.g.bufferline = {
 
   -- Excludes buffers from the tabline
   -- exclude_ft = {'javascript'},
-  exclude_name = {'package.json'},
+  exclude_name = {},
 
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
