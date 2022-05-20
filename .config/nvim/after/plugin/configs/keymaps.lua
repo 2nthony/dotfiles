@@ -143,10 +143,3 @@ if status_goto_preview_ok then
   end
 end
 
--- copilot
-if vim.g.loaded_copilot then
-  -- disable the `tab` map
-  vim.g.copilot_no_tab_map = true
-  keymap('i', '<C-l>', "copilot#Accept('\\<cr>')", { silent = true, expr = true })
-end
-
