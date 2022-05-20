@@ -21,7 +21,10 @@ end
 return require('packer').startup(function()
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
-  use 'rhysd/accelerated-jk'
+  use {
+    'rhysd/accelerated-jk',
+    commit = '156c5158b72059404f6b8aaf15b59f87dd0aaa88'
+  }
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
