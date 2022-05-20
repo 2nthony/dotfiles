@@ -17,6 +17,7 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nathom/filetype.nvim'
   Plug 'romgrk/barbar.nvim'
+  Plug 'mbbill/undotree'
 
   " lsp
   Plug 'neovim/nvim-lspconfig'
