@@ -5,7 +5,7 @@ local cb = require'diffview.config'.diffview_callback
 
 diffview.setup{
   diff_binaries = false,    -- Show diffs for binaries
-  enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
+  enhanced_diff_hl = true, -- See ':h diffview-config-enhanced_diff_hl'
   use_icons = true,         -- Requires nvim-web-devicons
   icons = {                 -- Only applies when use_icons is true.
     folder_closed = "",
@@ -16,27 +16,16 @@ diffview.setup{
     fold_open = "",
   },
   file_panel = {
-    position = "left",                  -- One of 'left', 'right', 'top', 'bottom'
-    width = 35,                         -- Only applies when position is 'left' or 'right'
-    height = 10,                        -- Only applies when position is 'top' or 'bottom'
-    listing_style = "tree",             -- One of 'list' or 'tree'
-    tree_options = {                    -- Only applies when listing_style is 'tree'
-      flatten_dirs = true,              -- Flatten dirs that only contain one single dir
-      folder_statuses = "only_folded",  -- One of 'never', 'only_folded' or 'always'.
-    },
-  },
-  file_history_panel = {
-    position = "bottom",
-    width = 35,
-    height = 16,
-    log_options = {
-      max_count = 256,      -- Limit the number of commits
-      follow = false,       -- Follow renames (only for single file)
-      all = false,          -- Include all refs under 'refs/' including HEAD
-      merges = false,       -- List only merge commits
-      no_merges = false,    -- List no merge commits
-      reverse = false,      -- List commits in reverse order
-    },
+    win_config = {
+      position = "left",                  -- One of 'left', 'right', 'top', 'bottom'
+      width = 30,                         -- Only applies when position is 'left' or 'right'
+      height = 10,                        -- Only applies when position is 'top' or 'bottom'
+      listing_style = "tree",             -- One of 'list' or 'tree'
+      tree_options = {                    -- Only applies when listing_style is 'tree'
+        flatten_dirs = true,              -- Flatten dirs that only contain one single dir
+        folder_statuses = "only_folded",  -- One of 'never', 'only_folded' or 'always'.
+      },
+    }
   },
   default_args = {    -- Default args prepended to the arg-list for the listed commands
     DiffviewOpen = {},
@@ -76,27 +65,6 @@ diffview.setup{
       ["<C-w>gf"]       = cb("goto_file_tab"),
       ["i"]             = cb("listing_style"),        -- Toggle between 'list' and 'tree' views
       ["f"]             = cb("toggle_flatten_dirs"),  -- Flatten empty subdirectories in tree listing style.
-      ["<leader>e"]     = cb("focus_files"),
-      ["<leader>b"]     = cb("toggle_files"),
-    },
-    file_history_panel = {
-      ["g!"]            = cb("options"),            -- Open the option panel
-      ["<C-A-d>"]       = cb("open_in_diffview"),   -- Open the entry under the cursor in a diffview
-      ["y"]             = cb("copy_hash"),          -- Copy the commit hash of the entry under the cursor
-      ["zR"]            = cb("open_all_folds"),
-      ["zM"]            = cb("close_all_folds"),
-      ["j"]             = cb("next_entry"),
-      ["<down>"]        = cb("next_entry"),
-      ["k"]             = cb("prev_entry"),
-      ["<up>"]          = cb("prev_entry"),
-      ["<cr>"]          = cb("select_entry"),
-      ["o"]             = cb("select_entry"),
-      ["<2-LeftMouse>"] = cb("select_entry"),
-      ["<tab>"]         = cb("select_next_entry"),
-      ["<s-tab>"]       = cb("select_prev_entry"),
-      ["gf"]            = cb("goto_file"),
-      ["<C-w><C-f>"]    = cb("goto_file_split"),
-      ["<C-w>gf"]       = cb("goto_file_tab"),
       ["<leader>e"]     = cb("focus_files"),
       ["<leader>b"]     = cb("toggle_files"),
     },
