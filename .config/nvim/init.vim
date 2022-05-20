@@ -1,6 +1,8 @@
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
 
+lua require('plugins')
+
 " init autocmd
 autocmd!
 " set script encoding
@@ -11,7 +13,7 @@ if !1 | finish | endif
 set nocompatible
 set number
 syntax enable
-set fileencodings=utf-8,sjis,euc-jp,latin
+set fileencodings=utf-8
 set encoding=utf-8
 set title
 set autoindent
@@ -86,18 +88,6 @@ if &term =~ "screen"
   autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
 endif
 
-"}}}
-
-" Imports "{{{
-" ---------------------------------------------------------------------
-runtime ./plug.vim
-if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
-  endif
-endif
 "}}}
 
 " Syntax theme "{{{
