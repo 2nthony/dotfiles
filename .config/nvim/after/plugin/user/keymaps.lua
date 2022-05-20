@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -144,3 +142,11 @@ if status_goto_preview_ok then
     keymap('n', 'gpr', "<cmd>lua require('goto-preview').goto_preview_references()<cr>", opts)
   end
 end
+
+-- copilot
+if vim.g.loaded_copilot then
+  -- disable the `tab` map
+  vim.g.copilot_no_tab_map = true
+  keymap('i', '<C-l>', "copilot#Accept('\\<cr>')", { silent = true, expr = true })
+end
+
