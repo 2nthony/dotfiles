@@ -60,9 +60,17 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 
 #### `g` means to `go` or `git`
 
+- `git` open lazygit (install `lazygit`)
 - `gw` go to word
 - `gl` go to line
-- `git` open lazygit (install `lazygit`)
+- `gj` git next hunk
+- `gk` git previous hunk
+- `ghs` git stage hunk
+- `ghr` git reset hunk
+- `ghu` git undo stage hunk
+- `ghp` git preview hunk
+
+See the full keybindings for git in [keymaps.gitsigns](./config/nvim/after/plugin/user/keymaps.lua)
 
 #### `s` means to `switch`, `split` or others
 
