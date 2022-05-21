@@ -55,7 +55,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `fe` toggle file explorer
 - `fb` open file explorer with current file position
 - `ff` find a file
-- `fr` find character(live grep) in files
+- `fr` find character(live grep) in files (install `ripgrep`)
 - `fb` find a buffer(tab)
 
 #### `g` means to `go` or `git`
