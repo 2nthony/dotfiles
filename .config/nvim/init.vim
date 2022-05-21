@@ -1,8 +1,6 @@
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
 
-lua require('plugins')
-
 " init autocmd
 autocmd!
 " set script encoding
@@ -111,3 +109,6 @@ set exrc
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
+
+lua require('plugins')
+
