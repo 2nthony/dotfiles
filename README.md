@@ -50,9 +50,9 @@ Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
 
 The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
 
-#### `f` means to `find` or `file`.
+#### `f` means to `find` or `file`
 
-- `fe` open file explorer
+- `fe` toggle file explorer
 - `fb` open file explorer with current file position
 - `ff` find a file
 - `fr` find character(live grep) in files
@@ -69,8 +69,8 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `sv` vertical split window
 - `sh` focus left window
 - `sj` focus bottom window
-- `sk` focus top window
-- `sl` focus right window
+- `sk` focus above window
+- `sl` focus below window
 
 #### `;` instead of `\`
 
