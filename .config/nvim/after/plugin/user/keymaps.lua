@@ -111,7 +111,6 @@ end
 -- see after/plugin/diffivew.lua key_bindinds
 
 -- gitsigns
--- see after/plugin/gitsigns.lua
 local status_gitsigns_ok = pcall(require, "gitsigns")
 if status_gitsigns_ok then
   -- Navigation
