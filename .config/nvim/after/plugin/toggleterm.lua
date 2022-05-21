@@ -19,7 +19,7 @@ toggleterm.setup({
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
-		winblend = 3,
+		winblend = 5,
 		highlights = {
 			border = "Normal",
 			background = "Normal",
@@ -44,17 +44,7 @@ local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
 -- NOTE: need to install lazygit first
--- sudo add-apt-repository ppa:lazygit-team/release
--- sudo apt-get update
--- sudo apt-get install lazygit
--- TODO: 这个命令暂时不起作用
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
-end
-
-local node = Terminal:new({ cmd = "node", hidden = true })
-
-function _NODE_TOGGLE()
-	node:toggle()
 end
 

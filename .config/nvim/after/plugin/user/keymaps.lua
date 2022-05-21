@@ -110,6 +110,32 @@ end
 -- diffview
 -- see after/plugin/diffivew.lua key_bindinds
 
+-- gitsigns
+-- see after/plugin/gitsigns.lua
+local status_gitsigns_ok = pcall(require, "gitsigns")
+if status_gitsigns_ok then
+  -- Navigation
+  keymap('n', 'gj', ':Gitsigns next_hunk<CR>', opts)
+  keymap('n', 'gk', ':Gitsigns prev_hunk<CR>', opts)
+
+  -- Actions 
+  keymap('n', 'ghs', ':Gitsigns stage_hunk<CR>', opts)
+  keymap('n', 'ghr', ':Gitsigns reset_hunk<CR>', opts)
+  keymap('n', 'ghu', '<cmd>Gitsigns undo_stage_hunk<CR>', opts)
+  keymap('n', 'ghS', '<cmd>Gitsigns stage_buffer<CR>', opts)
+  keymap('n', 'ghR', '<cmd>Gitsigns reset_buffer<CR>', opts)
+  keymap('n', 'ghp', '<cmd>Gitsigns preview_hunk<CR>', opts)
+  keymap('n', 'ghb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', opts)
+  keymap('n', 'gtb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
+  keymap('n', 'ghd', '<cmd>Gitsigns diffthis<CR>', opts)
+  keymap('n', 'ghD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', opts)
+  keymap('n', 'gtd', '<cmd>Gitsigns toggle_deleted<CR>', opts)
+
+  -- Text object
+  keymap('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)
+  keymap('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)
+end
+
 -- whichkey
 -- see after/plugin/whichkey.lua mappings
 local status_which_key_ok = pcall(require, "which-key")
@@ -143,3 +169,8 @@ if status_goto_preview_ok then
   end
 end
 
+-- toggleterm
+local status_toggleterm_ok = pcall(require, "toggleterm")
+if status_toggleterm_ok then
+  keymap('n', 'git', ':lua _LAZYGIT_TOGGLE()<cr>', opts)
+end

@@ -62,6 +62,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 
 - `gw` go to word
 - `gl` go to line
+- `git` open lazygit (install `lazygit`)
 
 #### `s` means to `switch`, `split` or others
 
