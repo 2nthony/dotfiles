@@ -53,10 +53,11 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
-- `fb` open file explorer with current file position
+- `fd` locate current file in file explorer
 - `ff` find a file
 - `fr` find character(live grep) in files (install `ripgrep`)
 - `fb` find a buffer(tab)
+- `fo` find oldfiles
 
 #### `g` means to `go` or `git`
 
