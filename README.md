@@ -70,7 +70,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `ghu` git undo stage hunk
 - `ghp` git preview hunk
 
-See the full keybindings for git in [keymaps.gitsigns](./config/nvim/after/plugin/user/keymaps.lua)
+See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
 
 #### `s` means to `switch`, `split` or others
 
