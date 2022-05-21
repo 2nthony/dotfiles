@@ -62,6 +62,7 @@ if status_telescope_ok then
   keymap('n', 'ff', ':Telescope find_files<CR>', opts)
   keymap('n', 'fr', ':Telescope live_grep<CR>', opts)
   keymap('n', 'fb', ':Telescope buffers<CR>', opts)
+  keymap('n', 'fo', ':Telescope oldfiles<CR>', opts)
   keymap('n', 'f;', ':Telescope help_tags<CR>', opts)
 end
 
