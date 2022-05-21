@@ -70,13 +70,20 @@ nvim_tree.setup{
       list = {
         -- user mappings go here
         { key = { "<CR>", "o" }, action = "edit" },
-        { key = "v", action = "vsplit" },
         { key = "O", action = "cd" },
+        { key = "S", action = "live_filter" },
+        { key = "cs", action = "clear_live_filter" },
+
+        -- reset
         { key = "s", action = "" },
-        { key = "<C-o>", action = "system_open" },
+        { key = "f", action = "" },
       }
     }
-  }
+  },
+  live_filter = {
+    prefix = "[Search]: ",
+    always_show_folders = true,
+  },
 }
 
 --
