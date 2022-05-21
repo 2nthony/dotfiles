@@ -38,6 +38,7 @@ gitsigns.setup {
     border = "rounded",
     style = "minimal",
     relative = "cursor",
+    focusable = false,
     row = 0,
     col = 1,
   },
