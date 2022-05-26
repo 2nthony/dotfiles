@@ -174,8 +174,8 @@ cmp_config = {
       Variable = " ",
     },
     source_names = {
-      copilot = "(Copilot)",
       nvim_lsp = "(LSP)",
+      copilot = "(Copilot)",
       treesitter = "(TS)",
       emoji = "(Emoji)",
       path = "(Path)",
@@ -213,8 +213,8 @@ cmp_config = {
     documentation = cmp.config.window.bordered(),
   },
   sources = {
-    { name = "copilot" },
     { name = "nvim_lsp" },
+    { name = "copilot" },
     { name = "path" },
     { name = "luasnip" },
     { name = "nvim_lua" },
