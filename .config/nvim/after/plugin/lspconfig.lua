@@ -11,6 +11,7 @@ end
 local lsp_signature = require'lsp_signature'
 local illuminate = require'illuminate'
 local aerial = require'aerial'
+local util = require'lspconfig.util'
 
 -- Use an on_attach function to only map the following keys 
 -- after the language server attaches to the current buffer
@@ -76,7 +77,8 @@ nvim_lsp.svelte.setup {
 }
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  root_dir = util.root_pattern('tailwind.config.js', 'tailwind.config.ts')
 }
 nvim_lsp.volar.setup {
   on_attach = on_attach,
