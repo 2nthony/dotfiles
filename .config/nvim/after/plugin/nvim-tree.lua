@@ -42,27 +42,6 @@
 local status_nvim_tree_ok, nvim_tree = pcall(require, 'nvim-tree')
 if (not status_nvim_tree_ok) then return end
 
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
 nvim_tree.setup{
   view = {
     mappings = {
@@ -84,6 +63,30 @@ nvim_tree.setup{
     prefix = "[Search]: ",
     always_show_folders = true,
   },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      }
+    }
+  }
 }
 
 --
