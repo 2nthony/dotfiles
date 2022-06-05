@@ -99,7 +99,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-spectre'
   use 'norcalli/nvim-colorizer.lua'
-  use 'folke/which-key.nvim'
+  use {'folke/which-key.nvim', disable = true}
   use {'akinsho/toggleterm.nvim', tag = 'v1.0.0'}
   -- use 'simrat39/rust-tools.nvim'
   use {
