@@ -20,6 +20,7 @@ end
 
 return require('packer').startup(function()
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use 'wakatime/vim-wakatime'
 
   use {
     'rhysd/accelerated-jk',
