@@ -8,7 +8,7 @@ if not status then
   return
 end
 
-local lsp_signature = require'lsp_signature'
+local status_lsp_signature_ok, lsp_signature = pcall(require, 'lsp_signature')
 local illuminate = require'illuminate'
 local aerial = require'aerial'
 local util = require'lspconfig.util'
@@ -44,7 +44,7 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
-  if lsp_signature then
+  if status_lsp_signature_ok then
     lsp_signature.on_attach()
   end
 
