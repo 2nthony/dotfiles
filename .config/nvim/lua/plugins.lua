@@ -36,7 +36,7 @@ return require('packer').startup(function()
   use 'nathom/filetype.nvim'
   use 'romgrk/barbar.nvim'
   use 'mbbill/undotree'
-  use {'github/copilot.vim', disable = true}
+  use {'github/copilot.vim'}
 
   -- lsp
   use 'neovim/nvim-lspconfig'
