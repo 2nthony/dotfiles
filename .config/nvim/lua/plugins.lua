@@ -36,7 +36,6 @@ return require('packer').startup(function()
   use 'nathom/filetype.nvim'
   use 'romgrk/barbar.nvim'
   use 'mbbill/undotree'
-  use {'github/copilot.vim'}
 
   -- lsp
   use 'neovim/nvim-lspconfig'
@@ -106,7 +105,7 @@ return require('packer').startup(function()
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
-    requires = {'zbirenbaum/copilot.lua'}
+    requires = {'zbirenbaum/copilot.lua', 'github/copilot.vim'}
   }
   use 'phaazon/hop.nvim'
 end)
