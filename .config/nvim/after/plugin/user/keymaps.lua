@@ -35,7 +35,11 @@ keymap("n", "Q", "q", opts)
 -- cancel q
 keymap("n", "q", "<Nop>", opts)
 -- no highlight
-keymap("n", "<leader>l", ":nohl<cr>", opts)
+keymap("n", ";l", ":nohl<cr>", opts)
+-- :q
+keymap("n", ";q", ":q<cr>", opts)
+-- :w
+keymap("n", ";w", ":w<cr>", opts)
 
 --[[ Window ]]
 
