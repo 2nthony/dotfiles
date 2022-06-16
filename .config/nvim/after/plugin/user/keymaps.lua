@@ -41,13 +41,13 @@ keymap("n", ";q", ":q<cr>", opts)
 -- :w
 keymap("n", ";w", ":w<cr>", opts)
 -- move cursor to start of line(include blank-spaces), better ^
-keymap('n', '<C-h>', '99999h', opts)
-keymap('i', '<C-h>', '<Esc>99999hi', opts)
-keymap('v', '<C-h>', '99999h', opts)
--- move cursor to end of line(include blank-spaces), better $
-keymap('n', '<C-l>', '99999l', opts)
-keymap('i', '<C-l>', '<Esc>99999la', opts)
-keymap('v', '<C-l>', '99999l', opts)
+keymap('n', '<C-h>', '^99h', opts)
+keymap('i', '<C-h>', '<Esc>^99hi', opts)
+keymap('v', '<C-h>', '^99h', opts)
+-- better $
+keymap('n', '<C-l>', '$', opts)
+keymap('i', '<C-l>', '<Esc>$a', opts)
+keymap('v', '<C-l>', '$h', opts)
 
 --[[ Window ]]
 
