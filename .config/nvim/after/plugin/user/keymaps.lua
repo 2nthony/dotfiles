@@ -38,6 +38,7 @@ keymap("n", "q", "<Nop>", opts)
 keymap("n", ";l", ":nohl<cr>", opts)
 -- :q
 keymap("n", ";q", ":q<cr>", opts)
+keymap("n", ";Q", ":q!<cr>", opts)
 -- :w
 keymap("n", ";w", ":w<cr>", opts)
 -- move cursor to start of line, better ^
