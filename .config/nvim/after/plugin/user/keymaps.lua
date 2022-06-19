@@ -40,10 +40,10 @@ keymap("n", ";l", ":nohl<cr>", opts)
 keymap("n", ";q", ":q<cr>", opts)
 -- :w
 keymap("n", ";w", ":w<cr>", opts)
--- move cursor to start of line(include blank-spaces), better ^
-keymap('n', '<C-h>', '^99h', opts)
-keymap('i', '<C-h>', '<Esc>^99hi', opts)
-keymap('v', '<C-h>', '^99h', opts)
+-- move cursor to start of line, better ^
+keymap('n', '<C-h>', '^99h^', opts)
+keymap('i', '<C-h>', '<Esc>^99h^i', opts)
+keymap('v', '<C-h>', '^99h^', opts)
 -- better $
 keymap('n', '<C-l>', '$', opts)
 keymap('i', '<C-l>', '<Esc>$a', opts)
