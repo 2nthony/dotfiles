@@ -88,8 +88,8 @@ end
 -- barbar.nvim
 local status_barbar_ok = pcall(require, 'bufferline.nvim')
 if status_barbar_ok then
-  keymap('n', ';w', ':BufferPrevious<CR>', opts)
-  keymap('n', ';e', ':BufferNext<CR>', opts)
+  keymap('n', ';<s-tab>', ':BufferPrevious<CR>', opts)
+  keymap('n', ';<tab>', ':BufferNext<CR>', opts)
   -- Goto buffer in position...
   keymap('n', ';1', ':BufferGoto 1<CR>', opts)
   keymap('n', ';2', ':BufferGoto 2<CR>', opts)
@@ -102,8 +102,8 @@ if status_barbar_ok then
   keymap('n', ';9', ':BufferGoto 9<CR>', opts)
   keymap('n', ';0', ':BufferLast<CR>', opts)
   -- Close buffer
-  keymap('n', ';q', ':BufferClose<CR>', opts)
-  keymap('n', ';Q', ':BufferClose!<CR>', opts)
+  keymap('n', ';x', ':BufferClose<CR>', opts)
+  keymap('n', ';X', ':BufferClose!<CR>', opts)
   -- Magic buffer-picking mode
   keymap('n', ';bp', ':BufferPick<CR>', opts)
   -- Re-order to previous/next

@@ -84,11 +84,11 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 
 #### `;` instead of `\`
 
-- `;w` previous buffer
-- `;e` next buffer
+- `;<s-tab>` previous buffer
+- `;<tab>` next buffer
 - `;1`, `;2`, ... go to buffer, `;0` go to the last buffer
-- `;q` close buffer
-- `;Q` force close buffer
+- `;x` close buffer
+- `;X` force(!) close buffer
 - `;bp` pick a buffer
 
 ## Credit
