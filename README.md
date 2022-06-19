@@ -70,6 +70,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `ghr` git reset hunk
 - `ghu` git undo stage hunk
 - `ghp` git preview hunk
+- `ghS` git stage current file
 
 See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
 
@@ -78,9 +79,9 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 - `ss` split window
 - `sv` vertical split window
 - `sh` focus left window
-- `sj` focus bottom window
+- `sj` focus below window
 - `sk` focus above window
-- `sl` focus below window
+- `sl` focus right window
 
 #### `;` instead of `\`
 
