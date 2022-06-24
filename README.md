@@ -28,6 +28,15 @@ export WORKSPACE="dev"
 
 ![](https://badgen.net/badge/NeoVIM/0.7.0/cyan)
 
+### Installation
+
+Clone this repo and link `nvim` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/nvim ~/.config
+```
+
 ### Features
 
 - [x] LSP
