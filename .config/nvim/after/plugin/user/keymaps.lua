@@ -87,7 +87,7 @@ if (status_nvim_tree_ok) then
 end
 
 -- barbar.nvim
-local status_barbar_ok = pcall(require, 'bufferline.nvim')
+local status_barbar_ok = pcall(require, 'bufferline')
 if status_barbar_ok then
   keymap('n', ';<s-tab>', ':BufferPrevious<CR>', opts)
   keymap('n', ';<tab>', ':BufferNext<CR>', opts)
