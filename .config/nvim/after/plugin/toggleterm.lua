@@ -19,6 +19,7 @@ toggleterm.setup({
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
+    -- https://github.com/akinsho/toggleterm.nvim/issues/61
 		winblend = 0,
 		highlights = {
 			border = "Normal",
