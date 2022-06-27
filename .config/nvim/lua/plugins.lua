@@ -82,6 +82,7 @@ return require('packer').startup(function()
 
   -- theme
   use {'catppuccin/nvim', as = 'catppuccin'}
+  use 'folke/tokyonight.nvim'
 
   -- others
   use 'kyazdani42/nvim-web-devicons'
