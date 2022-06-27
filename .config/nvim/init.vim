@@ -103,6 +103,8 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
 endif
 
+" runtime ./transparent.vim
+
 "}}}
 
 " Extras "{{{
