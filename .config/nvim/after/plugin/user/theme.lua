@@ -1,5 +1,4 @@
--- catppuccin/nvim
-vim.cmd('colorscheme catppuccin')
+vim.cmd('colorscheme tokyonight')
 
 vim.cmd([[
   let g:neosolarized_termtrans=1
