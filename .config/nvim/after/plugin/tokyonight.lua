@@ -6,6 +6,7 @@ end
 
 vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
+vim.g.tokyonight_dark_float = false
 
 -- https://github.com/folke/tokyonight.nvim/issues/162
 vim.g.tokyonight_colors = {
