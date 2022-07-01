@@ -87,9 +87,9 @@ return require('packer').startup(function()
   -- others
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
-  use{
+  use {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && yarn install",
+    run = "cd app && npm install",
     setup = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
