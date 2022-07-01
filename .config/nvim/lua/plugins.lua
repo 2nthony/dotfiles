@@ -58,7 +58,6 @@ return require('packer').startup(function()
     'rafamadriz/friendly-snippets',
     requires = {'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'}
   }
-  use 'ray-x/lsp_signature.nvim'
   use 'stevearc/aerial.nvim'
   use 'folke/trouble.nvim'
   use 'rmagatti/goto-preview'
