@@ -63,7 +63,12 @@ return require('packer').startup(function()
   use 'rmagatti/goto-preview'
 
   -- telescope
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use 'nvim-telescope/telescope-media-files.nvim'
   use 'stevearc/dressing.nvim' -- ui select enhancement
