@@ -24,7 +24,7 @@ Modify the file `.config/fish/user-config.fish`:
 export WORKSPACE="dev"
 ```
 
-## Vim
+## NeoVim
 
 ![](https://badgen.net/badge/NeoVIM/0.7.0/cyan)
 
