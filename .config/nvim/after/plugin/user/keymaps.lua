@@ -187,3 +187,13 @@ local status_toggleterm_ok = pcall(require, "toggleterm")
 if status_toggleterm_ok then
   keymap('n', 'git', ':lua _LAZYGIT_TOGGLE()<cr>', opts)
 end
+
+local status_trouble_ok = pcall(require, "trouble")
+if status_trouble_ok then
+  keymap('n', ';tt', '<cmd>TroubleToggle<cr>', opts)
+  keymap('n', ';tw', '<cmd>TroubleToggle workspace_diagnostics<cr>', opts)
+  keymap('n', ';td', '<cmd>TroubleToggle document_diagnostics<cr>', opts)
+  keymap('n', ';tl', '<cmd>TroubleToggle loclist<cr>', opts)
+  keymap('n', ';tq', '<cmd>TroubleToggle quickfix<cr>', opts)
+  keymap('n', ';tr', '<cmd>TroubleToggle lsp_references<cr>', opts)
+end
