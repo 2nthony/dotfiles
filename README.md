@@ -59,6 +59,15 @@ Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
 
 The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
 
+#### `C/Ctrl`
+
+- `C-h` better `^`
+- `C-l` better `$`
+- `C-a` select all text
+- `C-j` LSP diagnostic next, `S-C-j` LSP diagnostic prev
+- `C-k` LSP hover
+- `C-\` open a float terminal
+
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
@@ -76,10 +85,10 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `gj` git next hunk
 - `gk` git previous hunk
 - `ghs` git stage hunk
+- `ghS` git stage file
 - `ghr` git reset hunk
 - `ghu` git undo stage hunk
 - `ghp` git preview hunk
-- `ghS` git stage current file
 
 See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
 
@@ -102,6 +111,8 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 - `;x` close buffer
 - `;X` force(!) close buffer
 - `;bp` pick a buffer
+- `;S` ripgrep search(like global search)
+- `;tt` toggle show troubles(problems)
 
 ## Credit
 
