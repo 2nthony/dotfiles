@@ -1,8 +1,6 @@
 set fish_greeting ""
 
 set -gx TERM xterm-256color
-# user config file
-source $HOME/.config/fish/user-config.fish
 
 # theme
 #set -g theme_color_scheme terminal-dark
