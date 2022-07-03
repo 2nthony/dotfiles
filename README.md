@@ -15,15 +15,6 @@
 - [fnm](https://github.com/Schniz/fnm) - NVM alternative
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
 
-### peco
-
-Modify the file `.config/fish/user-config.fish`:
-
-```fish
-# which means `$HOME/dev` for peco to list git repos
-export WORKSPACE="dev"
-```
-
 ## NeoVim
 
 ![](https://badgen.net/badge/NeoVIM/0.7.0/cyan)
