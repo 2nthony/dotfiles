@@ -1,34 +1,8 @@
-![cover](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/YThN7QEsDMLt.png)
+![cover](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/hIGv561ETqRTHWgdbH.png)
 
-## 2nthony's dotfiles
+# 2nthony's dotfiles
 
-**Warning**: Use it with your own risk!
-
-This is a **MODIFIED** version from https://github.com/craftzdog/dotfiles-public .
-
-## Contents
-
-- NeoVIM config
-  - Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug)
-- tmux config
-- git config
-- fish config
-
-## Vim setup
-
-Requires Neovim (>= 0.5)
-
-- [vim-plug](https://github.com/junegunn/vim-plug) - A minimalist Vim plugin manager
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - A collection of configurations for Neovim's built-in LSP
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - [Treesitter](https://github.com/tree-sitter/tree-sitter) configurations and abstraction layer for Neovim
-- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion plugin for neovim coded in Lua
-- [tami5/lspsaga.nvim](https://github.com/tami5/lspsaga.nvim) - A light-weight LSP plugin based on Neovim built-in LSP with highly a performant UI
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder over lists
-  - Install [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) dependency: `brew install ripgrep`
-
-More to see [plug.vim](.config/nvim/plug.vim).
-
-## Shell setup
+## Shell
 
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
@@ -41,34 +15,6 @@ More to see [plug.vim](.config/nvim/plug.vim).
 - [fnm](https://github.com/Schniz/fnm) - NVM alternative
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
 
-## LSP setup
-
-Requires nvim-lspconfig
-
-- TypeScript(tsserver)
-  - `npm i -g typescript typescript-language-server diagnostic-languageserver`
-- Vue(Volar)
-  - `npm i -g @volar/server`
-- Svelte
-  - `npm i -g svelte-language-server`
-- Rust
-  - `rustup component add rust-analysis`
-  - `rustup component add rust-src`
-- Go
-- Tailwindcss
-  - `npm i -g @tailwindcss/language-server`
-
-## How to use
-
-Please follow https://github.com/craftzdog/dotfiles-public#how-to-use
-
-## Differents
-
-### vim-plug
-
-- `completion-nvim` -> `hrsh7th/nvim-cmp`
-- `glepnir/lspsaga.nvim` -> `tami5/lspsaga.nvim`
-
 ### peco
 
 Modify the file `.config/fish/user-config.fish`:
@@ -78,6 +24,100 @@ Modify the file `.config/fish/user-config.fish`:
 export WORKSPACE="dev"
 ```
 
+## NeoVim
+
+![](https://badgen.net/badge/NeoVIM/0.7.0/cyan)
+
+### Installation
+
+Clone this repo and link `nvim` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/nvim ~/.config
+```
+
+### Features
+
+- [x] LSP
+- [x] Git Integration
+- [x] Code Syntax Highlighting
+- [x] Code Snippets
+- [x] Code Completion
+- [x] Code Diagnostics
+- [x] GitHub Copilot
+- [x] Tabbar
+- [x] Statusline
+- [x] Good Looking Theme
+- [x] ...
+
+### Plugins
+
+Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
+
+### Keybindings
+
+The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
+
+#### `C/Ctrl`
+
+- `C-h` better `^`
+- `C-l` better `$`
+- `C-a` select all text
+- `C-j` LSP diagnostic next, `S-C-j` LSP diagnostic prev
+- `C-k` LSP hover
+- `C-\` open a float terminal
+
+#### `f` means to `find` or `file`
+
+- `fe` toggle file explorer
+- `fd` locate current file in file explorer
+- `ff` find a file
+- `fr` find character(live grep) in files (install `ripgrep`)
+- `fb` find a buffer(tab)
+- `fo` find oldfiles
+
+#### `g` means to `go` or `git`
+
+- `git` open lazygit (install `lazygit`)
+- `gw` go to word
+- `gl` go to line
+- `gj` git next hunk
+- `gk` git previous hunk
+- `ghs` git stage hunk
+- `ghS` git stage file
+- `ghr` git reset hunk
+- `ghu` git undo stage hunk
+- `ghp` git preview hunk
+
+See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
+
+#### `s` means to `switch`, `split` or others
+
+- `ss` split window
+- `sv` vertical split window
+- `sh` focus left window
+- `sj` focus below window
+- `sk` focus above window
+- `sl` focus right window
+
+#### `;` instead of `\`
+
+- `;w` = `:w`
+- `;q` = `:q`, `:Q` = `:q!`
+- `;<s-tab>` previous buffer
+- `;<tab>` next buffer
+- `;1`, `;2`, ... go to buffer, `;0` go to the last buffer
+- `;x` close buffer
+- `;X` force(!) close buffer
+- `;bp` pick a buffer
+- `;S` ripgrep search(like global search)
+- `;tt` toggle show troubles(problems)
+
+## Credit
+
+You can watch the **origin** [video(Bilibili for Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788) for the fully tutorial.
+
 ## About
 
-> GitHub([2nthony](https://github.com/2nthony)) · Twitter([2nthony](https://twitter.com/2nthony))
+> GitHub [2nthony](https://github.com/2nthony) · Twitter [\_2nthony](https://twitter.com/_2nthony)

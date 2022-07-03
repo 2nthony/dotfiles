@@ -11,7 +11,7 @@ if !1 | finish | endif
 set nocompatible
 set number
 syntax enable
-set fileencodings=utf-8,sjis,euc-jp,latin
+set fileencodings=utf-8
 set encoding=utf-8
 set title
 set autoindent
@@ -26,6 +26,8 @@ set expandtab
 "let loaded_matchparen = 1
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
+" Use OSX clipboard to copy and to paste
+set clipboard+=unnamedplus
 
 " incremental substitution (neovim)
 if has('nvim')
@@ -88,39 +90,6 @@ endif
 
 "}}}
 
-" File types "{{{
-" ---------------------------------------------------------------------
-" JavaScript
-au BufNewFile,BufRead *.es6 setf javascript
-" TypeScript
-au BufNewFile,BufRead *.tsx setf typescriptreact
-" Markdown
-au BufNewFile,BufRead *.md set filetype=markdown
-" Flow
-au BufNewFile,BufRead *.flow set filetype=javascript
-
-set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
-
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-
-"}}}
-
-" Imports "{{{
-" ---------------------------------------------------------------------
-runtime ./plug.vim
-if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
-  endif
-endif
-
-runtime ./maps.vim
-"}}}
-
 " Syntax theme "{{{
 " ---------------------------------------------------------------------
 
@@ -130,13 +99,11 @@ if exists("&termguicolors") && exists("&winblend")
   set termguicolors
   set winblend=0
   set wildoptions=pum
-  set pumblend=5
+  set pumblend=0
   set background=dark
-  " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
 endif
+
+" runtime ./transparent.vim
 
 "}}}
 
@@ -146,3 +113,6 @@ set exrc
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
+
+lua require('plugins')
+
