@@ -71,7 +71,6 @@ return require('packer').startup(function()
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use 'nvim-telescope/telescope-media-files.nvim'
-  use 'stevearc/dressing.nvim' -- ui select enhancement
 
   -- treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -92,6 +91,7 @@ return require('packer').startup(function()
   -- theme
   use {'catppuccin/nvim', as = 'catppuccin'}
   use 'folke/tokyonight.nvim'
+  use 'stevearc/dressing.nvim' -- popup beautify
 
   -- others
   use 'kyazdani42/nvim-web-devicons'
