@@ -77,6 +77,12 @@ if status_telescope_ok then
   keymap('n', 'fb', ':Telescope buffers<CR>', opts)
   keymap('n', 'fo', ':Telescope oldfiles<CR>', opts)
   keymap('n', 'f;', ':Telescope help_tags<CR>', opts)
+
+  -- todo-comments
+  local status_todo_comments_ok, todo_comments = pcall(require, 'todo-comments')
+  if status_todo_comments_ok then
+    keymap('n', 'ft', ':TodoTelescope<CR>', opts)
+  end
 end
 
 -- nvim-tree

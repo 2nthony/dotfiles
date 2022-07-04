@@ -67,6 +67,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `fr` find character(live grep) in files (install `ripgrep`)
 - `fb` find a buffer(tab)
 - `fo` find oldfiles
+- `ft` find todo comments
 
 #### `g` means to `go` or `git`
 
