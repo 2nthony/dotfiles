@@ -79,6 +79,7 @@ highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
 
 augroup BgHighlight
   autocmd!
+  " FIXME: telescope prompt background
   autocmd WinEnter * set cul
   autocmd WinLeave * set nocul
 augroup END
