@@ -31,6 +31,7 @@ telescope.setup{
   defaults = {
     buffer_previewer_maker = new_maker,
 
+    layout_strategy = 'vertical',
     prompt_prefix = " ",
     selection_caret = " ",
     mappings = {
