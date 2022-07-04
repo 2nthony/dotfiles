@@ -70,7 +70,7 @@ keymap('n', '<C-down>', '<C-w>+', opts)
 --[[ Plugin ]]
 
 -- telescope
-local status_telescope_ok = pcall(require, 'telescope')
+local status_telescope_ok, telescope = pcall(require, 'telescope')
 if status_telescope_ok then
   keymap('n', 'ff', ':Telescope find_files<CR>', opts)
   keymap('n', 'fr', ':Telescope live_grep<CR>', opts)
@@ -82,6 +82,11 @@ if status_telescope_ok then
   local status_todo_comments_ok = pcall(require, 'todo-comments')
   if status_todo_comments_ok then
     keymap('n', 'ft', ':TodoTelescope<CR>', opts)
+  end
+
+  if telescope.extensions.vim_bookmarks ~= nil then
+    keymap('n', 'fm', ':Telescope vim_bookmarks current_file<CR>', opts)
+    keymap('n', 'fM', ':Telescope vim_bookmarks all<CR>', opts)
   end
 end
 
