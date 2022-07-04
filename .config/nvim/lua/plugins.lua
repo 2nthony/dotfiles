@@ -77,7 +77,12 @@ return require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'windwp/nvim-ts-autotag'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'folke/todo-comments.nvim'
+  use {
+    'folke/todo-comments.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
   use 'p00f/nvim-ts-rainbow'
 
   -- git
