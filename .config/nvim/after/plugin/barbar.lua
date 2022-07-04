@@ -1,5 +1,5 @@
 -- https://github.com/romgrk/barbar.nvim
-local status_barbar_ok = pcall(require, 'bufferline.nvim')
+local status_barbar_ok = pcall(require, 'bufferline')
 if not status_barbar_ok then
   return
 end
