@@ -3,4 +3,9 @@ if not status_dressing_ok then
   return
 end
 
-dressing.setup{}
+dressing.setup{
+  input = {
+    enabled = true,
+    winblend = 0
+  },
+}
