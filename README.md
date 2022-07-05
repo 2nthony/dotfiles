@@ -17,7 +17,7 @@
 
 ## NeoVim
 
-![](https://badgen.net/badge/NeoVIM/0.7.0/cyan)
+![](https://img.shields.io/badge/-0.7.0-29BC9B)
 
 ### Installation
 
