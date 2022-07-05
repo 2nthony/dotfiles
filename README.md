@@ -68,6 +68,8 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `fb` find a buffer(tab)
 - `fo` find oldfiles
 - `ft` find todo comments
+- `fm` find bookmarks, `fM` find project bookmarks
+  - `mm` toggle bookmark
 
 #### `g` means to `go` or `git`
 
@@ -84,7 +86,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 
 See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
 
-#### `s` means to `switch`, `split` or others
+#### `s` means to `switch`, `split`
 
 - `ss` split window
 - `sv` vertical split window
