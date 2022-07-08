@@ -18,6 +18,15 @@
 
 ## Fish
 
+**NOT tested to a fresh device.**
+
+Clone this repo and link `fish` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/fish ~/.config
+```
+
 ## NeoVim
 
 ![](https://img.shields.io/badge/-0.7.0-29BC9B)
