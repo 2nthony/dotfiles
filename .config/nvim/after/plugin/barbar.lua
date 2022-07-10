@@ -7,7 +7,8 @@ end
 -- Set barbar's options
 vim.g.bufferline = {
   -- Enable/disable animations
-  animation = true,
+  -- auto-session needed to disable this
+  animation = false,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
   auto_hide = false,
