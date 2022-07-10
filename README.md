@@ -49,9 +49,10 @@ ln -s ~/yourpath/.config/nvim ~/.config
 - [x] Code Completion
 - [x] Code Diagnostics
 - [x] GitHub Copilot
-- [x] Tabbar
+- [x] Bufferline
 - [x] Statusline
 - [x] Good Looking Theme
+- [x] Auto Session
 - [x] ...
 
 ### Plugins
