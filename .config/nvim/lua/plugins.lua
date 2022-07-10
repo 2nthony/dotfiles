@@ -124,4 +124,5 @@ return require('packer').startup(function()
     requires = {'zbirenbaum/copilot.lua', 'github/copilot.vim'}
   }
   use 'phaazon/hop.nvim'
+  -- use 'mhartington/formatter.nvim'
 end)
