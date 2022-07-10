@@ -63,6 +63,7 @@ Pods/
 # Fish
 .config/fish/fish_variables.x86_64
 .fishd.tmp*
+fish_variables
 
 # Karabiner
 .config/karabiner/automatic_backups
