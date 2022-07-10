@@ -10,7 +10,7 @@
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
 - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Exa](https://the.exa.website/) - `ls` replacement
-- [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
+- [ghq](https://github.com/2nthony/ghq) - Local Git repository organizer
 - [peco](https://github.com/peco/peco) - Interactive filtering
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js manager
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
