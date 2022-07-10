@@ -3,6 +3,6 @@
 vim.cmd([[
   augroup fmt
     autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
+    autocmd BufWritePre * Neoformat
   augroup END
 ]])
