@@ -125,5 +125,5 @@ return require('packer').startup(function()
   }
   use 'phaazon/hop.nvim'
   -- use 'mhartington/formatter.nvim'
-  use 'mhartington/formatter.nvim'
+  use 'rmagatti/auto-session'
 end)

@@ -1,3 +1,4 @@
+-- now is disabled in plugins.lua
 local status_formatter_ok, formatter = pcall(require, 'formatter')
 if not status_formatter_ok then
   return
