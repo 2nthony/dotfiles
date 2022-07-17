@@ -117,7 +117,7 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use {'folke/which-key.nvim', disable = true}
   use {'akinsho/toggleterm.nvim', tag = 'v1.0.0'}
-  -- use 'simrat39/rust-tools.nvim'
+  use 'simrat39/rust-tools.nvim'
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
