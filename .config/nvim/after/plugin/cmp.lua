@@ -136,7 +136,23 @@ cmp_config = {
 
     ["<C-p>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping.confirm({ select = true })
+    ["<CR>"] = cmp.mapping(function(fallback)
+      if cmp.visible() and cmp.confirm(cmp_config.confirm_opts) then
+        -- TODO: not sure this, comment this because rust-tools.nvim
+        -- if luasnip.jumpable(1) then
+        --   luasnip.jump(1)
+        -- end
+        return
+      end
+
+      if luasnip.jumpable(1) then
+        if not luasnip.jump(1) then
+          fallback()
+        end
+      else
+        fallback()
+      end
+    end),
   },
 }
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
