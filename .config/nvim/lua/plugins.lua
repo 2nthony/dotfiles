@@ -95,7 +95,6 @@ return require('packer').startup(function()
   use 'sindrets/diffview.nvim'
 
   -- theme
-  use {'catppuccin/nvim', as = 'catppuccin'}
   use 'folke/tokyonight.nvim'
   use 'stevearc/dressing.nvim' -- popup beautify
 
