@@ -1,3 +1,7 @@
+local status_lsp_signature_ok, lsp_signature = pcall(require, 'lsp_signature')
+local status_illuminate_ok, illuminate = pcall(require, 'illuminate')
+local status_aerial_ok aerial = pcall(require, 'aerial')
+
 -- Use an on_attach function to only map the following keys 
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -33,11 +37,11 @@ local on_attach = function(client, bufnr)
     lsp_signature.on_attach()
   end
 
-  if illuminate then
+  if status_illuminate_ok then
     illuminate.on_attach(client)
   end
 
-  if aerial then
+  if status_aerial_ok then
     aerial.on_attach(client, bufnr)
   end
 end

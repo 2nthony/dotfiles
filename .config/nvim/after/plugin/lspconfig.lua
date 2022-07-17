@@ -8,9 +8,6 @@ if not status then
   return
 end
 
-local status_lsp_signature_ok, lsp_signature = pcall(require, 'lsp_signature')
-local illuminate = require'illuminate'
-local aerial = require'aerial'
 local util = require'lspconfig.util'
 local on_attach = require'lsp.on_attach'
 local capabilities = require'lsp.capabilities'
