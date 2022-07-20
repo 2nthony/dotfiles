@@ -32,6 +32,11 @@ telescope.setup{
     buffer_previewer_maker = new_maker,
 
     layout_strategy = 'vertical',
+    layout_config = {
+      vertical = {
+        preview_cutoff = 0
+      }
+    },
     prompt_prefix = " ",
     selection_caret = " ",
     mappings = {
@@ -108,6 +113,7 @@ telescope.setup{
   },
   pickers = {
     find_files = {
+      -- theme = "dropdown",
       find_command = {"fd", "--type", "file", "--hidden"},
     },
   },
