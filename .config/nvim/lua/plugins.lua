@@ -104,11 +104,7 @@ return require('packer').startup(function()
   use {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
-    setup = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-    tag = 'v0.0.10'
+    tag = 'v0.0.10',
   }
   use 'sbdchd/neoformat'
   use 'windwp/nvim-autopairs'
