@@ -106,6 +106,18 @@ cmp_config = {
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-f>"] = cmp.mapping.scroll_docs(-4),
     ["<C-d>"] = cmp.mapping.scroll_docs(4),
+    ["<esc>"] = cmp.mapping(function(callback)
+      -- NOTE: DO NOT delete the `callback`
+      if not luasnip.in_snippet() then
+        luasnip.unlink_current()
+        callback()
+      else
+        callback()
+      end
+    end, {
+      "i",
+      "s"
+    }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
