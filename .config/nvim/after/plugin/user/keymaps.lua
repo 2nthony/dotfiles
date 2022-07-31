@@ -187,7 +187,6 @@ if status_goto_preview_ok then
   keymap('n', 'gpi', "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", opts)
   keymap('n', 'gP', "<cmd>lua require('goto-preview').close_all_win()<cr>", opts)
 
-  local status_telescope_ok = pcall(require, 'telescope')
   if status_telescope_ok then
     keymap('n', 'gpr', "<cmd>lua require('goto-preview').goto_preview_references()<cr>", opts)
   end
