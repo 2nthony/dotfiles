@@ -107,13 +107,8 @@ cmp_config = {
     ["<C-f>"] = cmp.mapping.scroll_docs(-4),
     ["<C-d>"] = cmp.mapping.scroll_docs(4),
     ["<esc>"] = cmp.mapping(function(callback)
-      -- NOTE: DO NOT delete the `callback`
-      if not luasnip.in_snippet() then
-        luasnip.unlink_current()
-        callback()
-      else
-        callback()
-      end
+      luasnip.unlink_current()
+      callback() -- NOTE: CAN NOT delete this `callback`
     end, {
       "i",
       "s"
