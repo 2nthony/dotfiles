@@ -109,8 +109,7 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua'
   use {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    tag = 'v0.0.10',
+    run = "cd app && yarn install",
   }
   use 'sbdchd/neoformat'
   use 'windwp/nvim-autopairs'
