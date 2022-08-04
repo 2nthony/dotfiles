@@ -1,1 +1,4 @@
-vim.cmd('colorscheme tokyonight')
+-- apply theme
+
+-- from neosolarized.lua
+THEME_NEOSOLARIZED()

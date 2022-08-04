@@ -96,6 +96,12 @@ return require('packer').startup(function()
 
   -- theme
   use 'folke/tokyonight.nvim'
+  use {
+    'svrana/neosolarized.nvim',
+    requires = {
+      'tjdevries/colorbuddy.nvim'
+    }
+  }
   use 'stevearc/dressing.nvim' -- popup beautify
 
   -- others
