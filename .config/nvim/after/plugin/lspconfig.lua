@@ -138,7 +138,7 @@ vim.diagnostic.config({
   underline = true,
   severity_sort = true,
   float = {
-    focusable = false,
+    focusable = true,
     style = "minimal",
     border = "rounded",
     source = "always",
@@ -161,6 +161,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-local pop_opts = { border = "rounded", focusable = false, max_width = 80 }
+local pop_opts = { border = "rounded", focusable = true, max_width = 80 }
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, pop_opts)
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, pop_opts)
