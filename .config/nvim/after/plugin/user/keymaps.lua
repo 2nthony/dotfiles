@@ -100,8 +100,8 @@ end
 -- barbar.nvim
 local status_barbar_ok = pcall(require, 'bufferline')
 if status_barbar_ok then
-  keymap('n', ';<s-tab>', ':BufferPrevious<CR>', opts)
-  keymap('n', ';<tab>', ':BufferNext<CR>', opts)
+  keymap('n', '<s-tab>', ':BufferPrevious<CR>', opts)
+  keymap('n', '<tab>', ':BufferNext<CR>', opts)
   -- Goto buffer in position...
   keymap('n', ';1', ':BufferGoto 1<CR>', opts)
   keymap('n', ';2', ':BufferGoto 2<CR>', opts)

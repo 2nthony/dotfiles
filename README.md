@@ -72,6 +72,10 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `C-k` LSP hover
 - `C-\` open a float terminal
 
+#### `<Tab>`
+
+- `<Tab>` next buffer, `<S-Tab>` previous buffer
+
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
@@ -112,8 +116,6 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 
 - `;w` = `:w`
 - `;q` = `:q`, `:Q` = `:q!`
-- `;<s-tab>` previous buffer
-- `;<tab>` next buffer
 - `;1`, `;2`, ... go to buffer, `;0` go to the last buffer
 - `;x` close buffer
 - `;X` force(!) close buffer
