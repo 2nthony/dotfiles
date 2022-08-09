@@ -63,14 +63,14 @@ Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
 
 The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
 
-#### `C/Ctrl`
+#### `<C>` means to `<Ctrl>`
 
-- `C-h` better `^`
-- `C-l` better `$`
-- `C-a` select all text
-- `C-j` LSP diagnostic next, `S-C-j` LSP diagnostic prev
-- `C-k` LSP hover
-- `C-\` open a float terminal
+- `<C-h>` better `^`
+- `<C-l>` better `$`
+- `<C-a>` select all text
+- `<C-j>` LSP diagnostic next, `<S-C-j>` LSP diagnostic prev
+- `<C-k>` LSP hover
+- `<C-\>` open a float terminal
 
 #### `<Tab>`
 
