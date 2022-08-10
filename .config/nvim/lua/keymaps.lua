@@ -9,42 +9,37 @@ keymap('n', '<S-C-p>', '"0p', opts)
 -- Delete without yank
 keymap('n', '<leader>d', '"_d', opts)
 keymap('n', 'x', '"_x', opts)
+
 -- Select all
 keymap('n', '<C-a>', 'gg<S-v>G', opts)
+
 -- Delete a word backwards
 keymap('n', 'dw', 'vb"_d', opts)
--- Save with root permission
-vim.cmd([[
-  command! W w !sudo tee > /dev/null %
-]])
--- Search for selected text, forwards or backwards.
-vim.cmd([[
-  vnoremap <silent> * :<C-U>
-    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-    \gvy/<C-R><C-R>=substitute(
-    \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-    \gV:call setreg('"', old_reg, old_regtype)<CR>
-  vnoremap <silent> # :<C-U>
-    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-    \gvy?<C-R><C-R>=substitute(
-    \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-    \gV:call setreg('"', old_reg, old_regtype)<CR>
-]])
+
+-- Save with root permission (not working for now)
+-- vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+
 -- remap macro record key
 keymap("n", "Q", "q", opts)
+
 -- cancel q
 keymap("n", "q", "<Nop>", opts)
+
 -- no highlight
 keymap("n", ";l", ":nohl<cr>", opts)
+
 -- :q
 keymap("n", ";q", ":q<cr>", opts)
 keymap("n", ";Q", ":q!<cr>", opts)
+
 -- :w
 keymap("n", ";w", ":w<cr>", opts)
+
 -- move cursor to start of line, better ^
 keymap('n', '<C-h>', '^99h^', opts)
 keymap('i', '<C-h>', '<Esc>^99h^i', opts)
 keymap('v', '<C-h>', '^99h^', opts)
+
 -- better $
 keymap('n', '<C-l>', '$', opts)
 keymap('i', '<C-l>', '<Esc>$a', opts)
@@ -55,11 +50,13 @@ keymap('v', '<C-l>', '$h', opts)
 -- Split window
 keymap('n', 'ss', ':split<cr><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<cr><C-w>w', opts)
+
 -- Move window
 keymap('n', 'sh', '<C-w>h', opts)
 keymap('n', 'sk', '<C-w>k', opts)
 keymap('n', 'sj', '<C-w>j', opts)
 keymap('n', 'sl', '<C-w>l', opts)
+
 -- Resize window
 keymap('n', '<C-left>', '<C-w><', opts)
 keymap('n', '<C-right>', '<C-w>>', opts)
@@ -68,6 +65,20 @@ keymap('n', '<C-down>', '<C-w>+', opts)
 
 
 --[[ Plugin ]]
+
+-- lspsaga
+local status_lspsaga_ok = pcall(require, "lspsaga")
+if status_lspsaga_ok then
+  -- keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  -- keymap('n', '<S-C-j>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+  -- keymap('n', '<C-k>', '<Cmd>Lspsaga hover_doc<CR>', opts)
+  -- keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
+  keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+  keymap('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
+  keymap('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+  keymap('n', ';ca', '<cmd>Lspsaga code_action<CR>', opts)
+  keymap('v', ';ca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
+end
 
 -- telescope
 local status_telescope_ok, telescope = pcall(require, 'telescope')

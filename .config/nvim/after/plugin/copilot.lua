@@ -5,15 +5,16 @@ if not status_copilot_ok then
   return
 end
 
+
 if vim.g.loaded_copilot then
-  -- vim.cmd([[
-  --   autocmd BufEnter * let b:copilot_enabled = v:false
-  -- ]])
+  vim.g.copilot_no_tab_map = true
+  vim.g.copilot_assume_mapped = true
 
   vim.cmd([[
-    imap <silent><script><expr> <s-tab> copilot#Accept("\<CR>")
-    autocmd BufEnter * let g:copilot_no_tab_map = v:true
+    autocmd BufEnter * let b:copilot_enabled = v:false
   ]])
 end
 
--- copilot.setup{}
+copilot.setup({
+  ft_disable = { "markdown" }
+})

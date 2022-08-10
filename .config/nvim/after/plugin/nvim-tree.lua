@@ -61,7 +61,7 @@ nvim_tree.setup{
   },
   live_filter = {
     prefix = "[Search]: ",
-    always_show_folders = true,
+    always_show_folders = false,
   },
   renderer = {
     icons = {
@@ -69,20 +69,13 @@ nvim_tree.setup{
         default = "",
         symlink = "",
         git = {
-          unstaged = "",
+          unstaged = "M",
           staged = "S",
           unmerged = "",
-          renamed = "➜",
-          deleted = "",
+          renamed = "R",
+          deleted = "D",
           untracked = "U",
           ignored = "◌",
-        },
-        folder = {
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
         },
       }
     }

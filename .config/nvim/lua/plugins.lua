@@ -18,35 +18,39 @@ if not status_packer_ok then
   return
 end
 
-return require('packer').startup(function()
+return packer.startup(function()
+  -- core
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use 'wakatime/vim-wakatime'
 
-  use {
-    'rhysd/accelerated-jk',
-    commit = '156c5158b72059404f6b8aaf15b59f87dd0aaa88'
-  }
+  -- basic
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
-  use 'lewis6991/impatient.nvim'
+  use 'lewis6991/impatient.nvim' -- speed up loading lua modules
   use 'hoob3rt/lualine.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim'
   use 'nathom/filetype.nvim'
   use 'romgrk/barbar.nvim'
   use 'mbbill/undotree'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-spectre'
 
   -- lsp
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/mason.nvim'
+  use {
+    'williamboman/mason-lspconfig.nvim', -- formerly lsp installer
+    requires = {
+      'williamboman/mason.nvim',
+      'neovim/nvim-lspconfig'
+    }
+  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
-  -- use 'onsails/lspkind-nvim'
-  -- use 'tami5/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'glepnir/lspsaga.nvim'
   use 'folke/lsp-colors.nvim'
   use 'RRethy/vim-illuminate'
   use 'L3MON4D3/LuaSnip'
@@ -58,9 +62,8 @@ return require('packer').startup(function()
     'rafamadriz/friendly-snippets',
     requires = {'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'}
   }
-  use 'stevearc/aerial.nvim'
   use 'folke/trouble.nvim'
-  use 'rmagatti/goto-preview'
+  use 'simrat39/rust-tools.nvim'
 
   -- telescope
   use {
@@ -70,7 +73,12 @@ return require('packer').startup(function()
     }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
-  use 'nvim-telescope/telescope-media-files.nvim'
+  use {
+    'nvim-telescope/telescope-media-files.nvim',
+    requires = {
+      'nvim-lua/popup.nvim'
+    }
+  }
   use {
     'tom-anders/telescope-vim-bookmarks.nvim',
     requires = {
@@ -81,14 +89,18 @@ return require('packer').startup(function()
   -- treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'windwp/nvim-ts-autotag'
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    requires = {
+      'tpope/vim-commentary'
+    }
+  }
   use {
     'folke/todo-comments.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
     }
   }
-  use 'p00f/nvim-ts-rainbow'
 
   -- git
   use {'lewis6991/gitsigns.nvim', tag = 'v0.4'}
@@ -102,28 +114,33 @@ return require('packer').startup(function()
       'tjdevries/colorbuddy.nvim'
     }
   }
-  use 'stevearc/dressing.nvim' -- popup beautify
+  use 'stevearc/dressing.nvim' -- popup beautifyplugins
 
   -- others
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
   use {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && yarn install",
+    run = function() vim.fn["mkdp#util#install"]() end,
   }
   use 'sbdchd/neoformat'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-spectre'
   use 'norcalli/nvim-colorizer.lua'
-  use {'folke/which-key.nvim', disable = true}
   use {'akinsho/toggleterm.nvim', tag = 'v1.0.0'}
-  use 'simrat39/rust-tools.nvim'
   use {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-    requires = {'zbirenbaum/copilot.lua', 'github/copilot.vim'}
+    module = "copilot_cmp",
+    requires = {
+      "github/copilot.vim",
+      "zbirenbaum/copilot.lua",
+    }
   }
   use 'phaazon/hop.nvim'
   -- use 'mhartington/formatter.nvim'
   use 'rmagatti/auto-session'
+
+  use {
+    'rhysd/accelerated-jk',
+    commit = '156c5158b72059404f6b8aaf15b59f87dd0aaa88'
+  }
+  use 'wakatime/vim-wakatime'
 end)
