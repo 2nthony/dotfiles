@@ -32,13 +32,13 @@ telescope.setup{
     buffer_previewer_maker = new_maker,
 
     layout_strategy = 'vertical',
-    layout_config = {
-      vertical = {
-        preview_cutoff = 0
-      }
-    },
+    -- layout_config = {
+    --   vertical = {
+    --     preview_cutoff = 0
+    --   }
+    -- },
     prompt_prefix = " ",
-    selection_caret = " ",
+    selection_caret = " ",
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
@@ -125,7 +125,7 @@ telescope.setup{
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case", the default case_mode is "smart_case"
     },
     media_files = {
-      filetypes = {"png", "webp", "jpg", "jpeg"},
+      filetypes = {"png", "webp", "jpg", "jpeg", "gif", "svg"},
       -- find_cmd = "rg" -- find command (defaults to `fd`)
     },
   }

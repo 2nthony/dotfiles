@@ -1,8 +1,3 @@
-local status_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
-if status_lsp_installer then
-  lsp_installer.setup{}
-end
-
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if not status then
   return
@@ -11,12 +6,9 @@ end
 local util = require'lspconfig.util'
 local on_attach = require'lsp.on_attach'
 local capabilities = require'lsp.capabilities'
+local symbols = require'symbols'
 
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
@@ -114,18 +106,21 @@ nvim_lsp.jsonls.setup {
   }
 }
 
--- config
-
-local signs = {
-  { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn", text = "" },
-  { name = "DiagnosticSignHint", text = "" },
-  { name = "DiagnosticSignInfo", text = "" },
-}
-
-for _, sign in ipairs(signs) do
-  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+-- Diagnostic symbols in the sign column (gutter)
+local signs = symbols.signs
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
+
+local float_opts = {
+  focusable = true,
+  style = "minimal",
+  border = "rounded",
+  source = "always",
+  header = "",
+  prefix = "",
+}
 
 vim.diagnostic.config({
   -- virtual text
@@ -137,30 +132,21 @@ vim.diagnostic.config({
   update_in_insert = true,
   underline = true,
   severity_sort = true,
-  float = {
-    focusable = true,
-    style = "minimal",
-    border = "rounded",
-    source = "always",
-    header = "",
-    prefix = "",
-  },
+  float = float_opts,
 })
-
-vim.lsp.set_log_level("debug")
 
 -- virtual text icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
-    -- This sets the spacing and the prefix, obviously.
+    update_in_insert = false,
     virtual_text = {
       spacing = 4,
-      prefix = ''
-    }
+      prefix = symbols.signs.prefix
+    },
+    severity_sort = true,
   }
 )
 
-local pop_opts = { border = "rounded", focusable = true, max_width = 80 }
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, pop_opts)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, pop_opts)
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float_opts)
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float_opts)

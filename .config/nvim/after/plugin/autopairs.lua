@@ -1,7 +1,9 @@
 local status_autopairs_ok, autopairs = pcall(require, "nvim-autopairs")
 if (not status_autopairs_ok) then return end
 
-autopairs.setup{}
+autopairs.setup{
+  disable_filetype = { "TelescopePrompt" , "vim" },
+}
 
 local status_cmp_ok, cmp = pcall(require, "cmp")
 if status_cmp_ok then
