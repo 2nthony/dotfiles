@@ -62,8 +62,14 @@ Pods/
 
 # Fish
 .config/fish/fish_variables.x86_64
+.config/fish/completions/
+.config/fish/conf.d/
+!.config/fish/functions/fish_user_key_binding.fish
+!.config/fish/functions/peco_change_directory.fish
+!.config/fish/functions/peco_select_history.fish
+.config/fish/fish_plugins
+.config/fish/fish_variables
 .fishd.tmp*
-fish_variables
 
 # Karabiner
 .config/karabiner/automatic_backups
