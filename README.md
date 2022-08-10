@@ -2,36 +2,11 @@
 
 # 2nthony's dotfiles
 
-## Shell
+## [NeoVim](https://neovim.io/)
 
-- [Fish shell](https://fishshell.com/)
-- [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
-- [Tide](https://github.com/IlanCosman/tide) - Shell theme
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-- [z for fish](https://github.com/jethrokuan/z) - Directory jumping
-- [Exa](https://the.exa.website/) - `ls` replacement
-- [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
-- [peco](https://github.com/peco/peco) - Interactive filtering
-- [nvm](https://github.com/nvm-sh/nvm) - Node.js manager
-  - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
-- [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
+![](https://img.shields.io/badge/-0.7.x-29BC9B)
 
-## Fish
-
-**NOT tested to a fresh device.**
-
-Clone this repo and link `fish` to `~/.config`
-
-```bash
-git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/fish ~/.config
-```
-
-## NeoVim
-
-![](https://img.shields.io/badge/-0.7.0-29BC9B)
-
-### Installation
+### Setup
 
 Clone this repo and link `nvim` to `~/.config`
 
@@ -50,7 +25,6 @@ ln -s ~/yourpath/.config/nvim ~/.config
 - [x] Code Diagnostics
 - [x] GitHub Copilot
 - [x] Bufferline
-- [x] Statusline
 - [x] Good Looking Theme
 - [x] Auto Session
 - [x] ...
@@ -123,9 +97,24 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 - `;S` ripgrep search(like global search)
 - `;tt` toggle show troubles(problems)
 
+## Shell
+
+- [Fish shell](https://fishshell.com/)
+- [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
+- [Tide](https://github.com/IlanCosman/tide) - Shell theme
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
+- [z for fish](https://github.com/jethrokuan/z) - Directory jumping
+- [Exa](https://the.exa.website/) - `ls` replacement
+- [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
+- [peco](https://github.com/peco/peco) - Interactive filtering
+- [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
+  - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
+- [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
+
 ## Credit
 
-You can watch the **origin** [video(Bilibili for Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788) for the fully tutorial.
+- [打造 neovim IDE (Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788)
+- [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
 
 ## About
 
