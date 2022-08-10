@@ -64,6 +64,7 @@ Pods/
 .config/fish/fish_variables.x86_64
 .config/fish/completions/
 .config/fish/conf.d/
+.config/fish/functions/
 !.config/fish/functions/fish_user_key_binding.fish
 !.config/fish/functions/peco_change_directory.fish
 !.config/fish/functions/peco_select_history.fish
