@@ -7,12 +7,8 @@ end
 
 
 if vim.g.loaded_copilot then
-  vim.g.copilot_no_tab_map = true
-  vim.g.copilot_assume_mapped = true
-
-  vim.cmd([[
-    autocmd BufEnter * let b:copilot_enabled = v:false
-  ]])
+  -- disable Copilot globally
+  vim.g.copilot_enabled = false
 end
 
 copilot.setup({
