@@ -64,6 +64,14 @@ return packer.startup(function()
   }
   use 'folke/trouble.nvim'
   use 'simrat39/rust-tools.nvim'
+  use {
+    "zbirenbaum/copilot-cmp",
+    module = "copilot_cmp",
+    requires = {
+      "github/copilot.vim",
+      "zbirenbaum/copilot.lua",
+    }
+  }
 
   -- telescope
   use {
@@ -126,14 +134,6 @@ return packer.startup(function()
   use 'sbdchd/neoformat'
   use 'norcalli/nvim-colorizer.lua'
   use {'akinsho/toggleterm.nvim', tag = 'v1.0.0'}
-  use {
-    "zbirenbaum/copilot-cmp",
-    module = "copilot_cmp",
-    requires = {
-      "github/copilot.vim",
-      "zbirenbaum/copilot.lua",
-    }
-  }
   use 'phaazon/hop.nvim'
   -- use 'mhartington/formatter.nvim'
   use 'rmagatti/auto-session'
