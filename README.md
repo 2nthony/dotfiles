@@ -1,7 +1,7 @@
+# 2nthony's dotfiles
+
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
 ![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-49-51eyZ5D4.jpg)
-
-# 2nthony's dotfiles
 
 ## [NeoVim](https://neovim.io/)
 
