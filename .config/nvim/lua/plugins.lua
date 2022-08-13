@@ -85,12 +85,6 @@ return packer.startup(function()
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use {
-    'nvim-telescope/telescope-media-files.nvim',
-    requires = {
-      'nvim-lua/popup.nvim'
-    }
-  }
-  use {
     'tom-anders/telescope-vim-bookmarks.nvim',
     requires = {
       'MattesGroeger/vim-bookmarks'
