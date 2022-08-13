@@ -16,15 +16,10 @@ local cmp_config = {
     select = false,
   },
   formatting = {
-    format = function (entry, vim_item)
-      if entry.source.name == "copilot" then
-        vim_item.kind = ""
-        vim_item.kind_hl_group = "CmpItemKindCopilot"
-        return vim_item
-      end
-
-      return lspkind.cmp_format({ with_text = false, maxwidth = 50 })(entry, vim_item)
-    end
+    format = lspkind.cmp_format({
+      with_text = false,
+      maxwidth = 50,
+    }),
   },
   snippet = {
     expand = function(args)
@@ -94,4 +89,3 @@ cmp.setup.cmdline(':', {
 })
 
 cmp.setup(cmp_config)
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
