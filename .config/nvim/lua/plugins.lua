@@ -73,6 +73,7 @@ return packer.startup(function()
     requires = {
       "github/copilot.vim",
       "zbirenbaum/copilot.lua",
+      'tjdevries/colorbuddy.nvim',
     }
   }
 
