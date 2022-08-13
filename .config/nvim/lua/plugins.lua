@@ -23,7 +23,6 @@ return packer.startup(function()
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   -- basic
-  use 'tpope/vim-rhubarb'
   use 'tpope/vim-surround'
   use 'hoob3rt/lualine.nvim'
   use 'nvim-lua/plenary.nvim'
