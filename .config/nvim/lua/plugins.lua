@@ -25,14 +25,14 @@ return packer.startup(function()
   -- basic
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-surround'
-  use 'lewis6991/impatient.nvim' -- speed up loading lua modules
   use 'hoob3rt/lualine.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'nathom/filetype.nvim'
   use 'romgrk/barbar.nvim'
   use 'mbbill/undotree'
   use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-spectre'
+  use 'windwp/nvim-spectre' -- global character search
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua' -- file explorer
 
   -- lsp
   use 'neovim/nvim-lspconfig'
@@ -44,15 +44,19 @@ return packer.startup(function()
       'neovim/nvim-lspconfig'
     }
   }
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-path',
+    requires = {
+      "hrsh7th/nvim-cmp",
+    }
+  }
   use 'onsails/lspkind-nvim'
   use 'glepnir/lspsaga.nvim'
   use 'folke/lsp-colors.nvim'
-  use 'RRethy/vim-illuminate'
   use 'L3MON4D3/LuaSnip'
   use {
     'saadparwaiz1/cmp_luasnip',
@@ -111,7 +115,12 @@ return packer.startup(function()
   }
 
   -- git
-  use {'lewis6991/gitsigns.nvim', tag = 'v0.4'}
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
   use 'sindrets/diffview.nvim'
 
   -- theme
@@ -122,22 +131,20 @@ return packer.startup(function()
       'tjdevries/colorbuddy.nvim'
     }
   }
-  use 'stevearc/dressing.nvim' -- popup beautifyplugins
+
+  -- highlight
+  use 'norcalli/nvim-colorizer.lua' -- highlight HEX color
+  use 'RRethy/vim-illuminate' -- highlight related words under cursor
 
   -- others
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
   use {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   }
-  use 'sbdchd/neoformat'
-  use 'norcalli/nvim-colorizer.lua'
-  use {'akinsho/toggleterm.nvim', tag = 'v1.0.0'}
-  use 'phaazon/hop.nvim'
-  -- use 'mhartington/formatter.nvim'
-  use 'rmagatti/auto-session'
-
+  use 'sbdchd/neoformat' -- format file on save
+  use {'akinsho/toggleterm.nvim', tag = 'v2.1.0'}
+  use 'phaazon/hop.nvim' -- goto a word or line
+  use 'rmagatti/auto-session' -- restore session
   use {
     'rhysd/accelerated-jk',
     commit = '156c5158b72059404f6b8aaf15b59f87dd0aaa88'
