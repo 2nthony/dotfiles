@@ -10,16 +10,14 @@ function THEME_NEOSOLARIZED()
     comment_italics = true,
   })
 
-  local Color = n.Color
   local colors = n.colors
   local Group = n.Group
   local groups = n.groups
   local styles = n.styles
 
-  Color.new('black', '#000000')
   Group.new('CursorLine', colors.none, colors.base03, styles.none, colors.base1)
   Group.new('CursorLineNr', colors.yellow, colors.base03, styles.none, colors.base1)
-  Group.new('Visual', colors.none, colors.base03, styles.none)
+  Group.new('Visual', colors.none, colors.base01)
 
   local cError = groups.Error.fg
   local cInfo = groups.Information.fg
