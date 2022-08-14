@@ -51,6 +51,13 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 
 - `<Tab>` next buffer, `<S-Tab>` previous buffer
 
+#### `<Space>` relates to LSP
+
+- `<Space>d` search declarations
+- `<Space>p` preview definition
+- `<Space>r` replace declaration
+- `<Space>ca` code action
+
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
