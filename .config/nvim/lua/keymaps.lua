@@ -73,11 +73,11 @@ if status_lspsaga_ok then
   -- keymap('n', '<S-C-j>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
   -- keymap('n', '<C-k>', '<Cmd>Lspsaga hover_doc<CR>', opts)
   -- keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-  keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-  keymap('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
-  keymap('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
-  keymap('n', ';ca', '<cmd>Lspsaga code_action<CR>', opts)
-  keymap('v', ';ca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
+  keymap('n', '<space>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+  keymap('n', '<space>p', '<Cmd>Lspsaga preview_definition<CR>', opts)
+  keymap('n', '<space>r', '<Cmd>Lspsaga rename<CR>', opts)
+  keymap('n', '<space>ca', '<cmd>Lspsaga code_action<CR>', opts)
+  keymap('v', '<space>ca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
 end
 
 -- telescope
