@@ -4,11 +4,16 @@ local symbols = {
     Warn = "",
     Hint = "",
     Info = "",
-    prefix = "",
   },
   gits = {
     branch = "",
   },
+  caret = {
+    right = "",
+    bottom = "",
+  },
+  cube = "",
+  telescope = "",
 }
 
 return symbols

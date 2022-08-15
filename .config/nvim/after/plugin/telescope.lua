@@ -2,6 +2,7 @@ local status_telescope_ok, telescope = pcall(require, 'telescope')
 if (not status_telescope_ok) then return end
 
 local actions = require('telescope.actions')
+local symbols = require("symbols")
 
 -- disable preview binaries
 local previewers = require("telescope.previewers")
@@ -37,8 +38,8 @@ telescope.setup{
     --     preview_cutoff = 0
     --   }
     -- },
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = symbols.telescope .. " ",
+    selection_caret = symbols.caret.right .. " ",
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,

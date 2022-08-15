@@ -142,7 +142,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = false,
     virtual_text = {
       spacing = 4,
-      prefix = symbols.signs.prefix
+      prefix = symbols.cube
     },
     severity_sort = true,
   }
