@@ -1,6 +1,3 @@
-local status_lsp_signature_ok, lsp_signature = pcall(require, 'lsp_signature')
-local status_illuminate_ok, illuminate = pcall(require, 'illuminate')
-
 -- Use an on_attach function to only map the following keys 
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -30,14 +27,6 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-
-  if status_lsp_signature_ok then
-    lsp_signature.on_attach()
-  end
-
-  if status_illuminate_ok then
-    illuminate.on_attach(client)
-  end
 end
 
 return on_attach

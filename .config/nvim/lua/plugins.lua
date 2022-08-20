@@ -128,7 +128,6 @@ return packer.startup(function()
 
   -- highlight
   use 'norcalli/nvim-colorizer.lua' -- highlight HEX color
-  use 'RRethy/vim-illuminate' -- highlight related words under cursor
 
   -- others
   use {
