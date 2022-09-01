@@ -36,14 +36,14 @@ keymap("n", ";Q", ":q!<cr>", opts)
 keymap("n", ";w", ":w<cr>", opts)
 
 -- move cursor to start of line, better ^
-keymap('n', '<C-h>', '^99h^', opts)
-keymap('i', '<C-h>', '<Esc>^99h^i', opts)
-keymap('v', '<C-h>', '^99h^', opts)
+keymap('n', '<C-h>', '<Home>', opts)
+keymap('i', '<C-h>', '<Home>', opts)
+keymap('v', '<C-h>', '<Home>', opts)
 
 -- better $
-keymap('n', '<C-l>', '$', opts)
-keymap('i', '<C-l>', '<Esc>$a', opts)
-keymap('v', '<C-l>', '$h', opts)
+keymap('n', '<C-l>', '<End>', opts)
+keymap('i', '<C-l>', '<End>', opts)
+keymap('v', '<C-l>', '<End>', opts)
 
 --[[ Window ]]
 
