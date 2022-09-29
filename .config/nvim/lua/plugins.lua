@@ -116,7 +116,12 @@ return packer.startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
-  use 'sindrets/diffview.nvim'
+  use {
+    'sindrets/diffview.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 
   -- theme
   use 'folke/tokyonight.nvim'
