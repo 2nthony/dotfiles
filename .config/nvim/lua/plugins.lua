@@ -74,7 +74,8 @@ return packer.startup(function()
       "github/copilot.vim",
       "zbirenbaum/copilot.lua",
       'tjdevries/colorbuddy.nvim',
-    }
+    },
+    disable = true,
   }
 
   -- telescope
