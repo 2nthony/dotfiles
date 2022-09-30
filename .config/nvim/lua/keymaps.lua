@@ -35,6 +35,10 @@ keymap("n", "<space>Q", ":q!<cr>", opts)
 -- :w
 keymap("n", "<space>w", ":w<cr>", opts)
 
+-- :bdelete
+keymap("n", "<space>bd", ":bdelete<cr>", opts)
+keymap("n", "<space>bD", ":bdelete!<cr>", opts)
+
 -- move cursor to start of line, better ^
 keymap('n', '<C-h>', '<Home>^', opts)
 keymap('i', '<C-h>', '<Home><Esc>^i', opts)
