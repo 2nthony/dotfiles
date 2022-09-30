@@ -3,8 +3,9 @@ if not status_lspsaga_ok then
   return
 end
 
+local symbols = require('symbols')
+
 lspsaga.init_lsp_saga {
-  border_style = "rounded",
   saga_winblend = 0,
   server_filetype_map = {
     typescript = "typescript"
@@ -15,4 +16,8 @@ lspsaga.init_lsp_saga {
   show_outline = {
     jump_key = "<cr>"
   },
+  code_action_icon = symbols.signs.Hint .. " ",
+  code_action_lightbulb = {
+    enable_in_insert = false,
+  }
 }
