@@ -46,6 +46,7 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 - `<C-j>` LSP diagnostic next, `<S-C-j>` LSP diagnostic prev
 - `<C-k>` LSP hover
 - `<C-\>` open a float terminal
+- `<C-n>` new tab `:tabedit`
 
 #### `<Tab>`
 

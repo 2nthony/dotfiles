@@ -36,7 +36,7 @@ keymap("n", "<space>Q", ":q!<cr>", opts)
 keymap("n", "<space>w", ":w<cr>", opts)
 
 -- :tabedit - new tab
-keymap("n", "<space>bn", ":tabedit<cr>", opts)
+keymap("n", "<C-n>", ":tabedit<cr>", opts)
 
 -- :bdelete
 keymap("n", "<space>bd", ":bdelete<cr>", opts)
