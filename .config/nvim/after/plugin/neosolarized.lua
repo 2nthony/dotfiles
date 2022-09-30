@@ -17,7 +17,7 @@ function THEME_NEOSOLARIZED()
 
   Group.new('CursorLine', colors.none, colors.base03, styles.none, colors.base1)
   Group.new('CursorLineNr', colors.yellow, colors.base03, styles.none, colors.base1)
-  Group.new('Visual', colors.none, colors.base02)
+  Group.new('Visual', colors.none, colors.base02, styles.reverse)
 
   local cError = groups.Error.fg
   local cInfo = groups.Information.fg
