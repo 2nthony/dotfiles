@@ -26,14 +26,14 @@ keymap("n", "Q", "q", opts)
 keymap("n", "q", "<Nop>", opts)
 
 -- no highlight
-keymap("n", ";l", ":nohl<cr>", opts)
+keymap("n", "<space>l", ":nohl<cr>", opts)
 
 -- :q
-keymap("n", ";q", ":q<cr>", opts)
-keymap("n", ";Q", ":q!<cr>", opts)
+keymap("n", "<space>q", ":q<cr>", opts)
+keymap("n", "<spance>Q", ":q!<cr>", opts)
 
 -- :w
-keymap("n", ";w", ":w<cr>", opts)
+keymap("n", "<space>w", ":w<cr>", opts)
 
 -- move cursor to start of line, better ^
 keymap('n', '<C-h>', '<Home>^', opts)
@@ -140,10 +140,10 @@ end
 -- nvim-spectre
 local status_nvim_spectre_ok = pcall(require, 'spectre')
 if (status_nvim_spectre_ok) then
-  keymap('n', ';S', ':lua require("spectre").open()<cr>', opts)
-  keymap('n', ';sw', ':lua require("spectre").open_visual({select_word=true})<cr>', opts)
-  keymap('n', ';s', ':lua require("spectre").open_visual()<cr>', opts)
-  keymap('n', ';sp', ':lua require("spectre").open_file_search()<cr>', opts)
+  keymap('n', '<space>S', ':lua require("spectre").open()<cr>', opts)
+  keymap('n', '<space>sw', ':lua require("spectre").open_visual({select_word=true})<cr>', opts)
+  keymap('n', '<space>s', ':lua require("spectre").open_visual()<cr>', opts)
+  keymap('n', '<space>sp', ':lua require("spectre").open_file_search()<cr>', opts)
 end
 
 -- diffview
@@ -214,10 +214,10 @@ end
 
 local status_trouble_ok = pcall(require, "trouble")
 if status_trouble_ok then
-  keymap('n', ';tt', '<cmd>TroubleToggle<cr>', opts)
-  keymap('n', ';tw', '<cmd>TroubleToggle workspace_diagnostics<cr>', opts)
-  keymap('n', ';td', '<cmd>TroubleToggle document_diagnostics<cr>', opts)
-  keymap('n', ';tl', '<cmd>TroubleToggle loclist<cr>', opts)
-  keymap('n', ';tq', '<cmd>TroubleToggle quickfix<cr>', opts)
-  keymap('n', ';tr', '<cmd>TroubleToggle lsp_references<cr>', opts)
+  keymap('n', '<space>tt', '<cmd>TroubleToggle<cr>', opts)
+  keymap('n', '<space>tw', '<cmd>TroubleToggle workspace_diagnostics<cr>', opts)
+  keymap('n', '<space>td', '<cmd>TroubleToggle document_diagnostics<cr>', opts)
+  keymap('n', '<space>tl', '<cmd>TroubleToggle loclist<cr>', opts)
+  keymap('n', '<space>tq', '<cmd>TroubleToggle quickfix<cr>', opts)
+  keymap('n', '<space>tr', '<cmd>TroubleToggle lsp_references<cr>', opts)
 end
