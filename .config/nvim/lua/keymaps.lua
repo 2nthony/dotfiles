@@ -90,7 +90,7 @@ if status_telescope_ok then
   keymap('n', 'fr', ':Telescope live_grep<CR>', opts)
   keymap('n', 'fb', ':Telescope buffers<CR>', opts)
   keymap('n', 'fo', ':Telescope oldfiles<CR>', opts)
-  keymap('n', 'f;', ':Telescope help_tags<CR>', opts)
+  keymap('n', 'fh', ':Telescope help_tags<CR>', opts)
 
   -- todo-comments
   local status_todo_comments_ok = pcall(require, 'todo-comments')
