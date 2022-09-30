@@ -94,16 +94,15 @@ See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin
 - `sk` focus above window
 - `sl` focus right window
 
-#### `;` instead of `\`
+#### Others, `<Space>` instead of `\`
 
-- `;w` = `:w`
-- `;q` = `:q`, `:Q` = `:q!`
-- `;1`, `;2`, ... go to buffer, `;0` go to the last buffer
-- `;x` close buffer
-- `;X` force(!) close buffer
-- `;bp` pick a buffer
-- `;S` ripgrep search(like global search)
-- `;tt` toggle show troubles(problems)
+- `<Space>w` = `:w`
+- `<Space>q` = `:q`, `:Q` = `:q!`
+- `<Space>bd` delete buffer
+- `<Space>bD` force(!) delete buffer
+- `<Space>bp` pick a buffer
+- `<Space>S` ripgrep search(like global search)
+- `<Space>tt` toggle show troubles(problems)
 
 ## Shell
 
