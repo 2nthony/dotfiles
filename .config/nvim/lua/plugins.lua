@@ -21,21 +21,16 @@ end
 return packer.startup(function()
   -- core
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use 'nvim-lua/plenary.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
   -- basic
   use 'tpope/vim-surround'
   use 'hoob3rt/lualine.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use {
-    'akinsho/bufferline.nvim',
-    requires = {
-      'kyazdani42/nvim-web-devicons'
-    }
-  }
+  use 'akinsho/bufferline.nvim'
   use 'mbbill/undotree'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-spectre' -- global character search
-  use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua' -- file explorer
 
   -- lsp
@@ -83,12 +78,7 @@ return packer.startup(function()
   }
 
   -- telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use {
     'tom-anders/telescope-vim-bookmarks.nvim',
@@ -106,26 +96,11 @@ return packer.startup(function()
       'tpope/vim-commentary'
     }
   }
-  use {
-    'folke/todo-comments.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  use 'folke/todo-comments.nvim'
 
   -- git
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
-  use {
-    'sindrets/diffview.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  use 'lewis6991/gitsigns.nvim'
+  use 'sindrets/diffview.nvim'
 
   -- theme
   use 'folke/tokyonight.nvim'
