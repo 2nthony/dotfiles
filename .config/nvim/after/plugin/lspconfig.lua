@@ -113,15 +113,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-local float_opts = {
-  focusable = true,
-  style = "minimal",
-  border = "rounded",
-  source = "always",
-  header = "",
-  prefix = "",
-}
-
 vim.diagnostic.config({
   -- virtual text
   virtual_text = true,
@@ -132,7 +123,9 @@ vim.diagnostic.config({
   update_in_insert = true,
   underline = true,
   severity_sort = true,
-  float = float_opts,
+  float = {
+    source = "always"
+  },
 })
 
 -- virtual text icon
@@ -148,5 +141,3 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float_opts)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float_opts)

@@ -32,11 +32,4 @@ function THEME_NEOSOLARIZED()
   Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
   Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
   Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
-
-  vim.cmd [[
-    highlight FloatBorder guibg=NONE ctermbg=NONE  " Removes the border of float menu (LSP and Autocompletion uses it)
-    highlight link NormalFloat Normal 
-    highlight NormalFloat ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE 
-    highlight Pmenu ctermbg=NONE guibg=NONE 
-  ]]
 end
