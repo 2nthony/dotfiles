@@ -30,7 +30,7 @@ keymap("n", "<space>l", ":nohl<cr>", opts)
 
 -- :q
 keymap("n", "<space>q", ":q<cr>", opts)
-keymap("n", "<spance>Q", ":q!<cr>", opts)
+keymap("n", "<space>Q", ":q!<cr>", opts)
 
 -- :w
 keymap("n", "<space>w", ":w<cr>", opts)
