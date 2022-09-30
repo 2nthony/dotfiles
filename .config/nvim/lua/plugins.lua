@@ -26,7 +26,12 @@ return packer.startup(function()
   use 'tpope/vim-surround'
   use 'hoob3rt/lualine.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'romgrk/barbar.nvim'
+  use {
+    'akinsho/bufferline.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  }
   use 'mbbill/undotree'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-spectre' -- global character search
