@@ -28,6 +28,11 @@ keymap("n", "q", "<Nop>", opts)
 -- no highlight
 keymap("n", "<space>l", ":nohl<cr>", opts)
 
+-- e, but insert mode
+keymap("i", "<C-e>", "<Esc>ea", opts)
+-- b, but insert mode
+keymap("i", "<C-b>", "<Esc>bi", opts)
+
 -- :q
 keymap("n", "<space>q", ":q<cr>", opts)
 keymap("n", "<space>Q", ":q!<cr>", opts)
