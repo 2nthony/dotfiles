@@ -8,27 +8,36 @@ local on_attach = require'lsp.on_attach'
 local capabilities = require'lsp.capabilities'
 local symbols = require'symbols'
 
+local lsp_flags = {
+  debounce_text_changes = 150,
+}
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  flags = lsp_flags,
 }
 nvim_lsp.svelte.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  flags = lsp_flags,
 }
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  flags = lsp_flags,
   root_dir = util.root_pattern('tailwind.config.js', 'tailwind.config.ts')
 }
 nvim_lsp.volar.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  flags = lsp_flags,
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  flags = lsp_flags,
   settings = {
     Lua = {
       runtime = {
@@ -54,6 +63,7 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.jsonls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  flags = lsp_flags,
   settings = {
     json = {
       -- Schemas https://www.schemastore.org
