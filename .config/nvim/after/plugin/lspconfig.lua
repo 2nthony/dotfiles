@@ -24,6 +24,7 @@ nvim_lsp.tailwindcss.setup {
 nvim_lsp.volar.setup {
   on_attach = on_attach,
   capabilities = capabilities
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
