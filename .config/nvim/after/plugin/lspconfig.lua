@@ -10,11 +10,11 @@ local symbols = require'symbols'
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 nvim_lsp.svelte.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
@@ -23,7 +23,7 @@ nvim_lsp.tailwindcss.setup {
 }
 nvim_lsp.volar.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 nvim_lsp.sumneko_lua.setup {
