@@ -52,7 +52,7 @@ local cmp_config = {
       "i",
       "s"
     }),
-    ["<C-m>"] = cmp.mapping.complete(),
+    ["<C-p>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
