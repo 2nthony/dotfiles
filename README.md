@@ -30,7 +30,7 @@ git clone https://github.com/2nthony/dotfiles.git ~/yourpath
 ln -s ~/yourpath/.config/lvim ~/.config
 ```
 
-<details><summary>NeoVim is archived, I use LunarVim now.</summary>
+<details><summary>NeoVim built is archived, I use LunarVim now.</summary>
 
 ## [NeoVim](https://neovim.io/)
 
