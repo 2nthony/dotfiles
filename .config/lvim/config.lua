@@ -12,7 +12,6 @@ require("base")
 require("plugins")
 require("keymaps")
 require("highlights")
-require("plugin-patches")
 require("autocmd")
 require("hack")
 
