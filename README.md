@@ -3,18 +3,9 @@
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
 ![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-49-51eyZ5D4.jpg)
 
-## [NeoVim](https://neovim.io/)
+## [LunarVim](https://lunarvim.org)
 
-![](https://img.shields.io/badge/-0.7.x-29BC9B)
-
-### Setup
-
-Clone this repo and link `nvim` to `~/.config`
-
-```bash
-git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/nvim ~/.config
-```
+![](https://img.shields.io/badge/NeoVim-0.8.x-29BC9B)
 
 ### Features
 
@@ -30,13 +21,43 @@ ln -s ~/yourpath/.config/nvim ~/.config
 - [x] Auto Session
 - [x] ...
 
-### Plugins
+### Setup
+
+Clone this repo and link `lvim` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/lvim ~/.config
+```
+
+<details><summary>NeoVim (Archive)</summary>
+
+## [NeoVim](https://neovim.io/)
+
+![](https://img.shields.io/badge/-0.8.x-29BC9B)
+
+### Setup
+
+Clone this repo and link `nvim` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/nvim ~/.config
+```
 
 Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
 
+The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
+
+</details>
+
+### Plugins
+
+Full plugins see [plugins.lua](.config/lvim/lua/plugins.lua).
+
 ### Keybindings
 
-The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
+The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 
 #### `<C>` means to `<Ctrl>`
 
