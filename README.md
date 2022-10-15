@@ -5,7 +5,7 @@
 
 ## [LunarVim](https://lunarvim.org)
 
-![](https://img.shields.io/badge/NeoVim-0.8.x-29BC9B)
+![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
 ### Features
 
@@ -30,7 +30,7 @@ git clone https://github.com/2nthony/dotfiles.git ~/yourpath
 ln -s ~/yourpath/.config/lvim ~/.config
 ```
 
-<details><summary>NeoVim (Archive)</summary>
+<details><summary>NeoVim is archived, I use LunarVim now.</summary>
 
 ## [NeoVim](https://neovim.io/)
 
@@ -105,7 +105,7 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 - `ghu` git undo stage hunk
 - `ghp` git preview hunk
 
-See the full keybindings for git in [keymaps.gitsigns](.config/nvim/after/plugin/user/keymaps.lua)
+See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 
 #### `s` means to `switch`, `split`
 
