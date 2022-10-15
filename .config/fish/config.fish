@@ -17,9 +17,9 @@ alias lla "ll -A"
 alias g git
 alias lg lazygit
 alias clean "clear && printf '\e[3J'"
-command -qv nvim && alias vim nvim
+alias vim lvim
 
-set -gx EDITOR nvim
+set -gx EDITOR lvim
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
