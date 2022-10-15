@@ -75,6 +75,6 @@ Pods/
 # Karabiner
 .config/karabiner/automatic_backups
 
-# nvim
-.config/nvim/plugin/packer_compiled.lua
+# nvim/lvim
+packer_compiled.lua
 .luarc.json

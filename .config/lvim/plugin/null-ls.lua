@@ -1,0 +1,20 @@
+-- builtin
+-- https://github.com/jose-elias-alvarez/null-ls.nvim
+
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+  { command = "black" },
+  {
+    command = "prettier",
+    filetypes = {
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "json",
+      "css",
+      "html",
+    },
+  }
+})
