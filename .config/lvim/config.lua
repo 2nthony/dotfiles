@@ -12,7 +12,7 @@ require("base")
 require("plugins")
 require("keymaps")
 require("highlights")
-require("autocmd")
+require("autocmds")
 require("hack")
 
 -- general
