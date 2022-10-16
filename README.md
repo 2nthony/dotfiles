@@ -3,9 +3,26 @@
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
 ![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-49-51eyZ5D4.jpg)
 
-## [LunarVim](https://lunarvim.org)
+## [NeoVim](https://neovim.io/) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
-![](https://img.shields.io/badge/-0.8.x-29BC9B)
+<details><summary>Archived, I use LunarVim now.</summary>
+
+### Setup
+
+Clone this repo and link `nvim` to `~/.config`
+
+```bash
+git clone https://github.com/2nthony/dotfiles.git ~/yourpath
+ln -s ~/yourpath/.config/nvim ~/.config
+```
+
+Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
+
+The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
+
+</details>
+
+## [LunarVim](https://lunarvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
 ### Features
 
@@ -29,27 +46,6 @@ Clone this repo and link `lvim` to `~/.config`
 git clone https://github.com/2nthony/dotfiles.git ~/yourpath
 ln -s ~/yourpath/.config/lvim ~/.config
 ```
-
-<details><summary>NeoVim built is archived, I use LunarVim now.</summary>
-
-## [NeoVim](https://neovim.io/)
-
-![](https://img.shields.io/badge/-0.8.x-29BC9B)
-
-### Setup
-
-Clone this repo and link `nvim` to `~/.config`
-
-```bash
-git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/nvim ~/.config
-```
-
-Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
-
-The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
-
-</details>
 
 ### Plugins
 
