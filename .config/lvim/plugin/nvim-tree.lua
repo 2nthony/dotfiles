@@ -21,4 +21,5 @@ nvim_tree.setup.live_filter = {
 
 nvim_tree.setup.git.ignore = true
 
-table.insert(nvim_tree.setup.filters.custom, ".git/")
+-- https://github.com/nvim-tree/nvim-tree.lua/issues/1178#issuecomment-1101819983
+table.insert(nvim_tree.setup.filters.custom, "^\\.git$")
