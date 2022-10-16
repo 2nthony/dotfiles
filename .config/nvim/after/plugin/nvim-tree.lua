@@ -42,7 +42,7 @@
 local status_nvim_tree_ok, nvim_tree = pcall(require, 'nvim-tree')
 if (not status_nvim_tree_ok) then return end
 
-nvim_tree.setup{
+nvim_tree.setup {
   view = {
     mappings = {
       custom_only = false,
@@ -82,7 +82,8 @@ nvim_tree.setup{
   },
   filters = {
     custom = {
-      "^.git$",
+      -- https://github.com/nvim-tree/nvim-tree.lua/issues/1178#issuecomment-1101819983
+      "^\\.git$",
     }
   }
 }
