@@ -33,11 +33,3 @@ cmp.setup.cmdline(":", {
     { name = 'path' },
   },
 })
-
-local status_lspkind_ok, lspkind = pcall(require, "lspkind")
-if status_lspkind_ok then
-  lcmp.formatting.format = lspkind.cmp_format({
-    with_text = false,
-    mode = "symbol",
-  })
-end
