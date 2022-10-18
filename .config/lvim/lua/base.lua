@@ -21,3 +21,4 @@ vim.opt.wrap = false -- No Wrap lines
 
 -- lvim
 lvim.format_on_save = true
+lvim.colorscheme = "neosolarized"
