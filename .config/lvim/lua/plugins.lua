@@ -4,6 +4,7 @@ lvim.builtin.terminal.active = true -- toogleterm.nvim
 -- disable builtin plugins
 lvim.builtin.alpha.active = false -- alpha-nvim
 lvim.builtin.notify.active = false
+lvim.builtin.illuminate.active = false
 
 -- extra plugins
 lvim.plugins = {
