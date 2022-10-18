@@ -27,10 +27,10 @@ lcmp.confirm_opts = {
   select = false,
 }
 
-cmp.setup.cmdline(":", {
-  mapping = cmp.mapping.preset.cmdline(),
+table.insert(lcmp.cmdline.options, {
+  type = ":",
   sources = {
-    { name = 'cmdline' },
+    { name = "cmdline" },
     { name = 'path' },
-  },
+  }
 })
