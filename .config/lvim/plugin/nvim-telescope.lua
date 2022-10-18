@@ -12,6 +12,13 @@ telescope.defaults.layout_strategy = "vertical"
 
 telescope.defaults.path_display.shorten = nil
 
+-- override pickers
+telescope.pickers.buffers.initial_mode = nil
+telescope.pickers.oldfiles = {
+  theme = "dropdown",
+  previewer = false,
+}
+
 telescope.defaults.file_ignore_patterns = {
   "node_modules/",
   ".git/",
