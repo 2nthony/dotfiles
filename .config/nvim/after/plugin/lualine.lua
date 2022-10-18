@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local symbols = require'symbols'
+local symbols = require 'symbols'
 
 local diagnostics = {
   "diagnostics",
@@ -39,7 +39,7 @@ local location = {
 local progress = function()
   local current_line = vim.fn.line(".")
   local total_lines = vim.fn.line("$")
-  local chars = { "██", "▇▇", "▆▆", "▅▅", "▄▄", "▃▃", "▂▂", "▁▁", " ", }
+  local chars = { "██", "▇▇", "▆▆", "▅▅", "▄▄", "▃▃", "▂▂", "▁▁", "  ", }
   local line_ratio = current_line / total_lines
   local index = math.ceil(line_ratio * #chars)
   return chars[index]
@@ -56,7 +56,7 @@ lualine.setup({
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = { branch  },
+    lualine_b = { branch },
     lualine_c = { file_name },
     lualine_x = {
       diagnostics,
