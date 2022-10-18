@@ -1,8 +1,8 @@
 -- enable builtin plugins
-lvim.builtin.alpha.active = true -- alpha-nvim
 lvim.builtin.terminal.active = true -- toogleterm.nvim
 
 -- disable builtin plugins
+lvim.builtin.alpha.active = false -- alpha-nvim
 lvim.builtin.notify.active = false
 
 -- extra plugins
