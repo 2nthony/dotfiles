@@ -13,7 +13,7 @@ require("plugins")
 require("keymaps")
 require("highlights")
 require("autocmds")
-require("hack")
+-- require("hack")
 
 -- general
 -- lvim.log.level = "warn"
