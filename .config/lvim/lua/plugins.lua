@@ -45,7 +45,4 @@ lvim.plugins = {
 
   -- treesitter
   { "windwp/nvim-ts-autotag" },
-
-  -- telescope
-  { "nvim-telescope/telescope-ghq.nvim" },
 }

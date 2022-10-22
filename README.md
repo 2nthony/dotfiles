@@ -87,7 +87,6 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 - `ft` find todo comments
 - `fm` find bookmarks, `fM` find project bookmarks
   - `mm` toggle bookmark
-- `fghq` find ghq managed repos (install [ghq](https://github.com/2nthony/ghq) or [x-motemen/ghq](https://github.com/x-motemen/ghq))
 
 #### `g` means to `go` or `git`
 
