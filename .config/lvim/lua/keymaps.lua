@@ -86,7 +86,6 @@ keymap('n', 'fr', ':Telescope live_grep<CR>', opts)
 keymap('n', 'fb', ':Telescope buffers<CR>', opts)
 keymap('n', 'fo', ':Telescope oldfiles<CR>', opts)
 keymap('n', 'fh', ':Telescope help_tags<CR>', opts)
-keymap('n', 'ghq', ':Telescope ghq list theme=dropdown previewer=false<CR>', opts)
 
 -- terminal / toggleterm
 keymap('n', 'git', ':lua TOGGLE_LAZYGIT()<cr>', opts)
