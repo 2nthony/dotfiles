@@ -33,12 +33,15 @@ local progress = function()
 end
 
 lualine.options = {
-  theme = "solarized_dark",
   component_separators = { left = "", right = "" },
   section_separators = { left = "", right = "" },
   disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
   always_divide_middle = true,
 }
+
+if lvim.colorscheme == "neosolarized" then
+  lualine.options.theme = "solarized_dark"
+end
 
 lualine.sections = {
   lualine_a = { "mode" },
