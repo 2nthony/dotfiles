@@ -19,6 +19,8 @@ vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in 
 vim.opt.smarttab = true
 vim.opt.wrap = false -- No Wrap lines
 
+-- define my own colorscheme field
+vim.g.colorscheme = "neosolarized"
+
 -- lvim
 lvim.format_on_save = true
-lvim.colorscheme = "neosolarized"

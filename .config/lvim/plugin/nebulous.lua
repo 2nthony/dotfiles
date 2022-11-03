@@ -6,7 +6,7 @@ if not ok then
   return
 end
 
-if lvim.colorscheme ~= "nebulous" then
+if vim.g.colorscheme ~= "nebulous" then
   return
 end
 

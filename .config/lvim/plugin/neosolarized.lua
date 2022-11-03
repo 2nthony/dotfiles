@@ -6,7 +6,7 @@ if not status_neosolarized_ok then
   return
 end
 
-if lvim.colorscheme ~= "neosolarized" then
+if vim.g.colorscheme ~= "neosolarized" then
   return
 end
 

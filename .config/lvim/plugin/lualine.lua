@@ -39,7 +39,7 @@ lualine.options = {
   always_divide_middle = true,
 }
 
-if lvim.colorscheme == "neosolarized" then
+if vim.g.colorscheme == "neosolarized" then
   lualine.options.theme = "solarized_dark"
 end
 
