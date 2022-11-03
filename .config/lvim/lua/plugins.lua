@@ -35,6 +35,12 @@ lvim.plugins = {
       'tjdevries/colorbuddy.nvim'
     },
   },
+  {
+    "Yagua/nebulous.nvim",
+    requires = {
+      'tjdevries/colorbuddy.nvim'
+    },
+  },
 
   -- navigation
   { "phaazon/hop.nvim" },
