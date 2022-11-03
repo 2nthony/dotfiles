@@ -6,8 +6,6 @@
 *~
 .DS_Store
 *.sw[po]
-tags
-TAGS
 .svn
 *.dSYM
 *.log
