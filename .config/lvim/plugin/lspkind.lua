@@ -6,10 +6,11 @@ if not status_lspkind_ok then
 end
 
 lspkind.init({
-  symbol_map = lvim.icons.kind,
+  -- symbol_map = lvim.icons.kind,
   presets = "codicons"
 })
 
 lvim.builtin.cmp.formatting.format = lspkind.cmp_format({
   mode = "symbol",
+  maxwidth = 20,
 })
