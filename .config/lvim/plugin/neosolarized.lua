@@ -6,6 +6,10 @@ if not status_neosolarized_ok then
   return
 end
 
+if lvim.colorscheme ~= "neosolarized" then
+  return
+end
+
 local n = neosolarized.setup({
   comment_italics = true,
 })
@@ -32,3 +36,5 @@ Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl
 Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
 Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
 Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
+
+vim.cmd('colorscheme neosolarized')
