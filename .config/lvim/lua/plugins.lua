@@ -6,6 +6,7 @@ lvim.builtin.alpha.active = false -- alpha-nvim
 lvim.builtin.illuminate.active = false
 lvim.builtin.project.active = false
 lvim.builtin.breadcrumbs.active = false
+lvim.builtin.indentlines.active = false
 
 -- extra plugins
 lvim.plugins = {
