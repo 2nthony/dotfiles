@@ -12,5 +12,4 @@ lspkind.init({
 
 lvim.builtin.cmp.formatting.format = lspkind.cmp_format({
   mode = "symbol",
-  maxwidth = 20,
 })
