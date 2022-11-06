@@ -49,8 +49,7 @@ lualine.sections = {
   lualine_c = { file_name },
   lualine_x = {
     diagnostics,
-    components.encoding,
-    filetype
+    components.filetype
   },
   lualine_y = { components.location },
   lualine_z = { progress },
