@@ -12,4 +12,5 @@ colorizer.setup {
   'typescript',
   'jsx',
   'tsx',
+  'lua',
 }

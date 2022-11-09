@@ -24,4 +24,27 @@ nebulous.setup {
   },
 }
 
+-- fullmoon
+-- https://github.com/Yagua/nebulous.nvim/blob/main/lua/nebulous/colors/fullmoon.lua
+local bufferline = lvim.builtin.bufferline
+local fullmoon = require("nebulous.colors.Fullmoon")
+bufferline.highlights = {
+  separator = {
+    fg = fullmoon.Custom_1,
+    bg = fullmoon.background,
+  },
+  separator_selected = {
+    fg = fullmoon.Custom_1,
+  },
+  background = {
+    bg = fullmoon.background,
+  },
+  buffer_selected = {
+    bold = true,
+  },
+  fill = {
+    bg = fullmoon.Custom_1,
+  },
+}
+
 vim.cmd("colorscheme nebulous")
