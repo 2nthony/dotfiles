@@ -96,7 +96,9 @@ if status_lspsaga_ok then
   keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
   keymap('n', '<S-C-j>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
   keymap('n', '<C-k>', '<Cmd>Lspsaga hover_doc<CR>', opts)
-  keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
+  -- removed
+  -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
+  -- keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
   keymap('n', '<space>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
   keymap('n', '<space>p', '<Cmd>Lspsaga peek_definition<CR>', opts)
   keymap('n', '<space>r', '<Cmd>Lspsaga rename<CR>', opts)
