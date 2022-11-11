@@ -10,7 +10,7 @@ telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
 -- in order to disable the previewer
 telescope.defaults.layout_strategy = "vertical"
 
-telescope.defaults.path_display.shorten = nil
+telescope.defaults.path_display = nil
 
 -- override pickers
 telescope.pickers.buffers.initial_mode = nil
