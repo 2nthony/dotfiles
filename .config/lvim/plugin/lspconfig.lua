@@ -8,6 +8,4 @@ lvim.lsp.buffer_mappings.normal_mode = {}
 -- disable auto install servers
 lvim.lsp.installer.setup.automatic_installation = nil
 
-lsp.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
-}
+lsp.volar.setup {}
