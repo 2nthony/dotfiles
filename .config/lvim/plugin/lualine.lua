@@ -4,23 +4,13 @@
 local lualine = lvim.builtin.lualine
 local components = require("lvim.core.lualine.components")
 
-local file_name = {
-  'filename',
-  file_status = true, -- Displays file status (readonly status, modified status)
-  path = 0, -- 0: Just the filename, 1: Relative path, 2: Absolute path
-}
-
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
 }
 
-local filetype = {
-  "filetype",
-  colored = true,
-  icons_enabled = true,
-  icon_only = true,
-}
+local filetype = components.filetype
+filetype.icon_only = true
 
 -- cool function for progress
 local progress = function()
@@ -46,11 +36,8 @@ end
 lualine.sections = {
   lualine_a = { "mode" },
   lualine_b = { components.branch },
-  lualine_c = { file_name },
-  lualine_x = {
-    diagnostics,
-    components.filetype
-  },
+  lualine_c = { components.filename },
+  lualine_x = { diagnostics, filetype },
   lualine_y = { components.location },
   lualine_z = { progress },
 }
@@ -58,7 +45,7 @@ lualine.sections = {
 lualine.inactive_sections = {
   lualine_a = {},
   lualine_b = {},
-  lualine_c = { file_name },
+  lualine_c = { components.filename },
   lualine_x = { components.location },
   lualine_y = {},
   lualine_z = {},
