@@ -56,7 +56,7 @@ keymap('v', '<C-l>', '<End>', opts)
 keymap('n', 'ss', ':split<cr>', opts)
 keymap('n', 'sv', ':vsplit<cr>', opts)
 
--- Move window
+-- Switch window
 keymap('n', 'sh', '<C-w>h', opts)
 keymap('n', 'sk', '<C-w>k', opts)
 keymap('n', 'sj', '<C-w>j', opts)
