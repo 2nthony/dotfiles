@@ -52,4 +52,7 @@ lvim.plugins = {
 
   -- treesitter
   { "windwp/nvim-ts-autotag" },
+
+  -- telescope
+  { "folke/trouble.nvim" },
 }

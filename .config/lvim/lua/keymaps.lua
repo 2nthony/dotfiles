@@ -155,3 +155,18 @@ if status_gitsigns_ok then
   keymap('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)
   keymap('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)
 end
+
+local trouble_ok = pcall(require, "trouble")
+if trouble_ok then
+  keymap("n", "fwd", ":TroubleToggle workspace_diagnostics<CR>", opts)
+end
+
+local todo_ok = pcall(require, "todo-comments")
+if todo_ok then
+  if trouble_ok then
+    keymap("n", "ftc", ":TodoTrouble<CR>", opts)
+  else
+    keymap("n", "ftc", ":TodoLocList<CR>", opts)
+  end
+else
+end

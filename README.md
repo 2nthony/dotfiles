@@ -88,9 +88,8 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 - `fr` find character(live grep) in files (install `ripgrep`)
 - `fb` find a buffer(tab)
 - `fo` find oldfiles
-- `ft` find todo comments
-- `fm` find bookmarks, `fM` find project bookmarks
-  - `mm` toggle bookmark
+- `fwd` find workspace diagnostics(LSP diagnostics)
+- `ftc` find todo comments
 
 #### `g` means to `go` or `git`
 
