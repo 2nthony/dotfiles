@@ -77,8 +77,8 @@ keymap('n', 'fd', ':NvimTreeFindFile<cr>', opts)
 -- bufferline
 keymap('n', '<s-tab>', ':BufferLineCyclePrev<CR>', opts)
 keymap('n', '<tab>', ':BufferLineCycleNext<CR>', opts)
-keymap('n', '<space>bp', ':BufferLinePick<CR>', opts)
-keymap('n', '<space>bc', ':BufferLinePickClose<CR>', opts)
+keymap('n', 'bp', ':BufferLinePick<CR>', opts)
+keymap('n', 'bc', ':BufferLinePickClose<CR>', opts)
 
 -- telescope
 keymap('n', 'ff', ':Telescope find_files<CR>', opts)
@@ -99,11 +99,12 @@ if status_lspsaga_ok then
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-  keymap('n', '<space>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-  keymap('n', '<space>p', '<Cmd>Lspsaga peek_definition<CR>', opts)
-  keymap('n', '<space>r', '<Cmd>Lspsaga rename<CR>', opts)
-  keymap('n', '<space>ca', '<cmd>Lspsaga code_action<CR>', opts)
-  keymap('v', '<space>ca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
+  keymap('n', 'sd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+  keymap('n', 'sp', '<Cmd>Lspsaga peek_definition<CR>', opts)
+  keymap('n', 'sr', '<Cmd>Lspsaga rename<CR>', opts)
+  keymap('n', 'sca', '<cmd>Lspsaga code_action<CR>', opts)
+  keymap('v', 'sca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
+  keymap('n', 'so', '<Cmd>LSoutlineToggle<CR>', opts)
 end
 
 -- hop
@@ -138,17 +139,17 @@ if status_gitsigns_ok then
   keymap('n', 'gk', ':Gitsigns prev_hunk<CR>', opts)
 
   -- Actions
-  keymap('n', 'ghs', ':Gitsigns stage_hunk<CR>', opts)
-  keymap('n', 'ghr', ':Gitsigns reset_hunk<CR>', opts)
-  keymap('n', 'ghu', '<cmd>Gitsigns undo_stage_hunk<CR>', opts)
-  keymap('n', 'ghS', '<cmd>Gitsigns stage_buffer<CR>', opts)
-  keymap('n', 'ghR', '<cmd>Gitsigns reset_buffer<CR>', opts)
-  keymap('n', 'ghp', '<cmd>Gitsigns preview_hunk<CR>', opts)
-  keymap('n', 'ghb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', opts)
-  keymap('n', 'gtb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
-  keymap('n', 'ghd', '<cmd>Gitsigns diffthis<CR>', opts)
-  keymap('n', 'ghD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', opts)
-  keymap('n', 'gtd', '<cmd>Gitsigns toggle_deleted<CR>', opts)
+  keymap('n', 'gss', ':Gitsigns stage_hunk<CR>', opts)
+  keymap('n', 'gsr', ':Gitsigns reset_hunk<CR>', opts)
+  keymap('n', 'gsu', '<cmd>Gitsigns undo_stage_hunk<CR>', opts)
+  keymap('n', 'gsS', '<cmd>Gitsigns stage_buffer<CR>', opts)
+  keymap('n', 'gsR', '<cmd>Gitsigns reset_buffer<CR>', opts)
+  keymap('n', 'gsp', '<cmd>Gitsigns preview_hunk<CR>', opts)
+  keymap('n', 'gsb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', opts)
+  keymap('n', 'gsb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
+  keymap('n', 'gsd', '<cmd>Gitsigns diffthis<CR>', opts)
+  keymap('n', 'gsD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', opts)
+  keymap('n', 'gsd', '<cmd>Gitsigns toggle_deleted<CR>', opts)
 
   -- Text object
   keymap('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)

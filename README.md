@@ -76,6 +76,10 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 - `<Space>r` replace declaration
 - `<Space>ca` code action
 
+#### `b` means to `buffer`
+
+#### `s` means to `see` or `search`
+
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
@@ -95,11 +99,11 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 - `gl` go to line
 - `gj` git next hunk
 - `gk` git previous hunk
-- `ghs` git stage hunk
-- `ghS` git stage file
-- `ghr` git reset hunk
-- `ghu` git undo stage hunk
-- `ghp` git preview hunk
+- `gss` gitsigns stage hunk
+- `gsS` gitsigns stage file
+- `gsr` gitsigns reset hunk
+- `gsu` gitsigns undo stage hunk
+- `gsp` gitsigns preview hunk
 
 See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 
