@@ -77,8 +77,8 @@ keymap('n', 'fd', ':NvimTreeFindFile<cr>', opts)
 -- bufferline
 keymap('n', '<s-tab>', ':BufferLineCyclePrev<CR>', opts)
 keymap('n', '<tab>', ':BufferLineCycleNext<CR>', opts)
-keymap('n', 'bp', ':BufferLinePick<CR>', opts)
-keymap('n', 'bc', ':BufferLinePickClose<CR>', opts)
+keymap('n', '<C-b>p', ':BufferLinePick<CR>', opts)
+keymap('n', '<C-b>x', ':BufferLinePickClose<CR>', opts)
 
 -- telescope
 keymap('n', 'ff', ':Telescope find_files<CR>', opts)
