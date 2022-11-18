@@ -22,7 +22,7 @@ vim.opt.wrap = false -- No Wrap lines
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
 vim.g.colorscheme = "neosolarized"
-vim.g.colorscheme = "nebulous"
+-- vim.g.colorscheme = "nebulous"
 
 -- lvim
 lvim.format_on_save = true
