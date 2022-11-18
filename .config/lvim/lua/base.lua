@@ -18,6 +18,7 @@ vim.opt.scrolloff = 10
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
 vim.opt.wrap = false -- No Wrap lines
+vim.opt.undofile = true -- enable persistent undo, similar to undotree
 
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
