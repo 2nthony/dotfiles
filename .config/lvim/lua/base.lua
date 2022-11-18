@@ -19,6 +19,7 @@ vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in 
 vim.opt.smarttab = true
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.undofile = true -- enable persistent undo, similar to undotree
+vim.opt.whichwrap = "" -- don't move cursor to prev/next line via any key
 
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
