@@ -18,7 +18,12 @@ vim.opt.scrolloff = 10
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
 vim.opt.wrap = false -- No Wrap lines
+vim.opt.swapfile = false
+vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.undofile = true -- enable persistent undo, similar to undotree
+vim.opt.inccommand = 'split'
+vim.opt.laststatus = 2
+vim.opt.breakindent = true
 vim.opt.whichwrap = "" -- don't move cursor to prev/next line via any key
 
 -- define my own colorscheme field
