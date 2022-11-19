@@ -69,17 +69,6 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 
 - `<Tab>` next buffer, `<S-Tab>` previous buffer
 
-#### `<Space>` relates to LSP
-
-- `<Space>d` search declarations
-- `<Space>p` preview definition
-- `<Space>r` replace declaration
-- `<Space>ca` code action
-
-#### `b` means to `buffer`
-
-#### `s` means to `see` or `search`
-
 #### `f` means to `find` or `file`
 
 - `fe` toggle file explorer
@@ -94,8 +83,7 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 #### `g` means to `go` or `git`
 
 - `git` open lazygit (install `lazygit`)
-- `gw` go to word
-- `gl` go to line
+- `gw` go to word after cursor, `gW` before cursor([leap.nvim](https://github.com/ggandor/leap.nvim))
 - `gj` git next hunk
 - `gk` git previous hunk
 - `gss` gitsigns stage hunk
@@ -106,14 +94,18 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 
 See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 
-#### `s` means to `switch`, `split`
+#### `s` means to `switch`, `split`, `see`, `search` or `LSP`
 
 - `ss` split window
 - `sv` vertical split window
-- `sh` focus left window
-- `sj` focus below window
-- `sk` focus above window
-- `sl` focus right window
+- `sh` switch to left window
+- `sj` switch to below window
+- `sk` switch to above window
+- `sl` switch to right window
+- `sd` LSP search declarations
+- `sp` LSP see preview definition
+- `sr` LSP replace declaration
+- `sca` LSP code action
 
 #### Others, `<Space>` instead of `\`
 
