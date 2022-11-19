@@ -43,8 +43,8 @@ lvim.plugins = {
   },
 
   -- navigation
-  { "phaazon/hop.nvim" },
   { "windwp/nvim-spectre" },
+  { "ggandor/leap.nvim" },
 
   -- highlight
   { 'norcalli/nvim-colorizer.lua' }, -- highlight HEX color

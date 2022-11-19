@@ -107,21 +107,6 @@ if status_lspsaga_ok then
   keymap('n', 'so', '<Cmd>LSoutlineToggle<CR>', opts)
 end
 
--- hop
-local status_hop_ok = pcall(require, "hop")
-if status_hop_ok then
-  -- word
-  keymap('n', 'gw', ":lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
-  keymap('v', 'gw', ":lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", opts)
-  keymap('o', 'gw',
-    ":lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>"
-    , opts)
-  -- line
-  keymap('n', 'gl', ':HopLine<cr>', opts)
-  keymap('v', 'gl', ':HopLine<cr>', opts)
-  keymap('o', 'gl', ':HopLine<cr>', opts)
-end
-
 -- nvim-spectre
 local status_nvim_spectre_ok = pcall(require, 'spectre')
 if (status_nvim_spectre_ok) then
@@ -156,11 +141,13 @@ if status_gitsigns_ok then
   keymap('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opts)
 end
 
+-- trouble
 local trouble_ok = pcall(require, "trouble")
 if trouble_ok then
   keymap("n", "fwd", ":TroubleToggle workspace_diagnostics<CR>", opts)
 end
 
+-- todo-comments
 local todo_ok = pcall(require, "todo-comments")
 if todo_ok then
   if trouble_ok then
@@ -169,4 +156,11 @@ if todo_ok then
     keymap("n", "ftc", ":TodoLocList<CR>", opts)
   end
 else
+end
+
+-- leap
+local leap_ok = pcall(require, "leap")
+if leap_ok then
+  keymap('n', 'gw', '<Plug>(leap-forward-to)', opts)
+  keymap('n', 'gW', '<Plug>(leap-backward-to)', opts)
 end
