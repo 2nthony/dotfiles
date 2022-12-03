@@ -84,8 +84,8 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
 
 - `git` open lazygit (install `lazygit`)
 - `gw` go to word after cursor, `gW` before cursor([leap.nvim](https://github.com/ggandor/leap.nvim))
-- `gj` git next hunk
-- `gk` git previous hunk
+- `gsj` git next hunk
+- `gsk` git previous hunk
 - `gss` gitsigns stage hunk
 - `gsS` gitsigns stage file
 - `gsr` gitsigns reset hunk

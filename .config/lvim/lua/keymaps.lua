@@ -120,8 +120,8 @@ end
 local status_gitsigns_ok = pcall(require, "gitsigns")
 if status_gitsigns_ok then
   -- Navigation
-  keymap('n', 'gj', ':Gitsigns next_hunk<CR>', opts)
-  keymap('n', 'gk', ':Gitsigns prev_hunk<CR>', opts)
+  keymap('n', 'gsj', ':Gitsigns next_hunk<CR>', opts)
+  keymap('n', 'gsk', ':Gitsigns prev_hunk<CR>', opts)
 
   -- Actions
   keymap('n', 'gss', ':Gitsigns stage_hunk<CR>', opts)
