@@ -54,4 +54,7 @@ lvim.plugins = {
 
   -- telescope
   { "folke/trouble.nvim" },
+
+  -- git
+  { "sindrets/diffview.nvim" },
 }
