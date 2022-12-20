@@ -15,11 +15,16 @@ telescope.defaults.layout_strategy = "vertical"
 telescope.defaults.path_display = nil
 
 -- override pickers
-telescope.pickers.buffers.initial_mode = nil
-telescope.pickers.oldfiles = {
+local picker_options = {
   theme = "dropdown",
   previewer = false,
 }
+telescope.pickers.buffers.initial_mode = nil
+telescope.pickers.find_files = picker_options
+telescope.pickers.oldfiles = picker_options
+telescope.pickers.buffers = picker_options
+telescope.pickers.grep_string = picker_options
+telescope.pickers.live_grep = picker_options
 
 telescope.defaults.file_ignore_patterns = {
   "node_modules/",
