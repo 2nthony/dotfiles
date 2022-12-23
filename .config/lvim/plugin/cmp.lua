@@ -27,10 +27,4 @@ lcmp.confirm_opts = {
   select = false,
 }
 
-table.insert(lcmp.cmdline.options, {
-  type = ":",
-  sources = {
-    { name = "cmdline" },
-    { name = 'path' },
-  }
-})
+lcmp.cmdline.enable = true
