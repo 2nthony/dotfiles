@@ -104,7 +104,7 @@ if status_lspsaga_ok then
   keymap('n', 'sr', '<Cmd>Lspsaga rename<CR>', opts)
   keymap('n', 'sca', '<cmd>Lspsaga code_action<CR>', opts)
   keymap('v', 'sca', '<cmd><C-U>Lspsaga range_code_action<CR>', opts)
-  keymap('n', 'so', '<Cmd>LSoutlineToggle<CR>', opts)
+  keymap('n', 'so', '<Cmd>Lspsaga outline<CR>', opts)
 end
 
 -- nvim-spectre
