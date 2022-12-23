@@ -9,6 +9,9 @@ telescope.defaults.mappings.i["<S-Tab>"] = actions.move_selection_previous
 telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
 telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
 
+telescope.defaults.prompt_prefix = ""
+telescope.defaults.selection_caret = "  "
+
 telescope.defaults.preview = false
 
 telescope.defaults.path_display = nil
