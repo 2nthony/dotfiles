@@ -29,7 +29,6 @@ vim.opt.whichwrap = "" -- don't move cursor to prev/next line via any key
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
 vim.g.colorscheme = "neosolarized"
--- vim.g.colorscheme = "nebulous"
 
 -- lvim
 lvim.format_on_save = true
