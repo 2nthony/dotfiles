@@ -23,4 +23,4 @@ nvim_tree.setup.git.ignore = true
 nvim_tree.setup.update_focused_file.enable = false
 
 -- https://github.com/nvim-tree/nvim-tree.lua/issues/1178#issuecomment-1101819983
-table.insert(nvim_tree.setup.filters.custom, "^\\.git$")
+nvim_tree.setup.filters.custom = { "^\\.git$" }
