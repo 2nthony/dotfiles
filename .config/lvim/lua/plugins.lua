@@ -14,7 +14,6 @@ lvim.plugins = {
   { "folke/todo-comments.nvim" },
   { "wakatime/vim-wakatime" },
   { "tpope/vim-surround" },
-  { "rainbowhxch/accelerated-jk.nvim" },
   { "rmagatti/auto-session" },
   {
     "iamcco/markdown-preview.nvim",
