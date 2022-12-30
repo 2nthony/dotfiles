@@ -9,6 +9,7 @@ end
 local bufferline = lvim.builtin.bufferline
 
 bufferline.options = {
+  diagnostics = "nvim_lsp",
   mode = "tabs",
   separator_style = 'slant',
   always_show_bufferline = false,
