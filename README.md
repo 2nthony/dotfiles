@@ -117,6 +117,27 @@ See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 - `<Space>S` ripgrep search(like global search)
 - `<Space>tt` toggle show troubles(problems)
 
+### Code Snippets ([luasnip](https://github.com/L3MON4D3/LuaSnip))
+
+I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
+
+```json
+// ~/Library/Application Support/Code/User/snippets/package.json
+{
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./dropcode.code-snippets"
+      }
+    ]
+  }
+}
+```
+
 ## Shell
 
 - [Fish shell](https://fishshell.com/)
