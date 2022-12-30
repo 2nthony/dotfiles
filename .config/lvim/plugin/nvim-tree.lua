@@ -29,3 +29,9 @@ nvim_tree.setup.update_focused_file.enable = false
 
 -- https://github.com/nvim-tree/nvim-tree.lua/issues/1178#issuecomment-1101819983
 nvim_tree.setup.filters.custom = { "^\\.git$" }
+
+-- use normal size icons
+nvim_tree.setup.diagnostics.icons.hint = lvim.icons.diagnostics.Hint
+nvim_tree.setup.diagnostics.icons.info = lvim.icons.diagnostics.Info
+nvim_tree.setup.diagnostics.icons.warning = lvim.icons.diagnostics.Warning
+nvim_tree.setup.diagnostics.icons.error = lvim.icons.diagnostics.Error
