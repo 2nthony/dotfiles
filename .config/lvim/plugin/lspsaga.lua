@@ -1,8 +1,8 @@
 -- LSP
 -- https://github.com/glepnir/lspsaga.nvim
 
-local status_lspsaga_ok, lspsaga = pcall(require, "lspsaga")
-if not status_lspsaga_ok then
+local ok, lspsaga = pcall(require, "lspsaga")
+if not ok then
   return
 end
 

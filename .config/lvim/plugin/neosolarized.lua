@@ -1,8 +1,8 @@
 -- theme
 -- https://github.com/svrana/neosolarized.nvim
 
-local status_neosolarized_ok, neosolarized = pcall(require, "neosolarized")
-if not status_neosolarized_ok then
+local ok, neosolarized = pcall(require, "neosolarized")
+if not ok then
   return
 end
 

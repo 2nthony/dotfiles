@@ -1,6 +1,11 @@
 -- builtin
 -- https://github.com/kyazdani42/nvim-tree.lua
 
+local ok = pcall(require, "nvim-tree")
+if not ok then
+  return
+end
+
 local nvim_tree = lvim.builtin.nvimtree
 
 nvim_tree.setup.view.mappings.list = {

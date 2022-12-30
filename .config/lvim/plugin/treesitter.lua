@@ -1,3 +1,5 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter
+
 local treesitter = lvim.builtin.treesitter
 
 treesitter.ignore_install = { "haskell" }

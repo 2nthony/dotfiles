@@ -1,7 +1,7 @@
 -- https://github.com/onsails/lspkind.nvim
 
-local status_lspkind_ok, lspkind = pcall(require, "lspkind")
-if not status_lspkind_ok then
+local ok, lspkind = pcall(require, "lspkind")
+if not ok then
   return
 end
 

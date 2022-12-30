@@ -1,10 +1,12 @@
 -- builtin
 -- https://github.com/akinsho/toggleterm.nvim
 
-local toggleterm = lvim.builtin.terminal
-if not toggleterm.active then
+local ok = pcall(require, "toggleterm")
+if not ok then
   return
 end
+
+local toggleterm = lvim.builtin.terminal
 
 toggleterm.open_mapping = [[<c-\>]]
 toggleterm.direction = "float"

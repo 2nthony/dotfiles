@@ -1,7 +1,7 @@
 -- https://github.com/rmagatti/auto-session
 
-local status_auto_session_ok, auto_session = pcall(require, 'auto-session')
-if not status_auto_session_ok then
+local ok, auto_session = pcall(require, 'auto-session')
+if not ok then
   return
 end
 

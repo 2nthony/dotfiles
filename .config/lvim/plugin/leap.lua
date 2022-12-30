@@ -1,3 +1,5 @@
+-- https://github.com/ggandor/leap.nvim
+
 local ok, leap = pcall(require, "leap")
 if not ok then
   return
