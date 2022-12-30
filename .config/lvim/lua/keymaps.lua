@@ -25,11 +25,6 @@ keymap("n", "Q", "q", opts)
 -- cancel q
 keymap("n", "q", "<Nop>", opts)
 
--- e, but insert mode
-keymap("i", "<C-e>", "<Esc>ea", opts)
--- b, but insert mode
-keymap("i", "<C-b>", "<Esc>bi", opts)
-
 -- :tabedit - new tab
 keymap("n", "<C-n>", ":tabedit<cr>", opts)
 
