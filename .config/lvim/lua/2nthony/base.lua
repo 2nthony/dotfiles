@@ -25,6 +25,7 @@ vim.opt.inccommand = 'split'
 vim.opt.laststatus = 2
 vim.opt.breakindent = true
 vim.opt.whichwrap = "" -- don't move cursor to prev/next line via any key
+vim.opt.cmdheight = 2
 
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy

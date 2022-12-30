@@ -8,12 +8,12 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
-require("base")
-require("plugins")
-require("keymaps")
-require("highlights")
-require("autocmds")
--- require("hack")
+require("2nthony.base")
+require("2nthony.plugins")
+require("2nthony.keymaps")
+require("2nthony.highlights")
+require("2nthony.autocmds")
+-- require("2nthony.hack")
 
 -- general
 -- lvim.log.level = "warn"
