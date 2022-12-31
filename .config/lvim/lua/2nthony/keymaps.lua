@@ -9,15 +9,18 @@ local keymap = vim.api.nvim_set_keymap
 -- [[ Normal / Origin ]]
 
 keymap('n', '<S-C-p>', '"0p', opts)
--- Delete without yank
-keymap('n', '<leader>d', '"_d', opts)
-keymap('n', 'x', '"_x', opts)
+
+-- Delete
+keymap("n", "d", '"_d', opts)
+keymap("v", "d", '"_d', opts)
+-- Delete a word backwards
+keymap('n', 'dw', 'vb"_d', opts)
+
+-- Cut, then can paste
+keymap("n", "xx", 'dd', opts)
 
 -- Select all
 keymap('n', '<C-a>', 'gg<S-v>G', opts)
-
--- Delete a word backwards
-keymap('n', 'dw', 'vb"_d', opts)
 
 -- remap macro record key
 keymap("n", "Q", "q", opts)
