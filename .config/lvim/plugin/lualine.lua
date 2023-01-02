@@ -22,6 +22,10 @@ local progress = function()
   return chars[index]
 end
 
+-- fix the icon color?
+local branch = components.branch
+branch.icon = lvim.icons.git.Branch
+
 lualine.options = {
   component_separators = { left = "", right = "" },
   section_separators = { left = "", right = "" },
@@ -35,7 +39,7 @@ end
 
 lualine.sections = {
   lualine_a = { "mode" },
-  lualine_b = { components.branch },
+  lualine_b = { branch },
   lualine_c = { components.filename },
   lualine_x = { diagnostics, filetype },
   lualine_y = { components.location },
