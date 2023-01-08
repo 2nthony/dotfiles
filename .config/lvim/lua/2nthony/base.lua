@@ -30,6 +30,7 @@ vim.opt.cmdheight = 2
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
 vim.g.colorscheme = "neosolarized"
+vim.g.colorscheme = "vitesse"
 
 -- lvim
 lvim.format_on_save = true

@@ -42,6 +42,10 @@ if vim.g.colorscheme == "neosolarized" then
   lualine.options.theme = "solarized_dark"
 end
 
+if vim.g.colorscheme == "vitesse" then
+  lualine.options.theme = "vitesse"
+end
+
 lualine.sections = {
   lualine_a = { "mode" },
   lualine_b = { branch },

@@ -34,6 +34,12 @@ lvim.plugins = {
       'tjdevries/colorbuddy.nvim'
     },
   },
+  {
+    "2nthony/vitesse.nvim",
+    requires = {
+      "tjdevries/colorbuddy.nvim"
+    }
+  },
 
   -- navigation
   { "windwp/nvim-spectre" },
