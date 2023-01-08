@@ -1,4 +1,10 @@
+-- builtin
 -- https://github.com/nvim-treesitter/nvim-treesitter
+
+local ok = pcall(require, "nvim-treesitter")
+if not ok then
+  return
+end
 
 local treesitter = lvim.builtin.treesitter
 
