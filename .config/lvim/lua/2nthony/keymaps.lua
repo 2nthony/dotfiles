@@ -97,6 +97,7 @@ if status_lspsaga_ok then
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
+  keymap('i', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   keymap('n', 'sd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
   keymap('n', 'sp', '<Cmd>Lspsaga peek_definition<CR>', opts)
   keymap('n', 'sr', '<Cmd>Lspsaga rename<CR>', opts)
