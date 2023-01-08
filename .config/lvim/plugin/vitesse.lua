@@ -1,3 +1,5 @@
+-- https://github.com/2nthony/vitesse.nvim
+
 local ok, vitesse = pcall(require, "vitesse")
 if not ok then
   return
