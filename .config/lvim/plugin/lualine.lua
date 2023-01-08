@@ -1,6 +1,11 @@
 -- builtin
 -- https://github.com/nvim-lualine/lualine.nvim
 
+local ok = pcall(require, "lualine")
+if not ok then
+  return
+end
+
 local lualine = lvim.builtin.lualine
 local components = require("lvim.core.lualine.components")
 
@@ -10,7 +15,6 @@ local diagnostics = {
 }
 
 local filetype = components.filetype
-filetype.icon_only = true
 
 -- cool function for progress
 local progress = function()
@@ -22,9 +26,10 @@ local progress = function()
   return chars[index]
 end
 
--- fix the icon color?
-local branch = components.branch
-branch.icon = lvim.icons.git.Branch
+local branch = {
+  "branch",
+  icon = lvim.icons.git.Branch
+}
 
 lualine.options = {
   component_separators = { left = "", right = "" },
