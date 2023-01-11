@@ -7,6 +7,7 @@ if not ok then
 end
 
 lspsaga.init_lsp_saga {
+  border_style = "rounded",
   saga_winblend = 0,
   server_filetype_map = {
     typescript = "typescript"
