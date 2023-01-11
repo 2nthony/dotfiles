@@ -8,6 +8,7 @@ end
 
 local treesitter = lvim.builtin.treesitter
 
+treesitter.auto_install = false
 treesitter.ignore_install = { "haskell" }
 treesitter.highlight.enabled = true
 treesitter.ensure_installed = {
