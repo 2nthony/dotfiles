@@ -77,3 +77,4 @@ Pods/
 # nvim/lvim
 packer_compiled.lua
 .luarc.json
+lazy-lock.json

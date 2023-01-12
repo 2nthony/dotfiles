@@ -8,6 +8,10 @@ lvim.builtin.project.active = false
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.indentlines.active = false
 
+require("plugins.bufferline")
+require("plugins.nvim-tree")
+require("plugins.toggleterm")
+
 -- extra plugins
 lvim.plugins = {
   -- general
@@ -17,7 +21,7 @@ lvim.plugins = {
   { "rmagatti/auto-session" },
   {
     "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
 
   -- lsp
@@ -36,9 +40,12 @@ lvim.plugins = {
   },
   {
     "2nthony/vitesse.nvim",
-    requires = {
+    dependencies = {
       "tjdevries/colorbuddy.nvim"
-    }
+    },
+    config = function()
+      require("plugins.vitesse")
+    end
   },
 
   -- navigation
