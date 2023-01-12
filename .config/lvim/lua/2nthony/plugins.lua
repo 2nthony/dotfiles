@@ -11,6 +11,7 @@ lvim.builtin.indentlines.active = false
 require("plugins.bufferline")
 require("plugins.nvim-tree")
 require("plugins.toggleterm")
+require("plugins.nvim-treesitter")
 
 -- extra plugins
 lvim.plugins = {
