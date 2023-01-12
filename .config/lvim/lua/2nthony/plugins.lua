@@ -34,12 +34,6 @@ lvim.plugins = {
 
   -- theme
   {
-    'svrana/neosolarized.nvim',
-    requires = {
-      'tjdevries/colorbuddy.nvim'
-    },
-  },
-  {
     "2nthony/vitesse.nvim",
     dependencies = {
       "tjdevries/colorbuddy.nvim"
