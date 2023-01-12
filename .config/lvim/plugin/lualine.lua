@@ -42,7 +42,7 @@ if vim.g.colorscheme == "neosolarized" then
   lualine.options.theme = "solarized_dark"
 end
 
-if vim.g.colorscheme == "vitesse" then
+if lvim.colorscheme == "vitesse" then
   lualine.options.theme = "vitesse"
 end
 
