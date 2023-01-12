@@ -12,3 +12,5 @@ end
 vitesse.setup {
   comment_italics = true,
 }
+
+vim.cmd("colorscheme vitesse")
