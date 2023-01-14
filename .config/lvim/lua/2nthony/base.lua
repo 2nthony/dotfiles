@@ -1,6 +1,3 @@
--- vim
-vim.cmd("autocmd!")
-
 vim.wo.number = true
 
 vim.opt.backup = false
@@ -27,9 +24,6 @@ vim.opt.breakindent = true
 vim.opt.whichwrap = "" -- don't move cursor to prev/next line via any key
 vim.opt.cmdheight = 2
 
--- define my own colorscheme field
--- because these themes powered by colorbuddy
-vim.g.colorscheme = "neosolarized"
 -- highlight
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
