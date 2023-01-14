@@ -16,7 +16,6 @@ lspsaga.setup {
     }
   },
   outline = {
-    auto_close = false,
     keys = {
       jump = "<cr>"
     }
@@ -27,4 +26,7 @@ lspsaga.setup {
   lightbulb = {
     enable_in_insert = false,
   },
+  -- breadcrumbs
+  -- https://github.com/glepnir/lspsaga.nvim#lspsaga-symbols-in-winbar
+  symbol_in_winbar = {},
 }
