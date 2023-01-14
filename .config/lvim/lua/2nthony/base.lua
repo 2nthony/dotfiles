@@ -32,7 +32,8 @@ vim.opt.wildoptions = 'pum'
 vim.opt.pumblend = 0
 vim.opt.background = 'dark'
 
-lvim.colorscheme = "vitesse"
-
 -- lvim
 lvim.format_on_save = true
+
+-- colorscheme
+lvim.colorscheme = "vitesse"
