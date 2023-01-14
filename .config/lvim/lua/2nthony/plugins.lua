@@ -1,5 +1,6 @@
 -- enable builtin plugins
 lvim.builtin.terminal.active = true -- toogleterm.nvim
+lvim.builtin.cmp.cmdline.enable = true
 
 -- disable builtin plugins
 lvim.builtin.alpha.active = false -- alpha-nvim
