@@ -6,19 +6,25 @@ if not ok then
   return
 end
 
-lspsaga.init_lsp_saga {
-  border_style = "rounded",
-  saga_winblend = 0,
-  server_filetype_map = {
-    typescript = "typescript"
+lspsaga.setup {
+  ui = {
+    border = "rounded",
+    winblend = 0,
+    colors = {
+      normal_bg = "none",
+      title_bg = "none",
+    }
   },
-  finder_action_keys = {
-    open = "<cr>",
+  outline = {
+    auto_close = false,
+    keys = {
+      jump = "<cr>"
+    }
   },
-  show_outline = {
-    jump_key = "<cr>"
+  finder = {
+    edit = { "o", "<cr>" }
   },
-  code_action_lightbulb = {
+  lightbulb = {
     enable_in_insert = false,
-  }
+  },
 }
