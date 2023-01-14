@@ -6,8 +6,6 @@ local luasnip = require("luasnip")
 
 local lcmp = lvim.builtin.cmp
 
-lcmp.window = {}
-
 lcmp.mapping["<C-space>"] = {}
 lcmp.mapping["<C-f>"] = {}
 lcmp.mapping["<C-p>"] = cmp.mapping.complete()
