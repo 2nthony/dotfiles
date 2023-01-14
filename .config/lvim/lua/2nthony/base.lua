@@ -30,6 +30,14 @@ vim.opt.cmdheight = 2
 -- define my own colorscheme field
 -- because these themes powered by colorbuddy
 vim.g.colorscheme = "neosolarized"
+-- highlight
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.wildoptions = 'pum'
+vim.opt.pumblend = 0
+vim.opt.background = 'dark'
+
 lvim.colorscheme = "vitesse"
 
 -- lvim
