@@ -11,7 +11,6 @@ an executable
 require("2nthony.base")
 require("2nthony.plugins")
 require("2nthony.keymaps")
-require("2nthony.highlights")
 require("2nthony.autocmds")
 -- require("2nthony.hack")
 
