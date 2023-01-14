@@ -36,6 +36,9 @@ lvim.plugins = {
 
   -- theme
   {
+    "rose-pine/neovim",
+  },
+  {
     "2nthony/vitesse.nvim",
     dependencies = {
       "tjdevries/colorbuddy.nvim"

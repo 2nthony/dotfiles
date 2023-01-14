@@ -37,3 +37,4 @@ lvim.format_on_save = true
 
 -- colorscheme
 lvim.colorscheme = "vitesse"
+lvim.colorscheme = "rose-pine"
