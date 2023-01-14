@@ -26,5 +26,3 @@ lcmp.confirm_opts = {
   behavior = cmp.ConfirmBehavior.Replace,
   select = false,
 }
-
-lcmp.cmdline.enable = true
