@@ -22,4 +22,5 @@ treesitter.ensure_installed = {
   "css",
   "vue",
   "svelte",
+  "markdown",
 }
