@@ -10,5 +10,5 @@ if not ok then
 end
 
 vitesse.setup {
-  comment_italics = true,
+  reverse_visual = true,
 }
