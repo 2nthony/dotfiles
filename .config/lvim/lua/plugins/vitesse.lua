@@ -12,3 +12,5 @@ end
 vitesse.setup {
   reverse_visual = true,
 }
+
+vim.cmd("colorscheme vitesse")
