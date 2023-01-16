@@ -37,6 +37,7 @@ lvim.plugins = {
   -- theme
   {
     "2nthony/vitesse.nvim",
+    priority = 1000,
     dependencies = {
       "tjdevries/colorbuddy.nvim"
     },
