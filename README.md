@@ -59,11 +59,11 @@ ln -s ~/yourpath/.config/lvim ~/.config
 
 ### Plugins
 
-Full plugins see [plugins.lua](.config/lvim/lua/plugins.lua).
+Full plugins see [plugins.lua](.config/lvim/lua/2nthony/plugins.lua).
 
 ### Keybindings
 
-The latest keybindings in [keymaps.lua](.config/lvim/lua/keymaps.lua).
+The latest keybindings in [keymaps.lua](.config/lvim/lua/2nthony/keymaps.lua).
 
 #### `<C>` means to `<Ctrl>`
 
