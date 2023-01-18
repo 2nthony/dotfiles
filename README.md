@@ -1,7 +1,7 @@
 # 2nthony's dotfiles
 
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
-![](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19PH6Tpj.png)
+![](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19aN41xv.png)
 
 <p align="center">
   <sub>
@@ -49,7 +49,8 @@ The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.l
 
 ### Setup
 
-Clone this repo and link `lvim` to `~/.config`
+1. Install [LunarVim](https://www.lunarvim.org/docs/installation)
+2. Clone this repo and link `lvim` to `~/.config`
 
 ```bash
 git clone https://github.com/2nthony/dotfiles.git ~/yourpath
