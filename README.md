@@ -1,7 +1,16 @@
 # 2nthony's dotfiles
 
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
-![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-49-51eyZ5D4.jpg)
+![](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19PH6Tpj.png)
+
+<p align="center">
+  <sub>
+    <samp>
+      <a href="https://github.com/2nthony/vitesse.iterm">vitesse.iterm</a> •
+      <a href="https://github.com/2nthony/vitesse.nvim">vitesse.nvim</a>
+    </samp>
+  </sub>
+</p>
 
 ## [NeoVim](https://neovim.io/) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
@@ -151,6 +160,8 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
+- [vitesse.iterm](https://github.com/2nthony/vitesse.iterm) - Vitesse theme for iTerm2
+- [vitesse.nvim](https://github.com/2nthony/vitesse.nvim) - Vitesse theme for NeoVim
 
 ## Credit
 
