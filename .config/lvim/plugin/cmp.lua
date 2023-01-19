@@ -14,7 +14,9 @@ lcmp.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
 
 -- if back to normal mode, then unlink snippet action
 lcmp.mapping["<esc>"] = cmp.mapping(function(callback)
-  luasnip.unlink_current()
+  if luasnip.in_snippet() then
+    luasnip.unlink_current()
+  end
 
   -- NOTE: CAN NOT delete this `callback`
   callback()
