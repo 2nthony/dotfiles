@@ -28,7 +28,7 @@ lvim.plugins = {
   },
 
   -- lsp
-  { 'glepnir/lspsaga.nvim' },
+  { 'glepnir/lspsaga.nvim', event = "BufRead" },
   { 'onsails/lspkind-nvim' },
 
   -- cmp
