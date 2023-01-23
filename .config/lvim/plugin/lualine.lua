@@ -38,10 +38,6 @@ lualine.options = {
   always_divide_middle = true,
 }
 
-if lvim.colorscheme == "vitesse" then
-  lualine.options.theme = "vitesse"
-end
-
 lualine.sections = {
   lualine_a = { "mode" },
   lualine_b = { branch },
