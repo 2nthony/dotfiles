@@ -1,6 +1,42 @@
-keybinds clear-defaults=false {
-    normal {
-        unbind "Ctrl b"
+keybinds {
+    unbind "Ctrl q"
+
+    shared {
+        bind "Ctrl b" { SwitchToMode "tmux"; }
+    }
+
+    normal clear-defaults=true {
+        bind "Ctrl b" { SwitchToMode "tmux"; }
+    }
+
+    locked clear-defaults=true {
+        bind "Ctrl b" { SwitchToMode "normal"; }
+    }
+
+    pane {
+        bind "Ctrl b" { SwitchToMode "tmux"; }
+    }
+
+    resize {
+        bind "Ctrl r" { SwitchToMode "normal"; }
+    }
+
+    move {
+        bind "Ctrl m" { SwitchToMode "normal"; }
+    }
+
+    tmux clear-defaults=true {
+        bind "Ctrl b" "Enter" "Esc" { SwitchToMode "normal"; }
+
+        bind "g" { SwitchToMode "locked"; }
+        bind "p" { SwitchToMode "pane"; }
+        bind "t" { SwitchToMode "tab"; }
+        bind "r" { SwitchToMode "resize"; }
+        bind "m" { SwitchToMode "move"; }
+        bind "s" { SwitchToMode "scroll"; } // search
+
+        bind "d" { Detach; }
+        bind "q" { Quit; }
     }
 }
 
