@@ -1,2 +1,0 @@
-# osx clipboard
-#set-option -g default-command "reattach-to-user-namespace -l fish"
