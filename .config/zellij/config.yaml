@@ -1,4 +1,0 @@
-mouse_mode: false
-keybinds:
-  normal:
-    - unbind: [Ctrl: "b"]
