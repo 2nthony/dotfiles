@@ -121,7 +121,7 @@ mouse_mode false
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
 //
-// copy_on_select false
+copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
