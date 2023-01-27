@@ -2,15 +2,14 @@ themes {
     vitesse {
         fg "#bebaab"
         bg "#121212"
-        black "#111111"
         red "#cb7676"
         green "#4d9375"
         yellow "#e6cc77"
         blue "#6394bf"
         magenta "#d9739f"
-        cyan "#5eaab5"
-        white "#ffffff"
         orange "#d4976c"
+        cyan "#5eaab5"
+        black "#111111"
+        white "#ffffff"
     }
 }
-
