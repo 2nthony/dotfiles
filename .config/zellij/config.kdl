@@ -18,11 +18,11 @@ keybinds {
     }
 
     resize {
-        bind "Ctrl r" { SwitchToMode "normal"; }
+        bind "Ctrl n" { SwitchToMode "normal"; }
     }
 
     move {
-        bind "Ctrl m" { SwitchToMode "normal"; }
+        bind "Ctrl h" { SwitchToMode "normal"; }
     }
 
     tmux clear-defaults=true {
@@ -31,8 +31,8 @@ keybinds {
         bind "g" { SwitchToMode "locked"; }
         bind "p" { SwitchToMode "pane"; }
         bind "t" { SwitchToMode "tab"; }
-        bind "r" { SwitchToMode "resize"; }
-        bind "m" { SwitchToMode "move"; }
+        bind "n" { SwitchToMode "resize"; }
+        bind "h" { SwitchToMode "move"; }
         bind "s" { SwitchToMode "scroll"; } // search
 
         bind "d" { Detach; }
