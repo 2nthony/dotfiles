@@ -61,4 +61,7 @@ lvim.plugins = {
 
   -- git
   { "sindrets/diffview.nvim" },
+
+  -- syntax
+  { "imsnif/kdl.vim", event = "BufReadPre *.kdl", },
 }
