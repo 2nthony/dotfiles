@@ -38,7 +38,7 @@
     },
     {
       "fileMatch": ["turbo.json"],
-      "url": "https://turborepo.org/schema.json"
+      "url": "https://turbo.build/schema.json"
     }
   ]
 }
