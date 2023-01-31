@@ -39,6 +39,10 @@
     {
       "fileMatch": ["turbo.json"],
       "url": "https://turbo.build/schema.json"
+    },
+    {
+      "fileMatch": [".ghqrc"],
+      "url": "https://cdn.jsdelivr.net/gh/2nthony/ghq/scheme.json"
     }
   ]
 }
