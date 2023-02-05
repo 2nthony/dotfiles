@@ -11,7 +11,7 @@ telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
 
 telescope.defaults.preview = false
 
-telescope.defaults.path_display = nil
+telescope.defaults.path_display = { "smart" }
 
 telescope.theme = "dropdown"
 

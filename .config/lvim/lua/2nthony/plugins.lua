@@ -14,6 +14,8 @@ require("plugins.bufferline")
 require("plugins.nvim-tree")
 require("plugins.toggleterm")
 require("plugins.nvim-treesitter")
+require("plugins.telescope")
+require("plugins.lspconfig")
 
 -- extra plugins
 lvim.plugins = {
