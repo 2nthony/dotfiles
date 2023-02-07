@@ -62,6 +62,9 @@ lvim.plugins = {
     config = function ()
       require("plugins.nvim-surround")
     end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects", -- recommended
+    },
   },
 
   -- telescope
