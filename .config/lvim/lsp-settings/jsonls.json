@@ -47,6 +47,10 @@
     {
       "fileMatch": ["renovate.json"],
       "url": "https://docs.renovatebot.com/renovate-schema.json"
+    },
+    {
+      "fileMatch": ["tauri.conf.json"],
+      "url": "https://cdn.jsdelivr.net/gh/tauri-apps/tauri/tooling/cli/schema.json"
     }
   ]
 }
