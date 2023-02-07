@@ -22,7 +22,6 @@ lvim.plugins = {
   -- general
   { "folke/todo-comments.nvim" },
   { "wakatime/vim-wakatime" },
-  { "tpope/vim-surround" },
   { "rmagatti/auto-session" },
   {
     "iamcco/markdown-preview.nvim",
@@ -57,6 +56,13 @@ lvim.plugins = {
 
   -- treesitter
   { "windwp/nvim-ts-autotag" },
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function ()
+      require("plugins.nvim-surround")
+    end,
+  },
 
   -- telescope
   { "folke/trouble.nvim" },
