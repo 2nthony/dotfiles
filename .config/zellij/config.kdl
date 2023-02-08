@@ -4,6 +4,7 @@ keybinds {
     shared {
         unbind "Ctrl g"
         bind "Ctrl b" { SwitchToMode "tmux"; }
+        bind "q" { SwitchToMode "Normal"; }
     }
 
     normal clear-defaults=true {
@@ -100,7 +101,7 @@ keybinds {
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         bind "n" { Search "down"; }
-        bind "p" { Search "up"; }
+        bind "N" { Search "up"; }
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
