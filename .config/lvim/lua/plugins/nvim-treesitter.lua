@@ -22,5 +22,6 @@ treesitter.ensure_installed = {
   "css",
   "vue",
   "svelte",
-  "markdown",
+  "markdown", -- lspsaga
+  "markdown_inline", -- lspsaga
 }
