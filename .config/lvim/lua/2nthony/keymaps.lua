@@ -86,7 +86,7 @@ keymap('n', 'fo', ':Telescope oldfiles<CR>', opts)
 keymap('n', 'fh', ':Telescope help_tags<CR>', opts)
 
 -- terminal / toggleterm
-keymap('n', 'git', ':lua TOGGLE_LAZYGIT()<cr>', opts)
+keymap('n', 'git', ':lua LAZYGIT_TOGGLE()<cr>', opts)
 
 -- lspsaga
 local status_lspsaga_ok = pcall(require, "lspsaga")

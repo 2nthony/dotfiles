@@ -6,12 +6,13 @@ if not ok then
   return
 end
 
+local Terminal = require("toggleterm.terminal").Terminal
 local toggleterm = lvim.builtin.terminal
 
 toggleterm.open_mapping = [[<c-\>]]
 toggleterm.direction = "float"
 toggleterm.float_opts = {
-  -- border = "curved",
+  border = "curved",
   -- https://github.com/akinsho/toggleterm.nvim/issues/61
   winblend = 0,
   highlights = {
@@ -20,12 +21,13 @@ toggleterm.float_opts = {
   },
 }
 
-toggleterm.on_config_done = function()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local lazygit = Terminal:new({ cmd = "lazygit" })
-
-  -- NOTE: need to install lazygit first
-  function TOGGLE_LAZYGIT()
-    lazygit:toggle()
-  end
+-- NOTE: need to install lazygit first
+local lazygit = Terminal:new {
+  cmd = "lazygit",
+  hidden = true,
+  direction = toggleterm.direction,
+  float_opts = toggleterm.float_opts,
+}
+function LAZYGIT_TOGGLE()
+  lazygit:toggle()
 end
