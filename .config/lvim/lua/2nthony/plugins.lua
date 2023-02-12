@@ -77,4 +77,15 @@ lvim.plugins = {
 
   -- others
   { "wakatime/vim-wakatime", event = "VeryLazy" },
+  {
+    "roobert/surround-ui.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "folke/which-key.nvim",
+      "kylechui/nvim-surround",
+    },
+    config = {
+      root_key = "sr",
+    },
+  }
 }
