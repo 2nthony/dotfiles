@@ -21,7 +21,6 @@ require("plugins.lspconfig")
 lvim.plugins = {
   -- general
   { "folke/todo-comments.nvim" },
-  { "wakatime/vim-wakatime" },
   { "rmagatti/auto-session" },
   {
     "iamcco/markdown-preview.nvim",
@@ -75,4 +74,7 @@ lvim.plugins = {
 
   -- syntax
   { "imsnif/kdl.vim", event = "BufReadPre *.kdl", ft = "kdl" },
+
+  -- others
+  { "wakatime/vim-wakatime", event = "VeryLazy" },
 }
