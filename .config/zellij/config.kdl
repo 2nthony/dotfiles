@@ -152,6 +152,7 @@ keybinds {
         // pane
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
         bind "Ctrl x" { CloseFocus; }
+        bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
     }
 }
 
