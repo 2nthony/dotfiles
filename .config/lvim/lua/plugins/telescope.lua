@@ -16,6 +16,9 @@ telescope.defaults.path_display = { "smart" }
 telescope.theme = "dropdown"
 
 telescope.pickers.buffers.initial_mode = "insert"
+telescope.pickers.oldfiles = {
+  cwd_only = true,
+}
 
 telescope.defaults.file_ignore_patterns = {
   "node_modules/",
