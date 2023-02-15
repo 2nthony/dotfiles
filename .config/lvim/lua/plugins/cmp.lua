@@ -26,3 +26,5 @@ lcmp.confirm_opts = {
   behavior = cmp.ConfirmBehavior.Replace,
   select = false,
 }
+
+lcmp.formatting.duplicates.nvim_lsp = nil
