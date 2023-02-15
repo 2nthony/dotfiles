@@ -75,7 +75,11 @@ lvim.plugins = {
   { "sindrets/diffview.nvim" },
 
   -- syntax
-  { "imsnif/kdl.vim", event = "BufReadPre *.kdl", ft = "kdl" },
+  {
+    "imsnif/kdl.vim",
+    event = "BufReadPre *.kdl",
+    ft = "kdl",
+  },
 
   -- others
   { "wakatime/vim-wakatime", event = "VeryLazy" },
