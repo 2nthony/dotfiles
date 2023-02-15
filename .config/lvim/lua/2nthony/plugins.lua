@@ -59,7 +59,7 @@ lvim.plugins = {
   {
     "kylechui/nvim-surround",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       require("plugins.nvim-surround")
     end,
     dependencies = {
