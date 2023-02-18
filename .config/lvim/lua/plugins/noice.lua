@@ -9,7 +9,7 @@ return {
       view = "cmdline",
       format = {
         cmdline = {
-          icon = "❯_"
+          icon = "❯"
         },
         search_down = {
           icon = lvim.icons.ui.Search .. " "
