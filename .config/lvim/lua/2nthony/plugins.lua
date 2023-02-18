@@ -61,9 +61,7 @@ lvim.plugins = {
   {
     "kylechui/nvim-surround",
     event = "VeryLazy",
-    config = function()
-      require("plugins.nvim-surround")
-    end,
+    config = true,
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects", -- recommended
     },
