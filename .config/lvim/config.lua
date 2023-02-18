@@ -12,7 +12,6 @@ require("2nthony.base")
 require("2nthony.plugins")
 require("2nthony.keymaps")
 require("2nthony.autocmds")
--- require("2nthony.hack")
 
 -- general
 -- lvim.log.level = "warn"
