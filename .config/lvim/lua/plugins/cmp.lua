@@ -7,9 +7,8 @@ local luasnip = require("luasnip")
 local lcmp = lvim.builtin.cmp
 
 lcmp.mapping["<C-space>"] = {}
-lcmp.mapping["<C-f>"] = {}
 lcmp.mapping["<C-p>"] = cmp.mapping.complete()
-lcmp.mapping["<C-u>"] = cmp.mapping.scroll_docs( -4)
+lcmp.mapping["<C-f>"] = cmp.mapping.scroll_docs( -4)
 lcmp.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
 
 -- if back to normal mode, then unlink snippet action
@@ -28,3 +27,4 @@ lcmp.confirm_opts = {
 }
 
 lcmp.formatting.duplicates.nvim_lsp = nil
+lcmp.formatting.max_width = 20
