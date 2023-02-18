@@ -12,7 +12,7 @@ local toggleterm = lvim.builtin.terminal
 toggleterm.open_mapping = [[<c-\>]]
 toggleterm.direction = "float"
 toggleterm.float_opts = {
-  border = "curved",
+  border = "rounded",
   -- https://github.com/akinsho/toggleterm.nvim/issues/61
   winblend = 0,
   highlights = {
