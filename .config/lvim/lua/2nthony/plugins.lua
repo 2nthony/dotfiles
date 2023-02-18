@@ -37,17 +37,7 @@ lvim.plugins = {
   { 'hrsh7th/cmp-cmdline' },
 
   -- theme
-  {
-    "2nthony/vitesse.nvim",
-    dir = "~/ghq/github.com/2nthony/vitesse.nvim",
-    priority = 1000,
-    dependencies = {
-      "tjdevries/colorbuddy.nvim"
-    },
-    config = function()
-      require("plugins.vitesse")
-    end
-  },
+  require("plugins.vitesse"),
 
   -- navigation
   { "windwp/nvim-spectre" },
