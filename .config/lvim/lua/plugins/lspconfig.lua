@@ -16,6 +16,8 @@ lsp.tailwindcss.setup {
   root_dir = util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts')
 }
 
+lsp.lua_ls.setup {}
+
 -- vue
 -- enable take over mode, disable tsserver
 local vue_path = util.path.join(project_root, "node_modules", "vue")
