@@ -27,6 +27,7 @@ lvim.plugins = {
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+  require("plugins.noice"),
 
   -- lsp
   { 'glepnir/lspsaga.nvim', event = "BufRead" },
