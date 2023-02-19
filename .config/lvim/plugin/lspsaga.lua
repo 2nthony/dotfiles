@@ -6,10 +6,12 @@ if not ok then
   return
 end
 
+local float_opts = require("utils.float-opts")
+
 lspsaga.setup {
   ui = {
-    border = "rounded",
-    winblend = 0,
+    border = float_opts.border,
+    winblend = float_opts.winblend,
     colors = {
       normal_bg = "none",
       title_bg = "none",

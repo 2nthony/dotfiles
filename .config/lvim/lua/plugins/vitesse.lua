@@ -7,6 +7,6 @@ return {
     "tjdevries/colorbuddy.nvim"
   },
   config = {
-    reverse_visual = true,
+    -- reverse_visual = true,
   },
 }

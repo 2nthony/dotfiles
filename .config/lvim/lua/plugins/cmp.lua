@@ -3,6 +3,7 @@
 
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local float_opts = require("utils.float-opts")
 
 local lcmp = lvim.builtin.cmp
 
@@ -20,6 +21,9 @@ lcmp.mapping["<esc>"] = cmp.mapping(function(callback)
   -- NOTE: CAN NOT delete this `callback`
   callback()
 end, { "i", "s" })
+
+lvim.builtin.cmp.window.completion.border = float_opts.border
+lvim.builtin.cmp.window.documentation.border = float_opts.border
 
 lcmp.confirm_opts = {
   behavior = cmp.ConfirmBehavior.Replace,

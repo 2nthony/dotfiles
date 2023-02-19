@@ -1,4 +1,6 @@
-return {
+local float_opts = require("utils.float-opts")
+
+local config = {
   "folke/noice.nvim",
   dependencies = {
     "MunifTanjim/nui.nvim",
@@ -23,6 +25,9 @@ return {
       enabled = false,
     },
     lsp = {
+      progress = {
+        format = "", -- disable lsp progress, annoying
+      },
       signature = {
         enabled = false,
       },
@@ -34,12 +39,17 @@ return {
     views = {
       mini = {
         border = {
-          style = "rounded"
+          style = float_opts.border,
+        },
+        position = {
+          row = -2, -- avoid over in status line
         },
         win_options = {
-          winblend = 0
-        }
+          winblend = float_opts.winblend,
+        },
       }
     },
   },
 }
+
+return config

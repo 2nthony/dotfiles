@@ -49,7 +49,6 @@ keymap('i', '<C-l>', '<End>', opts)
 keymap('v', '<C-l>', '<End>', opts)
 
 --[[ Window ]]
-
 -- Split window
 keymap('n', 'ss', ':split<cr>', opts)
 keymap('n', 'sv', ':vsplit<cr>', opts)
@@ -67,7 +66,6 @@ keymap('n', '<C-up>', '<C-w>-', opts)
 keymap('n', '<C-down>', '<C-w>+', opts)
 
 --[[ Plugins ]]
-
 -- nvim-tree
 keymap('n', 'fe', ':NvimTreeToggle<cr>', opts)
 keymap('n', 'fd', ':NvimTreeFindFile<cr>', opts)
