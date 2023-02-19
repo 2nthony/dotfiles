@@ -12,26 +12,9 @@
   </sub>
 </p>
 
-## [NeoVim](https://neovim.io/) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
-
-<details><summary>Archived, I use LunarVim now.</summary>
-
-### Setup
-
-Clone this repo and link `nvim` to `~/.config`
-
-```bash
-git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/nvim ~/.config
-```
-
-Full plugins see [plugins.lua](.config/nvim/lua/plugins.lua).
-
-The latest keybindings in [keymaps.lua](.config/nvim/after/plugin/user/keymaps.lua).
-
-</details>
-
 ## [LunarVim](https://lunarvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
+
+🌙 LunarVim is an IDE layer for Neovim.
 
 ### Features
 
