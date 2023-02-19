@@ -22,8 +22,11 @@ lcmp.mapping["<esc>"] = cmp.mapping(function(callback)
   callback()
 end, { "i", "s" })
 
-lvim.builtin.cmp.window.completion.border = float_opts.border
-lvim.builtin.cmp.window.documentation.border = float_opts.border
+local win_opts = cmp.config.window.bordered({
+  border = float_opts.border,
+})
+lcmp.window.completion = win_opts
+lcmp.window.documentation = win_opts
 
 lcmp.confirm_opts = {
   behavior = cmp.ConfirmBehavior.Replace,
