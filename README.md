@@ -29,6 +29,7 @@
 - [x] Bufferline
 - [x] Good Looking Theme
 - [x] Auto Session
+- [x] Print action messages at the bottom-right popup
 - [x] ...
 
 ### Setup
@@ -146,7 +147,6 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
 - [vitesse.iterm](https://github.com/2nthony/vitesse.iterm) - Vitesse theme for iTerm2
-- [vitesse.nvim](https://github.com/2nthony/vitesse.nvim) - Vitesse theme for NeoVim
 
 ## Credit
 
