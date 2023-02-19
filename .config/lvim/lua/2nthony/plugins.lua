@@ -17,6 +17,7 @@ require("plugins.nvim-treesitter")
 require("plugins.telescope")
 require("plugins.lspconfig")
 require("plugins.cmp")
+require("plugins.which-key")
 
 -- extra plugins
 lvim.plugins = {
