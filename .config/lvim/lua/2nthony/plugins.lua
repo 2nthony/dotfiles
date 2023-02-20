@@ -1,5 +1,5 @@
 -- enable builtin plugins
-lvim.builtin.terminal.active = true -- toogleterm.nvim
+lvim.builtin.terminal.active = true -- toggleterm.nvim
 lvim.builtin.cmp.cmdline.enable = true
 
 -- disable builtin plugins
