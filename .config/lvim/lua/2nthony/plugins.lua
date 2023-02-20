@@ -35,7 +35,7 @@ lvim.plugins = {
 
   -- navigation
   { "windwp/nvim-spectre" },
-  { "ggandor/leap.nvim" },
+  require("plugins.leap"),
 
   -- highlight
   { 'norcalli/nvim-colorizer.lua' }, -- highlight HEX color
