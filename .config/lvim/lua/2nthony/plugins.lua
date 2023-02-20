@@ -31,7 +31,7 @@ lvim.plugins = {
   require("plugins.noice"),
 
   -- lsp
-  { 'glepnir/lspsaga.nvim', event = "BufRead" },
+  require("plugins.lspsaga"),
 
   -- cmp
   { 'hrsh7th/cmp-cmdline' },
