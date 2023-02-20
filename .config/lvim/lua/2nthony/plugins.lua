@@ -68,6 +68,7 @@ lvim.plugins = {
     "imsnif/kdl.vim",
     event = "BufReadPre *.kdl",
     ft = "kdl",
+    pin = true,
   },
 
   -- others
