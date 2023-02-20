@@ -24,17 +24,11 @@ lvim.plugins = {
   -- general
   { "folke/todo-comments.nvim" },
   { "rmagatti/auto-session" },
-  {
-    "iamcco/markdown-preview.nvim",
-    build = function() vim.fn["mkdp#util#install"]() end,
-  },
   require("plugins.noice"),
+  require("plugins.markdown-preview"),
 
   -- lsp
   require("plugins.lspsaga"),
-
-  -- cmp
-  { 'hrsh7th/cmp-cmdline' },
 
   -- theme
   require("plugins.vitesse"),
@@ -45,6 +39,7 @@ lvim.plugins = {
 
   -- highlight
   { 'norcalli/nvim-colorizer.lua' }, -- highlight HEX color
+  require("plugins.kdl"),
 
   -- treesitter
   { "windwp/nvim-ts-autotag" },
@@ -61,18 +56,10 @@ lvim.plugins = {
   { "folke/trouble.nvim" },
 
   -- git
-  { "sindrets/diffview.nvim" },
-
-  -- syntax
-  {
-    "imsnif/kdl.vim",
-    event = "BufReadPre *.kdl",
-    ft = "kdl",
-    pin = true,
-  },
+  require("plugins.diffview"),
 
   -- others
-  { "wakatime/vim-wakatime", event = "VeryLazy" },
+  require("plugins.wakatime"),
   {
     "roobert/surround-ui.nvim",
     event = "VeryLazy",
