@@ -32,6 +32,7 @@ lvim.plugins = {
 
   -- lsp
   require("plugins.lspsaga"),
+  require("plugins.lspkind"),
 
   -- theme
   require("plugins.vitesse"),
