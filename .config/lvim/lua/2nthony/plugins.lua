@@ -18,14 +18,17 @@ require("plugins.telescope")
 require("plugins.lspconfig")
 require("plugins.cmp")
 require("plugins.which-key")
+require("plugins.null-ls")
+require("plugins.gitsigns")
+require("plugins.lualine")
 
 -- extra plugins
 lvim.plugins = {
   -- general
   { "folke/todo-comments.nvim" },
-  { "rmagatti/auto-session" },
   require("plugins.noice"),
   require("plugins.markdown-preview"),
+  require("plugins.auto-session"),
 
   -- lsp
   require("plugins.lspsaga"),
@@ -38,7 +41,7 @@ lvim.plugins = {
   require("plugins.leap"),
 
   -- highlight
-  { 'norcalli/nvim-colorizer.lua' }, -- highlight HEX color
+  require("plugins.colorizer"),
   require("plugins.kdl"),
 
   -- treesitter
