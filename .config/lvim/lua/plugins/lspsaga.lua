@@ -7,6 +7,11 @@ return {
   'glepnir/lspsaga.nvim',
   event = "BufRead",
   config = {
+    request_timeout = 5000,
+    scroll_preview = {
+      scroll_down = "<C-d>",
+      scroll_up = "<C-f>",
+    },
     ui = {
       border = float_opts.border,
       winblend = float_opts.winblend,
@@ -21,7 +26,19 @@ return {
       }
     },
     finder = {
-      edit = { "o", "<cr>" }
+      keys = {
+        vsplit = "v",
+        split = "s",
+        quit = { "q", "<esc>" },
+        edit = { "<cr>" },
+        close_in_preview = "q",
+      }
+    },
+    definition = {
+      edit = "<cr>",
+      vsplit = "<C-v>",
+      split = "<C-s>",
+      tabe = "<C-t>",
     },
     lightbulb = {
       enable_in_insert = false,
