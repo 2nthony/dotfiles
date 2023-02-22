@@ -4,7 +4,7 @@ keybinds {
     shared {
         unbind "Ctrl g"
         bind "Ctrl b" { SwitchToMode "tmux"; }
-        bind "q" { SwitchToMode "Normal"; }
+        bind "Esc" "q" { ScrollToBottom; SwitchToMode "Normal"; }
     }
 
     normal clear-defaults=true {
@@ -96,8 +96,8 @@ keybinds {
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "Ctrl d" "PageDown" { PageScrollDown; }
+        bind "Ctrl u" "PageUp" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         bind "n" { Search "down"; }
@@ -105,11 +105,12 @@ keybinds {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
+        bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
 
     entersearch {
-        bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
-        bind "Enter" { SwitchToMode "Search"; }
+        unbind "q"
+        bind "Ctrl c" "Esc" "Enter" { SwitchToMode "Search"; }
     }
 
     renametab {
@@ -130,7 +131,7 @@ keybinds {
         bind "t" { SwitchToMode "tab"; }
         bind "n" { SwitchToMode "resize"; }
         bind "h" { SwitchToMode "move"; }
-        bind "s" { SwitchToMode "scroll"; }
+        bind "s" { SwitchToMode "search"; }
 
         bind "o" { FocusNextPane; }
         bind "d" { Detach; }
@@ -150,6 +151,10 @@ keybinds {
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
 
         // pane
+        bind "Ctrl h" { MoveFocus "Left"; }
+        bind "Ctrl l" { MoveFocus "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
         bind "Ctrl x" { CloseFocus; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
