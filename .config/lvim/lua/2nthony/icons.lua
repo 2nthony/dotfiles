@@ -1,0 +1,1 @@
+lvim.icons.kind.Color = ""
