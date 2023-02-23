@@ -38,7 +38,7 @@ lvim.plugins = {
   require("plugins.vitesse"),
 
   -- navigation
-  { "windwp/nvim-spectre" },
+  require("plugins.spectre"),
   require("plugins.leap"),
 
   -- highlight
