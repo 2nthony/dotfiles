@@ -17,7 +17,7 @@ return {
           if vim.fn.hlID(group) < 1 then
             vim.api.nvim_set_hl(0, group, { fg = '#' .. color })
           end
-          vim_item.kind = ""
+          vim_item.kind = lvim.icons.kind.Color
           vim_item.kind_hl_group = group
           return vim_item
         end
@@ -27,6 +27,7 @@ return {
     end
 
     lcmp.formatting.format = lspkind.cmp_format({
+      mode = "text",
       maxwidth = lcmp.formatting.max_width,
       symbol_map = lvim.icons.kind,
       ellipsis_char = lvim.icons.ui.Ellipsis,
