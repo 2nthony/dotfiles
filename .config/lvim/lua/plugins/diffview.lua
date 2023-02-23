@@ -1,4 +1,5 @@
 -- git
+-- https://github.com/sindrets/diffview.nvim
 
 return {
   "sindrets/diffview.nvim",
@@ -11,5 +12,8 @@ return {
     "DiffviewToggleFiles",
     "DiffviewFocusFiles",
     "DiffviewFileHistory",
+  },
+  config = {
+    enhanced_diff_hl = true,
   },
 }
