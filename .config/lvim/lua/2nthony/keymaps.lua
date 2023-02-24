@@ -36,17 +36,14 @@ keymap("n", "<space>bd", ":bdelete<cr>", opts)
 keymap("n", "<space>bD", ":bdelete!<cr>", opts)
 
 -- better ^, move cursor to start of line
-keymap('n', '<C-h>', '<Home>^', opts)
-keymap('i', '<C-h>', '<Home><Esc>^i', opts)
-keymap('v', '<C-h>', '<Home>^', opts)
-keymap('n', '<C-S-h>', '<Home>', opts)
-keymap('i', '<C-S-h>', '<Home><Esc>i', opts)
-keymap('v', '<C-S-h>', '<Home>', opts)
+keymap('n', '<C-h>', '<Home>', opts)
+keymap('i', '<C-h>', '<Home>', opts)
+keymap('v', '<C-h>', '<Home>', opts)
 
 -- better $
 keymap('n', '<C-l>', '<End>', opts)
 keymap('i', '<C-l>', '<End>', opts)
-keymap('v', '<C-l>', '<End>', opts)
+keymap('v', '<C-l>', '<End><Left>', opts)
 
 --[[ Window ]]
 -- Split window
