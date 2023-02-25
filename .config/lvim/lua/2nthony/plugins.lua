@@ -29,6 +29,7 @@ lvim.plugins = {
   require("plugins.noice"),
   require("plugins.markdown-preview"),
   require("plugins.auto-session"),
+  require("plugins.visual-multi"),
 
   -- lsp
   require("plugins.lspsaga"),

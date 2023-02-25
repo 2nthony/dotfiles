@@ -158,3 +158,15 @@ if leap_ok then
   keymap('n', 'gw', '<Plug>(leap-forward-to)', opts)
   keymap('n', 'gW', '<Plug>(leap-backward-to)', opts)
 end
+
+-- visual-multi
+-- https://github.com/mg979/vim-visual-multi/wiki/Mappings#full-mappings-list
+vim.cmd([[
+  let g:VM_default_mappings = 0
+  let g:VM_maps = {}
+  let g:VM_maps["Find Under"] = '<C-S-d>'
+  let g:VM_maps["Find Subword Under"] = '<C-S-d>'
+  let g:VM_maps["Add Cursor Down"] = '<C-S-Down>'
+  let g:VM_maps["Add Cursor Up"] = '<C-S-Up>'
+  let g:VM_maps["Add Cursor At Pos"] = '<C-S-c>'
+]])
