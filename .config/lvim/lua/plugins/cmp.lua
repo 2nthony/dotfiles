@@ -36,4 +36,4 @@ lcmp.confirm_opts = {
 -- format
 -- for more see plugins/lspkind
 lcmp.formatting.duplicates.nvim_lsp = 5
-lcmp.formatting.max_width = 25
+lcmp.formatting.max_width = 30
