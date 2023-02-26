@@ -1,15 +1,16 @@
 -- enable builtin plugins
 lvim.builtin.terminal.active = true -- toggleterm.nvim
 lvim.builtin.cmp.cmdline.enable = true
+lvim.builtin.alpha.active = true -- alpha-nvim
 
 -- disable builtin plugins
-lvim.builtin.alpha.active = false -- alpha-nvim
 lvim.builtin.illuminate.active = false
 lvim.builtin.project.active = false
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.indentlines.active = false
 lvim.builtin.lir.active = false
 
+require("plugins.alpha")
 require("plugins.bufferline")
 require("plugins.nvim-tree")
 require("plugins.toggleterm")

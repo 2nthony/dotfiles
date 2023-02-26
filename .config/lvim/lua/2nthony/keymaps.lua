@@ -173,3 +173,6 @@ keymap("n", "<C-m>d", "<Plug>(VM-Find-Under)", opts)
 keymap("n", "<C-m>c", "<Plug>(VM-Add-Cursor-At-Pos)", opts)
 keymap("n", "<C-m><C-j>", "<Plug>(VM-Add-Cursor-Down)", opts)
 keymap("n", "<C-m><C-k>", "<Plug>(VM-Add-Cursor-Up)", opts)
+
+-- alpha
+keymap("n", "<space>a", ":Alpha<cr>", opts)
