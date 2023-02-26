@@ -164,9 +164,12 @@ end
 vim.cmd([[
   let g:VM_default_mappings = 0
   let g:VM_maps = {}
-  let g:VM_maps["Find Under"] = '<C-S-d>'
-  let g:VM_maps["Find Subword Under"] = '<C-S-d>'
-  let g:VM_maps["Add Cursor Down"] = '<C-S-Down>'
-  let g:VM_maps["Add Cursor Up"] = '<C-S-Up>'
-  let g:VM_maps["Add Cursor At Pos"] = '<C-S-c>'
+  let g:VM_maps["Find Under"] = ''
+  let g:VM_maps["Find Subword Under"] = ''
 ]])
+-- press `n` select next word in this mode
+keymap("n", "<C-m>d", "<Plug>(VM-Find-Under)", opts)
+-- keymap("n", "<C-m>d", "<Plug>(VM-Find-Subword-Under)", opts)
+keymap("n", "<C-m>c", "<Plug>(VM-Add-Cursor-At-Pos)", opts)
+keymap("n", "<C-m><C-j>", "<Plug>(VM-Add-Cursor-Down)", opts)
+keymap("n", "<C-m><C-k>", "<Plug>(VM-Add-Cursor-Up)", opts)
