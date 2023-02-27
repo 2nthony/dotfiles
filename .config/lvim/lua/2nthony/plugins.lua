@@ -29,8 +29,8 @@ lvim.plugins = {
   { "folke/todo-comments.nvim" },
   require("plugins.noice"),
   require("plugins.markdown-preview"),
+  require("plugins.auto-session"),
   require("plugins.visual-multi"),
-  require("plugins.persistence"),
 
   -- lsp
   require("plugins.lspsaga"),
