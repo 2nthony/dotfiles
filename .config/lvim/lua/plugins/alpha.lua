@@ -12,7 +12,7 @@ alpha.dashboard.section.footer.val = " "
 
 alpha.dashboard.section.buttons.entries = {
   { "f", icons.ui.FindFile .. "  Find File",       "<CMD>Telescope find_files<CR>" },
-  { "r", icons.ui.History .. "  Restore sessions", ":lua require('persistence').load()<cr>" },
+  { "r",  icons.ui.History .. "  Restore sessions", ":RestoreSession<cr>" },
   {
     "c",
     lvim.icons.ui.Gear .. "  Configuration",
