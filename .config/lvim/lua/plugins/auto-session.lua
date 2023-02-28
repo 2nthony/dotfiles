@@ -15,6 +15,7 @@ return {
   "rmagatti/auto-session",
   init = function()
     -- https://github.com/rmagatti/auto-session#recommended-sessionoptions-config
+    -- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
     vim.o.sessionoptions = "curdir,folds,help,tabpages,winsize,winpos,terminal"
   end,
   config = {
