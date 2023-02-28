@@ -11,7 +11,9 @@ alpha.dashboard.section.header.val = " "
 alpha.dashboard.section.footer.val = " "
 
 alpha.dashboard.section.buttons.entries = {
-  { "f", icons.ui.FindFile .. "  Find File",       "<CMD>Telescope find_files<CR>" },
+  { "n",  icons.ui.NewFile .. "  New File",         "<CMD>ene!<CR>" },
+  { "ff", icons.ui.FindFile .. "  Find File",       "<CMD>Telescope find_files<CR>" },
+  { "fe", icons.ui.FolderOpen .. "  File Explorer", "<CMD>NvimTreeToggle<CR>" },
   { "r",  icons.ui.History .. "  Restore sessions", ":RestoreSession<cr>" },
   {
     "c",
