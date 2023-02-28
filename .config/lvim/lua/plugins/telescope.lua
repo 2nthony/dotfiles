@@ -3,6 +3,7 @@
 
 local actions = require('telescope.actions')
 local telescope = lvim.builtin.telescope
+local float_opts = require("utils.float-opts")
 
 telescope.defaults.mappings.i["<Tab>"] = actions.move_selection_next
 telescope.defaults.mappings.i["<S-Tab>"] = actions.move_selection_previous
@@ -12,6 +13,8 @@ telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
 telescope.defaults.preview = false
 
 telescope.defaults.path_display = { "smart" }
+
+telescope.defaults.winblend = float_opts.winblend
 
 telescope.theme = "dropdown"
 
