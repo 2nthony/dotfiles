@@ -1,3 +1,6 @@
+-- general
+-- https://github.com/folke/noice.nvim
+
 local float_opts = require("utils.float-opts")
 
 local config = {
@@ -8,7 +11,7 @@ local config = {
   event = "VeryLazy",
   config = {
     cmdline = {
-      view = "cmdline",
+      view = "cmdline", -- cmdline_popup, cmdline
       format = {
         cmdline = {
           icon = "❯"
@@ -37,6 +40,15 @@ local config = {
     },
     -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/views.lua
     views = {
+      cmdline_popup = {
+        zindex = 100,
+        border = {
+          padding = { 0, 0 },
+        },
+        position = {
+          row = "30%"
+        },
+      },
       mini = {
         border = {
           style = float_opts.border,
