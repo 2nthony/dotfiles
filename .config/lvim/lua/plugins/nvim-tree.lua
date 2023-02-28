@@ -10,13 +10,15 @@ local nvim_tree = lvim.builtin.nvimtree
 
 nvim_tree.setup.view.mappings.list = {
   { key = { "<CR>", "o" }, action = "edit" },
-  { key = "O", action = "cd" },
-  { key = "S", action = "live_filter" },
-  { key = "cs", action = "clear_live_filter" },
+  { key = "O",             action = "cd" },
+  { key = "S",             action = "live_filter" },
+  { key = "cs",            action = "clear_live_filter" },
+  { key = "<C-s>",         action = "split" },
 
   -- reset
-  { key = "s", action = "" },
-  { key = "f", action = "" },
+  { key = "s",             action = "" },
+  { key = "f",             action = "" },
+  { key = "<C-x>",         action = "" },
 }
 
 nvim_tree.setup.live_filter = {
