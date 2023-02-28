@@ -2,6 +2,5 @@
 
 return {
   "wakatime/vim-wakatime",
-  event = "VeryLazy",
-  lazy = true,
+  event = "BufRead",
 }
