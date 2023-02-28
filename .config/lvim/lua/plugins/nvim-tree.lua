@@ -12,13 +12,15 @@ nvim_tree.setup.view.mappings.list = {
   { key = { "<CR>", "o" }, action = "edit" },
   { key = "O",             action = "cd" },
   { key = "S",             action = "live_filter" },
-  { key = "cs",            action = "clear_live_filter" },
+  { key = "F",             action = "clear_live_filter" },
   { key = "<C-s>",         action = "split" },
+  { key = "?",             action = "toggle_help" },
 
   -- reset
   { key = "s",             action = "" },
   { key = "f",             action = "" },
   { key = "<C-x>",         action = "" },
+  { key = "g?",            action = "" },
 }
 
 nvim_tree.setup.live_filter = {
