@@ -10,6 +10,9 @@ end
 
 -- [[ Normal / Origin ]]
 
+-- reset
+keymap("n", "K", "<nop>")
+
 keymap('n', '<S-C-p>', '"0p')
 
 -- Delete
