@@ -6,6 +6,8 @@ local util = require("lspconfig.util")
 local cwd = vim.fn.getcwd()
 local project_root = util.find_node_modules_ancestor(cwd)
 
+vim.lsp.set_log_level("ERROR")
+
 -- unmap all preset buffer keymaps, use lspsaga instead
 lvim.lsp.buffer_mappings.normal_mode = {}
 
