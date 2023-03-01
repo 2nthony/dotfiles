@@ -176,11 +176,11 @@ vim.cmd([[
   let g:VM_maps["Find Subword Under"] = ''
 ]])
 -- press `n` select next word in this mode
-keymap("n", "<C-e>d", "<Plug>(VM-Find-Under)")
+keymap("n", "<C-S-d>", "<Plug>(VM-Find-Under)")
 -- keymap("n", "<C-e>d", "<Plug>(VM-Find-Subword-Under)")
-keymap("n", "<C-e>c", "<Plug>(VM-Add-Cursor-At-Pos)")
-keymap("n", "<C-e><C-j>", "<Plug>(VM-Add-Cursor-Down)")
-keymap("n", "<C-e><C-k>", "<Plug>(VM-Add-Cursor-Up)")
+keymap("n", "<C-S-c>", "<Plug>(VM-Add-Cursor-At-Pos)")
+keymap("n", "<C-S-j>", "<Plug>(VM-Add-Cursor-Down)")
+keymap("n", "<C-S-k>", "<Plug>(VM-Add-Cursor-Up)")
 
 -- alpha
 keymap("n", "<space>a", ":Alpha<cr>")
