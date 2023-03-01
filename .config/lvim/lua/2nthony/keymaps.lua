@@ -95,7 +95,7 @@ keymap('n', 'git', ':lua LAZYGIT_TOGGLE()<cr>')
 local status_lspsaga_ok = pcall(require, "lspsaga")
 if status_lspsaga_ok then
   keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>')
-  keymap('n', '<S-C-j>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>')
+  keymap('n', 'J', '<Cmd>Lspsaga diagnostic_jump_prev<CR>')
   keymap('n', '<C-k>', '<Cmd>Lspsaga hover_doc ++quiet<CR>')
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
