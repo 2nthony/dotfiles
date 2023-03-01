@@ -10,6 +10,10 @@ local config = {
   },
   event = "VeryLazy",
   config = {
+    health = {
+      checker = false,
+    },
+    throttle = 1000 / 50,
     cmdline = {
       view = "cmdline", -- cmdline_popup, cmdline
       format = {
