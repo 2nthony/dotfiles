@@ -29,6 +29,7 @@ local config = {
     },
     lsp = {
       progress = {
+        enabled = false,
         format = "", -- disable lsp progress, annoying
       },
       signature = {
