@@ -148,6 +148,13 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
 - [vitesse.iterm](https://github.com/2nthony/vitesse.iterm) - Vitesse theme for iTerm2
 
+## Troubleshootings
+
+### `<C-S-*>` key not working
+iTerm2: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+`
+
+Details from: https://github.com/zellij-org/zellij/issues/265#issuecomment-823703039
+
 ## Credit
 
 - [打造 neovim IDE (Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788)
