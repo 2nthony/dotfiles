@@ -13,6 +13,8 @@ end
 -- reset
 keymap("n", "K", "<nop>")
 
+keymap("i", "<C-enter>", "<esc>o")
+
 keymap('n', '<S-C-p>', '"0p')
 
 -- Delete
