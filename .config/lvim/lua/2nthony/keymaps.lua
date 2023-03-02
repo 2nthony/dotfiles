@@ -13,6 +13,10 @@ end
 -- reset
 keymap("n", "K", "<nop>")
 
+-- print current file path
+keymap("n", "<C-g>", ":lua print(vim.fn.expand('%'))<cr>")
+keymap("n", "<C-S-g>", ":lua print(vim.fn.expand('%:p'))<cr>")
+
 keymap("i", "<C-enter>", "<esc>o")
 
 keymap('n', '<S-C-p>', '"0p')
