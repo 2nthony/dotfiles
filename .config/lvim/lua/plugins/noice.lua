@@ -15,10 +15,11 @@ local config = {
     },
     throttle = 1000 / 50,
     cmdline = {
-      view = "cmdline", -- cmdline_popup, cmdline
+      view = "cmdline_popup", -- cmdline_popup, cmdline
       format = {
         cmdline = {
-          icon = "❯"
+          icon = "❯",
+          title = " Command ",
         },
         search_down = {
           icon = lvim.icons.ui.Search .. " "
