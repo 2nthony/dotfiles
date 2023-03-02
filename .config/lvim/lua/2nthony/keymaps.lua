@@ -43,9 +43,9 @@ keymap("n", "<space>bd", ":bdelete<cr>")
 keymap("n", "<space>bD", ":bdelete!<cr>")
 
 -- better ^, move cursor to start of line
-keymap('n', '<C-h>', '<Home>^')
-keymap('i', '<C-h>', '<Home><esc>^i')
-keymap('v', '<C-h>', '<Home>^')
+keymap('n', '<C-h>', '^')
+keymap('i', '<C-h>', '<esc>^i')
+keymap('v', '<C-h>', '^')
 keymap('n', '<C-S-h>', '<Home>')
 keymap('i', '<C-S-h>', '<Home>')
 keymap('v', '<C-S-h>', '<Home>')
