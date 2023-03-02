@@ -14,6 +14,9 @@ local config = {
       checker = false,
     },
     throttle = 1000 / 50,
+    presets = {
+      long_message_to_split = true,
+    },
     cmdline = {
       view = "cmdline_popup", -- cmdline_popup, cmdline
       format = {
