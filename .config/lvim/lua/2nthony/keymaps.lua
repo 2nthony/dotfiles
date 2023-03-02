@@ -12,6 +12,7 @@ end
 
 -- reset
 keymap("n", "K", "<nop>")
+keymap("n", "q", "<Nop>")
 
 -- print current file path
 keymap("n", "<C-g>", ":lua print(vim.fn.expand('%'))<cr>")
@@ -35,9 +36,6 @@ keymap('n', '<C-a>', 'gg<S-v>G')
 
 -- remap macro record key
 keymap("n", "Q", "q")
-
--- cancel q
-keymap("n", "q", "<Nop>")
 
 -- :tabnew - new tab
 keymap("n", "<C-n>", ":tabnew<cr>:Alpha<cr>")
