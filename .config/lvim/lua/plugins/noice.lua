@@ -37,14 +37,36 @@ local config = {
     },
     lsp = {
       progress = {
-        enabled = false,
-        format = "", -- disable lsp progress, annoying
+        -- enabled = false,
+        -- format = "", -- disable lsp progress, annoying
       },
       signature = {
         enabled = false,
       },
       hover = {
         enabled = false,
+      },
+    },
+    -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/routes.lua
+    routes = {
+      {
+        filter = {
+          event = 'msg_show',
+          find = 'written',
+        },
+        opts = { skip = true },
+
+      },
+      {
+        filter = {
+          any = {
+            { event = 'lsp', kind = 'progress', find = 'code_action' },
+            { event = 'lsp', kind = 'progress', find = 'formatting' },
+            { event = 'lsp', kind = 'progress', find = 'diagnostics' },
+            { event = 'lsp', kind = 'progress', find = 'diagnostics_on_open' },
+          },
+        },
+        opts = { skip = true },
       },
     },
     -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/views.lua
