@@ -8,7 +8,7 @@ local config = {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
-  event = "VeryLazy",
+  event = "BufReadPost",
   config = {
     health = {
       checker = false,
@@ -55,7 +55,6 @@ local config = {
           find = 'written',
         },
         opts = { skip = true },
-
       },
       {
         filter = {
