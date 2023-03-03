@@ -22,6 +22,7 @@ require("plugins.which-key")
 require("plugins.null-ls")
 require("plugins.gitsigns")
 require("plugins.lualine")
+require("plugins.luasnip")
 
 -- extra plugins
 lvim.plugins = {
