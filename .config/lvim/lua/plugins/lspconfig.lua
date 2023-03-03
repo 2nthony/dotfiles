@@ -18,7 +18,19 @@ lsp.tailwindcss.setup {
   root_dir = util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts')
 }
 
-lsp.lua_ls.setup {}
+lsp.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+    },
+  },
+}
 
 -- vue
 -- enable take over mode, disable tsserver
