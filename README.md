@@ -150,10 +150,10 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 
 ## Troubleshootings
 
-### `<C-S-*>` key not working
-iTerm2: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+`
+<!-- ### `<C-S-*>` key not working -->
+<!-- iTerm2: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+` -->
 
-Details from: https://github.com/zellij-org/zellij/issues/265#issuecomment-823703039
+<!-- Details from: https://github.com/zellij-org/zellij/issues/265#issuecomment-823703039 -->
 
 ## Credit
 
