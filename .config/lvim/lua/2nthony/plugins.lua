@@ -74,8 +74,5 @@ lvim.plugins = {
       "folke/which-key.nvim",
       "kylechui/nvim-surround",
     },
-    config = {
-      root_key = "sr",
-    },
   }
 }
