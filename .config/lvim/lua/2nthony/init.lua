@@ -1,6 +1,5 @@
 -- lvim
 lvim.format_on_save = true
-lvim.transparent_window = true
 -- colorscheme
 lvim.colorscheme = "vitesse"
 
