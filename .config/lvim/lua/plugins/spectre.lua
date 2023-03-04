@@ -4,5 +4,11 @@
 return {
   "windwp/nvim-spectre",
   event = "BufRead",
-  config = {},
+  opts = {
+    mapping = {
+          ['send_to_qf'] = {
+        map = 'sqf',
+      },
+    },
+  },
 }
