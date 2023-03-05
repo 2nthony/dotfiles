@@ -3,6 +3,8 @@
 
 local float_opts = require("utils.float-opts")
 
+local throttle = 1000 / 50
+
 local config = {
   "folke/noice.nvim",
   dependencies = {
@@ -13,7 +15,7 @@ local config = {
     health = {
       checker = false,
     },
-    throttle = 1000 / 50,
+    throttle = throttle,
     presets = {
       long_message_to_split = true,
     },
@@ -39,6 +41,7 @@ local config = {
       progress = {
         -- enabled = false,
         -- format = "", -- disable lsp progress, annoying
+        throttle = throttle,
       },
       signature = {
         enabled = false,
