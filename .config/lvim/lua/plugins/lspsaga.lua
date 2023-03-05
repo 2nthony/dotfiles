@@ -55,5 +55,8 @@ return {
       separator = " " .. lvim.icons.ui.ChevronShortRight .. " ",
       color_mode = false,
     },
+    beacon = {
+      enable = false,
+    },
   }
 }
