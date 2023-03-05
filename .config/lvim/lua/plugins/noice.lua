@@ -59,6 +59,15 @@ local config = {
       {
         filter = {
           any = {
+            { event = 'msg_show', find = '; before' },
+            { event = 'msg_show', find = '; after' },
+          },
+        },
+        opts = { skip = true },
+      },
+      {
+        filter = {
+          any = {
             { event = 'lsp', kind = 'progress', find = 'code_action' },
             { event = 'lsp', kind = 'progress', find = 'formatting' },
             { event = 'lsp', kind = 'progress', find = 'diagnostics' },
