@@ -54,28 +54,17 @@ local config = {
     routes = {
       {
         filter = {
-          event = 'msg_show',
-          find = 'written',
-        },
-        opts = { skip = true },
-      },
-      {
-        filter = {
           any = {
+            -- save
+            { event = 'msg_show', find = 'written' },
+            -- undo, redo
             { event = 'msg_show', find = '; before' },
             { event = 'msg_show', find = '; after' },
-          },
-        },
-        opts = { skip = true },
-      },
-      {
-        filter = {
-          any = {
             -- force filter all `*ing *` msg. e.g. formatting, diagnosing, indexing
-            { event = 'lsp', kind = 'progress', find = 'ing ' },
-            { event = 'lsp', kind = 'progress', find = 'code_action' },
-            { event = 'lsp', kind = 'progress', find = 'diagnostics' },
-            { event = 'lsp', kind = 'progress', find = 'diagnostics_on_open' },
+            { event = 'lsp',      kind = 'progress', find = 'ing ' },
+            { event = 'lsp',      kind = 'progress', find = 'code_action' },
+            { event = 'lsp',      kind = 'progress', find = 'diagnostics' },
+            { event = 'lsp',      kind = 'progress', find = 'diagnostics_on_open' },
           },
         },
         opts = { skip = true },
