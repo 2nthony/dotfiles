@@ -18,7 +18,13 @@ return {
       colors = {
         normal_bg = "none",
         title_bg = "none",
-      }
+      },
+      kind = {
+            ['Array'] = { lvim.icons.kind.Array .. ' ', 'Type' },
+            ['Function'] = { lvim.icons.kind.Function .. ' ', 'Function' },
+            ['Interface'] = { lvim.icons.kind.Interface .. ' ', 'Interface' },
+            ['Object'] = { lvim.icons.kind.Object .. ' ', 'Type' },
+      },
     },
     outline = {
       keys = {
