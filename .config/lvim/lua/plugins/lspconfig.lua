@@ -14,6 +14,8 @@ lvim.lsp.buffer_mappings.normal_mode = {}
 -- disable auto install servers
 lvim.lsp.installer.setup.automatic_installation = nil
 
+lvim.lsp.diagnostics.virtual_text = { prefix = '' }
+
 lsp.tailwindcss.setup {
   root_dir = util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts')
 }
