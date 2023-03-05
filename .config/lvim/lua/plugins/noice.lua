@@ -40,7 +40,7 @@ local config = {
     lsp = {
       progress = {
         -- enabled = false,
-        -- format = "", -- disable lsp progress, annoying
+        format = "", -- disable lsp progress, annoying
         throttle = throttle,
       },
       signature = {
