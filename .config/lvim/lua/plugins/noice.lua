@@ -93,10 +93,10 @@ local config = {
       },
       mini = {
         border = {
-          -- style = float_opts.border,
+          style = float_opts.border,
         },
         position = {
-          -- row = -2, -- avoid over in status line
+          row = -2, -- avoid over in status line
         },
         win_options = {
           winblend = float_opts.winblend,
