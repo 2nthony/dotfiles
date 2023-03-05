@@ -71,8 +71,9 @@ local config = {
       {
         filter = {
           any = {
+            -- force filter all `*ing *` msg. e.g. formatting, diagnosing, indexing
+            { event = 'lsp', kind = 'progress', find = 'ing ' },
             { event = 'lsp', kind = 'progress', find = 'code_action' },
-            { event = 'lsp', kind = 'progress', find = 'formatting' },
             { event = 'lsp', kind = 'progress', find = 'diagnostics' },
             { event = 'lsp', kind = 'progress', find = 'diagnostics_on_open' },
           },
