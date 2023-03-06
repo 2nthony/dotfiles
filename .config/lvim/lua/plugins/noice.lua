@@ -9,8 +9,9 @@ local config = {
   "folke/noice.nvim",
   dependencies = {
     "MunifTanjim/nui.nvim",
+    'nvim-treesitter/nvim-treesitter',
   },
-  event = "BufReadPost",
+  event = "VeryLazy",
   config = {
     health = {
       checker = false,
