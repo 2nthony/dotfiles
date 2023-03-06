@@ -34,7 +34,9 @@ local branch = {
 lualine.options = {
   component_separators = { left = "", right = "" },
   section_separators = { left = "", right = "" },
-  disabled_filetypes = { "alpha", "dashboard", "Outline" },
+  disabled_filetypes = {
+    statusline = { "alpha", "dashboard" }
+  },
   always_divide_middle = true,
 }
 
