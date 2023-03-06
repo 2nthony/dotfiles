@@ -2,11 +2,17 @@
 
 local lsp = require("lspconfig")
 local util = require("lspconfig.util")
+local windows = require('lspconfig.ui.windows')
+local float_opts = require('utils.float-opts')
 
 local cwd = vim.fn.getcwd()
 local project_root = util.find_node_modules_ancestor(cwd)
 
 vim.lsp.set_log_level("ERROR")
+
+windows.default_options = {
+  border = float_opts.border,
+}
 
 -- unmap all preset buffer keymaps, use lspsaga instead
 lvim.lsp.buffer_mappings.normal_mode = {}
