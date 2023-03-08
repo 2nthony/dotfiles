@@ -41,7 +41,7 @@ nvim_tree.setup.diagnostics.icons.info = lvim.icons.diagnostics.Info
 nvim_tree.setup.diagnostics.icons.warning = lvim.icons.diagnostics.Warning
 nvim_tree.setup.diagnostics.icons.error = lvim.icons.diagnostics.Error
 
-nvim_tree.setup.view.float.enable = true
+nvim_tree.setup.view.float.enable = false
 if nvim_tree.setup.view.float.enable then
   nvim_tree.setup.view.float.quit_on_focus_loss = true
   nvim_tree.setup.view.float.open_win_config.width = 35
@@ -54,7 +54,7 @@ if nvim_tree.setup.view.float.enable then
   nvim_tree.setup.view.float.open_win_config = function()
     local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
     local window_h_int = math.floor(screen_h)
-    return vim.tbl_extend("force", open_win_config, {
+    return vim.tbl_extend("force", {}, open_win_config, {
       height = window_h_int,
     })
   end
