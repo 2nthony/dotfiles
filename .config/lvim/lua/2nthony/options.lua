@@ -1,6 +1,8 @@
 local float_opts = require("utils.float-opts")
 local opt = vim.opt
 
+vim.wo.number = true
+
 opt.number = true
 opt.backup = false
 opt.mouse = "" -- disable mouse
