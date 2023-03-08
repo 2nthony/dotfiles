@@ -27,6 +27,8 @@ opt.laststatus = 2
 opt.breakindent = true
 opt.whichwrap = "" -- don't move cursor to prev/next line via any key
 opt.showmode = false
+opt.shortmess:append('sI')
+opt.formatoptions:append { 'r' }
 
 -- highlight
 opt.cursorline = true
