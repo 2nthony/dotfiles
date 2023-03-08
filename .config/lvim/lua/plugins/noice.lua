@@ -11,6 +11,7 @@ local config = {
     "MunifTanjim/nui.nvim",
     'nvim-treesitter/nvim-treesitter',
   },
+  enabled = false,
   event = "VeryLazy",
   config = {
     health = {
