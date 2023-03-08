@@ -4,12 +4,13 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 local float_opts = require("utils.float-opts")
+local win_opts = require("utils.win-opts")
 
 local lcmp = lvim.builtin.cmp
 
 lcmp.mapping["<C-space>"] = {}
 lcmp.mapping["<C-p>"] = cmp.mapping.complete()
-lcmp.mapping["<C-f>"] = cmp.mapping.scroll_docs( -4)
+lcmp.mapping["<C-f>"] = cmp.mapping.scroll_docs(-4)
 lcmp.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
 
 -- if back to normal mode, then unlink snippet action
@@ -22,11 +23,12 @@ lcmp.mapping["<esc>"] = cmp.mapping(function(callback)
   callback()
 end, { "i", "s" })
 
-local win_opts = cmp.config.window.bordered({
+local win_bordered_opts = cmp.config.window.bordered({
   border = float_opts.border,
+  winhighlight = win_opts.winhighlight,
 })
-lcmp.window.completion = win_opts
-lcmp.window.documentation = win_opts
+lcmp.window.completion = win_bordered_opts
+lcmp.window.documentation = win_bordered_opts
 
 lcmp.confirm_opts = {
   behavior = cmp.ConfirmBehavior.Replace,
