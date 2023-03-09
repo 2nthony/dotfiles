@@ -19,6 +19,8 @@ return {
         normal_bg = "none",
         title_bg = "none",
       },
+      expand = lvim.icons.ui.ChevronShortRight,
+      collapse = lvim.icons.ui.ChevronShortDown,
       kind = {
             ['Array'] = { lvim.icons.kind.Array .. ' ', 'Type' },
             ['Function'] = { lvim.icons.kind.Function .. ' ', 'Function' },
