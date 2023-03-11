@@ -40,6 +40,7 @@ lvim.plugins = {
   -- theme
   require("plugins.vitesse"),
   require("plugins.rose-pine"),
+  require("plugins.github-theme"),
 
   -- navigation
   require("plugins.spectre"),
