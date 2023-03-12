@@ -6,7 +6,8 @@ return {
   dependencies = {
     "tjdevries/colorbuddy.nvim"
   },
-  config = {
     -- reverse_visual = true,
+  opts = {
+    dim_nc = true,
   },
 }
