@@ -6,6 +6,9 @@ local float_opts = require("utils.float-opts")
 return {
   'glepnir/lspsaga.nvim',
   event = "BufRead",
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter',
+  },
   config = {
     request_timeout = 5000,
     scroll_preview = {
@@ -22,10 +25,10 @@ return {
       expand = lvim.icons.ui.ChevronShortRight,
       collapse = lvim.icons.ui.ChevronShortDown,
       kind = {
-            ['Array'] = { lvim.icons.kind.Array .. ' ', 'Type' },
-            ['Function'] = { lvim.icons.kind.Function .. ' ', 'Function' },
-            ['Interface'] = { lvim.icons.kind.Interface .. ' ', 'Interface' },
-            ['Object'] = { lvim.icons.kind.Object .. ' ', 'Type' },
+        ['Array'] = { lvim.icons.kind.Array .. ' ', 'Type' },
+        ['Function'] = { lvim.icons.kind.Function .. ' ', 'Function' },
+        ['Interface'] = { lvim.icons.kind.Interface .. ' ', 'Interface' },
+        ['Object'] = { lvim.icons.kind.Object .. ' ', 'Type' },
       },
     },
     outline = {
