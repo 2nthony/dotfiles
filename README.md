@@ -13,9 +13,9 @@
   </sub>
 </p>
 
-## [LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
+## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
-💤 lazy with extra features:
+lazy with extra features:
 
 - [x] AI-Powered Autocomplete([Codeium](https://codeium.com))
 - [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse))
