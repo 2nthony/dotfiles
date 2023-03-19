@@ -159,6 +159,7 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 
 - [打造 neovim IDE (Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788)
 - [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
+- [ayamir/nvimdots](https://github.com/ayamir/nvimdots)
 
 ## About
 
