@@ -25,7 +25,7 @@
 
 ### Setup
 
-1. Install [LunarVim](https://www.lunarvim.org/docs/installation)
+1. Install [LazyVim](https://www.lazyvim.org/installation)
 2. Clone this repo and link `nvim` to `~/.config`
 
 ```bash
