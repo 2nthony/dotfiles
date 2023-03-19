@@ -14,7 +14,7 @@ alpha.dashboard.section.buttons.entries = {
   { "n",  icons.ui.NewFile .. "  New File",         "<CMD>ene!<CR>" },
   { "ff", icons.ui.FindFile .. "  Find File",       "<CMD>Telescope find_files<CR>" },
   { "fe", icons.ui.FolderOpen .. "  File Explorer", "<CMD>NvimTreeToggle<CR>" },
-  { "r",  icons.ui.History .. "  Restore sessions", ":RestoreSession<cr>" },
+  { "s",  icons.ui.History .. "  Restore sessions", ":RestoreSession<cr>" },
   {
     "c",
     lvim.icons.ui.Gear .. "  Configuration",
