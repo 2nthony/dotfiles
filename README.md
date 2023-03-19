@@ -13,42 +13,33 @@
   </sub>
 </p>
 
-## [LunarVim](https://lunarvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
+## [LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.8.x-29BC9B)
 
-🌙 LunarVim is an IDE layer for Neovim.
+💤 lazy with extra features:
 
-### Features
-
-- [x] LSP
-- [x] Git Integration
-- [x] Code Syntax Highlighting
-- [x] Code Snippets
-- [x] Code Completion
-- [x] Code Diagnostics
-- [x] GitHub Copilot
-- [x] Bufferline
-- [x] Good Looking Theme
-- [x] Auto Session
-- [x] Print action messages at the bottom-right popup
+- [x] AI-Powered Autocomplete([Codeium](https://codeium.com))
+- [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse))
+- [x] Transparent friendly
+- [x] Git Integration(LazyGit)
 - [x] ...
 
 ### Setup
 
 1. Install [LunarVim](https://www.lunarvim.org/docs/installation)
-2. Clone this repo and link `lvim` to `~/.config`
+2. Clone this repo and link `nvim` to `~/.config`
 
 ```bash
 git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/lvim ~/.config
+ln -s ~/yourpath/.config/nvim ~/.config
 ```
 
 ### Plugins
 
-Full plugins see [plugins.lua](.config/lvim/lua/2nthony/plugins.lua).
+All plugins [plugins/](.config/nvim/lua/plugins).
 
 ### Keybindings
 
-The latest keybindings in [keymaps.lua](.config/lvim/lua/2nthony/keymaps.lua).
+The latest keybindings in [keymaps.lua](.config/nvim/lua/config/keymaps.lua).
 
 #### `<C>` means to `<Ctrl>`
 
@@ -66,13 +57,14 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/2nthony/keymaps.lua).
 
 #### `f` means to `find` or `file`
 
-- `fe` toggle file explorer
+- `fe` file explorer
 - `fd` locate current file in file explorer
-- `ff` find a file
-- `fr` find character(live grep) in files (install `ripgrep`)
+- `ff` find files
+- `fr` find text in files(live grep) (install `ripgrep`)
 - `fb` find a buffer(tab)
 - `fo` find oldfiles
-- `fwd` find workspace diagnostics(LSP diagnostics)
+- `fc` find changed files (git status)
+- `ftw` find trouble workspace(LSP diagnostics)
 - `ftc` find todo comments
 
 #### `g` means to `go` or `git`
@@ -86,8 +78,6 @@ The latest keybindings in [keymaps.lua](.config/lvim/lua/2nthony/keymaps.lua).
 - `gsr` gitsigns reset hunk
 - `gsu` gitsigns undo stage hunk
 - `gsp` gitsigns preview hunk
-
-See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 
 #### `s` means to `switch`, `split`, `see`, `search` or `LSP`
 
@@ -104,13 +94,9 @@ See the full keybindings for git in [keymaps.gitsigns](.config/lvim/keymaps.lua)
 
 #### Others, `<Space>` instead of `\`
 
-- `<Space>w` = `:w`
-- `<Space>q` = `:q`, `:Q` = `:q!`
 - `<Space>bd` delete buffer
 - `<Space>bD` force(!) delete buffer
-- `<Space>bp` pick a buffer
-- `<Space>S` ripgrep search(like global search)
-- `<Space>tt` toggle show troubles(problems)
+- `<Space>bp` pin a buffer
 
 ### Code Snippets ([luasnip](https://github.com/L3MON4D3/LuaSnip))
 
