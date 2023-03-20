@@ -70,7 +70,7 @@ return {
 
         vim_item.dup = duplicates[entry.source.name] or duplicates.default
 
-        vim_item = format_tailwindcss_color(entry, vim_item)
+        vim_item = format_tailwindcss_color(entry, vim_item, lspkind)
 
         return vim_item
       end,

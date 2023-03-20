@@ -1,10 +1,9 @@
 local icons = require("lazyvim.config").icons
-local lspkind = require("lspkind")
 
 local M = {}
 
 -- https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/after/plugin/cmp.rc.lua#L5
-M.format_taiwlindcss_color = function(entry, vim_item)
+M.format_taiwlindcss_color = function(entry, vim_item, lspkind)
   if vim_item.kind == "Color" and entry.completion_item.documentation then
     local _, _, r, g, b = string.find(entry.completion_item.documentation, "^rgb%((%d+), (%d+), (%d+)")
     if r then
