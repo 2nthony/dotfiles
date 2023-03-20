@@ -27,6 +27,8 @@ return {
       button.opts.hl_shortcut = "AlphaShortcut"
     end
 
+    dashboard.opts.layout[1].val = 2
+
     return dashboard
   end,
 }
