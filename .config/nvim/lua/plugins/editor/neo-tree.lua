@@ -8,7 +8,7 @@ return {
     return {}
   end,
   opts = function(_, opts)
-    local icons = require("util.icon")
+    local icons = require("lazyvim.config").icons
     local has = require("lazyvim.util").has
 
     local function open(cmd)
@@ -40,8 +40,14 @@ return {
     opts.window.mappings["<C-v>"] = open("vsplit")
     opts.window.mappings["<C-f>"] = "filter_on_submit"
 
-    opts.default_component_configs.indent.expander_collapsed = icons.ui.ChevronShortRight
-    opts.default_component_configs.indent.expander_expanded = icons.ui.ChevronShortDown
+    opts.default_component_configs.indent.expander_collapsed = icons.ui.ChevronRight
+    opts.default_component_configs.indent.expander_expanded = icons.ui.ChevronDown
+    opts.default_component_configs.icon = {
+      folder_closed = icons.ui.Folder,
+      folder_open = icons.ui.FolderOpen,
+      folder_empty = icons.ui.FolderOpenLine,
+      default = icons.ui.Text,
+    }
 
     return opts
   end,

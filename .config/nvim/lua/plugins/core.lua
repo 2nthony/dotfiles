@@ -29,6 +29,7 @@ return {
         Module = icon.ui.Package,
       },
       ui = icon.ui,
+      misc = icon.misc,
     },
   },
 }

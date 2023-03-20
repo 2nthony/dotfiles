@@ -10,7 +10,7 @@ return {
     theme = "dropdown",
     defaults = {
       prompt_prefix = icon.ui.Telescope .. " ",
-      selection_caret = icon.ui.ChevronShortRight .. " ",
+      selection_caret = icon.ui.ChevronRight .. " ",
       preview = false,
       mappings = {
         i = {
