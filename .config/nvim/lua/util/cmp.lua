@@ -34,4 +34,8 @@ M.duplicates = {
   path = 0,
 }
 
+M.formatting = {
+  max_width = 50,
+}
+
 return M

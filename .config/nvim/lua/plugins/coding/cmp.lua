@@ -17,6 +17,7 @@ return {
     local win = require("util.opts").win
     local format_tailwindcss_color = require("util.cmp").format_taiwlindcss_color
     local duplicates = require("util.cmp").duplicates
+    local formatting = require("util.cmp").formatting
 
     local win_bordered = cmp.config.window.bordered({
       border = float.border,
@@ -57,10 +58,9 @@ return {
     end, { "i", "s" })
 
     opts.formatting.fields = { "kind", "abbr", "menu" }
-    opts.formatting.max_width = 50
     opts.formatting.format = lspkind.cmp_format({
       mode = "text",
-      maxwidth = opts.formatting.max_width or 50,
+      maxwidth = formatting.max_width,
       symbol_map = icons.kinds,
       ellipsis_char = icons.ui.Ellipsis,
       before = function(entry, vim_item)
