@@ -2,7 +2,7 @@
 
 return {
   "glepnir/lspsaga.nvim",
-  event = "BufRead",
+  event = { "BufReadPre" },
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
   },
