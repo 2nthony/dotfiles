@@ -1,4 +1,5 @@
 -- used in `plugins/core`
+-- meta icon, no blank space prefix or siffix
 local icon = {
   diagnostics = {
     Error = "",
@@ -92,12 +93,14 @@ local icon = {
     Target = "󰀘",
     Telescope = "",
     Text = "",
-    Tree = "",
+    Tree = "󰐅",
     Triangle = "契",
     TriangleShortArrowDown = "",
     TriangleShortArrowLeft = "",
     TriangleShortArrowRight = "",
     TriangleShortArrowUp = "",
+    Palette = "󰏘",
+    PaletteLine = "󰸌",
   },
   misc = {
     PrimitiveSquare = "",
