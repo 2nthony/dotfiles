@@ -1,7 +1,7 @@
--- https://github.com/echasnovski/mini.pairs
+-- https://github.com/echasnovski/mini.ai
 
 return {
-  "echasnovski/mini.pairs",
+  "echasnovski/mini.ai",
   lazy = true,
   event = function()
     return {
