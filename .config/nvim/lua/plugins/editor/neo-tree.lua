@@ -1,4 +1,4 @@
-local icons = require("util.icon")
+-- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
@@ -7,36 +7,61 @@ return {
   keys = function()
     return {}
   end,
-  opts = {
-    filesystem = {
-      follow_current_file = false,
-      filtered_items = {
-        hide_dotfiles = false,
-        hide_by_name = {
-          ".git",
-        },
-        never_show = {
-          ".DS_Store",
-        },
+  opts = function(_, opts)
+    local icons = require("util.icon")
+    local has = require("lazyvim.util").has
+
+    local function open(cmd)
+      if has("nvim-window-picker") then
+        cmd = cmd .. "_with_window_picker"
+      end
+      return cmd
+    end
+
+    opts.filesystem.follow_current_file = false
+    opts.filesystem.filtered_items = {
+      hide_dotfiles = false,
+      hide_by_name = {
+        ".git",
       },
-    },
-    window = {
-      width = 35,
-      mappings = {
-        ["o"] = "open",
-        ["<C-s>"] = "open_split",
-        ["<C-v>"] = "open_vsplit",
-        ["<C-f>"] = "filter_on_submit",
-        -- unmap
-        ["s"] = "",
-        ["S"] = "",
-        ["f"] = "",
+      never_show = {
+        ".DS_Store",
       },
-    },
-    default_component_configs = {
-      indent = {
-        expander_collapsed = icons.ui.ChevronShortRight,
-        expander_expanded = icons.ui.ChevronShortDown,
+    }
+
+    opts.window.width = 35
+
+    opts.window.mappings["s"] = ""
+    opts.window.mappings["S"] = ""
+    opts.window.mappings["f"] = ""
+    opts.window.mappings["o"] = open("open")
+    opts.window.mappings["<cr>"] = open("open")
+    opts.window.mappings["<C-s>"] = open("split")
+    opts.window.mappings["<C-v>"] = open("vsplit")
+    opts.window.mappings["<C-f>"] = "filter_on_submit"
+
+    opts.default_component_configs.indent.expander_collapsed = icons.ui.ChevronShortRight
+    opts.default_component_configs.indent.expander_expanded = icons.ui.ChevronShortDown
+
+    return opts
+  end,
+  dependencies = {
+    -- https://github.com/s1n7ax/nvim-window-picker
+    {
+      "s1n7ax/nvim-window-picker",
+      opts = {
+        autoselect_one = true,
+        include_current = false,
+        filter_rules = {
+          -- filter using buffer options
+          bo = {
+            -- if the file type is one of following, the window will be ignored
+            filetype = { "neo-tree", "neo-tree-popup", "notify" },
+
+            -- if the buffer type is one of following, the window will be ignored
+            buftype = { "terminal", "quickfix" },
+          },
+        },
       },
     },
   },
