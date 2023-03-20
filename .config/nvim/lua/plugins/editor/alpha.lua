@@ -18,6 +18,7 @@ return {
       dashboard.button("c", icons.ui.Gear .. "  Config", ":e $MYVIMRC <cr>"),
 
       dashboard.button("l", icons.misc.Lazy .. "  Lazy", ":Lazy<cr>"),
+      dashboard.button("m", icons.ui.Package .. "  Mason", ":Mason<cr>"),
       dashboard.button("q", icons.ui.Close .. "  Quit", ":q<cr>"),
       dashboard.button("x", icons.ui.SignOut .. "  Exit (Quit all)", ":qa<cr>"),
     }
