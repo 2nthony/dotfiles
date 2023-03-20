@@ -27,4 +27,21 @@ return {
       enable = true,
     },
   },
+  dependencies = {
+    -- https://github.com/windwp/nvim-ts-autotag
+    {
+      "windwp/nvim-ts-autotag",
+      opts = {
+        filetypes = {
+          "html",
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "vue",
+          "xml",
+        },
+      },
+    },
+  },
 }
