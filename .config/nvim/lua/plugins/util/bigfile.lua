@@ -4,7 +4,7 @@ return {
   "LunarVim/bigfile.nvim",
   lazy = false,
   config = function(_)
-    local detect_bigfile = {
+    local set_filetype_bigfile = {
       name = "detect_bigfile",
       opts = { defer = true },
       disable = function()
@@ -27,7 +27,7 @@ return {
       filesize = 0.5, -- unit MB
       pattern = { "*" },
       features = {
-        detect_bigfile,
+        set_filetype_bigfile,
         cmp,
         "treesitter",
         "lsp",
