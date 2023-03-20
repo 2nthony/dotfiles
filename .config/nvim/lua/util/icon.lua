@@ -9,9 +9,6 @@ local icon = {
     Debug = "",
     Trace = "✎",
   },
-  kinds = {
-    Codeium = " ",
-  },
   git = {
     AddedLine = "",
     ModifiedLine = "",
@@ -83,7 +80,7 @@ local icon = {
     Lock = "",
     NewFile = "",
     Note = "",
-    Package = "",
+    Package = "󰏗",
     Pencil = "",
     Plus = "",
     Project = "",
@@ -107,6 +104,7 @@ local icon = {
     PrimitiveSquareLine = "",
     PrimitiveDot = "",
     Lazy = "󰒲",
+    Codeium = "",
   },
 }
 

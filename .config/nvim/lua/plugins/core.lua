@@ -23,7 +23,10 @@ return {
         modified = icon.git.ModifiedLine .. " ",
         removed = icon.git.RemovedLine .. " ",
       },
-      kinds = icon.kinds,
+      kinds = {
+        Codeium = icon.misc.Codeium,
+        Module = icon.ui.Package,
+      },
       ui = icon.ui,
     },
   },
