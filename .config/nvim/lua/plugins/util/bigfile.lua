@@ -24,7 +24,7 @@ return {
     }
 
     require("bigfile").config({
-      filesize = 0.2, -- unit MB
+      filesize = 0.5, -- unit MB
       pattern = { "*" },
       features = {
         detect_bigfile,
