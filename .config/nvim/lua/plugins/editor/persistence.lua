@@ -13,7 +13,7 @@ return {
   end,
   opts = {
     options = {
-      "buffers",
+      -- "buffers",
       "curdir",
       "folds",
       "tabpages",
