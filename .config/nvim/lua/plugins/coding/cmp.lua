@@ -70,7 +70,12 @@ return {
 
         vim_item.dup = duplicates[entry.source.name] or duplicates.default
 
-        vim_item = format_tailwindcss_color(entry, vim_item, lspkind)
+        vim_item = format_tailwindcss_color(entry, vim_item)
+
+        -- required. check if `symbolic` able
+        if lspkind.symbolic(vim_item.kind):len() > 0 then
+          vim_item.kind = lspkind.symbolic(vim_item.kind)
+        end
 
         return vim_item
       end,
