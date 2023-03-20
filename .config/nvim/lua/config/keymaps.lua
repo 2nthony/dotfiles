@@ -37,7 +37,11 @@ map("n", "<C-a>", "gg<S-v>G")
 map("n", "Q", "q")
 
 -- :tabnew - new tab
-map("n", "<C-n>", ":tabnew<cr>:Alpha<cr>")
+local newtab_cmd = ":tabnew<cr>"
+if has("alpha-nvim") then
+  newtab_cmd = newtab_cmd .. ":Alpha<cr>"
+end
+map("n", "<C-n>", newtab_cmd)
 
 -- better ^, move cursor to start of line
 map("n", "<C-h>", "^")
