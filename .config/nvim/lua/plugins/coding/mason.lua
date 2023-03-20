@@ -13,6 +13,9 @@ return {
   end,
   opts = {
     log_level = vim.log.levels.ERROR,
+    ensure_installed = {
+      "stylua",
+    },
     ui = {
       border = float.border,
       width = 0.8,
