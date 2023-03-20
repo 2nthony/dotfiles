@@ -1,3 +1,4 @@
+-- used in `plugins/core`
 local icon = {
   diagnostics = {
     Error = "",

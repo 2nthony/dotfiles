@@ -24,6 +24,7 @@ return {
         removed = icon.git.RemovedLine .. " ",
       },
       kinds = icon.kinds,
+      ui = icon.ui,
     },
   },
 }

@@ -62,7 +62,7 @@ return {
       mode = "text",
       maxwidth = opts.formatting.max_width or 50,
       symbol_map = icons.kinds,
-      ellipsis_char = icons.icon.ui.Ellipsis,
+      ellipsis_char = icons.ui.Ellipsis,
       before = function(entry, vim_item)
         if vim_item.kind == "Codeium" then
           vim_item.kind_hl_group = "CmpItemKindCodeium"

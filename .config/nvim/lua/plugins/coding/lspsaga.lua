@@ -23,8 +23,8 @@ return {
           normal_bg = "none",
           title_bg = "none",
         },
-        expand = icons.icon.ui.ChevronShortRight,
-        collapse = icons.icon.ui.ChevronShortDown,
+        expand = icons.ui.ChevronShortRight,
+        collapse = icons.ui.ChevronShortDown,
         kind = {
           ["Array"] = { icons.kinds.Array, "Type" },
           ["Function"] = { icons.kinds.Function, "Function" },
@@ -58,7 +58,7 @@ return {
       -- breadcrumbs
       -- https://github.com/glepnir/lspsaga.nvim#lspsaga-symbols-in-winbar
       symbol_in_winbar = {
-        separator = " " .. icons.icon.ui.ChevronShortRight .. " ",
+        separator = " " .. icons.ui.ChevronShortRight .. " ",
         color_mode = false,
       },
       beacon = {
