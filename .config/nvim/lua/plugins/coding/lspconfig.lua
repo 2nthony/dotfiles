@@ -34,7 +34,7 @@ return {
 
     opts.autoformat = true
 
-    opts.diagnostics.virtual_text.prefix = icons.misc.PrimitiveDot
+    opts.diagnostics.virtual_text.prefix = icons.ui.CircleFilled
 
     opts.format.timeout_ms = 5000
 
