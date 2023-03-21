@@ -1,5 +1,5 @@
 local actions = require("telescope.actions")
-local icons = require("icons")
+local icons = require("config.icons")
 
 return {
   "nvim-telescope/telescope.nvim",
