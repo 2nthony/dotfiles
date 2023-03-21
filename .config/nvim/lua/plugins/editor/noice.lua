@@ -1,6 +1,6 @@
 -- https://github.com/folke/noice.nvim
 
-local icons = require("icons")
+local icons = require("config.icons")
 local float = require("util.opts").float
 local throttle = 100
 
