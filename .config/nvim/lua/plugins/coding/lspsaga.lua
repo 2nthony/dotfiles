@@ -2,12 +2,13 @@
 
 return {
   "glepnir/lspsaga.nvim",
-  event = { "BufReadPre" },
+  lazy = true,
+  event = { "BufReadPost" },
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
   },
   opts = function()
-    local icons = require("icons")
+    local icons = require("lazyvim.config").icons
     local float = require("util.opts").float
 
     return {

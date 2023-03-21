@@ -1,7 +1,5 @@
 -- https://www.lazyvim.org/configurations
 
-local icons = require("icons")
-
 return {
   "LazyVim/LazyVim",
   opts = {
@@ -9,6 +7,6 @@ return {
     defaults = {
       keymaps = false,
     },
-    icons = icons,
+    icons = require("icons"),
   },
 }
