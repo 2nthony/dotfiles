@@ -26,7 +26,6 @@ return {
       kinds = {
         Codeium = icon.misc.Codeium,
         Color = icon.ui.Palette,
-        Module = icon.ui.Package,
       },
       ui = icon.ui,
       misc = icon.misc,
