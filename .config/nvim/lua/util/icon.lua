@@ -11,9 +11,9 @@ local icon = {
     Trace = "✎",
   },
   git = {
-    AddedLine = "",
-    ModifiedLine = "",
-    RemovedLine = "",
+    Added = "",
+    Modified = "",
+    Removed = "",
     FileDeleted = "",
     FileIgnored = "",
     FileRenamed = "",

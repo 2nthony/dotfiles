@@ -19,9 +19,9 @@ return {
         Hint = icon.diagnostics.Hint .. " ",
       },
       git = {
-        added = icon.git.AddedLine .. " ",
-        modified = icon.git.ModifiedLine .. " ",
-        removed = icon.git.RemovedLine .. " ",
+        added = icon.git.Added .. " ",
+        modified = icon.git.Modified .. " ",
+        removed = icon.git.Removed .. " ",
       },
       kinds = {
         Codeium = icon.misc.Codeium,
