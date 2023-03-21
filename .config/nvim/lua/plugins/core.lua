@@ -7,6 +7,6 @@ return {
     defaults = {
       keymaps = false,
     },
-    icons = require("icons"),
+    icons = require("config.icons"),
   },
 }

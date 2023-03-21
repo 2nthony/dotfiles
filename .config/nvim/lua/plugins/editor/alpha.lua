@@ -8,7 +8,7 @@ return {
     return { "BufWinEnter" }
   end,
   opts = function(_, dashboard)
-    local icons = require("icons")
+    local icons = require("lazyvim.config").icons
     local logo = require("util.alpha").logo
 
     dashboard.section.header.val = logo.empty

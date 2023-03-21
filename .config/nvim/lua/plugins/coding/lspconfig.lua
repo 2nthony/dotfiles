@@ -20,7 +20,7 @@ return {
     vim.lsp.set_log_level(vim.log.levels.ERROR)
   end,
   opts = function(_, opts)
-    local icons = require("icons")
+    local icons = require("lazyvim.config").icons
     local cwd = vim.fn.getcwd()
     local path = require("lspconfig.util").path
     local root_pattern = require("lspconfig.util").root_pattern

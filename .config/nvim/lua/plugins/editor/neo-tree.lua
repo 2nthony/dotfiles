@@ -8,7 +8,7 @@ return {
     return {}
   end,
   opts = function(_, opts)
-    local icons = require("icons")
+    local icons = require("lazyvim.config").icons
     local has = require("lazyvim.util").has
 
     local function open(cmd)

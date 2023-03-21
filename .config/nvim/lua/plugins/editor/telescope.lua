@@ -3,6 +3,7 @@ local icons = require("icons")
 
 return {
   "nvim-telescope/telescope.nvim",
+  lazy = true,
   keys = function()
     return {}
   end,

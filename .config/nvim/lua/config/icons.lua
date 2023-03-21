@@ -2,29 +2,29 @@
 local icons = {}
 
 icons.diagnostics = {
-  Error = " ",
-  Warn = " ",
-  Info = " ",
-  Question = " ",
-  Hint = " ",
-  Debug = " ",
-  Trace = "✎ ",
+  Error = "",
+  Warn = "",
+  Info = "",
+  Question = "",
+  Hint = "",
+  Debug = "",
+  Trace = "✎",
 }
 
 icons.git = {
-  Added = " ",
-  Modified = " ",
-  Removed = " ",
-  FileDeleted = " ",
-  FileIgnored = " ",
-  FileRenamed = " ",
+  Added = "",
+  Modified = "",
+  Removed = "",
+  FileDeleted = "",
+  FileIgnored = "",
+  FileRenamed = "",
   FileStaged = "S",
   FileUnmerged = "",
   FileUnstaged = "",
   FileUntracked = "U",
   Branch = "",
-  Diff = " ",
-  Repo = " ",
+  Diff = "",
+  Repo = "",
 }
 
 icons.misc = {
@@ -115,23 +115,19 @@ icons.ui = {
 }
 
 icons.kinds = {
-  Codeium = " ",
-  Color = icons.ui.Palette .. " ",
+  Codeium = "",
+  Color = icons.ui.Palette,
 }
 
---- @type fun(p1: table): table
-local function compat_case(icons_tbl)
-  local tbl = vim.deepcopy(icons_tbl)
-
-  for key, val in pairs(icons_tbl) do
-    tbl[key] = val
-    tbl[string.lower(key)] = val
-  end
-
-  return tbl
+--- @type fun(p1: string): table
+local function add_space(category)
+  return setmetatable({}, {
+    __index = function(_, key)
+      return icons[category][key] .. " "
+    end,
+  })
 end
 
-icons.diagnostics = compat_case(icons.diagnostics)
-icons.git = compat_case(icons.git)
+icons.diagnostics = add_space("diagnostics")
 
 return icons

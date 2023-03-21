@@ -3,7 +3,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   opts = function(_, opts)
-    local icons = require("icons")
+    local icons = require("lazyvim.config").icons
 
     opts.options.component_separators = { left = "", right = "" }
     opts.options.section_separators = { left = "", right = "" }
