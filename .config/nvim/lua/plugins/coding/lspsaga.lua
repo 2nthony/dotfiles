@@ -7,7 +7,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
   opts = function()
-    local icons = require("lazyvim.config").icons
+    local icons = require("icons")
     local float = require("util.opts").float
 
     return {

@@ -1,5 +1,5 @@
 local actions = require("telescope.actions")
-local icon = require("util.icon")
+local icons = require("icons")
 
 return {
   "nvim-telescope/telescope.nvim",
@@ -9,8 +9,8 @@ return {
   opts = {
     theme = "dropdown",
     defaults = {
-      prompt_prefix = icon.ui.Telescope .. " ",
-      selection_caret = icon.ui.ChevronRight .. " ",
+      prompt_prefix = icons.ui.Telescope .. " ",
+      selection_caret = icons.ui.ChevronRight .. " ",
       preview = false,
       mappings = {
         i = {

@@ -1,6 +1,5 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
-local icons = require("util.icon")
 local float = require("util.opts").float
 
 return {
@@ -21,6 +20,7 @@ return {
     vim.lsp.set_log_level(vim.log.levels.ERROR)
   end,
   opts = function(_, opts)
+    local icons = require("icons")
     local cwd = vim.fn.getcwd()
     local path = require("lspconfig.util").path
     local root_pattern = require("lspconfig.util").root_pattern

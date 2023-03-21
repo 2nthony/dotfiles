@@ -1,15 +1,16 @@
 -- https://github.com/nvim-lualine/lualine.nvim
-local icons = require("util.icon")
 
 return {
   "nvim-lualine/lualine.nvim",
   opts = function(_, opts)
+    local icons = require("icons")
+
     opts.options.component_separators = { left = "", right = "" }
     opts.options.section_separators = { left = "", right = "" }
 
     local branch = { "branch", icon = icons.git.Branch }
     local filename = { "filename", path = 1 }
-    local diagnostics = { "diagnostics" }
+    local diagnostics = { "diagnostics", symbols = icons.diagnostics }
     local filetype = { "filetype" }
     local location = { "location", padding = { left = 0, right = 1 } }
 

@@ -12,7 +12,7 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
-    local icons = require("lazyvim.config").icons
+    local icons = require("icons")
     local float = require("util.opts").float
     local win = require("util.opts").win
     local format_tailwindcss_color = require("util.cmp").format_taiwlindcss_color
