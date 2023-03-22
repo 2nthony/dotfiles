@@ -18,6 +18,8 @@ return {
     end
 
     vim.lsp.set_log_level(vim.log.levels.ERROR)
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
   end,
   opts = function(_, opts)
     local icons = require("lazyvim.config").icons
