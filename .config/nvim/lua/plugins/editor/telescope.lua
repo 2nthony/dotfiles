@@ -1,6 +1,11 @@
 local actions = require("telescope.actions")
 local icons = require("config.icons")
 
+local grep_picker = {
+  preview = true,
+  only_sort_text = true, -- don't include the filename in the search results
+}
+
 return {
   "nvim-telescope/telescope.nvim",
   lazy = true,
@@ -40,13 +45,8 @@ return {
       oldfiles = {
         cwd_only = true,
       },
-      live_grep = {
-        --@usage don't include the filename in the search results
-        only_sort_text = true,
-      },
-      grep_string = {
-        only_sort_text = true,
-      },
+      live_grep = grep_picker,
+      grep_string = grep_picker,
       buffers = {
         mappings = {
           i = {
