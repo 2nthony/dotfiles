@@ -119,15 +119,19 @@ icons.kinds = {
   Color = icons.ui.Palette,
 }
 
---- @type fun(p1: string): table
+--- @param category 'diagnostics'|'git'|'misc'|'ui'|'kinds'
+--- @return table<string, string>
 local function add_space(category)
-  return setmetatable({}, {
-    __index = function(_, key)
-      return icons[category][key] .. " "
-    end,
-  })
+  local tbl = vim.deepcopy(icons[category])
+
+  for key, value in pairs(tbl) do
+    tbl[key] = value .. " "
+  end
+
+  return tbl
 end
 
 icons.diagnostics = add_space("diagnostics")
+icons.kinds = add_space("kinds")
 
 return icons
