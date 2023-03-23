@@ -5,10 +5,7 @@ icons.diagnostics = {
   Error = "",
   Warn = "",
   Info = "",
-  Question = "",
   Hint = "",
-  Debug = "",
-  Trace = "✎",
 }
 
 icons.git = {
@@ -40,6 +37,7 @@ icons.ui = {
   ArrowCircleLeft = "󰳞",
   ArrowCircleRight = "󰳠",
   ArrowCircleUp = "󰳢",
+  Beaker = "",
   BookMark = "",
   BoxChecked = "",
   Bug = "",
@@ -89,9 +87,11 @@ icons.ui = {
   Note = "",
   Package = "󰏗",
   Edit = "",
-  Plus = "",
+  Plus = "",
   Project = "",
+  Pencil = "✎",
   Search = "",
+  Skull = "󰯈",
   SignIn = "",
   SignOut = "",
   Tab = "",
@@ -107,6 +107,7 @@ icons.ui = {
   TriangleShortArrowUp = "",
   Palette = "󰏘",
   PaletteLine = "󰸌",
+  Question = "",
   Heart = "󰣐",
   HeartLine = "󱢠",
   PrimitiveSquare = "",
@@ -118,6 +119,9 @@ icons.kinds = {
   Codeium = "",
   Color = icons.ui.Palette,
 }
+
+-- alias
+icons.ui.Test = icons.ui.Beaker
 
 --- @param category 'diagnostics'|'git'|'misc'|'ui'|'kinds'
 --- @return table<string, string>
