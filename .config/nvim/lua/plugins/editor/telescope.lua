@@ -4,6 +4,7 @@ local icons = require("config.icons")
 local grep_picker = {
   preview = true,
   only_sort_text = true, -- don't include the filename in the search results
+  path_display = { "shorten" },
 }
 
 return {
