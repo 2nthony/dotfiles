@@ -64,6 +64,7 @@ Pods/
 .config/fish/conf.d/
 !.config/fish/conf.d/dev_env.fish
 !.config/fish/conf.d/nvm_default_version.fish
+!.config/fish/conf.d/pnpm_setup.fish
 .config/fish/functions/
 !.config/fish/functions/fish_user_key_binding.fish
 !.config/fish/functions/peco_change_directory.fish
