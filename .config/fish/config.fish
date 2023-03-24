@@ -20,7 +20,7 @@ alias clean "clear && printf '\e[3J'"
 alias vim nvim
 alias t zellij
 
-set -gx EDITOR lvim
+set -gx EDITOR vim
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
