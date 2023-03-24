@@ -10,7 +10,15 @@ return {
 
     local branch = { "branch", icon = icons.git.Branch }
     local filename = { "filename", path = 1 }
-    local diagnostics = { "diagnostics", symbols = icons.diagnostics }
+    local diagnostics = {
+      "diagnostics",
+      symbols = {
+        error = icons.diagnostics.Error,
+        warn = icons.diagnostics.Warn,
+        info = icons.diagnostics.Info,
+        hint = icons.diagnostics.Hint,
+      },
+    }
     local filetype = { "filetype" }
     local location = { "location", padding = { left = 0, right = 1 } }
 
