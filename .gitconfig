@@ -6,7 +6,7 @@
 	proxy = http://127.0.0.1:7890
 [core]
 	excludesfile = ~/.gitignore
-  # editor = nvim
+  editor = nvim
 [color]
   status = auto
   diff = auto
