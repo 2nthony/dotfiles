@@ -1,7 +1,6 @@
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
--- TODO: switch to eslint_d
 
-local prettier_files = { ".prettierrc", ".prettierrc.js", ".prettierignore" }
+local prettier_files = { ".prettier", ".prettierrc", ".prettierrc.js", ".prettierrc.json" }
 
 return {
   "jose-elias-alvarez/null-ls.nvim",
@@ -12,18 +11,18 @@ return {
     return {
       log_level = "error",
       sources = {
-        nls.builtins.formatting.prettier.with({
+        nls.builtins.formatting.prettierd.with({
           condition = function(utils)
             return utils.root_has_file(prettier_files)
           end,
         }),
-        nls.builtins.formatting.eslint.with({
+        nls.builtins.formatting.eslint_d.with({
           condition = function(utils)
             return not utils.root_has_file(prettier_files)
           end,
         }),
-        nls.builtins.diagnostics.eslint,
-        nls.builtins.code_actions.eslint,
+        nls.builtins.diagnostics.eslint_d,
+        nls.builtins.code_actions.eslint_d,
 
         nls.builtins.formatting.stylua,
       },
