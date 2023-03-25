@@ -51,3 +51,5 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+[init]
+	defaultBranch = main
