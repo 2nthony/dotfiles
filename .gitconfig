@@ -6,7 +6,7 @@
 	proxy = http://127.0.0.1:7890
 [core]
 	excludesfile = ~/.gitignore
-  # editor = lvim
+  # editor = nvim
 [color]
   status = auto
   diff = auto
@@ -39,12 +39,12 @@
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 [diff]
-  tool = lvimdiff
-[difftool "lvimdiff"]
-	cmd = lvim -d \"$LOCAL\" \"$REMOTE\"
+  tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "lvimdiff"]
-	cmd = lvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[mergetool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
