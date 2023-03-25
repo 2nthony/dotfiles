@@ -7,6 +7,8 @@ return {
   end,
   opts = {
     ensure_installed = {
+      "lua",
+      "help",
       "javascript",
       "typescript",
       "tsx",
