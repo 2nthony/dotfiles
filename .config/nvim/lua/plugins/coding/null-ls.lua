@@ -6,10 +6,12 @@ return {
   "jose-elias-alvarez/null-ls.nvim",
   lazy = true,
   opts = function()
+    local float = require("util.opts").float
     local nls = require("null-ls")
 
     return {
       log_level = "error",
+      border = float.border,
       sources = {
         nls.builtins.formatting.prettierd.with({
           condition = function(utils)
