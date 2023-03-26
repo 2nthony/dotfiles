@@ -12,12 +12,7 @@ return {
     local filename = { "filename", path = 1 }
     local diagnostics = {
       "diagnostics",
-      symbols = {
-        error = icons.diagnostics.Error,
-        warn = icons.diagnostics.Warn,
-        info = icons.diagnostics.Info,
-        hint = icons.diagnostics.Hint,
-      },
+      symbols = icons.diagnostics,
     }
     local filetype = { "filetype" }
     local location = { "location", padding = { left = 0, right = 1 } }
