@@ -53,3 +53,8 @@
 	process = git-lfs filter-process
 [init]
 	defaultBranch = main
+[github]
+	user = 2nthony
+[user]
+	name = 2nthony
+	email = ant.hu@outlook.com
