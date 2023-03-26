@@ -65,7 +65,6 @@ Pods/
 !.config/fish/conf.d/android_studio_java_home_env.fish
 !.config/fish/conf.d/nvm_default_version.fish
 !.config/fish/conf.d/pnpm_setup.fish
-!.config/fish/conf.d/brew_cmd.fish
 !.config/fish/conf.d/rust_path_env.fish
 .config/fish/functions/
 !.config/fish/functions/fish_user_key_binding.fish
