@@ -2,19 +2,19 @@
 local icons = {}
 
 icons.diagnostics = {
-  Error = "",
-  Warn = "",
-  Info = "",
-  Hint = "",
+  Error = " ",
+  Warn = " ",
+  Info = " ",
+  Hint = " ",
 }
 
 icons.git = {
-  Added = "",
-  Modified = "",
-  Removed = "",
-  FileDeleted = "",
-  FileIgnored = "",
-  FileRenamed = "",
+  Added = " ",
+  Modified = " ",
+  Removed = " ",
+  FileDeleted = " ",
+  FileIgnored = " ",
+  FileRenamed = " ",
   FileStaged = "S",
   FileUnmerged = "",
   FileUnstaged = "",
@@ -116,8 +116,8 @@ icons.ui = {
 }
 
 icons.kinds = {
-  Codeium = "",
-  Color = icons.ui.Palette,
+  Codeium = " ",
+  Color = icons.ui.Palette .. " ",
 }
 
 -- alias
@@ -125,17 +125,17 @@ icons.ui.Test = icons.ui.Beaker
 
 --- @param category 'diagnostics'|'git'|'misc'|'ui'|'kinds'
 --- @return table<string, string>
-local function add_space(category)
+local function add_lower_case(category)
   local tbl = vim.deepcopy(icons[category])
 
   for key, value in pairs(tbl) do
-    tbl[key] = value .. " "
+    tbl[string.lower(key)] = value
   end
 
   return tbl
 end
 
-icons.diagnostics = add_space("diagnostics")
-icons.kinds = add_space("kinds")
+icons.diagnostics = add_lower_case("diagnostics")
+icons.git = add_lower_case("git")
 
 return icons
