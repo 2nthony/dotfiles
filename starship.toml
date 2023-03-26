@@ -10,3 +10,16 @@ success_symbol = '[❯](bold green)' # The 'success_symbol' segment is being set
 
 [git_branch]
 symbol = ' '
+
+[git_status]
+conflicted = '=${count}'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = '${count}'
+untracked = '?${count}'
+stashed = '$${count}'
+modified = '!${count}'
+staged = '+${count}'
+renamed = '»${count}'
+delete = 'ⅹ${count}'
