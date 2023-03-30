@@ -161,7 +161,7 @@ if has("surround-ui.nvim") then
 end
 
 if has("trouble.nvim") then
-  wkmap["f"]["t"]["w"] = { ":TroubleToggle workspace_diagnostics<cr>", "Workspace troubles" }
+  wkmap["f"]["t"]["w"] = { ":TroubleToggle workspace_diagnostics<cr>", "Trouble workspace" }
 end
 
 if has("todo-comments.nvim") then
