@@ -121,6 +121,7 @@ if has("lspsaga.nvim") then
     c = { ":Lspsaga show_cursor_diagnostics<cr>", "Show cursor diagnostics" },
     l = { ":Lspsaga show_line_diagnostics<cr>", "Show line diagnostics" },
     b = { ":Lspsaga show_buf_diagnostics<cr>", "Show buffer diagnostics" },
+    w = { ":Lspsaga show_workspace_diagnostics<cr>", "Show workspace diagnostics" },
   }
 end
 
