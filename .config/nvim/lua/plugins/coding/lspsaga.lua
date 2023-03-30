@@ -67,6 +67,10 @@ return {
       beacon = {
         enable = false,
       },
+      diagnostic = {
+        on_insert = false,
+        -- extend_relatedInformation = true,
+      },
     }
   end,
 }
