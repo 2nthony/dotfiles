@@ -103,11 +103,25 @@ if has("lspsaga.nvim") then
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- map('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>')
   map("i", "<C-k>", ":lua vim.lsp.buf.signature_help()<CR>")
-  wkmap["s"]["d"] = { ":Lspsaga lsp_finder<cr>", "LSP finder" }
+  wkmap["s"]["f"] = { ":Lspsaga lsp_finder<cr>", "LSP finder" }
   wkmap["s"]["p"] = { ":Lspsaga peek_definition<cr>", "Peek definition" }
+  wkmap["s"]["P"] = { ":Lspsaga peek_type_definition<cr>", "Peek type definition" }
+  wkmap["s"]["g"] = { ":Lspsaga goto_definition<cr>", "Goto definition" }
+  wkmap["s"]["G"] = { ":Lspsaga goto_type_definition<cr>", "Goto type definition" }
   wkmap["s"]["r"] = { ":Lspsaga rename<cr>", "LSP rename" }
   wkmap["s"]["o"] = { ":Lspsaga outline<cr>", "LSP outline" }
-  wkmap["s"]["ca"] = { ":Lspsaga code_action<cr>", "LSP code action" }
+  wkmap["s"]["c"] = {
+    name = "code, call hierarchy",
+    a = { ":Lspsaga code_action<cr>", "LSP code action" },
+    i = { ":Lspsaga incoming_calls<cr>", "Incoming calls" },
+    o = { ":Lspsaga outgoing_calls<cr>", "Outgoing calls" },
+  }
+  wkmap["s"]["d"] = {
+    name = "Show diagnostics",
+    c = { ":Lspsaga show_cursor_diagnostics<cr>", "Show cursor diagnostics" },
+    l = { ":Lspsaga show_line_diagnostics<cr>", "Show line diagnostics" },
+    b = { ":Lspsaga show_buf_diagnostics<cr>", "Show buffer diagnostics" },
+  }
 end
 
 if has("nvim-tree.lua") then
