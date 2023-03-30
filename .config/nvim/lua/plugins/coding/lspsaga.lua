@@ -4,6 +4,7 @@ return {
   "glepnir/lspsaga.nvim",
   lazy = true,
   event = { "BufReadPost" },
+  cmd = { "Lspsaga" },
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
   },
