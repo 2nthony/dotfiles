@@ -87,10 +87,16 @@ The latest keybindings in [keymaps.lua](.config/nvim/lua/config/keymaps.lua).
 - `sj` switch to below window
 - `sk` switch to above window
 - `sl` switch to right window
-- `sd` LSP search declarations
+- `sf` LSP finder
 - `sp` LSP see preview definition
 - `sr` LSP replace declaration
+- `sdc` LSP diagnostic, cursor
+- `sdl` LSP diagnostic, line
+- `sdb` LSP diagnostic, buffer
+- `sdw` LSP diagnostic, workspace
 - `sca` LSP code action
+- `sci` LSP incoming calls
+- `sco` LSP outgoing calls
 
 #### Others, `<Space>` instead of `\`
 
