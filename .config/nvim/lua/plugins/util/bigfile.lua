@@ -27,15 +27,14 @@ return {
       filesize = 0.5, -- unit MB
       pattern = { "*" },
       features = {
-        set_filetype_bigfile,
-        cmp,
         "treesitter",
         "lsp",
         "illuminate",
         "indent_blankline",
         "syntax",
-        "filetype",
         "vimopts",
+        set_filetype_bigfile,
+        cmp,
       },
     })
   end,
