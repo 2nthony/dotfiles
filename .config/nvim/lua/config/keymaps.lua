@@ -222,11 +222,12 @@ if has("vim-visual-multi") then
   wkmap["v"]["k"] = { "<Plug>(VM-Add-Cursor-Up)", "add cursor up" }
 end
 
--- global
+-- global, no prefix needed
 wk.register({
   s = wkmap["s"],
   f = wkmap["f"],
   g = wkmap["g"],
 })
 
+-- all prefix needed
 wk.register(wkmap, { prefix = "<leader>" })
