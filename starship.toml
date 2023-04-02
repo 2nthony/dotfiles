@@ -9,7 +9,7 @@ add_newline = false
 success_symbol = '[❯](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 
 [git_branch]
-symbol = ' '
+symbol = ' '
 
 [git_status]
 conflicted = '=${count}'
