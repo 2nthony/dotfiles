@@ -8,22 +8,6 @@ icons.diagnostics = {
   Hint = " ",
 }
 
-icons.git = {
-  Added = " ",
-  Modified = " ",
-  Removed = " ",
-  FileDeleted = " ",
-  FileIgnored = " ",
-  FileRenamed = " ",
-  FileStaged = "S",
-  FileUnmerged = "",
-  FileUnstaged = "",
-  FileUntracked = "U",
-  Branch = "",
-  Diff = "",
-  Repo = "",
-}
-
 icons.misc = {
   Lazy = "󰒲",
 }
@@ -43,12 +27,14 @@ icons.ui = {
   Bug = "",
   Stacks = "",
   DebugConsole = "",
+  DebugStop = "",
   Calendar = "",
   Check = "",
   ChevronDown = "",
   ChevronLeft = "",
   ChevronRight = "",
   ChevronUp = "",
+  ChromeMaximize = "",
   Circle = "",
   CircleFilled = "",
   CircleLarge = "",
@@ -120,10 +106,36 @@ icons.kinds = {
   Color = icons.ui.Palette .. " ",
 }
 
+icons.git = {
+  Added = " ",
+  Modified = " ",
+  Deleted = " ",
+  Ignored = " ",
+  Renamed = " ",
+  Staged = "",
+  Unstaged = "",
+  Untracked = icons.ui.DebugStop .. " ",
+  Unmerged = " ",
+  Conflict = " ",
+  Branch = "",
+  Diff = "",
+  Repo = "",
+}
+icons.git_text = vim.tbl_extend("force", icons.git, {
+  Added = "A",
+  Modified = "M",
+  Deleted = "D",
+  Ignored = "I",
+  Renamed = "R",
+  Staged = "",
+  Unstaged = "",
+  Untracked = "U",
+})
+
 -- alias
 icons.ui.Test = icons.ui.Beaker
 
---- @param category 'diagnostics'|'git'|'misc'|'ui'|'kinds'
+--- @param category 'diagnostics'|'git'|'git_text'|'misc'|'ui'|'kinds'
 --- @return table<string, string>
 local function add_lower_case(category)
   local tbl = vim.deepcopy(icons[category])
@@ -137,5 +149,6 @@ end
 
 icons.diagnostics = add_lower_case("diagnostics")
 icons.git = add_lower_case("git")
+icons.git_text = add_lower_case("git_text")
 
 return icons
