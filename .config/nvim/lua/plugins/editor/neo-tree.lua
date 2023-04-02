@@ -44,8 +44,8 @@ return {
     opts.default_component_configs.indent.expander_expanded = icons.ui.ChevronDown
     opts.default_component_configs.icon = {
       folder_closed = icons.ui.Folder,
-      folder_open = icons.ui.FolderOpen,
-      folder_empty = icons.ui.FolderOpenLine,
+      folder_open = icons.ui.FolderOpened,
+      folder_empty = icons.ui.FolderOpened,
       default = icons.ui.Text,
     }
     opts.default_component_configs.git_status = {

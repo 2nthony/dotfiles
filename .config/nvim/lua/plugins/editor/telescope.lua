@@ -16,7 +16,7 @@ return {
   opts = {
     theme = "dropdown",
     defaults = {
-      prompt_prefix = icons.ui.Telescope .. " ",
+      prompt_prefix = icons.ui.Telescope,
       selection_caret = icons.ui.ChevronRight .. " ",
       preview = false,
       mappings = {

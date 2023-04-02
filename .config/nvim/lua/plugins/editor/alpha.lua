@@ -14,19 +14,19 @@ return {
     dashboard.section.header.val = logo.empty
 
     dashboard.section.buttons.val = {
-      dashboard.button("n", icons.ui.NewFile .. "  New File", ":ene! <cr>"),
-      dashboard.button("ff", icons.ui.FindFile .. "  Find File", ":Telescope find_files <cr>"),
+      dashboard.button("n", icons.ui.NewFile .. " New File", ":ene! <cr>"),
+      dashboard.button("ff", icons.ui.FindFile .. " Find File", ":Telescope find_files <cr>"),
       dashboard.button(
         "fe",
-        icons.ui.FileTree .. "  File Explorer",
+        icons.ui.FileTree .. " File Explorer",
         ":lua require('neo-tree.command').execute({ toggle = true }) <cr>"
       ),
-      dashboard.button("s", icons.ui.History .. "  Restore sessions", ":lua require('persistence').load()<cr>"),
-      dashboard.button("l", icons.misc.Lazy .. "  Lazy", ":Lazy<cr>"),
-      dashboard.button("m", icons.ui.Package .. "  Mason", ":Mason<cr>"),
-      dashboard.button("c", icons.ui.Gear .. "  Config", ":e $MYVIMRC <cr>"),
-      dashboard.button("q", icons.ui.SignOut .. "  Quit", ":q<cr>"),
-      dashboard.button("x", icons.ui.CloseAll .. "  Exit (Quit all)", ":qa<cr>"),
+      dashboard.button("s", icons.ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
+      dashboard.button("l", icons.misc.Lazy .. " Lazy", ":Lazy<cr>"),
+      dashboard.button("m", icons.ui.Package .. " Mason", ":Mason<cr>"),
+      dashboard.button("c", icons.ui.Gear .. " Config", ":e $MYVIMRC <cr>"),
+      dashboard.button("q", icons.ui.SignOut .. " Quit", ":q<cr>"),
+      dashboard.button("x", icons.ui.CloseAll .. " Exit (Quit all)", ":qa<cr>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButton"

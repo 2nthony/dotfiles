@@ -30,10 +30,10 @@ return {
           title = " Command ",
         },
         search_down = {
-          icon = icons.ui.Search .. " ",
+          icon = icons.ui.Search .. "",
         },
         search_up = {
-          icon = icons.ui.Search .. " ",
+          icon = icons.ui.Search .. "",
         },
       },
     },

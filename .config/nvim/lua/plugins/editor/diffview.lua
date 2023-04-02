@@ -20,7 +20,7 @@ return {
       enhanced_diff_hl = true,
       icons = {
         folder_closed = icons.ui.Folder,
-        folder_open = icons.ui.FolderOpen,
+        folder_open = icons.ui.FolderOpened,
       },
       signs = {
         fold_closed = icons.ui.ChevronRight,
