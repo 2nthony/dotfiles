@@ -63,6 +63,7 @@ map("n", "<C-up>", "<C-w>-")
 map("n", "<C-down>", "<C-w>+")
 
 local wkmap = { mode = { "n" } }
+wkmap[";"] = { ":Alpha<cr>", "Alpha" }
 wkmap["s"] = {
   name = "switch, split, LSP",
   -- split window
