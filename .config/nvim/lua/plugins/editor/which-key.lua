@@ -11,6 +11,7 @@ return {
       spelling = true,
     },
   },
-  -- disabled keymaps from https://www.lazyvim.org/plugins/editor#which-keynvim
+  -- override to disable presets keymaps
+  -- https://www.lazyvim.org/plugins/editor#which-keynvim
   config = true,
 }
