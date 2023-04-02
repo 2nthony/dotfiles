@@ -48,6 +48,9 @@ return {
       folder_empty = icons.ui.FolderOpenLine,
       default = icons.ui.Text,
     }
+    opts.default_component_configs.git_status = {
+      symbols = icons.git_text,
+    }
 
     return opts
   end,
