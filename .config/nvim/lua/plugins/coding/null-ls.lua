@@ -13,16 +13,12 @@ return {
       log_level = "error",
       border = float.border,
       sources = {
-        nls.builtins.formatting.prettierd.with({
+        nls.builtins.formatting.prettier.with({
           condition = function(utils)
             return utils.root_has_file(prettier_files)
           end,
         }),
-        nls.builtins.formatting.eslint_d.with({
-          condition = function(utils)
-            return not utils.root_has_file(prettier_files)
-          end,
-        }),
+        nls.builtins.formatting.eslint_d,
         nls.builtins.diagnostics.eslint_d,
         nls.builtins.code_actions.eslint_d,
 
