@@ -170,6 +170,18 @@ if has("gitsigns.nvim") then
   }
 end
 
+if has("diffview.nvim") then
+  wkmap["g"]["d"] = {
+    name = "Git Diffview",
+    o = { ":DiffviewOpen<cr>", "Open" },
+    c = { ":DiffviewClose<cr>", "Close" },
+    f = { ":DiffviewFocusFiles<cr>", "Focus files" },
+    h = { ":DiffviewFileHistory<cr>", "File history" },
+    t = { ":DiffviewToggleFiles<cr>", "Toggle files" },
+    r = { ":DiffviewRefresh<cr>", "Refresh" },
+  }
+end
+
 if has("surround-ui.nvim") then
   require("surround-ui").setup({
     root_key = "S",
