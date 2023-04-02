@@ -1,6 +1,8 @@
 -- https://github.com/folke/todo-comments.nvim
 
 local icons = require("config.icons")
+local icons_ui = icons.get("ui", { 'space' })
+local icons_diagnostics = icons.get("diagnostics", { 'space' })
 
 return {
   "folke/todo-comments.nvim",
@@ -11,25 +13,25 @@ return {
   opts = {
     keywords = {
       FIX = {
-        icon = icons.ui.Bug,
+        icon = icons_ui.Bug,
       },
       TODO = {
-        icon = icons.ui.Check,
+        icon = icons_ui.Check,
       },
       HACK = {
-        icon = icons.ui.Skull,
+        icon = icons_ui.Skull,
       },
       WARN = {
-        icon = icons.diagnostics.Warn,
+        icon = icons_diagnostics.Warn,
       },
       PERF = {
-        icon = icons.ui.Dashboard,
+        icon = icons_ui.Dashboard,
       },
       NOTE = {
-        icon = icons.ui.Comment,
+        icon = icons_ui.Comment,
       },
       TEST = {
-        icon = icons.ui.Beaker,
+        icon = icons_ui.Beaker,
       },
     },
   },

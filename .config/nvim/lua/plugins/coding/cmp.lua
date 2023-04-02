@@ -1,5 +1,8 @@
 -- https://github.com/hrsh7th/nvim-cmp
 -- https://www.lazyvim.org/plugins/coding#nvim-cmp
+local icons = require("config.icons")
+local icons_ui = icons.get("ui")
+local icons_kinds = icons.get("kinds")
 
 return {
   "hrsh7th/nvim-cmp",
@@ -12,7 +15,6 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
-    local icons = require("lazyvim.config").icons
     local float = require("util.opts").float
     local win = require("util.opts").win
     local format_tailwindcss_color = require("util.cmp").format_taiwlindcss_color
@@ -61,8 +63,8 @@ return {
     opts.formatting.format = lspkind.cmp_format({
       mode = "text",
       maxwidth = formatting.max_width,
-      symbol_map = icons.kinds,
-      ellipsis_char = icons.ui.Ellipsis,
+      symbol_map = icons_kinds,
+      ellipsis_char = icons_ui.Ellipsis,
       before = function(entry, vim_item)
         if vim_item.kind == "Codeium" then
           vim_item.kind_hl_group = "CmpItemKindCodeium"

@@ -1,6 +1,8 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
 local float = require("util.opts").float
+local icons = require("config.icons")
+local icons_ui = icons.get("ui")
 
 return {
   "neovim/nvim-lspconfig",
@@ -22,7 +24,6 @@ return {
     vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
   end,
   opts = function(_, opts)
-    local icons = require("lazyvim.config").icons
     local cwd = vim.fn.getcwd()
     local path = require("lspconfig.util").path
     local root_pattern = require("lspconfig.util").root_pattern
@@ -36,7 +37,7 @@ return {
 
     opts.autoformat = true
 
-    opts.diagnostics.virtual_text.prefix = icons.ui.CircleFilled
+    opts.diagnostics.virtual_text.prefix = icons_ui.CircleFilled
 
     opts.format.timeout_ms = 5000
 

@@ -1,4 +1,7 @@
 -- https://github.com/glepnir/lspsaga.nvim
+local icons = require("config.icons")
+local icons_kinds = icons.get("kinds", { "space" })
+local icons_ui = icons.get("ui")
 
 return {
   "glepnir/lspsaga.nvim",
@@ -9,7 +12,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
   opts = function()
-    local icons = require("lazyvim.config").icons
     local float = require("util.opts").float
 
     return {
@@ -25,13 +27,13 @@ return {
           normal_bg = "none",
           title_bg = "none",
         },
-        expand = icons.ui.ChevronRight,
-        collapse = icons.ui.ChevronDown,
+        expand = icons_ui.ChevronRight,
+        collapse = icons_ui.ChevronDown,
         kind = {
-          ["Array"] = { icons.kinds.Array, "Type" },
-          ["Function"] = { icons.kinds.Function, "Function" },
-          ["Interface"] = { icons.kinds.Interface, "Interface" },
-          ["Object"] = { icons.kinds.Object, "Type" },
+          ["Array"] = { icons_kinds.Array, "Type" },
+          ["Function"] = { icons_kinds.Function, "Function" },
+          ["Interface"] = { icons_kinds.Interface, "Interface" },
+          ["Object"] = { icons_kinds.Object, "Type" },
         },
       },
       outline = {
@@ -61,7 +63,7 @@ return {
       -- breadcrumbs
       -- https://github.com/glepnir/lspsaga.nvim#lspsaga-symbols-in-winbar
       symbol_in_winbar = {
-        separator = " " .. icons.ui.ChevronRight .. " ",
+        separator = " " .. icons_ui.ChevronRight .. " ",
         color_mode = false,
       },
       beacon = {

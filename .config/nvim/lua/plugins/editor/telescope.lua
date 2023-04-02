@@ -1,5 +1,6 @@
 local actions = require("telescope.actions")
 local icons = require("config.icons")
+local icons_ui = icons.get("ui", { 'space' })
 
 local grep_picker = {
   preview = true,
@@ -16,8 +17,8 @@ return {
   opts = {
     theme = "dropdown",
     defaults = {
-      prompt_prefix = icons.ui.Telescope,
-      selection_caret = icons.ui.ChevronRight .. " ",
+      prompt_prefix = icons_ui.Telescope,
+      selection_caret = icons_ui.ChevronRight,
       preview = false,
       mappings = {
         i = {

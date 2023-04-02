@@ -1,4 +1,3 @@
--- module for `require('lazyvim.config').icons`
 local icons = {}
 
 icons.ui = {
@@ -13,11 +12,11 @@ icons.ui = {
   Beaker = "",
   BookMark = "",
   BoxChecked = "",
-  Bug = " ",
-  Stacks = " ",
-  DebugConsole = " ",
-  DebugStop = " ",
-  Calendar = " ",
+  Bug = "",
+  Stacks = "",
+  DebugConsole = "",
+  DebugStop = "",
+  Calendar = "",
   Check = "",
   ChevronDown = "",
   ChevronLeft = "",
@@ -26,54 +25,54 @@ icons.ui = {
   ChromeMaximize = "",
   Circle = "",
   CircleFilled = "",
-  CircleLarge = " ",
-  CircleLargeFilled = " ",
+  CircleLarge = "",
+  CircleLargeFilled = "",
   CircleSmallFilled = "",
   Close = "",
-  CloseAll = " ",
+  CloseAll = "",
   CloudDownload = "",
-  Code = " ",
-  Comment = " ",
-  Dashboard = " ",
+  Code = "",
+  Comment = "",
+  Dashboard = "",
   DividerLeft = "",
   DividerRight = "",
   Ellipsis = "…",
-  Error = " ",
-  File = " ",
-  FileSymlink = " ",
-  Files = " ",
-  FileTree = "󱏒 ",
-  FindFile = "󰮗 ",
+  Error = "",
+  File = "",
+  FileSymlink = "",
+  Files = "",
+  FileTree = "󱏒",
+  FindFile = "󰮗",
   FindText = "",
   Fire = "",
   Folder = "",
   FolderOpened = "",
   FolderSymlink = "",
-  Gear = " ",
-  History = " ",
-  Info = " ",
-  Lightbulb = " ",
-  LightbulbAutofix = " ",
+  Gear = "",
+  History = "",
+  Info = "",
+  Lightbulb = "",
+  LightbulbAutofix = "",
   LineLeft = "▏",
   LineMiddle = "│",
-  List = " ",
-  ListTree = " ",
-  Lock = " ",
-  NewFile = " ",
-  Note = " ",
-  Package = "󰏗 ",
-  Edit = " ",
-  Plus = " ",
-  Project = " ",
+  List = "",
+  ListTree = "",
+  Lock = "",
+  NewFile = "",
+  Note = "",
+  Package = "󰏗",
+  Edit = "",
+  Plus = "",
+  Project = "",
   Pencil = "✎",
-  Search = " ",
-  Skull = "󰯈 ",
-  SignIn = " ",
-  SignOut = " ",
-  Tab = " ",
-  Table = " ",
-  Target = "󰀘 ",
-  Telescope = " ",
+  Search = "",
+  Skull = "󰯈",
+  SignIn = "",
+  SignOut = "",
+  Tab = "",
+  Table = "",
+  Target = "󰀘",
+  Telescope = "",
   Text = "",
   Tree = "󰐅",
   Triangle = "契",
@@ -81,12 +80,12 @@ icons.ui = {
   TriangleShortArrowLeft = "",
   TriangleShortArrowRight = "",
   TriangleShortArrowUp = "",
-  Warning = " ",
-  Palette = "󰏘 ",
-  PaletteLine = "󰸌 ",
-  Question = " ",
-  Heart = "󰣐 ",
-  HeartLine = "󱢠 ",
+  Warning = "",
+  Palette = "󰏘",
+  PaletteLine = "󰸌",
+  Question = "",
+  Heart = "󰣐",
+  HeartLine = "󱢠",
   PrimitiveSquare = "",
   PrimitiveSquareLine = "",
   PrimitiveDot = "",
@@ -100,28 +99,63 @@ icons.diagnostics = {
 }
 
 icons.misc = {
-  Lazy = "󰒲 ",
+  Lazy = "󰒲",
 }
 
 icons.kinds = {
-  Codeium = " ",
+  Array = "",
+  Boolean = "",
+  Class = "",
+  Constant = "",
+  Constructor = "",
+  Copilot = "",
+  Enum = "",
+  EnumMember = "",
+  Event = "",
+  Field = "",
+  File = "",
+  Folder = icons.ui.Folder,
+  Function = "",
+  Interface = "",
+  Key = "",
+  Keyword = "",
+  Method = "",
+  Module = "",
+  Namespace = "",
+  Null = "",
+  Number = "",
+  Object = "",
+  Operator = "",
+  Package = "",
+  Property = "",
+  Reference = "",
+  Snippet = "",
+  String = "",
+  Struct = "",
+  Text = "",
+  TypeParameter = "",
+  Unit = "",
+  Value = "",
+  Variable = "",
+  -- added or overrided
+  Codeium = "",
   Color = icons.ui.Palette,
 }
 
 icons.git = {
-  Added = " ",
-  Modified = " ",
-  Deleted = " ",
-  Ignored = " ",
-  Renamed = " ",
+  Added = "",
+  Modified = "",
+  Deleted = "",
+  Ignored = "",
+  Renamed = "",
   Staged = "",
   Unstaged = "",
   Untracked = icons.ui.DebugStop,
-  Unmerged = " ",
-  Conflict = " ",
+  Unmerged = "",
+  Conflict = "",
   Branch = "",
-  Diff = " ",
-  Repo = " ",
+  Diff = "",
+  Repo = "",
 }
 icons.git_text = vim.tbl_extend("force", icons.git, {
   Added = "A",
@@ -138,19 +172,32 @@ icons.git_text = vim.tbl_extend("force", icons.git, {
 icons.ui.Test = icons.ui.Beaker
 
 --- @param category 'diagnostics'|'git'|'git_text'|'misc'|'ui'|'kinds'
+--- @param opts? table<'space'|'lower_case'>
 --- @return table<string, string>
-local function add_lower_case(category)
-  local tbl = vim.deepcopy(icons[category])
+function icons.get(category, opts)
+  opts = opts or {}
 
-  for key, value in pairs(tbl) do
-    tbl[string.lower(key)] = value
+  local enabled_opts = {}
+  for _, opt in ipairs(opts) do
+    enabled_opts[opt] = true
   end
 
-  return tbl
-end
+  local icon_value = {}
+  local icon_copied = vim.deepcopy(icons[category])
 
-icons.diagnostics = add_lower_case("diagnostics")
-icons.git = add_lower_case("git")
-icons.git_text = add_lower_case("git_text")
+  for key, value in pairs(icon_copied) do
+    if enabled_opts.space then
+      value = value .. " "
+    end
+
+    if enabled_opts.lower_case then
+      icon_value[string.lower(key)] = value
+    end
+
+    icon_value[key] = value
+  end
+
+  return icon_value
+end
 
 return icons

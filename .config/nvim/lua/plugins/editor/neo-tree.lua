@@ -1,4 +1,7 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
+local icons = require("config.icons")
+local icons_ui = icons.get("ui")
+local icons_git_text = icons.get("git_text", { "lower_case" })
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
@@ -8,7 +11,6 @@ return {
     return {}
   end,
   opts = function(_, opts)
-    local icons = require("lazyvim.config").icons
     local has = require("lazyvim.util").has
 
     local function open(cmd)
@@ -40,16 +42,16 @@ return {
     opts.window.mappings["<C-v>"] = open("vsplit")
     opts.window.mappings["<C-f>"] = "filter_on_submit"
 
-    opts.default_component_configs.indent.expander_collapsed = icons.ui.ChevronRight
-    opts.default_component_configs.indent.expander_expanded = icons.ui.ChevronDown
+    opts.default_component_configs.indent.expander_collapsed = icons_ui.ChevronRight
+    opts.default_component_configs.indent.expander_expanded = icons_ui.ChevronDown
     opts.default_component_configs.icon = {
-      folder_closed = icons.ui.Folder,
-      folder_open = icons.ui.FolderOpened,
-      folder_empty = icons.ui.FolderOpened,
-      default = icons.ui.Text,
+      folder_closed = icons_ui.Folder,
+      folder_open = icons_ui.FolderOpened,
+      folder_empty = icons_ui.FolderOpened,
+      default = icons_ui.Text,
     }
     opts.default_component_configs.git_status = {
-      symbols = icons.git_text,
+      symbols = icons_git_text,
     }
 
     return opts

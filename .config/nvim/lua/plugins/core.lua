@@ -1,4 +1,5 @@
 -- https://www.lazyvim.org/configurations
+local icons = require("config.icons")
 
 return {
   "LazyVim/LazyVim",
@@ -7,6 +8,10 @@ return {
     defaults = {
       keymaps = false,
     },
-    icons = require("config.icons"),
+    icons = {
+      diagnostics = icons.get("diagnostics", { "space" }),
+      git = icons.get("git", { 'space' }),
+      kinds = icons.get("kinds", { 'space' }),
+    },
   },
 }

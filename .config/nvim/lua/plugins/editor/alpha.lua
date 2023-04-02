@@ -1,5 +1,8 @@
 -- https://github.com/goolord/alpha-nvim
 -- https://github.com/ayamir/nvimdots/blob/main/lua/modules/configs/ui/alpha.lua
+local icons = require("config.icons")
+local icons_ui = icons.get("ui", { "space" })
+local icons_misc = icons.get("misc", { "space" })
 
 return {
   "goolord/alpha-nvim",
@@ -8,25 +11,24 @@ return {
     return { "BufWinEnter" }
   end,
   opts = function(_, dashboard)
-    local icons = require("lazyvim.config").icons
     local logo = require("util.alpha").logo
 
     dashboard.section.header.val = logo.empty
 
     dashboard.section.buttons.val = {
-      dashboard.button("n", icons.ui.NewFile .. " New File", ":ene! <cr>"),
-      dashboard.button("ff", icons.ui.FindFile .. " Find File", ":Telescope find_files <cr>"),
+      dashboard.button("n", icons_ui.NewFile .. " New File", ":ene! <cr>"),
+      dashboard.button("ff", icons_ui.FindFile .. " Find File", ":Telescope find_files <cr>"),
       dashboard.button(
         "fe",
-        icons.ui.FileTree .. " File Explorer",
+        icons_ui.FileTree .. " File Explorer",
         ":lua require('neo-tree.command').execute({ toggle = true }) <cr>"
       ),
-      dashboard.button("s", icons.ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
-      dashboard.button("l", icons.misc.Lazy .. " Lazy", ":Lazy<cr>"),
-      dashboard.button("m", icons.ui.Package .. " Mason", ":Mason<cr>"),
-      dashboard.button("c", icons.ui.Gear .. " Config", ":e $MYVIMRC <cr>"),
-      dashboard.button("q", icons.ui.SignOut .. " Quit", ":q<cr>"),
-      dashboard.button("x", icons.ui.CloseAll .. " Exit (Quit all)", ":qa<cr>"),
+      dashboard.button("s", icons_ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
+      dashboard.button("l", icons_misc.Lazy .. " Lazy", ":Lazy<cr>"),
+      dashboard.button("m", icons_ui.Package .. " Mason", ":Mason<cr>"),
+      dashboard.button("c", icons_ui.Gear .. " Config", ":e $MYVIMRC <cr>"),
+      dashboard.button("q", icons_ui.SignOut .. " Quit", ":q<cr>"),
+      dashboard.button("x", icons_ui.CloseAll .. " Exit (Quit all)", ":qa<cr>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButton"

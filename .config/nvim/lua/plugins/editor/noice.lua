@@ -1,6 +1,7 @@
 -- https://github.com/folke/noice.nvim
 
 local icons = require("config.icons")
+local icons_ui = icons.get("ui", { 'space' })
 local float = require("util.opts").float
 local throttle = 100
 
@@ -30,10 +31,10 @@ return {
           title = " Command ",
         },
         search_down = {
-          icon = icons.ui.Search .. "",
+          icon = icons_ui.Search .. "",
         },
         search_up = {
-          icon = icons.ui.Search .. "",
+          icon = icons_ui.Search .. "",
         },
       },
     },
