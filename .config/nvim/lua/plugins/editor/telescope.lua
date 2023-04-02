@@ -1,6 +1,6 @@
 local actions = require("telescope.actions")
 local icons = require("config.icons")
-local icons_ui = icons.get("ui", { 'space' })
+local icons_ui = icons.get("ui", { "space" })
 
 local grep_picker = {
   preview = true,

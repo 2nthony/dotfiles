@@ -1,8 +1,8 @@
 -- https://github.com/folke/todo-comments.nvim
 
 local icons = require("config.icons")
-local icons_ui = icons.get("ui", { 'space' })
-local icons_diagnostics = icons.get("diagnostics", { 'space' })
+local icons_ui = icons.get("ui", { "space" })
+local icons_diagnostics = icons.get("diagnostics", { "space" })
 
 return {
   "folke/todo-comments.nvim",

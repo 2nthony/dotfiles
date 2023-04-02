@@ -10,8 +10,8 @@ return {
     },
     icons = {
       diagnostics = icons.get("diagnostics", { "space" }),
-      git = icons.get("git", { 'space' }),
-      kinds = icons.get("kinds", { 'space' }),
+      git = icons.get("git", { "space" }),
+      kinds = icons.get("kinds", { "space" }),
     },
   },
 }

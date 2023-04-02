@@ -1,7 +1,7 @@
 -- https://github.com/folke/noice.nvim
 
 local icons = require("config.icons")
-local icons_ui = icons.get("ui", { 'space' })
+local icons_ui = icons.get("ui", { "space" })
 local float = require("util.opts").float
 local throttle = 100
 
