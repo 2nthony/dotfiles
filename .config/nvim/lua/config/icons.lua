@@ -127,9 +127,9 @@ icons.git_text = vim.tbl_extend("force", icons.git, {
   Deleted = "D",
   Ignored = "I",
   Renamed = "R",
-  Staged = "",
-  Unstaged = "",
-  Untracked = "U",
+  Staged = "S",
+  Unstaged = "U",
+  Untracked = "?",
 })
 
 -- alias
