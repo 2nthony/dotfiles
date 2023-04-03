@@ -32,6 +32,7 @@ return {
         ["Function"] = { icons_kinds.Function, "Function" },
         ["Interface"] = { icons_kinds.Interface, "Interface" },
         ["Object"] = { icons_kinds.Object, "Type" },
+        ["Folder"] = { icons_ui.FolderOpened .. " ", "Folder" },
       },
     },
     outline = {
