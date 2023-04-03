@@ -3,7 +3,7 @@
 return {
   "LunarVim/bigfile.nvim",
   lazy = false,
-  config = function(_)
+  opts = function()
     local set_filetype_bigfile = {
       name = "detect_bigfile",
       opts = { defer = true },
@@ -23,7 +23,15 @@ return {
       end,
     }
 
-    require("bigfile").config({
+    local mini_indentscope = {
+      name = "mini_indentscope",
+      opts = { defer = true },
+      disable = function()
+        vim.b.miniindentscope_disable = false
+      end,
+    }
+
+    return {
       filesize = 0.5, -- unit MB
       pattern = { "*" },
       features = {
@@ -35,7 +43,8 @@ return {
         "vimopts",
         set_filetype_bigfile,
         cmp,
+        mini_indentscope,
       },
-    })
+    }
   end,
 }

@@ -2,5 +2,7 @@
 
 return {
   "lukas-reineke/indent-blankline.nvim",
-  opts = {},
+  opts = {
+    filetype_exclude = { "bigfile" },
+  },
 }
