@@ -2,6 +2,10 @@ local slant = require("vitesse.features.bufferline.slant")
 
 return {
   "akinsho/bufferline.nvim",
+  dependencies = { "2nthony/vitesse.nvim" },
+  event = function()
+    return { "BufReadPost" }
+  end,
   keys = function()
     return {}
   end,
@@ -14,6 +18,7 @@ return {
       show_buffer_close_icons = false,
       show_close_icon = false,
       color_icons = true,
+      show_duplicate_prefix = false,
     },
     highlights = slant.highlights,
   },
