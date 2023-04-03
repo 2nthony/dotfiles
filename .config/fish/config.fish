@@ -18,7 +18,7 @@ alias g git
 alias lg lazygit
 alias clean "clear && printf '\e[3J'"
 alias vim nvim
-alias t zellij
+alias t tmux
 
 set -gx EDITOR nvim
 
