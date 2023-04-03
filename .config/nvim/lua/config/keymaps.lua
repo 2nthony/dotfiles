@@ -82,9 +82,14 @@ wkmap["f"] = {
 }
 wkmap["g"] = { name = "git, go" }
 wkmap["v"] = { name = "visual" }
-wkmap["h"] = { name = "UNNAMED" }
 
-wkmap["h"]["l"] = { ":nohlsearch<cr>", "No highlight search" }
+wkmap["h"] = {
+  name = "highlight",
+  d = { "gd", "Search identify (gd)" },
+  w = { "/\\<<C-R>=expand('<cword>')<CR>\\><CR>", "Search current word below" },
+  W = { "?\\<<C-R>=expand('<cword>')<CR>\\><CR>", "Search current word above" },
+  l = { ":nohlsearch<cr>", "No highlight search" },
+}
 
 wkmap["b"]["d"] = { ":bdelete<cr>", "Delete buffer" }
 wkmap["b"]["D"] = { ":bdelete!<cr>", "Delete buffer (force)" }
