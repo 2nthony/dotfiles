@@ -44,6 +44,7 @@ return {
     opts.mapping["<C-n>"] = {}
     opts.mapping["<C-f>"] = {}
 
+    opts.mapping["<C-w>"] = cmp.mapping.close()
     opts.mapping["<C-u>"] = cmp.mapping.scroll_docs(-4)
     opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
     opts.mapping["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
