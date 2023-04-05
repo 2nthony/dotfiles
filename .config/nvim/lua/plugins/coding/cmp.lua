@@ -47,8 +47,8 @@ return {
     opts.mapping["<C-w>"] = cmp.mapping.close()
     opts.mapping["<C-u>"] = cmp.mapping.scroll_docs(-4)
     opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
-    opts.mapping["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-    opts.mapping["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+    opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
+    opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
     opts.mapping["<Tab>"] = opts.mapping["<CR>"] or opts.mapping["<cr>"]
     -- if back to normal mode, then unlink snippet action
     opts.mapping["<esc>"] = cmp.mapping(function(callback)
