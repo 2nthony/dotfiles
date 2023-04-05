@@ -49,7 +49,22 @@ return {
     opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
     opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
     opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
-    opts.mapping["<Tab>"] = opts.mapping["<CR>"] or opts.mapping["<cr>"]
+    opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
+      local entry = cmp.get_selected_entry() or {}
+      local entry_source_name = vim.tbl_get(entry, "source", "name")
+
+      if luasnip.locally_jumpable(1) then
+        luasnip.jump(1)
+      elseif entry and entry_source_name == "luasnip" then
+        if luasnip.expandable() then
+          luasnip.expand()
+        end
+      elseif cmp.visible() then
+        pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"])
+      else
+        fallback()
+      end
+    end, { "i", "s" })
     -- if back to normal mode, then unlink snippet action
     opts.mapping["<esc>"] = cmp.mapping(function(callback)
       if luasnip.in_snippet() then
