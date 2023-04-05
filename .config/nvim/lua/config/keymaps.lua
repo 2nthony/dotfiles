@@ -201,12 +201,6 @@ if has("diffview.nvim") then
   }
 end
 
-if has("surround-ui.nvim") then
-  require("surround-ui").setup({
-    root_key = "S",
-  })
-end
-
 if has("trouble.nvim") then
   wkmap["f"]["t"]["w"] = { ":TroubleToggle workspace_diagnostics<cr>", "Trouble workspace" }
 end
@@ -232,6 +226,10 @@ end
 if has("leap.nvim") then
   wkmap["g"]["w"] = { "<Plug>(leap-forward-to)", "Look forward word" }
   wkmap["g"]["W"] = { "<Plug>(leap-backward-to)", "Look behind word" }
+end
+
+if has("mini.surround") then
+  wkmap["g"]["z"] = { name = "Surround (mini)" }
 end
 
 if has("vim-visual-multi") then
