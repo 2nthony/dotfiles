@@ -38,6 +38,8 @@ return {
         -- rust
         "**/debug/",
         "target/release/",
+        -- yarn
+        ".yarn/*",
       },
     },
     pickers = {
