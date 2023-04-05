@@ -62,6 +62,20 @@ map("n", "<C-right>", "<C-w>>")
 map("n", "<C-up>", "<C-w>-")
 map("n", "<C-down>", "<C-w>+")
 
+-- Better indenting <>, keeps selection
+-- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/keymappings.lua
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- Move line(s), like vscode
+-- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/keymappings.lua
+map("n", "<A-j>", ":m .+1<cr>==")
+map("n", "<A-k>", ":m .-2<cr>==")
+map("i", "<A-j>", "<esc>:m .+1<cr>==gi")
+map("i", "<A-k>", "<esc>:m .-2<cr>==gi")
+map("v", "<A-j>", ":m '>+1<cr>gv-gv")
+map("v", "<A-k>", ":m '<-2<cr>gv-gv")
+
 local wkmap = { mode = { "n" } }
 wkmap[";"] = { ":Alpha<cr>", "Alpha" }
 wkmap["s"] = {
