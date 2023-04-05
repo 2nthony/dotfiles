@@ -5,7 +5,7 @@
 add_newline = false
 
 [git_branch]
-symbol = ' '
+symbol = '󰘬 '
 
 [git_status]
 conflicted = '=${count}'
