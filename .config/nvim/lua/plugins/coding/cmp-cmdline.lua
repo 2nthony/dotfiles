@@ -29,6 +29,9 @@ return {
       cmp.setup.cmdline(opt.type, {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources(opt.sources),
+        completion = {
+          completeopt = "menu,menuone,noselect",
+        },
       })
     end
   end,
