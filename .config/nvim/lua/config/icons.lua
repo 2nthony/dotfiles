@@ -153,7 +153,7 @@ icons.git = {
   Untracked = icons.ui.DebugStop,
   Unmerged = "",
   Conflict = "",
-  Branch = "",
+  Branch = "󰘬",
   Diff = "",
   Repo = "",
 }
