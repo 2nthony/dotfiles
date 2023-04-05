@@ -24,7 +24,7 @@ return {
       checker = false,
     },
     cmdline = {
-      -- view = "cmdline", -- cmdline_popup, cmdline
+      view = "cmdline", -- cmdline_popup, cmdline
       format = {
         cmdline = {
           icon = "❯",
