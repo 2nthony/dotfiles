@@ -1,8 +1,8 @@
 return {
   "2nthony/vitesse.nvim",
   dir = "~/ghq/github.com/2nthony/vitesse.nvim",
-  lazy = true,
-  -- priority = 1000,
+  lazy = false,
+  priority = 1000,
   dependencies = {
     "tjdevries/colorbuddy.nvim",
   },
