@@ -29,6 +29,7 @@ M.duplicates = {
   default = 0,
 
   nvim_lsp = 1,
+  luasnip = 1,
   buffer = 0,
   path = 0,
 }
