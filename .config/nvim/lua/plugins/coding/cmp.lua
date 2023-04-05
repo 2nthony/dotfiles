@@ -56,7 +56,6 @@ return {
         luasnip.unlink_current()
       end
 
-      -- NOTE: CAN NOT delete this `callback`
       callback()
     end, { "i", "s" })
 
