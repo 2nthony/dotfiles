@@ -4,6 +4,7 @@ local skip_filetypes = {
   "neo-tree",
   "alpha",
   "NvimTree",
+  "gitcommit",
 }
 
 return {
