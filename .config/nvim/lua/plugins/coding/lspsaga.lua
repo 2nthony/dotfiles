@@ -3,6 +3,7 @@ local icons = require("config.icons")
 local icons_kinds = icons.get("kinds", { "space" })
 local icons_ui = icons.get("ui")
 local float = require("util.opts").float
+local timeout = require("util.lsp").timeout
 
 return {
   "glepnir/lspsaga.nvim",
@@ -13,7 +14,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
   opts = {
-    request_timeout = 5000,
+    request_timeout = timeout,
     scroll_preview = {
       scroll_down = "<C-d>",
       scroll_up = "<C-f>",

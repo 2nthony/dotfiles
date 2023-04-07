@@ -3,6 +3,7 @@
 local float = require("util.opts").float
 local icons = require("config.icons")
 local icons_ui = icons.get("ui")
+local timeout = require("util.lsp").timeout
 
 return {
   "neovim/nvim-lspconfig",
@@ -39,7 +40,7 @@ return {
 
     opts.diagnostics.virtual_text.prefix = icons_ui.CircleFilled
 
-    opts.format.timeout_ms = 5000
+    opts.format.timeout_ms = timeout
 
     -- servers
     opts.servers.tailwindcss = {
