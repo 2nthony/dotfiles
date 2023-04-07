@@ -184,8 +184,6 @@ if has("gitsigns.nvim") then
     s = { gs("stage_hunk"), "Stage Hunk" },
     S = { gs("stage_buffer"), "Stage Buffer" },
     u = { gs("undo_stage_hunk"), "Undo Stage Hunk" },
-    d = { gs("diffthis"), "Diff this" },
-    D = { gs("diffthis", "~"), "Diff this ~" },
   }
 end
 
