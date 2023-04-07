@@ -1,6 +1,11 @@
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
-local prettier_files = { ".prettier", ".prettierrc", ".prettierrc.js", ".prettierrc.json" }
+local prettier_files = {
+  ".prettier",
+  ".prettierrc",
+  ".prettierrc.js",
+  ".prettierrc.json",
+}
 
 return {
   "jose-elias-alvarez/null-ls.nvim",
