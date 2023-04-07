@@ -90,10 +90,7 @@ wkmap["s"] = {
   l = { "<c-w>l", "right window" },
 }
 wkmap["b"] = { name = "buffer" }
-wkmap["f"] = {
-  name = "file, find",
-  t = { name = "Todos, trouble" },
-}
+wkmap["f"] = { name = "file, find" }
 wkmap["g"] = { name = "git, go" }
 wkmap["v"] = { name = "visual" }
 
@@ -199,10 +196,10 @@ if has("diffview.nvim") then
   }
 end
 
+wkmap["f"]["t"] = { name = "Todo, trouble" }
 if has("trouble.nvim") then
   wkmap["f"]["t"]["w"] = { ":TroubleToggle workspace_diagnostics<cr>", "Trouble workspace" }
 end
-
 if has("todo-comments.nvim") then
   local cmd = ":TodoLocList<cr>"
   if has("trouble.nvim") then
