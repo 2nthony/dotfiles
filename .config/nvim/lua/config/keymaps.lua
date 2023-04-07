@@ -229,6 +229,7 @@ if has("leap.nvim") then
 end
 
 if has("mini.surround") then
+  wkmap["g"].name = wkmap["g"].name .. ", surround"
   wkmap["g"]["z"] = { name = "Surround (mini)" }
 end
 
