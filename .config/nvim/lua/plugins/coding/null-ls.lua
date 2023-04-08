@@ -10,14 +10,14 @@ local prettier_files = {
 return {
   "jose-elias-alvarez/null-ls.nvim",
   lazy = true,
-  opts = function()
+  opts = function(_, opts)
     local float = require("util.opts").float
     local nls = require("null-ls")
 
-    return {
+    return vim.tbl_extend("force", opts, {
       log_level = "error",
       border = float.border,
-      sources = {
+      sources = vim.list_extend(opts.sources, {
         nls.builtins.formatting.prettier.with({
           condition = function(utils)
             return utils.root_has_file(prettier_files)
@@ -26,9 +26,7 @@ return {
         nls.builtins.formatting.eslint_d,
         nls.builtins.diagnostics.eslint_d,
         nls.builtins.code_actions.eslint_d,
-
-        nls.builtins.formatting.stylua,
-      },
-    }
+      }),
+    })
   end,
 }
