@@ -168,10 +168,14 @@ icons.git_text = vim.tbl_extend("force", icons.git, {
   Untracked = "?",
 })
 
+icons.filetype = {
+  tailwind = "󱏿",
+}
+
 -- alias
 icons.ui.Test = icons.ui.Beaker
 
---- @param category 'diagnostics'|'git'|'git_text'|'misc'|'ui'|'kinds'
+--- @param category 'diagnostics'|'git'|'git_text'|'misc'|'ui'|'kinds'|'filetype'
 --- @param opts? table<'space'|'lower_case'>
 --- @return table<string, string>
 function icons.get(category, opts)
