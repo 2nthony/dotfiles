@@ -1,31 +1,52 @@
 {
   "json.schemas": [
     {
-      "fileMatch": ["package.json"],
+      "fileMatch": [
+        "package.json"
+      ],
       "url": "https://json.schemastore.org/package.json"
     },
     {
-      "fileMatch": ["tsconfig*.json", "jsconfig*.json"],
+      "fileMatch": [
+        "tsconfig*.json",
+        "jsconfig*.json"
+      ],
       "url": "https://json.schemastore.org/tsconfig.json"
     },
     {
-      "fileMatch": [".prettierrc", ".prettierrc.json", "prettier.config.json"],
+      "fileMatch": [
+        ".prettierrc",
+        ".prettierrc.json",
+        "prettier.config.json"
+      ],
       "url": "https://json.schemastore.org/prettierrc.json"
     },
     {
-      "fileMatch": [".eslintrc", ".eslintrc.json"],
+      "fileMatch": [
+        ".eslintrc",
+        ".eslintrc.json"
+      ],
       "url": "https://json.schemastore.org/eslintrc.json"
     },
     {
-      "fileMatch": [".babelrc", ".babelrc.json", "babel.config.json"],
+      "fileMatch": [
+        ".babelrc",
+        ".babelrc.json",
+        "babel.config.json"
+      ],
       "url": "https://json.schemastore.org/babelrc.json"
     },
     {
-      "fileMatch": ["lerna.json"],
+      "fileMatch": [
+        "lerna.json"
+      ],
       "url": "https://json.schemastore.org/lerna.json"
     },
     {
-      "fileMatch": ["now.json", "vercel.json"],
+      "fileMatch": [
+        "now.json",
+        "vercel.json"
+      ],
       "url": "https://json.schemastore.org/now.json"
     },
     {
@@ -37,20 +58,34 @@
       "url": "http://json.schemastore.org/stylelintrc.json"
     },
     {
-      "fileMatch": ["turbo.json"],
+      "fileMatch": [
+        "turbo.json"
+      ],
       "url": "https://turbo.build/schema.json"
     },
     {
-      "fileMatch": [".ghqrc"],
+      "fileMatch": [
+        ".ghqrc"
+      ],
       "url": "https://cdn.jsdelivr.net/gh/2nthony/ghq/scheme.json"
     },
     {
-      "fileMatch": ["renovate.json"],
+      "fileMatch": [
+        "renovate.json"
+      ],
       "url": "https://docs.renovatebot.com/renovate-schema.json"
     },
     {
-      "fileMatch": ["tauri.conf.json"],
+      "fileMatch": [
+        "tauri.conf.json"
+      ],
       "url": "https://cdn.jsdelivr.net/gh/tauri-apps/tauri/tooling/cli/schema.json"
+    },
+    {
+      "fileMatch": [
+        "rome.json"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/rome/tools@main/npm/rome/configuration_schema.json"
     }
   ]
 }
