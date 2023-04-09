@@ -16,6 +16,8 @@ return {
       },
     },
   },
+  { import = "lazyvim.plugins.extras.lang.typescript" },
+  { import = "lazyvim.plugins.extras.lang.json" },
   { import = "plugins.colorscheme" },
   { import = "plugins.coding" },
   { import = "plugins.editor" },
