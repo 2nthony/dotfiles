@@ -65,4 +65,13 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    local defaults = require("noice.config").defaults()
+    -- hide cmdheight if cmdline enabled
+    if opts.cmdline.enabled or defaults.cmdline.enabled then
+      vim.opt.cmdheight = 0
+    end
+
+    require("noice").setup(opts)
+  end,
 }
