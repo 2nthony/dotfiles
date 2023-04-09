@@ -35,6 +35,7 @@ return {
         ["Interface"] = { icons_kinds.Interface, "Interface" },
         ["Object"] = { icons_kinds.Object, "Type" },
         ["Folder"] = { icons_ui.FolderOpened .. " ", "Folder" },
+        ["String"] = { icons_kinds.String, "String" },
       },
     },
     outline = {
