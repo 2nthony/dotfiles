@@ -20,6 +20,7 @@ return {
       scroll_up = "<C-f>",
     },
     ui = {
+      title = false,
       border = float.border,
       winblend = float.winblend,
       colors = {
