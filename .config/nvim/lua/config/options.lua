@@ -7,6 +7,7 @@ local opt = vim.opt
 
 opt.mouse = ""
 opt.relativenumber = false
+opt.diffopt = "filler,iwhite,internal,linematch:60,algorithm:patience"
 
 opt.winblend = float.winblend
 opt.pumblend = float.pumblend
