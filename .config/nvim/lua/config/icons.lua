@@ -144,18 +144,18 @@ icons.kinds = {
 
 icons.git = {
   Added = "",
-  Modified = "",
+  Branch = "󰘬",
+  Conflict = "",
   Deleted = "",
+  Diff = "",
   Ignored = "",
+  Modified = "",
   Renamed = "",
+  Repo = "",
   Staged = "",
   Unstaged = "",
   Untracked = icons.ui.DebugStop,
   Unmerged = "",
-  Conflict = "",
-  Branch = "󰘬",
-  Diff = "",
-  Repo = "",
 }
 icons.git_text = vim.tbl_extend("force", icons.git, {
   Added = "A",
