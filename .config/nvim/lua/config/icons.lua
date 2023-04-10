@@ -159,13 +159,27 @@ icons.git = {
 }
 icons.git_text = vim.tbl_extend("force", icons.git, {
   Added = "A",
-  Modified = "M",
+  Conflict = "C",
   Deleted = "D",
+  Modified = "M",
   Ignored = "I",
   Renamed = "R",
   Staged = "S",
   Unstaged = "U",
   Untracked = "?",
+  Unmerged = "‡",
+})
+icons.git_symbol = vim.tbl_extend("force", icons.git, {
+  Added = "+",
+  Conflict = "×",
+  Deleted = "-",
+  Modified = "~",
+  Ignored = "",
+  Renamed = "→",
+  Staged = "+",
+  Unstaged = "",
+  Untracked = "?",
+  Unmerged = "‡",
 })
 
 icons.filetype = {
@@ -175,7 +189,7 @@ icons.filetype = {
 -- alias
 icons.ui.Test = icons.ui.Beaker
 
---- @param category 'diagnostics'|'git'|'git_text'|'misc'|'ui'|'kinds'|'filetype'
+--- @param category 'diagnostics'|'git'|'git_text'|'git_symbol'|'misc'|'ui'|'kinds'|'filetype'
 --- @param opts? table<'space'|'lower_case'>
 --- @return table<string, string>
 function icons.get(category, opts)
