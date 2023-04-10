@@ -38,9 +38,6 @@ return {
         },
       },
     },
-    nofity = {
-      enabled = false,
-    },
     lsp = {
       progress = {
         enabled = false,
@@ -63,6 +60,12 @@ return {
           winblend = float.winblend,
         },
       },
+    },
+    messages = {
+      enabled = false,
+    },
+    notify = {
+      enabled = false,
     },
   },
   config = function(_, opts)
