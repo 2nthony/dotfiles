@@ -11,8 +11,8 @@ map("n", "K", "<nop>")
 map("n", "q", "<Nop>")
 
 -- print current file path
-map("n", "<C-g>", ":lua print(vim.fn.expand('%'))<cr>")
-map("n", "<C-S-g>", ":lua print(vim.fn.expand('%:p'))<cr>")
+-- map("n", "<C-g>", ":lua print(vim.fn.expand('%'))<cr>")
+-- map("n", "<C-S-g>", ":lua print(vim.fn.expand('%:p'))<cr>")
 
 map("n", "<C-enter>", "o<esc>")
 map("i", "<C-enter>", "<esc>o")
