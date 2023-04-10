@@ -1,7 +1,6 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 local icons = require("config.icons")
 local icons_ui = icons.get("ui")
-local icons_git_text = icons.get("git_text", { "lower_case" })
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
@@ -51,7 +50,7 @@ return {
       default = icons_ui.Text,
     }
     opts.default_component_configs.git_status = {
-      symbols = icons_git_text,
+      symbols = icons.get("git_symbol", { "lower_case" }),
     }
 
     return opts

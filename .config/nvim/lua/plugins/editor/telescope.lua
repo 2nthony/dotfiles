@@ -58,6 +58,9 @@ return {
           },
         },
       },
+      git_status = {
+        git_icons = icons.get("git_symbol", { "lower_case" }),
+      },
     },
   },
   config = function(_, opts)
