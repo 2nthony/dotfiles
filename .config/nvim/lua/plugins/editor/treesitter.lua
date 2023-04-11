@@ -7,9 +7,11 @@ return {
   end,
   opts = {
     ensure_installed = {
+      "comment",
       "lua",
       "help",
       "javascript",
+      "jsdoc",
       "typescript",
       "tsx",
       "fish",
