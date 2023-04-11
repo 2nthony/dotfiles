@@ -1,13 +1,5 @@
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
-local prettier_files = {
-  ".prettier",
-  ".prettierrc",
-  ".prettierrc.js",
-  ".prettierrc.cjs",
-  ".prettierrc.json",
-}
-
 return {
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -22,7 +14,7 @@ return {
         sources = vim.list_extend(opts.sources, {
           nls.builtins.formatting.prettier.with({
             condition = function(utils)
-              return utils.root_has_file(prettier_files)
+              return utils.root_has_file_matches(".prettier*")
             end,
           }),
         }),
