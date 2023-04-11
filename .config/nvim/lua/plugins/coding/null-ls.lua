@@ -4,6 +4,7 @@ local prettier_files = {
   ".prettier",
   ".prettierrc",
   ".prettierrc.js",
+  ".prettierrc.cjs",
   ".prettierrc.json",
 }
 
