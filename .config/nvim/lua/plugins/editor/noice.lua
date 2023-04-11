@@ -62,7 +62,7 @@ return {
       },
     },
     messages = {
-      enabled = false,
+      -- enabled = false,
     },
     notify = {
       enabled = false,
