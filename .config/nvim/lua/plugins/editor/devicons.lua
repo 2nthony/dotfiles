@@ -12,6 +12,7 @@ return {
     override_by_filename = {
       ["tailwind.config.js"] = tailwind,
       ["tailwind.config.cjs"] = tailwind,
+      ["tailwind.config.ts"] = tailwind,
     },
   },
 }
