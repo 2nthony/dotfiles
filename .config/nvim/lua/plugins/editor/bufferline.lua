@@ -21,7 +21,7 @@ return {
 
     if has("vitesse.nvim") then
       local slant = require("vitesse.features.bufferline.slant")
-      opts.options.separator_style = slant.separator_style
+      opts.options.separator_style = "padded_slant"
       opts.highlights = slant.highlights
     end
 
