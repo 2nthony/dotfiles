@@ -21,8 +21,8 @@ return {
       "css",
       "vue",
       "svelte",
-      "markdown", -- lspsaga
-      "markdown_inline", -- lspsaga
+      "markdown", -- lsp, lspsaga diagnostic
+      "markdown_inline", -- lsp, lspsaga diagnostic
     },
     ignore_install = {
       "haskell",
