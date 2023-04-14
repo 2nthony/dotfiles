@@ -112,6 +112,11 @@ if has("bufferline.nvim") then
   wkmap["b"]["P"] = { ":BufferLineGroupClose ungrouped<cr>", "Delete non-pinned buffers" }
 end
 
+-- lsp
+map("n", "<C-k>", vim.lsp.buf.hover)
+map("i", "<C-k>", vim.lsp.buf.signature_help)
+map("n", "<C-j>", vim.diagnostic.goto_next)
+map("n", "J", vim.diagnostic.goto_prev)
 if has("lspsaga.nvim") then
   map("n", "<C-j>", ":Lspsaga diagnostic_jump_next<CR>")
   map("n", "J", ":Lspsaga diagnostic_jump_prev<CR>")
