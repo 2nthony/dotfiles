@@ -118,13 +118,12 @@ map("i", "<C-k>", vim.lsp.buf.signature_help)
 map("n", "<C-j>", vim.diagnostic.goto_next)
 map("n", "J", vim.diagnostic.goto_prev)
 if has("lspsaga.nvim") then
-  map("n", "<C-j>", ":Lspsaga diagnostic_jump_next<CR>")
-  map("n", "J", ":Lspsaga diagnostic_jump_prev<CR>")
-  map("n", "<C-k>", ":Lspsaga hover_doc ++quiet<CR>")
+  -- map("n", "<C-j>", ":Lspsaga diagnostic_jump_next<CR>")
+  -- map("n", "J", ":Lspsaga diagnostic_jump_prev<CR>")
+  -- map("n", "<C-k>", ":Lspsaga hover_doc ++quiet<CR>")
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- map('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>')
-  map("i", "<C-k>", ":lua vim.lsp.buf.signature_help()<CR>")
   wkmap["s"]["f"] = { ":Lspsaga lsp_finder<cr>", "LSP finder" }
   wkmap["s"]["p"] = { ":Lspsaga peek_definition<cr>", "Peek definition" }
   wkmap["s"]["P"] = { ":Lspsaga peek_type_definition<cr>", "Peek type definition" }
