@@ -44,16 +44,12 @@ end
 map("n", "<C-n>", newtab_cmd)
 
 -- better ^, move cursor to start of line
-map("n", "<C-h>", "^")
+map({ "n", "v" }, "<C-h>", "^")
 map("i", "<C-h>", "<esc>^i")
-map("v", "<C-h>", "^")
-map("n", "<C-S-h>", "<Home>")
-map("i", "<C-S-h>", "<Home>")
-map("v", "<C-S-h>", "<Home>")
+map({ "n", "i", "v" }, "<C-S-h>", "<Home>")
 
 -- better $
-map("n", "<C-l>", "<End>")
-map("i", "<C-l>", "<End>")
+map({ "n", "i" }, "<C-l>", "<End>")
 map("v", "<C-l>", "<End><Left>")
 
 -- Resize window
