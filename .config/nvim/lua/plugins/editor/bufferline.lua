@@ -1,8 +1,5 @@
 return {
   "akinsho/bufferline.nvim",
-  event = function()
-    return { "BufReadPost" }
-  end,
   keys = function()
     return {}
   end,
