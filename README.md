@@ -78,10 +78,10 @@ The latest keybindings in [keymaps.lua](.config/nvim/lua/config/keymaps.lua).
 - `gsr` gitsigns reset hunk
 - `gsu` gitsigns undo stage hunk
 - `gsp` gitsigns preview hunk
-- `gdo` git diffview open
-- `gdc` git diffview close
-- `gdh` git diffview file history
-- `gdr` git diffview refresh
+- `gido` git diffview open
+- `gidc` git diffview close
+- `gidh` git diffview file history
+- `gidr` git diffview refresh
 
 #### `s` means to `switch`, `split`, `see`, `search` or `LSP`
 

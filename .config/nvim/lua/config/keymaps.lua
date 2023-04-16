@@ -87,7 +87,11 @@ wkmap["s"] = {
 }
 wkmap["b"] = { name = "buffer" }
 wkmap["f"] = { name = "file, find" }
-wkmap["g"] = { name = "git, go" }
+wkmap["g"] = {
+  name = "git, go",
+  D = { vim.lsp.buf.definition, "Goto definition" },
+  i = { name = "git" },
+}
 wkmap["v"] = { name = "visual" }
 
 wkmap["h"] = {
@@ -185,8 +189,8 @@ if has("gitsigns.nvim") then
 end
 
 if has("diffview.nvim") then
-  wkmap["g"]["d"] = {
-    name = "Git Diffview",
+  wkmap["g"]["i"]["d"] = {
+    name = "Diffview",
     o = { ":DiffviewOpen<cr>", "Open" },
     c = { ":DiffviewClose<cr>", "Close" },
     f = { ":DiffviewFocusFiles<cr>", "Focus files" },
@@ -215,7 +219,7 @@ if has("nvim-spectre") then
 end
 
 if has("toggleterm.nvim") then
-  wkmap["g"]["it"] = { require("util.git").lazygit, "Lazygit" }
+  wkmap["g"]["i"]["t"] = { require("util.git").lazygit, "Lazygit" }
 end
 
 if has("leap.nvim") then
