@@ -92,7 +92,7 @@ wkmap["v"] = { name = "visual" }
 
 wkmap["h"] = {
   name = "highlight",
-  d = { "gd", "Search identify (gd)" },
+  d = { ":normal! gd<cr>", "Search identify (gd)" },
   w = { "/\\<<C-R>=expand('<cword>')<CR>\\><CR>", "Search current word below" },
   W = { "?\\<<C-R>=expand('<cword>')<CR>\\><CR>", "Search current word above" },
   l = { ":nohlsearch<cr>", "No highlight search" },
