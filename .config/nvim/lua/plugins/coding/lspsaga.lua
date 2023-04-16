@@ -11,6 +11,7 @@ return {
   event = { "BufReadPost" },
   cmd = { "Lspsaga" },
   dependencies = {
+    "neovim/nvim-lspconfig",
     "nvim-treesitter/nvim-treesitter",
   },
   opts = {
