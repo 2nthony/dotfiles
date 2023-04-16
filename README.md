@@ -143,7 +143,6 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
-- [peco](https://github.com/peco/peco) - Interactive filtering
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
 - [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
