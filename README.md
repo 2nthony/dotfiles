@@ -137,9 +137,10 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
-- [Tide](https://github.com/IlanCosman/tide) - Shell theme
+  - [Tide](https://github.com/IlanCosman/tide) - Shell theme
+  - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
+  - [fzf for fish](https://github.com/PatrickF1/fzf.fish) - requires `fzf`
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-- [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
 - [peco](https://github.com/peco/peco) - Interactive filtering
