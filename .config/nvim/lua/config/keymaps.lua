@@ -122,7 +122,7 @@ map("n", "J", vim.diagnostic.goto_prev)
 if has("lspsaga.nvim") then
   -- map("n", "<C-j>", ":Lspsaga diagnostic_jump_next<CR>")
   -- map("n", "J", ":Lspsaga diagnostic_jump_prev<CR>")
-  -- map("n", "<C-k>", ":Lspsaga hover_doc ++quiet<CR>")
+  map("n", "<C-k>", ":Lspsaga hover_doc ++quiet<CR>")
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- map('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>')
