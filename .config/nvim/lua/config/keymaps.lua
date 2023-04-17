@@ -36,6 +36,8 @@ map("n", "<C-a>", "gg<S-v>G")
 -- remap macro record key
 map("n", "Q", "q")
 
+map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
+
 -- :tabnew - new tab
 local newtab_cmd = ":tabnew<cr>"
 if has("alpha-nvim") then
