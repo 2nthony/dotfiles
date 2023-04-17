@@ -36,6 +36,7 @@ map("n", "<C-a>", "gg<S-v>G")
 -- remap macro record key
 map("n", "Q", "q")
 
+-- terminal mode
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 
 -- :tabnew - new tab
