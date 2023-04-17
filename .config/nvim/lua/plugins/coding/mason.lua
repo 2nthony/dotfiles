@@ -18,8 +18,8 @@ return {
     },
     ui = {
       border = float.border,
-      width = 0.8,
-      height = 0.8,
+      width = float.size.width,
+      height = float.size.height,
     },
   },
 }
