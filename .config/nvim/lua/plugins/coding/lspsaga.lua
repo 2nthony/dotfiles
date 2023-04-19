@@ -74,6 +74,7 @@ return {
     },
     diagnostic = {
       on_insert = false,
+      -- show_code_action = false,
       -- extend_relatedInformation = true, -- not working
     },
   },
