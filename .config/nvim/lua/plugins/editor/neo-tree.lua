@@ -35,11 +35,15 @@ return {
     opts.window.mappings["s"] = ""
     opts.window.mappings["S"] = ""
     opts.window.mappings["f"] = ""
+    opts.window.mappings["<C-x>"] = ""
     opts.window.mappings["o"] = open("open")
     opts.window.mappings["<cr>"] = open("open")
     opts.window.mappings["<C-s>"] = open("split")
     opts.window.mappings["<C-v>"] = open("vsplit")
-    -- opts.window.mappings["<C-f>"] = "filter_on_submit"
+    opts.window.mappings["/"] = "filter_on_submit"
+    opts.window.mappings["<C-/>"] = "clear_filter" -- <c-/>
+    -- FIXME: tmux keymap
+    opts.window.mappings["<C-_>"] = "clear_filter" -- <c-/>
 
     opts.default_component_configs.indent.expander_collapsed = icons_ui.ChevronRight
     opts.default_component_configs.indent.expander_expanded = icons_ui.ChevronDown
