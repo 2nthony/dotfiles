@@ -106,4 +106,6 @@ return {
 
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
+  -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/linting/eslint.lua
+  { import = "lazyvim.plugins.extras.linting.eslint" },
 }

@@ -21,6 +21,4 @@ return {
       })
     end,
   },
-  -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/linting/eslint.lua
-  { import = "lazyvim.plugins.extras.linting.eslint" },
 }
