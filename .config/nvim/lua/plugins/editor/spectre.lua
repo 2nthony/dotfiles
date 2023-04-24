@@ -1,8 +1,8 @@
 -- navigation
--- https://github.com/windwp/nvim-spectre
+-- https://github.com/nvim-pack/nvim-spectre
 
 return {
-  "windwp/nvim-spectre",
+  "nvim-pack/nvim-spectre",
   event = "BufRead",
   keys = function()
     return {}
