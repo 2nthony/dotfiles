@@ -4,6 +4,7 @@ local float = require("util.opts").float
 local icons = require("config.icons")
 local icons_ui = icons.get("ui")
 local timeout = require("util.lsp").timeout
+local get_setting = require("util.vscode").get_setting
 
 return {
   {
@@ -34,7 +35,7 @@ return {
           },
         },
       },
-      autoformat = true,
+      autoformat = get_setting("editor.formatOnSave"),
       diagnostics = {
         virtual_text = {
           prefix = icons_ui.CircleFilled,
