@@ -68,7 +68,6 @@ Pods/
 !.config/fish/conf.d/brew-setup.fish
 !.config/fish/conf.d/rust-setup.fish
 .config/fish/functions/
-!.config/fish/functions/fish_user_key_binding.fish
 .config/fish/fish_plugins
 .config/fish/fish_variables
 .fishd.tmp*
