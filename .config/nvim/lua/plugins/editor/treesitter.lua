@@ -19,6 +19,7 @@ return {
       "yaml",
       "html",
       "css",
+      "scss",
       "vue",
       "svelte",
       "markdown", -- lsp, lspsaga diagnostic
