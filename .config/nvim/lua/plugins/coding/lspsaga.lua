@@ -6,9 +6,9 @@ local float = require("util.opts").float
 local timeout = require("util.lsp").timeout
 
 return {
-  "glepnir/lspsaga.nvim",
+  "nvimdev/lspsaga.nvim",
   lazy = true,
-  event = { "BufReadPost" },
+  event = { "LspAttach" },
   cmd = { "Lspsaga" },
   dependencies = {
     "neovim/nvim-lspconfig",
