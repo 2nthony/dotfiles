@@ -1,5 +1,6 @@
 local M = {}
 
+---get full `.vscode/settings.json` as table
 function M.get_settings()
   local settings = {}
   local cwd = vim.fn.getcwd()
@@ -15,6 +16,8 @@ function M.get_settings()
   return settings
 end
 
+---get `.vscode/settings.json` value by key
+---@param key string table key
 function M.get_setting(key)
   local settings = M.get_settings()
   return settings[key]
