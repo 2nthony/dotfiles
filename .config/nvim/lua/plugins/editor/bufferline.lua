@@ -21,7 +21,7 @@ return {
     dependencies = "vitesse.nvim",
     opts = {
       options = {
-        separator_style = "padded_slant",
+        separator_style = "slant",
       },
       highlights = require("vitesse.features.bufferline.slant").highlights,
     },
