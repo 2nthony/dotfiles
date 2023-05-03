@@ -70,5 +70,5 @@ return {
   { import = "lazyvim.plugins.extras.lang.json" },
   -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/linting/eslint.lua
   { import = "lazyvim.plugins.extras.linting.eslint" },
-  { import = "plugins.coding.extras.vue" },
+  { import = "plugins.extras.lang.vue" },
 }
