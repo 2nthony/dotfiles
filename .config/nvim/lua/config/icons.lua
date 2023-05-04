@@ -184,6 +184,7 @@ icons.git_symbol = vim.tbl_extend("force", icons.git, {
 
 icons.filetype = {
   tailwind = "󱏿",
+  svg = "󰜡",
 }
 
 -- alias
