@@ -17,7 +17,6 @@ return {
     local lspkind = require("lspkind")
     local float = require("util.opts").float
     local win = require("util.opts").win
-    local format_tailwindcss_color = require("util.cmp").format_taiwlindcss_color
     local duplicates = require("util.cmp").duplicates
     local formatting = require("util.cmp").formatting
 
@@ -85,8 +84,6 @@ return {
         end
 
         vim_item.dup = duplicates[entry.source.name] or duplicates.default
-
-        vim_item = format_tailwindcss_color(entry, vim_item)
 
         -- required. check if `symbolic` able
         if lspkind.symbolic(vim_item.kind):len() > 0 then

@@ -52,7 +52,6 @@ return {
         timeout_ms = timeout,
       },
       servers = {
-        tailwindcss = {},
         unocss = {},
       },
     },
@@ -68,6 +67,7 @@ return {
 
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
+  { import = "lazyvim.plugins.extras.lang.tailwind" },
   -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/linting/eslint.lua
   { import = "lazyvim.plugins.extras.linting.eslint" },
   { import = "plugins.extras.lang.vue" },
