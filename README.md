@@ -41,13 +41,17 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 
 The latest keybindings in [keymaps.lua](.config/nvim/lua/config/keymaps.lua).
 
+#### LSP
+
+- `K` LSP hover
+- `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
+- `<C-k>` LSP signature help
+
 #### `<C>` means to `<Ctrl>`
 
 - `<C-h>` better `^`
 - `<C-l>` better `$`
 - `<C-a>` select all text
-- `<C-j>` LSP diagnostic next, `<S-C-j>` LSP diagnostic prev
-- `<C-k>` LSP hover
 - `<C-\>` open a float terminal
 - `<C-n>` new tab `:tabedit`
 
