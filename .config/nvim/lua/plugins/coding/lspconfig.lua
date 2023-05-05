@@ -13,13 +13,15 @@ return {
     init = function()
       -- reset lazyvim lsp keymaps
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- clone avoid infinite loop
-      local keymaps = vim.deepcopy(keys)
-      for _, keymap in ipairs(keymaps) do
-        local key = keymap[1]
-        if key then
-          keys[#keys + 1] = { key, false }
-        end
+
+      -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
+      local disable_keys = {
+        "gd",
+        "gD",
+        "gK",
+      }
+      for _, key in ipairs(disable_keys) do
+        keys[#keys + 1] = { key, false }
       end
 
       vim.lsp.set_log_level(vim.log.levels.ERROR)

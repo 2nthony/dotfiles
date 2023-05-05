@@ -117,14 +117,15 @@ if has("bufferline.nvim") then
 end
 
 -- lsp
-map("n", "<C-k>", vim.lsp.buf.hover)
-map("i", "<C-k>", vim.lsp.buf.signature_help)
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
+map("n", "K", vim.lsp.buf.hover)
+map({ "n", "i" }, "<C-k>", vim.lsp.buf.signature_help)
 map("n", "<C-j>", vim.diagnostic.goto_next)
 map("n", "J", vim.diagnostic.goto_prev)
 if has("lspsaga.nvim") then
+  map("n", "K", ":Lspsaga hover_doc ++quiet<CR>")
   -- map("n", "<C-j>", ":Lspsaga diagnostic_jump_next<CR>")
   -- map("n", "J", ":Lspsaga diagnostic_jump_prev<CR>")
-  map("n", "<C-k>", ":Lspsaga hover_doc ++quiet<CR>")
   -- removed
   -- https://github.com/glepnir/lspsaga.nvim/issues/502#issuecomment-1236949596
   -- map('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>')
