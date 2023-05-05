@@ -19,14 +19,15 @@ map("i", "<C-enter>", "<esc>o")
 
 map("n", "<S-C-p>", '"0p')
 
+-- impletemented in `cutlass.nvim`
 -- https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/30423919#30423919
 -- Delete, d
-map("n", "d", '"_d')
-map("n", "D", '"_D')
-map("v", "d", '"_d')
+-- map("n", "d", '"_d')
+-- map("n", "D", '"_D')
+-- map("v", "d", '"_d')
 -- Cut, x
-map("n", "x", '""d')
-map("n", "xx", "dd")
+-- map("n", "x", '""d')
+-- map("n", "xx", "dd")
 -- Delete a word backwards
 map("n", "dw", 'vb"_d')
 
