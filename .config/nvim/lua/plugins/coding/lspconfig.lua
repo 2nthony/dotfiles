@@ -19,6 +19,7 @@ return {
         "gd",
         "gD",
         "gK",
+        "K",
       }
       for _, key in ipairs(disable_keys) do
         keys[#keys + 1] = { key, false }
