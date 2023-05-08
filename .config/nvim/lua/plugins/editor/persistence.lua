@@ -9,9 +9,6 @@ local skip_filetypes = {
 
 return {
   "folke/persistence.nvim",
-  keys = function()
-    return {}
-  end,
   opts = {
     options = {
       -- "buffers",

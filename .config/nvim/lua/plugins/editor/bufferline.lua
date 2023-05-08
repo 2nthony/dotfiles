@@ -1,9 +1,6 @@
 return {
   {
     "akinsho/bufferline.nvim",
-    keys = function()
-      return {}
-    end,
     opts = {
       options = {
         diagnostics = "nvim_lsp",

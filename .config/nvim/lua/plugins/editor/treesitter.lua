@@ -2,9 +2,6 @@
 
 return {
   "nvim-treesitter/nvim-treesitter",
-  keys = function()
-    return {}
-  end,
   opts = {
     ensure_installed = {
       "comment",

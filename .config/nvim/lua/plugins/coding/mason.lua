@@ -8,9 +8,6 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
   },
-  keys = function()
-    return {}
-  end,
   opts = {
     log_level = vim.log.levels.ERROR,
     ensure_installed = {

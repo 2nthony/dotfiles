@@ -6,9 +6,6 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = true,
   cmd = "Neotree",
-  keys = function()
-    return {}
-  end,
   opts = function(_, opts)
     local has = require("lazyvim.util").has
 
