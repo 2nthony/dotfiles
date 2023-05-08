@@ -10,25 +10,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
-    init = function()
-      -- reset lazyvim lsp keymaps
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-
-      -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
-      local disable_keys = {
-        "gd",
-        "gD",
-        "gK",
-        "K",
-      }
-      for _, key in ipairs(disable_keys) do
-        keys[#keys + 1] = { key, false }
-      end
-
-      vim.lsp.set_log_level(vim.log.levels.ERROR)
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
-    end,
     opts = {
       -- 'lspconfig.ui.windows'
       ui = {
@@ -58,6 +39,15 @@ return {
         unocss = {},
       },
     },
+  },
+
+  {
+    "nvim-lspconfig",
+    opts = function()
+      vim.lsp.set_log_level(vim.log.levels.ERROR)
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
+      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
+    end,
   },
 
   -- ui
