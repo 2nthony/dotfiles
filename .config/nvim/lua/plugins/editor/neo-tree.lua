@@ -42,8 +42,6 @@ return {
     opts.window.mappings["<C-v>"] = open("vsplit")
     opts.window.mappings["/"] = "filter_on_submit"
     opts.window.mappings["<C-/>"] = "clear_filter" -- <c-/>
-    -- FIXME: tmux keymap
-    opts.window.mappings["<C-_>"] = "clear_filter" -- <c-/>
 
     opts.default_component_configs.indent.expander_collapsed = icons_ui.ChevronRight
     opts.default_component_configs.indent.expander_expanded = icons_ui.ChevronDown

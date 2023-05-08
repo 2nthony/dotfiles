@@ -150,10 +150,14 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 
 ## Troubleshootings
 
-<!-- ### `<C-S-*>` key not working -->
-<!-- iTerm2: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+` -->
+### Modifier keys(`<c-*>`, `<a-*>`) not working in tmux
 
-<!-- Details from: https://github.com/zellij-org/zellij/issues/265#issuecomment-823703039 -->
+#### iTerm2
+
+Details from: https://github.com/tmux/tmux/wiki/Modifier-Keys#extended-keys
+
+- [x] `<c-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Report modifiers using CSI u`
+- [x] `<a-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+`
 
 ## Credit
 
