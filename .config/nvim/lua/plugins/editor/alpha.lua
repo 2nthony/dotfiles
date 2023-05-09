@@ -28,7 +28,11 @@ return {
         ":lua require('neo-tree.command').execute({ toggle = true }) <cr>"
       ),
       dashboard.button("r", icons_ui.Files .. " Recent files", ":Telescope oldfiles<cr>"),
-      dashboard.button("s", icons_ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
+      dashboard.button(
+        "s",
+        icons_ui.History .. " Restore sessions",
+        ":lua require('persistence').load({ last = true })<cr>"
+      ),
       dashboard.button("l", icons_misc.Lazy .. " Lazy", ":Lazy<cr>"),
       dashboard.button("m", icons_ui.Package .. " Mason", ":Mason<cr>"),
       dashboard.button("c", icons_ui.Gear .. " Config", ":e $MYVIMRC <cr>"),
