@@ -3,7 +3,6 @@
 return {
   "mg979/vim-visual-multi",
   lazy = true,
-  event = { "BufReadPost" },
   init = function()
     -- https://github.com/mg979/vim-visual-multi/wiki/Mappings#full-mappings-list
     vim.cmd([[
