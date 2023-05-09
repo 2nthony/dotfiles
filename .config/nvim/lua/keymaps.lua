@@ -1,4 +1,4 @@
--- personal keymaps
+---@diagnostic disable: assign-type-mismatch
 
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
 local function disable_lsp_keymaps(disable_keys)
@@ -8,8 +8,76 @@ local function disable_lsp_keymaps(disable_keys)
   end
 end
 
-return {
-  -- general
+local M = {}
+
+---@type LazyKeys[]
+M.generals = {
+  -- reset
+  { "q", "<nop>" },
+
+  -- reset window navigation
+  { "<c-h>", "<nop>" },
+  { "<c-j>", "<nop>" },
+  { "<c-k>", "<nop>" },
+  { "<c-l>", "<nop>" },
+
+  -- remap macrp record key
+  { "Q", "q" },
+
+  -- impletemented in `cutlass.nvim`
+  -- https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/30423919#30423919
+  -- Delete, d
+  -- { "d", '"_d', mode = { "n", "v" } },
+  -- { "D", '"_D' },
+  -- Cut, x
+  -- { "x", '""d' },
+  -- { "xx", '"dd' },
+
+  -- move window
+  { "sh", "<c-w>h", desc = "Go to left window" },
+  { "sj", "<c-w>j", desc = "Go to below window" },
+  { "sk", "<c-w>k", desc = "Go to above window" },
+  { "sl", "<c-w>l", desc = "Go to right window" },
+
+  -- split window
+  { "ss", "<c-W>s", desc = "Split window below" },
+  { "sv", "<c-W>v", desc = "Split window right" },
+
+  -- Delete a word backwards
+  { "dw", 'vb"_d', desc = "Delete a word backwards" },
+
+  -- Select all
+  { "<c-a>", "gg<s-v>G", desc = "Select all" },
+
+  -- buffer
+  { "<leader>bd", ":bdelete<cr>", desc = "Delete buffer" },
+  { "<leader>bD", ":bdelete!<cr>", desc = "Delete buffer (force)" },
+
+  -- enhance enter
+  { "<c-enter>", "o<esc>" },
+  { "<c-enter>", "<esc>o", mode = { "i" } },
+
+  -- vscode like, copy lines down/up action
+  { "<s-a-j>", ":copy.<cr>" },
+  { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
+  { "<s-a-k>", ":copy.-1<cr>" },
+  { "<s-a-k>", ":copy.+v:count<cr>gv", mode = { "v" } },
+
+  -- better ^, move cursor to start of line
+  { "<c-h>", "^", mode = { "n", "v" } },
+  { "<c-h>", "<esc>^i", mode = { "i" } },
+  { "<c-s-h>", "<home>", mode = { "n", "i", "v" } },
+
+  -- better $
+  { "<c-l>", "<end>", mode = { "n", "i" } },
+  { "<c-l>", "<end><left>", mode = { "v" } },
+
+  -- new file
+  { "<leader>fn", ":tabnew<cr>", desc = "New File" },
+}
+
+---@type LazyPluginSpec[]
+M.plugins = {
   {
     "which-key.nvim",
     lazy = false,
@@ -20,75 +88,6 @@ return {
       },
     },
   },
-  {
-    "LazyVim",
-    keys = {
-      -- reset
-      { "q", "<nop>" },
-      { "gt", "<nop>" },
-      { "gT", "<nop>" },
-
-      -- remap macrp record key
-      { "Q", "q" },
-
-      -- impletemented in `cutlass.nvim`
-      -- https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/30423919#30423919
-      -- Delete, d
-      -- { "d", '"_d', mode = { "n", "v" } },
-      -- { "D", '"_D' },
-      -- Cut, x
-      -- { "x", '""d' },
-      -- { "xx", '"dd' },
-
-      -- move window
-      { "sh", "<c-w>h", desc = "Go to left window" },
-      { "sj", "<c-w>j", desc = "Go to below window" },
-      { "sk", "<c-w>k", desc = "Go to above window" },
-      { "sl", "<c-w>l", desc = "Go to right window" },
-
-      -- split window
-      { "ss", "<c-W>s", desc = "Split window below" },
-      { "sv", "<c-W>v", desc = "Split window right" },
-
-      -- Delete a word backwards
-      { "dw", 'vb"_d', desc = "Delete a word backwards" },
-
-      -- Select all
-      { "<c-a>", "gg<s-v>G", desc = "Select all" },
-
-      -- buffer
-      { "<leader>bd", ":bdelete<cr>", desc = "Delete buffer" },
-      { "<leader>bD", ":bdelete!<cr>", desc = "Delete buffer (force)" },
-
-      -- enhance enter
-      { "<c-enter>", "o<esc>" },
-      { "<c-enter>", "<esc>o", mode = { "i" } },
-
-      { "<leader>n", ":tabnew<cr>", desc = "New tab" },
-
-      -- vscode like, copy lines down/up action
-      { "<s-a-j>", ":copy.<cr>" },
-      { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
-      { "<s-a-k>", ":copy.-1<cr>" },
-      { "<s-a-k>", ":copy.+v:count<cr>gv", mode = { "v" } },
-    },
-  },
-  -- lazy trick to override the lazyvim keymap
-  {
-    "nvim-lspconfig",
-    keys = {
-      -- better ^, move cursor to start of line
-      { "<c-h>", "^", mode = { "n", "v" } },
-      { "<c-h>", "<esc>^i", mode = { "i" } },
-      { "<c-s-h>", "<home>", mode = { "n", "i", "v" } },
-
-      -- better $
-      { "<c-l>", "<end>", mode = { "n", "i" } },
-      { "<c-l>", "<end><left>", mode = { "v" } },
-    },
-  },
-
-  -- plugins
   {
     "nvim-lspconfig",
     init = function()
@@ -145,7 +144,7 @@ return {
     },
   },
   {
-    "leap.nvim",
+    "ggandor/leap.nvim",
     keys = function()
       local mode = { "n", "x", "o" }
       return {
@@ -159,7 +158,7 @@ return {
     "alpha-nvim",
     keys = {
       { "<leader>;", ":Alpha<cr>", desc = "Alpha" },
-      { "<leader>n", ":tabnew<cr>:Alpha<cr>", desc = "New tab (Alpha)" },
+      { "<leader><tab>n", ":tabnew<cr>:Alpha<cr>", desc = "New Tab (Alpha)" },
     },
   },
   {
@@ -182,4 +181,13 @@ return {
       { "<leader>vk", "<Plug>(VM-Add-Cursor-Up)", desc = "add cursor up" },
     },
   },
+  {
+    "bufferline.nvim",
+    keys = {
+      { "gt", "<nop>" },
+      { "gT", "<nop>" },
+    },
+  },
 }
+
+return M
