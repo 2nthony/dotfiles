@@ -40,7 +40,7 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 ### Keymaps
 
 - [LazyVim keymaps](https://www.lazyvim.org/keymaps)
-- [Personal keymaps](.config/nvim/lua/plugins/keymaps.lua)
+- [Personal keymaps](.config/nvim/lua/keymaps.lua)
 - Press the `<space>` key to check all
 
 #### General
