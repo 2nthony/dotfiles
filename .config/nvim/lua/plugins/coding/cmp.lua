@@ -79,10 +79,6 @@ return {
       symbol_map = icons_kinds,
       ellipsis_char = icons_ui.Ellipsis,
       before = function(entry, vim_item)
-        if vim_item.kind == "Codeium" then
-          vim_item.kind_hl_group = "CmpItemKindCodeium"
-        end
-
         vim_item.dup = duplicates[entry.source.name] or duplicates.default
 
         -- required. check if `symbolic` able
