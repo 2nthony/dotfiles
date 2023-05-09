@@ -8,7 +8,7 @@ local timeout = require("util.lsp").timeout
 return {
   "nvimdev/lspsaga.nvim",
   lazy = true,
-  event = { "LspAttach" },
+  -- event = { "LspAttach" },
   cmd = { "Lspsaga" },
   dependencies = {
     "neovim/nvim-lspconfig",
@@ -66,6 +66,7 @@ return {
     -- breadcrumbs
     -- https://github.com/glepnir/lspsaga.nvim#lspsaga-symbols-in-winbar
     symbol_in_winbar = {
+      enable = false,
       separator = " " .. icons_ui.ChevronRight .. " ",
       color_mode = false,
     },
