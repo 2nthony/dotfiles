@@ -1,6 +1,7 @@
 local M = {}
 
 M.map = function(mode, lhs, rhs, opts)
+  rhs = rhs or "<nop>"
   local keys = require("lazy.core.handler").handlers.keys
   ---@cast keys LazyKeysHandler
   -- do not create the keymap if a lazy keys handler exists
