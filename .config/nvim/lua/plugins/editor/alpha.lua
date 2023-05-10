@@ -22,11 +22,7 @@ return {
         icons_ui.GoToFile .. " Find File",
         ":lua require('lazyvim.util').telescope('files')() <cr>"
       ),
-      dashboard.button(
-        "e",
-        icons_ui.FileTree .. " File Explorer",
-        ":lua require('neo-tree.command').execute({ toggle = true }) <cr>"
-      ),
+      dashboard.button("e", icons_ui.FileTree .. " File Explorer", ":Neotree toggle<cr>"),
       dashboard.button("r", icons_ui.Files .. " Recent files", ":Telescope oldfiles<cr>"),
       dashboard.button("s", icons_ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
       dashboard.button("l", icons_misc.Lazy .. " Lazy", ":Lazy<cr>"),
