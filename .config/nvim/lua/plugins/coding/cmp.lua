@@ -36,15 +36,6 @@ return {
       select = false,
     }
 
-    -- reset
-    opts.mapping["<C-space>"] = {}
-    opts.mapping["<C-b>"] = {}
-    opts.mapping["<C-p>"] = {}
-    opts.mapping["<C-n>"] = {}
-    opts.mapping["<C-f>"] = {}
-
-    opts.mapping["<C-u>"] = cmp.mapping.scroll_docs(-4)
-    opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
     opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
     opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
     opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
