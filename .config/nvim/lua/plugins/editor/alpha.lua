@@ -7,9 +7,6 @@ local icons_misc = icons.get("misc", { "space" })
 return {
   "goolord/alpha-nvim",
   lazy = true,
-  event = function()
-    return { "BufWinEnter" }
-  end,
   opts = function(_, dashboard)
     local logo = require("util.alpha").logo
 
