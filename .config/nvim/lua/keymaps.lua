@@ -1,10 +1,9 @@
 ---@diagnostic disable: assign-type-mismatch
 
--- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
-local function disable_lsp_keymaps(disable_keys)
+local function override_lsp_keymaps(keymaps)
   local keys = require("lazyvim.plugins.lsp.keymaps").get()
-  for _, key in ipairs(disable_keys or {}) do
-    keys[#keys + 1] = { key, false }
+  for _, keymap in ipairs(keymaps or {}) do
+    keys[#keys + 1] = keymap
   end
 end
 
@@ -90,10 +89,11 @@ M.plugins = {
   },
   {
     "nvim-lspconfig",
-    init = function()
-      disable_lsp_keymaps({ "gK" })
+    init = function(self)
+      override_lsp_keymaps(self.keys)
     end,
     keys = {
+      { "gK", false },
       { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
       { "<c-j>", "]d", remap = true },
       { "J", "[d", remap = true },
@@ -110,12 +110,10 @@ M.plugins = {
       { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
       { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
       { "<leader>co", ":Lspsaga outline<cr>", desc = "Code outline" },
+      { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
     },
-    init = function(plugin)
-      for _, value in ipairs(plugin.keys or {}) do
-        local key = value[1]
-        disable_lsp_keymaps({ key })
-      end
+    init = function(self)
+      override_lsp_keymaps(self.keys)
     end,
   },
   {
