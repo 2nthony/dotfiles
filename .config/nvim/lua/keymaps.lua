@@ -1,5 +1,7 @@
 ---@diagnostic disable: assign-type-mismatch
 
+local telescope = require("lazyvim.util").telescope
+
 local function override_lsp_keymaps(keymaps)
   local keys = require("lazyvim.plugins.lsp.keymaps").get()
   for _, keymap in ipairs(keymaps or {}) do
@@ -119,26 +121,31 @@ M.plugins = {
   {
     "toggleterm.nvim",
     keys = {
-      {
-        "<leader>gg",
-        function()
-          require("util.git").lazygit({ dir = require("lazyvim.util").get_root() })
-        end,
-        desc = "Lazygit (root dir)",
-      },
-      { "<leader>gG", require("util.git").lazygit, desc = "Lazygit" },
+      { "<leader>gg", require("util.git").lazygit, desc = "Lazygit" },
     },
   },
   {
     "neo-tree.nvim",
     keys = {
-      {
-        "<leader>fd",
-        function()
-          require("neo-tree.command").execute({ reveal = true })
-        end,
-        desc = "Explorer NeoTree reveal",
-      },
+      { "<leader>fE", false },
+      { "<leader>E", false },
+      { "<leader>fe", ":Neotree toggle<cr>", desc = "File Explorer" },
+      { "<leader>e", "<leader>fe", remap = true, desc = "File Explorer" },
+      { "<leader>fd", ":Neotree reveal<cr>", desc = "File Explorer reveal" },
+    },
+  },
+  {
+    "telescope.nvim",
+    keys = {
+      { "<leader>ff", telescope("files", { cwd = false }), desc = "Find Files" },
+      { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
+      { "<leader>fF", false },
+      { "<leader>sg", telescope("live_grep", { cwd = false }), desc = "Grep" },
+      { "<leader>/", "<leader>sg", remap = true, desc = "Grep" },
+      { "<leader>sG", false },
+      { "<leader>sw", telescope("grep_string", { cwd = false }), desc = "Word" },
+      { "<leader>sW", false },
+      { "<leader>fR", false },
     },
   },
   {
