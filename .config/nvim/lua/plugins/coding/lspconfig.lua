@@ -6,6 +6,10 @@ local icons_ui = icons.get("ui")
 local timeout = require("util.lsp").timeout
 local get_setting = require("util.vscode").get_setting
 
+vim.lsp.set_log_level(vim.log.levels.ERROR)
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -39,15 +43,6 @@ return {
         unocss = {},
       },
     },
-  },
-
-  {
-    "nvim-lspconfig",
-    opts = function()
-      vim.lsp.set_log_level(vim.log.levels.ERROR)
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
-    end,
   },
 
   -- ui
