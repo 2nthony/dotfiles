@@ -6,7 +6,6 @@ local icons_diagnostics = icons.get("diagnostics", { "space" })
 
 return {
   "folke/todo-comments.nvim",
-  cmd = { "TodoLocList", "TodoTrouble", "TodoTelescope" },
   opts = {
     keywords = {
       FIX = {
