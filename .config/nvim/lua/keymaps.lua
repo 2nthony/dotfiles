@@ -21,6 +21,10 @@ M.generals = {
   { "<c-j>", "<nop>" },
   { "<c-k>", "<nop>" },
   { "<c-l>", "<nop>" },
+  { "<leader>gg", false },
+  { "<leader>gG", false },
+  { "<leader>ft", false },
+  { "<leader>fT", false },
 
   -- remap macrp record key
   { "Q", "q" },
