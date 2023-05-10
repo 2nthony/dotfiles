@@ -5,7 +5,6 @@ local disabled = {
   "echasnovski/mini.bufremove",
   "catppuccin", -- lazyvim renamed
   "folke/tokyonight.nvim",
-  "echasnovski/mini.pairs",
 }
 
 local list = {}
