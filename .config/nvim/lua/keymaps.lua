@@ -133,9 +133,21 @@ M.plugins = {
     keys = {
       { "<leader>fE", false },
       { "<leader>E", false },
-      { "<leader>fe", ":Neotree toggle<cr>", desc = "File Explorer" },
+      {
+        "<leader>fe",
+        function()
+          require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+        end,
+        desc = "File Explorer",
+      },
       { "<leader>e", "<leader>fe", remap = true, desc = "File Explorer" },
-      { "<leader>fd", ":Neotree reveal<cr>", desc = "File Explorer reveal" },
+      {
+        "<leader>fd",
+        function()
+          require("neo-tree.command").execute({ reveal = true, dir = vim.loop.cwd() })
+        end,
+        desc = "File Explorer reveal",
+      },
     },
   },
   {
