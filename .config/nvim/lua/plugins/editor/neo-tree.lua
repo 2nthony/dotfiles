@@ -23,7 +23,6 @@ return {
       mappings = {
         ["s"] = "",
         ["S"] = "",
-        ["f"] = "",
         ["<C-x>"] = "",
         -- ["o"] = "open",
         -- ["<cr>"] = "open",
@@ -33,8 +32,10 @@ return {
         ["<cr>"] = "open_with_window_picker",
         ["<C-s>"] = "split_with_window_picker",
         ["<C-v>"] = "vsplit_with_window_picker",
-        ["/"] = "filter_on_submit",
-        ["<C-/>"] = "clear_filter", -- <c-/>
+        ["<C-f>"] = "clear_filter",
+        ["g?"] = "show_help",
+        ["/"] = "", -- default search down
+        ["?"] = "", --default search above
       },
     },
     default_component_configs = {
