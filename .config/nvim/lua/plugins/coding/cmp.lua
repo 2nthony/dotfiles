@@ -5,7 +5,6 @@ local icons_ui = icons.get("ui")
 local icons_kinds = icons.get("kinds")
 
 return {
-  { import = "plugins.extras.coding.vscode-supertab" },
   {
     "hrsh7th/nvim-cmp",
     lazy = true,
