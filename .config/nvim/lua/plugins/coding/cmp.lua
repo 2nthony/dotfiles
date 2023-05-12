@@ -32,11 +32,6 @@ return {
 
       opts.completion.keyword_length = 1
 
-      opts.confirm_opts = {
-        behavior = cmp.ConfirmBehavior.Replace,
-        select = false,
-      }
-
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
       -- if back to normal mode, then unlink snippet action
