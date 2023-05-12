@@ -1,3 +1,3 @@
 return {
-  import = "lazyvimvscode.supertab",
+  import = "lazyvimp.supertab",
 }
