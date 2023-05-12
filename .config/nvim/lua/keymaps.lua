@@ -62,12 +62,6 @@ M.generals = {
   { "<c-enter>", "o<esc>" },
   { "<c-enter>", "<esc>o", mode = { "i" } },
 
-  -- vscode like, copy lines down/up action
-  { "<s-a-j>", ":copy.<cr>" },
-  { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
-  { "<s-a-k>", ":copy.-1<cr>" },
-  { "<s-a-k>", ":copy.+v:count<cr>gv", mode = { "v" } },
-
   -- better ^, move cursor to start of line
   { "<c-h>", "^", mode = { "n", "v" } },
   { "<c-h>", "<esc>^i", mode = { "i" } },
@@ -83,6 +77,7 @@ M.generals = {
 
 ---@type LazyPluginSpec[]
 M.plugins = {
+  { import = "lazyvimp.copy-lines-action" },
   {
     "which-key.nvim",
     lazy = false,
