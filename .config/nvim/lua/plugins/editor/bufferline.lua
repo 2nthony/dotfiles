@@ -24,11 +24,11 @@ return {
   {
     "bufferline.nvim",
     dependencies = "vitesse.nvim",
-    opts = {
-      options = {
-        separator_style = "slant",
-      },
-      highlights = require("vitesse.features.bufferline.slant").highlights,
-    },
+    opts = function(_, opts)
+      opts.options.separator_style = "slant"
+      opts.highlights = require("vitesse.features.bufferline.slant").highlights
+
+      return opts
+    end,
   },
 }
