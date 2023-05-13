@@ -118,6 +118,8 @@ M.plugins = {
       { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
       { "gp", ":Lspsaga peek_definition<cr>", desc = "Peek definition" },
       { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
+      -- { "<c-j>", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
+      -- { "J", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
       { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
       { "<leader>co", ":Lspsaga outline<cr>", desc = "Code outline" },
       { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
