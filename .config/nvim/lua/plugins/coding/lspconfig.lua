@@ -28,10 +28,9 @@ return {
         virtual_text = {
           prefix = icons_ui.CircleFilled,
         },
-        update_in_insert = true,
         float = {
-          header = "",
-          source = "always",
+          -- header = "",
+          -- source = "always",
           border = float.border,
         },
         severity_sort = true,
