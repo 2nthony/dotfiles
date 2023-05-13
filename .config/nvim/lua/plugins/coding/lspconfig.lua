@@ -29,8 +29,6 @@ return {
           prefix = icons_ui.CircleFilled,
         },
         float = {
-          -- header = "",
-          -- source = "always",
           border = float.border,
         },
         severity_sort = true,
