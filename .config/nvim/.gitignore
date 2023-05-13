@@ -6,3 +6,6 @@ debug
 foo.*
 *.log
 data
+
+# local plugins
+local.lua
