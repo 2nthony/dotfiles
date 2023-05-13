@@ -7,6 +7,9 @@ local float = require("util.opts").float
 local throttle = 100
 
 return {
+  { "rcarriga/nvim-notify", enabled = false },
+  { "SmiteshP/nvim-navic", enabled = false },
+
   {
     "akinsho/bufferline.nvim",
     opts = {
@@ -119,5 +122,28 @@ return {
 
       require("noice").setup(opts)
     end,
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    opts = {
+      input = {
+        win_options = {
+          winblend = float.winblend,
+        },
+      },
+      select = {
+        nui = {
+          win_options = {
+            winblend = float.winblend,
+          },
+        },
+      },
+      builtin = {
+        win_options = {
+          winblend = float.winblend,
+        },
+      },
+    },
   },
 }

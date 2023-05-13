@@ -4,28 +4,11 @@ local icons_ui = icons.get("ui")
 local icons_ui_space = icons.get("ui", { "space" })
 local icons_misc_space = icons.get("misc", { "space" })
 local icons_diagnostics_space = icons.get("diagnostics", { "space" })
-local icons_filetype = icons.get("filetype")
-local actions = require("telescope.actions")
-
-local tailwind = {
-  icon = icons_filetype.tailwind,
-  color = "#38bdf8",
-  name = "Tailwind",
-}
-
-local svg = {
-  icon = icons_filetype.svg,
-  color = "#FFB13B",
-  name = "Svg",
-}
-
-local grep_picker = {
-  preview = true,
-  only_sort_text = true, -- don't include the filename in the search results
-  path_display = { "shorten" },
-}
 
 return {
+  { "echasnovski/mini.bufremove", enabled = false },
+  { "ggandor/flit.nvim", enabled = false },
+
   {
     "goolord/alpha-nvim",
     lazy = true,
@@ -77,20 +60,6 @@ return {
   },
 
   {
-    "nvim-tree/nvim-web-devicons",
-    opts = {
-      override_by_filename = {
-        ["tailwind.config.js"] = tailwind,
-        ["tailwind.config.cjs"] = tailwind,
-        ["tailwind.config.ts"] = tailwind,
-      },
-      override_by_extension = {
-        svg = svg,
-      },
-    },
-  },
-
-  {
     "sindrets/diffview.nvim",
     lazy = true,
     cmd = {
@@ -129,29 +98,6 @@ return {
         },
       }
     end,
-  },
-
-  {
-    "stevearc/dressing.nvim",
-    opts = {
-      input = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-      select = {
-        nui = {
-          win_options = {
-            winblend = float.winblend,
-          },
-        },
-      },
-      builtin = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-    },
   },
 
   {
@@ -250,94 +196,6 @@ return {
             },
           },
         },
-      },
-    },
-  },
-
-  {
-    "nvim-telescope/telescope.nvim",
-    lazy = true,
-    opts = {
-      theme = "dropdown",
-      defaults = {
-        prompt_prefix = icons_ui_space.Telescope,
-        selection_caret = icons_ui_space.ChevronRight,
-        preview = false,
-        mappings = {
-          i = {
-            ["<Tab>"] = actions.move_selection_next,
-            ["<S-Tab>"] = actions.move_selection_previous,
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
-          },
-          n = {
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
-          },
-        },
-        file_ignore_patterns = {
-          "node_modules/",
-          ".git/",
-          -- rust
-          "**/debug/",
-          "target/release/",
-          -- yarn
-          ".yarn/*",
-        },
-      },
-      pickers = {
-        find_files = {
-          no_ignore = false,
-          hidden = true,
-        },
-        oldfiles = {
-          cwd_only = true,
-        },
-        live_grep = grep_picker,
-        grep_string = grep_picker,
-        buffers = {
-          mappings = {
-            i = {
-              ["<C-d>"] = actions.delete_buffer,
-            },
-          },
-        },
-        git_status = {
-          git_icons = icons.get("git_symbol", { "lower_case" }),
-        },
-      },
-    },
-    config = function(_, opts)
-      local theme = require("telescope.themes")["get_" .. (opts.theme or "dropdown")]
-      if theme then
-        opts.defaults = theme(opts.defaults)
-      end
-
-      if vim.fn.executable("rg") then
-        -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/util/init.lua#LL87C36-L87C36
-        opts.defaults.vimgrep_arguments = {
-          "rg",
-          "--color=never",
-          "--no-heading",
-          "--with-filename",
-          "--line-number",
-          "--column",
-          "--smart-case",
-          "--hidden",
-          "--glob=!.git/",
-        }
-      end
-
-      require("telescope").setup(opts)
-    end,
-    dependencies = {
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        enabled = vim.fn.executable("fzf"),
-        build = "make",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
       },
     },
   },
