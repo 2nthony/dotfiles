@@ -110,7 +110,7 @@ M.plugins = {
     },
   },
   {
-    "lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     keys = {
       { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
       { "gh", ":Lspsaga lsp_finder<cr>", desc = "LSP finder" },
@@ -129,7 +129,7 @@ M.plugins = {
     end,
   },
   {
-    "toggleterm.nvim",
+    "akinsho/toggleterm.nvim",
     keys = {
       { "<leader>gg", require("util.git").lazygit, desc = "Lazygit" },
     },
@@ -189,7 +189,7 @@ M.plugins = {
     },
   },
   {
-    "diffview.nvim",
+    "sindrets/diffview.nvim",
     keys = {
       { "<leader>gdo", ":DiffviewOpen<cr>", desc = "Diffview Open" },
       { "<leader>gdc", ":DiffviewClose<cr>", desc = "Diffview Close" },
@@ -200,7 +200,7 @@ M.plugins = {
     },
   },
   {
-    "vim-visual-multi",
+    "mg979/vim-visual-multi",
     keys = {
       { "<leader>vd", "<Plug>(VM-Find-Under)", desc = "select multi word, `n` next" },
       { "<leader>vc", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "add cursor" },
