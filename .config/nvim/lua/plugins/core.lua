@@ -12,9 +12,5 @@ return {
       },
     },
   },
-  { import = "plugins.coding" },
-  { import = "plugins.editor" },
-  { import = "plugins.util" },
-  { import = "plugins.syntax" },
   pcall(require, "keymaps") and require("keymaps").plugins or nil,
 }
