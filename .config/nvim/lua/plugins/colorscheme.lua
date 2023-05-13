@@ -1,6 +1,8 @@
 local has = require("lazyvim.util").has
 
 return {
+  { "catppuccin", enabled = false },
+  { "folke/tokyonight.nvim", enabled = false },
   {
     "2nthony/vitesse.nvim",
     lazy = true,
