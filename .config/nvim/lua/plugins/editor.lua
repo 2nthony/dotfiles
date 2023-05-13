@@ -2,62 +2,11 @@ local float = require("util.opts").float
 local icons = require("config.icons")
 local icons_ui = icons.get("ui")
 local icons_ui_space = icons.get("ui", { "space" })
-local icons_misc_space = icons.get("misc", { "space" })
 local icons_diagnostics_space = icons.get("diagnostics", { "space" })
 
 return {
   { "echasnovski/mini.bufremove", enabled = false },
   { "ggandor/flit.nvim", enabled = false },
-
-  {
-    "goolord/alpha-nvim",
-    lazy = true,
-    opts = function(_, dashboard)
-      local logo = require("util.alpha").logo
-
-      dashboard.section.header.val = logo.empty
-
-      dashboard.section.buttons.val = {
-        dashboard.button("n", icons_ui_space.NewFile .. " New File", ":ene! <cr>"),
-        dashboard.button(
-          "f",
-          icons_ui_space.GoToFile .. " Find File",
-          ":lua require('lazyvim.util').telescope('files')() <cr>"
-        ),
-        dashboard.button("e", icons_ui_space.FileTree .. " File Explorer", ":Neotree toggle<cr>"),
-        dashboard.button("r", icons_ui_space.Files .. " Recent files", ":Telescope oldfiles<cr>"),
-        dashboard.button("s", icons_ui_space.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
-        dashboard.button("l", icons_misc_space.Lazy .. " Lazy", ":Lazy<cr>"),
-        dashboard.button("m", icons_ui_space.Package .. " Mason", ":Mason<cr>"),
-        dashboard.button("c", icons_ui_space.Gear .. " Config", ":e $MYVIMRC <cr>"),
-        dashboard.button("q", icons_ui_space.SignOut .. " Quit", ":q<cr>"),
-        dashboard.button("x", icons_ui_space.CloseAll .. " Exit (Quit all)", ":qa<cr>"),
-      }
-      for _, button in ipairs(dashboard.section.buttons.val) do
-        button.opts.hl = "AlphaButton"
-        button.opts.hl_shortcut = "AlphaShortcut"
-      end
-
-      local head_butt_padding = 2
-      local occu_height = #dashboard.section.header.val + 2 * #dashboard.section.buttons.val + head_butt_padding
-      local header_padding = math.max(0, math.ceil((vim.fn.winheight(0) - occu_height) * 0.25))
-      local foot_butt_padding = 1
-
-      dashboard.opts.layout = {
-        { type = "padding", val = header_padding },
-        dashboard.section.header,
-        { type = "padding", val = head_butt_padding },
-        dashboard.section.buttons,
-        { type = "padding", val = foot_butt_padding },
-        dashboard.section.footer,
-      }
-
-      return dashboard
-    end,
-    config = function(_, dashboard)
-      require("alpha").setup(dashboard.opts)
-    end,
-  },
 
   {
     "sindrets/diffview.nvim",
