@@ -16,7 +16,6 @@ return {
     },
     opts = function(_, opts)
       local cmp = require("cmp")
-      local luasnip = require("luasnip")
       local lspkind = require("lspkind")
       local float = require("util.opts").float
       local win = require("util.opts").win
