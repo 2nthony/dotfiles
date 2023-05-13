@@ -24,8 +24,11 @@ M.generals = {
   { "<c-k>", "<nop>" },
   { "<c-l>", "<nop>" },
 
+  -- reset lazyvim lazygit
   { "<leader>gg", false },
   { "<leader>gG", false },
+
+  -- reset lazyvim float term
   { "<leader>ft", false },
   { "<leader>fT", false },
 
