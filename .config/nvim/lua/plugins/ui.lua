@@ -152,10 +152,6 @@ return {
     "goolord/alpha-nvim",
     lazy = true,
     opts = function(_, dashboard)
-      local logo = require("util.alpha").logo
-
-      dashboard.section.header.val = logo.empty
-
       dashboard.section.buttons.val = {
         dashboard.button("n", icons_ui_space.NewFile .. " New File", ":ene! <cr>"),
         dashboard.button(
@@ -176,25 +172,6 @@ return {
         button.opts.hl = "AlphaButton"
         button.opts.hl_shortcut = "AlphaShortcut"
       end
-
-      local head_butt_padding = 2
-      local occu_height = #dashboard.section.header.val + 2 * #dashboard.section.buttons.val + head_butt_padding
-      local header_padding = math.max(0, math.ceil((vim.fn.winheight(0) - occu_height) * 0.25))
-      local foot_butt_padding = 1
-
-      dashboard.opts.layout = {
-        { type = "padding", val = header_padding },
-        dashboard.section.header,
-        { type = "padding", val = head_butt_padding },
-        dashboard.section.buttons,
-        { type = "padding", val = foot_butt_padding },
-        dashboard.section.footer,
-      }
-
-      return dashboard
-    end,
-    config = function(_, dashboard)
-      require("alpha").setup(dashboard.opts)
     end,
   },
 }
