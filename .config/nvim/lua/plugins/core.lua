@@ -5,7 +5,6 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vitesse",
       icons = {
         diagnostics = icons.get("diagnostics", { "space" }),
         git = icons.get("git", { "space" }),
