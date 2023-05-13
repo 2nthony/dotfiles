@@ -87,6 +87,7 @@ M.generals = {
 ---@type LazyPluginSpec[]
 M.plugins = {
   { import = "lazyvimp.copy-lines-action" },
+
   {
     "which-key.nvim",
     lazy = false,
@@ -107,31 +108,6 @@ M.plugins = {
       { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
       { "<c-j>", "]d", remap = true },
       { "J", "[d", remap = true },
-    },
-  },
-  {
-    "nvimdev/lspsaga.nvim",
-    keys = {
-      { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
-      { "gh", ":Lspsaga lsp_finder<cr>", desc = "LSP finder" },
-      -- { "gd", ":Lspsaga goto_definition<cr>", desc = "Goto definition" },
-      { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
-      { "gp", ":Lspsaga peek_definition<cr>", desc = "Peek definition" },
-      { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
-      -- { "<c-j>", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
-      -- { "J", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
-      { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
-      { "<leader>co", ":Lspsaga outline<cr>", desc = "Code outline" },
-      { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
-    },
-    init = function(self)
-      override_lsp_keymaps(self.keys)
-    end,
-  },
-  {
-    "akinsho/toggleterm.nvim",
-    keys = {
-      { "<leader>gg", require("util.git").lazygit, desc = "Lazygit" },
     },
   },
   {
@@ -171,6 +147,40 @@ M.plugins = {
     },
   },
   {
+    "alpha-nvim",
+    keys = {
+      { "<leader>;", ":Alpha<cr>", desc = "Alpha" },
+      { "<leader><tab>n", ":tabnew<cr>:Alpha<cr>", desc = "New Tab (Alpha)" },
+    },
+  },
+
+  -- extra plugins
+  {
+    "nvimdev/lspsaga.nvim",
+    keys = {
+      { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
+      { "gh", ":Lspsaga lsp_finder<cr>", desc = "LSP finder" },
+      -- { "gd", ":Lspsaga goto_definition<cr>", desc = "Goto definition" },
+      { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
+      { "gp", ":Lspsaga peek_definition<cr>", desc = "Peek definition" },
+      { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
+      -- { "<c-j>", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
+      -- { "J", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
+      { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
+      { "<leader>co", ":Lspsaga outline<cr>", desc = "Code outline" },
+      { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
+    },
+    init = function(self)
+      override_lsp_keymaps(self.keys)
+    end,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    keys = {
+      { "<leader>gg", require("util.git").lazygit, desc = "Lazygit" },
+    },
+  },
+  {
     "ggandor/leap.nvim",
     keys = function()
       local mode = { "n", "x", "o" }
@@ -180,13 +190,6 @@ M.plugins = {
         { "gf", mode = mode, "<Plug>(leap-from-window)", desc = "Leap from windows" },
       }
     end,
-  },
-  {
-    "alpha-nvim",
-    keys = {
-      { "<leader>;", ":Alpha<cr>", desc = "Alpha" },
-      { "<leader><tab>n", ":tabnew<cr>:Alpha<cr>", desc = "New Tab (Alpha)" },
-    },
   },
   {
     "sindrets/diffview.nvim",
