@@ -5,7 +5,6 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vitesse",
       defaults = {
         keymaps = false,
       },
