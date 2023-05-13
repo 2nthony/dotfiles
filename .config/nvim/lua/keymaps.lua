@@ -55,7 +55,7 @@ M.generals = {
   { "sv", "<c-W>v", desc = "Split window right" },
 
   -- Delete a word backwards
-  { "dw", 'vb"_d', desc = "Delete a word backwards" },
+  { "db", 'vb"_d', desc = "Delete a word backwards" },
 
   -- Visual paste, don't yank
   { "p", '"_dP', mode = "v" },
