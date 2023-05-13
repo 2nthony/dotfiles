@@ -21,14 +21,4 @@ return {
       },
     },
   },
-  {
-    "bufferline.nvim",
-    dependencies = "vitesse.nvim",
-    opts = function(_, opts)
-      opts.options.separator_style = "slant"
-      opts.highlights = require("vitesse.features.bufferline.slant").highlights
-
-      return opts
-    end,
-  },
 }

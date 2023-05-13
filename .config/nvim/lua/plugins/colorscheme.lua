@@ -1,3 +1,5 @@
+local has = require("lazyvim.util").has
+
 return {
   {
     "2nthony/vitesse.nvim",
@@ -18,5 +20,14 @@ return {
     opts = {
       colorscheme = "vitesse",
     },
+  },
+  {
+    "bufferline.nvim",
+    opts = function(_, opts)
+      opts.options.separator_style = "slant"
+      if has("vitesse.nvim") then
+        opts.highlights = require("vitesse.features.bufferline.slant").highlights
+      end
+    end,
   },
 }
