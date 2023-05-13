@@ -15,12 +15,15 @@ local M = {}
 M.generals = {
   -- reset
   { "q", "<nop>" },
+  { "gt", "<nop>" },
+  { "gT", "<nop>" },
 
   -- reset window navigation
   { "<c-h>", "<nop>" },
   { "<c-j>", "<nop>" },
   { "<c-k>", "<nop>" },
   { "<c-l>", "<nop>" },
+
   { "<leader>gg", false },
   { "<leader>gG", false },
   { "<leader>ft", false },
@@ -195,13 +198,6 @@ M.plugins = {
       { "<leader>vc", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "add cursor" },
       { "<leader>vj", "<Plug>(VM-Add-Cursor-Down)", desc = "add cursor down" },
       { "<leader>vk", "<Plug>(VM-Add-Cursor-Up)", desc = "add cursor up" },
-    },
-  },
-  {
-    "bufferline.nvim",
-    keys = {
-      { "gt", "<nop>" },
-      { "gT", "<nop>" },
     },
   },
 }
