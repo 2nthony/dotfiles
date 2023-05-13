@@ -18,7 +18,6 @@ require("lazy").setup({
     { "2nthony/lazyvimp" },
     -- import/override with your plugins
     { import = "plugins" },
-    pcall(require, "keymaps") and require("keymaps").plugins or nil,
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
