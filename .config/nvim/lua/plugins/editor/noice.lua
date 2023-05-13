@@ -7,9 +7,6 @@ local throttle = 100
 
 return {
   "folke/noice.nvim",
-  keys = function()
-    return {}
-  end,
   dependencies = {
     "MunifTanjim/nui.nvim",
     "nvim-treesitter/nvim-treesitter",

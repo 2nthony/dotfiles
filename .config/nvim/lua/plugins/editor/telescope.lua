@@ -11,9 +11,6 @@ local grep_picker = {
 return {
   "nvim-telescope/telescope.nvim",
   lazy = true,
-  keys = function()
-    return {}
-  end,
   opts = {
     theme = "dropdown",
     defaults = {

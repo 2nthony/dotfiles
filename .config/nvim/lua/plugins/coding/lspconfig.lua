@@ -6,26 +6,14 @@ local icons_ui = icons.get("ui")
 local timeout = require("util.lsp").timeout
 local get_setting = require("util.vscode").get_setting
 
+vim.lsp.set_log_level(vim.log.levels.ERROR)
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
+
 return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
-    init = function()
-      -- reset lazyvim lsp keymaps
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- clone avoid infinite loop
-      local keymaps = vim.deepcopy(keys)
-      for _, keymap in ipairs(keymaps) do
-        local key = keymap[1]
-        if key then
-          keys[#keys + 1] = { key, false }
-        end
-      end
-
-      vim.lsp.set_log_level(vim.log.levels.ERROR)
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
-    end,
     opts = {
       -- 'lspconfig.ui.windows'
       ui = {
@@ -40,10 +28,7 @@ return {
         virtual_text = {
           prefix = icons_ui.CircleFilled,
         },
-        update_in_insert = true,
         float = {
-          header = "",
-          source = "always",
           border = float.border,
         },
         severity_sort = true,

@@ -37,76 +37,26 @@ ln -s ~/yourpath/.config/nvim ~/.config
 
 All plugins [plugins/](.config/nvim/lua/plugins).
 
-### Keybindings
+### Keymaps
 
-The latest keybindings in [keymaps.lua](.config/nvim/lua/config/keymaps.lua).
+- [LazyVim keymaps](https://www.lazyvim.org/keymaps)
+- [Personal keymaps](.config/nvim/lua/keymaps.lua)
+- Press the `<space>` key to check all
 
-#### `<C>` means to `<Ctrl>`
+#### General
 
 - `<C-h>` better `^`
 - `<C-l>` better `$`
 - `<C-a>` select all text
-- `<C-j>` LSP diagnostic next, `<S-C-j>` LSP diagnostic prev
-- `<C-k>` LSP hover
 - `<C-\>` open a float terminal
-- `<C-n>` new tab `:tabedit`
+- `<s-a-j>` copy line(s) down
+- `<s-a-k>` copy line(s) up
 
-#### `<Tab>`
+#### LSP
 
-- `<Tab>` next buffer, `<S-Tab>` previous buffer
-
-#### `f` means to `find` or `file`
-
-- `fe` file explorer
-- `fd` locate current file in file explorer
-- `ff` find files
-- `fr` find text in files(live grep) (install `ripgrep`)
-- `fb` find a buffer(tab)
-- `fo` find oldfiles
-- `fc` find changed files (git status)
-- `ftw` find trouble workspace(LSP diagnostics)
-- `ftc` find todo comments
-
-#### `g` means to `go` or `git`
-
-- `git` open lazygit (install `lazygit`)
-- `gw` go to word after cursor, `gW` before cursor([leap.nvim](https://github.com/ggandor/leap.nvim))
-- `gsj` git next hunk
-- `gsk` git previous hunk
-- `gss` gitsigns stage hunk
-- `gsS` gitsigns stage file
-- `gsr` gitsigns reset hunk
-- `gsu` gitsigns undo stage hunk
-- `gsp` gitsigns preview hunk
-- `gido` git diffview open
-- `gidc` git diffview close
-- `gidh` git diffview file history
-- `gidr` git diffview refresh
-
-#### `s` means to `switch`, `split`, `see`, `search` or `LSP`
-
-- `ss` split window
-- `sv` vertical split window
-- `sh` switch to left window
-- `sj` switch to below window
-- `sk` switch to above window
-- `sl` switch to right window
-- `sf` LSP finder
-- `sp` LSP see preview definition
-- `sr` LSP replace declaration
-- `sdc` LSP diagnostic, cursor
-- `sdl` LSP diagnostic, line
-- `sdb` LSP diagnostic, buffer
-- `sdw` LSP diagnostic, workspace
-- `sca` LSP code action
-- `sci` LSP incoming calls
-- `sco` LSP outgoing calls
-
-#### Others, `<Space>` instead of `\`
-
-- `<Space>bd` delete buffer
-- `<Space>bD` force(!) delete buffer
-- `<Space>bp` pin a buffer
+- `K` LSP hover
+- `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
+- `<C-k>` LSP signature help
 
 ### Code Snippets ([luasnip](https://github.com/L3MON4D3/LuaSnip))
 
@@ -146,10 +96,14 @@ I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
 
 ## Troubleshootings
 
-<!-- ### `<C-S-*>` key not working -->
-<!-- iTerm2: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+` -->
+### Modifier keys(`<c-*>`, `<a-*>`) not working in tmux
 
-<!-- Details from: https://github.com/zellij-org/zellij/issues/265#issuecomment-823703039 -->
+#### iTerm2
+
+Details from: https://github.com/tmux/tmux/wiki/Modifier-Keys#extended-keys
+
+- [x] `<c-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Report modifiers using CSI u`
+- [x] `<a-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+`
 
 ## Credit
 

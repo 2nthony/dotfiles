@@ -3,8 +3,6 @@ local disabled = {
   "SmiteshP/nvim-navic",
   "rcarriga/nvim-notify",
   "echasnovski/mini.bufremove",
-  "catppuccin", -- lazyvim renamed
-  "folke/tokyonight.nvim",
 }
 
 local list = {}

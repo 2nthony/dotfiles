@@ -7,9 +7,6 @@ local icons_misc = icons.get("misc", { "space" })
 return {
   "goolord/alpha-nvim",
   lazy = true,
-  event = function()
-    return { "BufWinEnter" }
-  end,
   opts = function(_, dashboard)
     local logo = require("util.alpha").logo
 
@@ -17,12 +14,13 @@ return {
 
     dashboard.section.buttons.val = {
       dashboard.button("n", icons_ui.NewFile .. " New File", ":ene! <cr>"),
-      dashboard.button("ff", icons_ui.FindFile .. " Find File", ":Telescope find_files <cr>"),
       dashboard.button(
-        "fe",
-        icons_ui.FileTree .. " File Explorer",
-        ":lua require('neo-tree.command').execute({ toggle = true }) <cr>"
+        "f",
+        icons_ui.GoToFile .. " Find File",
+        ":lua require('lazyvim.util').telescope('files')() <cr>"
       ),
+      dashboard.button("e", icons_ui.FileTree .. " File Explorer", ":Neotree toggle<cr>"),
+      dashboard.button("r", icons_ui.Files .. " Recent files", ":Telescope oldfiles<cr>"),
       dashboard.button("s", icons_ui.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
       dashboard.button("l", icons_misc.Lazy .. " Lazy", ":Lazy<cr>"),
       dashboard.button("m", icons_ui.Package .. " Mason", ":Mason<cr>"),

@@ -2,10 +2,5 @@
 
 return {
   "folke/trouble.nvim",
-  keys = function()
-    return {}
-  end,
-  opts = {
-    use_diagnostic_signs = true,
-  },
+  opts = {},
 }

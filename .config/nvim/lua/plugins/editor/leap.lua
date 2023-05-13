@@ -2,10 +2,6 @@
 
 return {
   "ggandor/leap.nvim",
-  event = { "BufReadPost" },
-  keys = function()
-    return {}
-  end,
   opts = {
     highlight_unlabeled_phase_one_targets = true,
   },

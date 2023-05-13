@@ -6,59 +6,54 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = true,
   cmd = "Neotree",
-  keys = function()
-    return {}
-  end,
-  opts = function(_, opts)
-    local has = require("lazyvim.util").has
-
-    local function open(cmd)
-      if has("nvim-window-picker") then
-        cmd = cmd .. "_with_window_picker"
-      end
-      return cmd
-    end
-
-    opts.filesystem.follow_current_file = false
-    opts.filesystem.filtered_items = {
-      hide_dotfiles = false,
-      hide_by_name = {
-        ".git",
+  opts = {
+    filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_by_name = {
+          ".git",
+        },
+        never_show = {
+          ".DS_Store",
+        },
       },
-      never_show = {
-        ".DS_Store",
+    },
+    window = {
+      width = 35,
+      mappings = {
+        ["s"] = "",
+        ["S"] = "",
+        ["<C-x>"] = "",
+        -- ["o"] = "open",
+        -- ["<cr>"] = "open",
+        -- ["<C-s>"] = "open_split",
+        -- ["<C-v>"] = "open_vsplit",
+        ["o"] = "open_with_window_picker",
+        ["<cr>"] = "open_with_window_picker",
+        ["<C-s>"] = "split_with_window_picker",
+        ["<C-v>"] = "vsplit_with_window_picker",
+        ["<C-f>"] = "clear_filter",
+        ["g?"] = "show_help",
+        ["/"] = "", -- default search down
+        ["?"] = "", --default search above
       },
-    }
-
-    opts.window.width = 35
-
-    opts.window.mappings["s"] = ""
-    opts.window.mappings["S"] = ""
-    opts.window.mappings["f"] = ""
-    opts.window.mappings["<C-x>"] = ""
-    opts.window.mappings["o"] = open("open")
-    opts.window.mappings["<cr>"] = open("open")
-    opts.window.mappings["<C-s>"] = open("split")
-    opts.window.mappings["<C-v>"] = open("vsplit")
-    opts.window.mappings["/"] = "filter_on_submit"
-    opts.window.mappings["<C-/>"] = "clear_filter" -- <c-/>
-    -- FIXME: tmux keymap
-    opts.window.mappings["<C-_>"] = "clear_filter" -- <c-/>
-
-    opts.default_component_configs.indent.expander_collapsed = icons_ui.ChevronRight
-    opts.default_component_configs.indent.expander_expanded = icons_ui.ChevronDown
-    opts.default_component_configs.icon = {
-      folder_closed = icons_ui.Folder,
-      folder_open = icons_ui.FolderOpened,
-      folder_empty = icons_ui.FolderOpened,
-      default = icons_ui.Text,
-    }
-    opts.default_component_configs.git_status = {
-      symbols = icons.get("git_symbol", { "lower_case" }),
-    }
-
-    return opts
-  end,
+    },
+    default_component_configs = {
+      indent = {
+        expander_collapsed = icons_ui.ChevronRight,
+        expander_expanded = icons_ui.ChevronDown,
+      },
+      icon = {
+        folder_closed = icons_ui.Folder,
+        folder_open = icons_ui.FolderOpened,
+        folder_empty = icons_ui.FolderOpened,
+        default = icons_ui.Text,
+      },
+      git_status = {
+        symbols = icons.get("git_symbol", { "lower_case" }),
+      },
+    },
+  },
   dependencies = {
     -- https://github.com/s1n7ax/nvim-window-picker
     {
