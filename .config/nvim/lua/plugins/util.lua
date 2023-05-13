@@ -1,12 +1,5 @@
 local float = require("util.opts").float
 
-local api = os.getenv("OPENAI_API_KEY")
-local chatgpt_enabled = (api and true) or false
-
-if not chatgpt_enabled then
-  vim.notify("[chatgpt.nvim]: `OPENAI_API_KEY` not found in env", vim.log.levels.ERROR)
-end
-
 return {
   { import = "lazyvimp.project" },
 
@@ -128,24 +121,6 @@ return {
       -- when 'enable_deceleration = true', 'deceleration_table = { {200, 3}, {300, 7}, {450, 11}, {600, 15}, {750, 21}, {900, 9999} }'
       deceleration_table = { { 150, 9999 } },
     },
-  },
-
-  {
-    "jackmort/chatgpt.nvim",
-    enabled = chatgpt_enabled,
-    cmd = {
-      "ChatGPT",
-      "ChatGPTRun",
-      "ChatGPTActAs",
-      "ChatGPTCompletecode",
-      "ChatGPTEditwithInstructions",
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    opts = {},
   },
 
   {
