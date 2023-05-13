@@ -57,6 +57,9 @@ M.generals = {
   -- Delete a word backwards
   { "dw", 'vb"_d', desc = "Delete a word backwards" },
 
+  -- Visual paste, don't yank
+  { "p", '"_dP', mode = "v" },
+
   -- Select all
   { "<c-a>", "gg<s-v>G", desc = "Select all" },
 
