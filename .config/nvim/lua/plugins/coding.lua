@@ -3,8 +3,6 @@ local icons_ui = icons.get("ui")
 local icons_kinds = icons.get("kinds")
 
 return {
-  {},
-
   -- cmp
   { import = "lazyvimp.cmp-supertab" },
   { import = "lazyvimp.cmp-esc-unlink-snippet" },
@@ -114,54 +112,5 @@ return {
         table.insert(opts.sources, 1, { name = "codeium", group_index = 1 })
       end,
     },
-  },
-
-  {
-    "L3MON4D3/LuaSnip",
-    opts = {
-      update_events = "TextChanged,TextChangedI",
-      delete_check_events = "TextChanged,InsertLeave",
-    },
-  },
-
-  { "echasnovski/mini.pairs", enabled = false },
-  {
-    "windwp/nvim-autopairs",
-    lazy = true,
-    event = { "InsertEnter" },
-    opts = {
-      disable_filetype = {
-        "bigfile",
-        "TelescopePrompt",
-        "spectre_panel",
-      },
-      check_ts = true,
-      ts_config = {
-        javascript = { "string", "template_string" },
-      },
-      fast_wrap = {
-        map = "<M-e>",
-        chars = { "{", "[", "(", '"', "'" },
-        pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-        offset = 0, -- Offset from pattern match
-        end_key = "$",
-        keys = "qwertyuiopzxcvbnmasdfghjkl",
-        check_comma = true,
-        highlight = "Search",
-        highlight_grey = "Comment",
-      },
-    },
-    config = function(_, opts)
-      require("nvim-autopairs").setup(opts)
-
-      pcall(function()
-        local function on_confirm_done(...)
-          require("nvim-autopairs.completion.cmp").on_confirm_done(...)
-        end
-
-        require("cmp").event:off("confirm_done", on_confirm_done)
-        require("cmp").event:on("confirm_done", on_confirm_done)
-      end)
-    end,
   },
 }

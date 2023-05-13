@@ -4,20 +4,7 @@ local icons_ui = icons.get("ui")
 local icons_ui_space = icons.get("ui", { "space" })
 local icons_misc_space = icons.get("misc", { "space" })
 local icons_diagnostics_space = icons.get("diagnostics", { "space" })
-local icons_filetype = icons.get("filetype")
 local actions = require("telescope.actions")
-
-local tailwind = {
-  icon = icons_filetype.tailwind,
-  color = "#38bdf8",
-  name = "Tailwind",
-}
-
-local svg = {
-  icon = icons_filetype.svg,
-  color = "#FFB13B",
-  name = "Svg",
-}
 
 local grep_picker = {
   preview = true,
@@ -26,6 +13,9 @@ local grep_picker = {
 }
 
 return {
+  { "echasnovski/mini.bufremove", enabled = false },
+  { "ggandor/flit.nvim", enabled = false },
+
   {
     "goolord/alpha-nvim",
     lazy = true,
@@ -77,20 +67,6 @@ return {
   },
 
   {
-    "nvim-tree/nvim-web-devicons",
-    opts = {
-      override_by_filename = {
-        ["tailwind.config.js"] = tailwind,
-        ["tailwind.config.cjs"] = tailwind,
-        ["tailwind.config.ts"] = tailwind,
-      },
-      override_by_extension = {
-        svg = svg,
-      },
-    },
-  },
-
-  {
     "sindrets/diffview.nvim",
     lazy = true,
     cmd = {
@@ -129,29 +105,6 @@ return {
         },
       }
     end,
-  },
-
-  {
-    "stevearc/dressing.nvim",
-    opts = {
-      input = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-      select = {
-        nui = {
-          win_options = {
-            winblend = float.winblend,
-          },
-        },
-      },
-      builtin = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-    },
   },
 
   {
