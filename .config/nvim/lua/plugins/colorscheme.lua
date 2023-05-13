@@ -26,8 +26,8 @@ return {
   {
     "bufferline.nvim",
     opts = function(_, opts)
-      opts.options.separator_style = "slant"
       if has("vitesse.nvim") then
+        opts.options.separator_style = "slant"
         opts.highlights = require("vitesse.features.bufferline.slant").highlights
       end
     end,
