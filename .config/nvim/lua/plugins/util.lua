@@ -1,7 +1,7 @@
 local float = require("util.opts").float
 
 return {
-  { import = "lazyvimp.project" },
+  { import = "plugins.extras.util.project" },
 
   {
     "iamcco/markdown-preview.nvim",

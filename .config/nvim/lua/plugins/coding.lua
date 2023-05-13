@@ -4,8 +4,8 @@ local icons_kinds = icons.get("kinds")
 
 return {
   -- cmp
-  { import = "lazyvimp.cmp-supertab" },
-  { import = "lazyvimp.cmp-esc-unlink-snippet" },
+  { import = "plugins.extras.coding.supertab" },
+  { import = "plugins.extras.coding.esc-unlink-snippet" },
   {
     "hrsh7th/nvim-cmp",
     lazy = true,

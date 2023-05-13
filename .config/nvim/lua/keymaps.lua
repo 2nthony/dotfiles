@@ -86,7 +86,7 @@ M.generals = {
 
 ---@type LazyPluginSpec[]
 M.plugins = {
-  { import = "lazyvimp.copy-lines-action" },
+  { import = "plugins.extras.keymap.copy-lines-action" },
 
   {
     "which-key.nvim",
