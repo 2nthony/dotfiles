@@ -129,10 +129,10 @@ icons.kinds = {
   Keyword = "",
   Method = "",
   Module = "",
-  Namespace = "",
+  Namespace = "",
   Null = "",
   Number = "",
-  Object = "",
+  Object = "",
   Operator = "",
   Package = "",
   Property = "",
@@ -191,6 +191,7 @@ icons.git_symbol = vim.tbl_extend("force", icons.git, {
 })
 
 icons.filetype = {
+  json = icons.kinds.Object,
   tailwind = "󱏿",
   svg = "󰜡",
 }
