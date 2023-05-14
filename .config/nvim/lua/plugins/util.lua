@@ -126,7 +126,16 @@ return {
   {
     "NvChad/nvim-colorizer.lua",
     lazy = true,
-    event = { "BufReadPost" },
+    ft = {
+      "html",
+      "vue",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "svelte",
+      "css",
+    },
     opts = {
       user_default_options = {
         RRGGBBAA = true,
