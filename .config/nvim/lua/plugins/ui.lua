@@ -152,6 +152,10 @@ return {
     "goolord/alpha-nvim",
     lazy = true,
     opts = function(_, dashboard)
+      local logo = " "
+
+      dashboard.section.header.val = logo
+
       dashboard.section.buttons.val = {
         dashboard.button("n", icons_ui_space.NewFile .. " New File", ":ene! <cr>"),
         dashboard.button(
@@ -172,6 +176,9 @@ return {
         button.opts.hl = "AlphaButton"
         button.opts.hl_shortcut = "AlphaShortcut"
       end
+
+      -- no top gap
+      dashboard.opts.layout[1].val = 0
     end,
   },
 }
