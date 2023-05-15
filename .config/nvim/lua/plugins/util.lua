@@ -193,4 +193,10 @@ return {
       },
     },
   },
+
+  {
+    "2nthony/qclose.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }
