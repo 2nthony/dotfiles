@@ -98,6 +98,7 @@ M.plugins = {
       defaults = {
         ["<leader>gd"] = { name = "+diffview" },
         ["<leader>v"] = { name = "+visual" },
+        ["<leader>dd"] = { name = "+overseer (Task Runner)" },
       },
     },
   },
@@ -212,6 +213,15 @@ M.plugins = {
       { "<leader>vc", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "add cursor" },
       { "<leader>vj", "<Plug>(VM-Add-Cursor-Down)", desc = "add cursor down" },
       { "<leader>vk", "<Plug>(VM-Add-Cursor-Up)", desc = "add cursor up" },
+    },
+  },
+  {
+    "stevearc/overseer.nvim",
+    keys = {
+      { "<leader>ddl", ":OverseerToggle<cr>", desc = "Overseer List Toggle" },
+      { "<leader>ddr", ":OverseerRun<cr>", desc = "Overseer Run" },
+      { "<leader>ddc", ":OverseerRunCmd<cr>", desc = "Overseer Run Cmd" },
+      { "<leader>ddi", ":OverseerInfo<cr>", desc = "Overseer Info" },
     },
   },
 }
