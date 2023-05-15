@@ -12,3 +12,17 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = ".*rc",
   command = "setfiletype json",
 })
+
+-- cmp, disable in these filetypes
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "bigfile",
+    "OverseerForm",
+  },
+  callback = function()
+    local ok, cmp = pcall(require, "cmp")
+    if ok then
+      cmp.setup.buffer({ enabled = false })
+    end
+  end,
+})
