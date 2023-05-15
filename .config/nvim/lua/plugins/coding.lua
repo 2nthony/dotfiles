@@ -16,19 +16,8 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       local lspkind = require("lspkind")
-      local float = require("util.opts").float
-      local win = require("util.opts").win
       local duplicates = require("util.cmp").duplicates
       local formatting = require("util.cmp").formatting
-
-      local win_bordered = cmp.config.window.bordered({
-        border = float.border,
-        winhighlight = win.winhighlight,
-      })
-      opts.window = {
-        completion = win_bordered,
-        documentation = win_bordered,
-      }
 
       opts.completion.keyword_length = 1
 
