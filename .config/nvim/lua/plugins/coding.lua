@@ -77,11 +77,13 @@ return {
       local cmp = require("cmp")
 
       for _, opt in ipairs(opts.types) do
-        cmp.setup.cmdline(opt.type, {
-          mapping = cmp.mapping.preset.cmdline(),
-          sources = cmp.config.sources(opt.sources),
-          completion = opts.completion,
-        })
+        cmp.setup.cmdline(
+          opt.type,
+          vim.tbl_extend("force", opts, {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = cmp.config.sources(opt.sources),
+          })
+        )
       end
     end,
   },
