@@ -23,14 +23,6 @@ return {
     "neovim/nvim-lspconfig",
     lazy = true,
     opts = {
-      -- 'lspconfig.ui.windows'
-      ui = {
-        window = {
-          default_options = {
-            border = float.border,
-          },
-        },
-      },
       autoformat = get_setting("editor.formatOnSave"),
       diagnostics = {
         virtual_text = {
@@ -53,8 +45,10 @@ return {
   -- ui
   {
     "nvim-lspconfig",
-    opts = function(_, opts)
-      require("lspconfig.ui.windows").default_options = opts.ui.window.default_options
+    opts = function()
+      require("lspconfig.ui.windows").default_options = {
+        border = float.border,
+      }
     end,
   },
 
