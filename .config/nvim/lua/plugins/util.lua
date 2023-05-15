@@ -146,15 +146,6 @@ return {
   },
 
   {
-    "gbprod/cutlass.nvim",
-    lazy = false,
-    opts = {
-      cut_key = "x",
-      exclude = { "ns" },
-    },
-  },
-
-  {
     "2nthony/qclose.nvim",
     event = "VeryLazy",
     opts = {},

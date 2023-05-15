@@ -35,14 +35,17 @@ M.generals = {
   -- remap macrp record key
   { "Q", "q" },
 
-  -- impletemented in `cutlass.nvim`
+  -- delete is not cut
   -- https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/30423919#30423919
   -- Delete, d
-  -- { "d", '"_d', mode = { "n", "v" } },
-  -- { "D", '"_D' },
+  { "d", '"_d', mode = { "n", "x" } },
+  { "D", '"_D', mode = { "n", "x" } },
+  { "x", '"_x', mode = { "n", "x" } },
+  { "X", '"_X', mode = { "n", "x" } },
   -- Cut, x
-  -- { "x", '""d' },
-  -- { "xx", '"dd' },
+  { "x", "d", mode = { "n", "x" } },
+  { "xx", "dd" },
+  { "X", "D", mode = { "n", "x" } },
 
   -- move window
   { "sh", "<c-w>h", desc = "Go to left window" },
