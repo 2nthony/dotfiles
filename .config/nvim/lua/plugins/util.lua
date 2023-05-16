@@ -1,5 +1,3 @@
-local float = require("util.opts").float
-
 return {
   { import = "plugins.extras.util.project" },
 
@@ -81,11 +79,6 @@ return {
     opts = {
       open_mapping = [[<c-\>]],
       direction = "float",
-      float_opts = {
-        border = float.border,
-        -- https://github.com/akinsho/toggleterm.nvim/issues/61
-        winblend = float.winblend,
-      },
     },
   },
 

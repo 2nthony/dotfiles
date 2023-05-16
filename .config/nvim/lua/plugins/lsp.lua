@@ -8,8 +8,6 @@ local timeout = require("util.lsp").timeout
 local get_setting = require("util.vscode").get_setting
 
 vim.lsp.set_log_level(vim.log.levels.ERROR)
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
 
 return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -28,9 +26,6 @@ return {
         virtual_text = {
           prefix = icons_ui.CircleFilled,
         },
-        float = {
-          border = float.border,
-        },
         severity_sort = true,
       },
       format = {
@@ -40,16 +35,6 @@ return {
         unocss = {},
       },
     },
-  },
-
-  -- ui
-  {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig.ui.windows").default_options = {
-        border = float.border,
-      }
-    end,
   },
 
   -- lspsaga
@@ -71,7 +56,6 @@ return {
       ui = {
         title = false,
         border = float.border,
-        winblend = float.winblend,
         colors = {
           normal_bg = "none",
           title_bg = "none",
@@ -140,7 +124,6 @@ return {
         "stylua",
       },
       ui = {
-        border = float.border,
         width = float.size.width,
         height = float.size.height,
       },
@@ -162,7 +145,6 @@ return {
 
       return vim.tbl_extend("force", opts, {
         log_level = "error",
-        border = float.border,
         sources = vim.list_extend(opts.sources, {
           nls.builtins.formatting.prettier.with({
             condition = function(utils)

@@ -1,4 +1,3 @@
-local float = require("util.opts").float
 local icons = require("config.icons")
 local icons_ui = icons.get("ui")
 local icons_ui_space = icons.get("ui", { "space" })
@@ -56,8 +55,6 @@ return {
     opts = {
       current_line_blame = true,
       preview_config = {
-        border = float.border,
-        style = float.style,
       },
     },
   },
@@ -174,16 +171,6 @@ return {
         TEST = {
           icon = icons_ui_space.Beaker,
         },
-      },
-    },
-  },
-
-  {
-    "folke/which-key.nvim",
-    opts = {
-      window = {
-        border = float.border,
-        winblend = float.winblend,
       },
     },
   },

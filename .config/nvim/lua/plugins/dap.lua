@@ -1,5 +1,3 @@
-local float = require("util.opts").float
-
 return {
   {
     "stevearc/overseer.nvim",
@@ -21,22 +19,13 @@ return {
     },
     opts = {
       form = {
-        border = float.border,
-        win_opts = {
-          winblend = float.winblend,
-        },
+        border = "none",
       },
       confirm = {
-        border = float.border,
-        win_opts = {
-          winblend = float.winblend,
-        },
+        border = "none",
       },
       task_win = {
-        border = float.border,
-        win_opts = {
-          winblend = float.winblend,
-        },
+        border = "none",
       },
     },
   },
