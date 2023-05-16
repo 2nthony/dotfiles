@@ -49,10 +49,6 @@ return {
     },
     opts = {
       request_timeout = timeout,
-      scroll_preview = {
-        scroll_down = "<C-d>",
-        scroll_up = "<C-f>",
-      },
       ui = {
         title = false,
         border = float.border,
@@ -105,11 +101,6 @@ return {
       beacon = {
         enable = false,
       },
-      diagnostic = {
-        on_insert = false,
-        -- show_code_action = false,
-        -- extend_relatedInformation = true, -- not working
-      },
     },
   },
 
@@ -122,10 +113,6 @@ return {
       log_level = vim.log.levels.ERROR,
       ensure_installed = {
         "stylua",
-      },
-      ui = {
-        width = float.size.width,
-        height = float.size.height,
       },
     },
   },

@@ -18,7 +18,6 @@ return {
         mode = "tabs",
         show_buffer_close_icons = false,
         show_close_icon = false,
-        -- show_duplicate_prefix = false,
         groups = {
           items = {
             require("bufferline.groups").builtin.pinned:with({ icon = icons_ui.Pinned }),
@@ -72,10 +71,6 @@ return {
       cmdline = {
         view = "cmdline", -- cmdline_popup, cmdline
         format = {
-          cmdline = {
-            icon = "❯",
-            title = " Command ",
-          },
           search_down = {
             icon = icons_ui_space.Search .. "",
           },
@@ -89,22 +84,12 @@ return {
           enabled = false,
           throttle = throttle,
         },
-        signature = {
-          enabled = false,
-        },
+        signature = {},
         hover = {
-          enabled = false,
+          silent = true,
         },
         message = {
           enabled = false,
-        },
-      },
-      -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/views.lua
-      views = {
-        mini = {
-          win_options = {
-            winblend = float.winblend,
-          },
         },
       },
       messages = {
@@ -123,29 +108,6 @@ return {
 
       require("noice").setup(opts)
     end,
-  },
-
-  {
-    "stevearc/dressing.nvim",
-    opts = {
-      input = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-      select = {
-        nui = {
-          win_options = {
-            winblend = float.winblend,
-          },
-        },
-      },
-      builtin = {
-        win_options = {
-          winblend = float.winblend,
-        },
-      },
-    },
   },
 
   {
