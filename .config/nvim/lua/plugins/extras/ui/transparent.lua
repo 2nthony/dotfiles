@@ -134,7 +134,7 @@ return {
     "noice.nvim",
     opts = {
       -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/views.lua
-      view = {
+      views = {
         mini = {
           win_options = {
             winblend = float.winblend,
