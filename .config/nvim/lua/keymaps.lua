@@ -162,7 +162,7 @@ M.plugins = {
   {
     "nvimdev/lspsaga.nvim",
     keys = {
-      { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
+      -- { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
       { "gh", ":Lspsaga lsp_finder<cr>", desc = "LSP finder" },
       -- { "gd", ":Lspsaga goto_definition<cr>", desc = "Goto definition" },
       { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
