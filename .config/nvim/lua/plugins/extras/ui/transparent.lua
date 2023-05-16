@@ -30,6 +30,14 @@ return {
       },
     },
   },
+  {
+    "telescope.nvim",
+    opts = {
+      defaults = {
+        winblend = float.winblend,
+      },
+    },
+  },
 
   -- coding
   {
