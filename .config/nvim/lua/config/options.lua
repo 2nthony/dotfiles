@@ -2,7 +2,6 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-local float = require("util.opts").float
 local opt = vim.opt
 
 opt.backup = false
@@ -14,6 +13,6 @@ opt.relativenumber = false
 opt.diffopt = "filler,iwhite,internal,linematch:60,algorithm:patience"
 
 -- popup, float
-opt.winblend = float.winblend
-opt.pumblend = float.pumblend
+opt.winblend = 0
+opt.pumblend = 5
 opt.pumheight = 10

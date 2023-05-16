@@ -1,8 +1,8 @@
 local M = {}
 
 M.float = {
-  winblend = 0,
-  pumblend = 0,
+  winblend = vim.o.winblend,
+  pumblend = vim.o.pumblend,
   border = "rounded",
   style = "minimal",
   size = {
