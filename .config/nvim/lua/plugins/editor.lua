@@ -55,6 +55,7 @@ return {
     opts = {
       current_line_blame = true,
       preview_config = {
+        border = "none",
       },
     },
   },
@@ -183,6 +184,7 @@ return {
         "toggleterm",
         "OverseerList",
         "OverseerForm",
+        "DressingInput",
       },
     },
   },

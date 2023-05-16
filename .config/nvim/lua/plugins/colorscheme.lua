@@ -13,15 +13,18 @@ return {
       reverse_visual = true,
       dim_nc = true,
       -- transparent_background = false,
-      -- transparent_float_background = false,
+      transparent_float_background = false,
       cmp_cmdline_disable_search_highlight_group = true,
+      telescope_border_follow_float_background = true,
     },
   },
   {
     "LazyVim",
-    opts = {
-      colorscheme = "vitesse",
-    },
+    opts = function(_, opts)
+      if has("vitesse.nvim") then
+        opts.colorscheme = "vitesse"
+      end
+    end,
   },
   {
     "bufferline.nvim",
