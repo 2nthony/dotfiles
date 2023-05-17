@@ -16,7 +16,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 -- cmp, disable in these filetypes
 vim.api.nvim_create_autocmd("FileType", {
   pattern = {
-    "bigfile",
     "OverseerForm",
   },
   callback = function()
