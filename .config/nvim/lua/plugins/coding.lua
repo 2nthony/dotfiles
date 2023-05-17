@@ -4,6 +4,7 @@ local icons_kinds = icons.get("kinds")
 
 return {
   { import = "plugins.extras.coding.autopairs" },
+  { import = "plugins.extras.coding.comment" },
   -- cmp
   { import = "plugins.extras.coding.supertab" },
   { import = "plugins.extras.coding.esc-unlink-snippet" },
