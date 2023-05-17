@@ -185,6 +185,7 @@ return {
         "OverseerList",
         "OverseerForm",
         "DressingInput",
+        "lspinfo",
       },
     },
   },
