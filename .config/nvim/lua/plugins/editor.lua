@@ -186,6 +186,7 @@ return {
         "OverseerForm",
         "DressingInput",
         "lspinfo",
+        "TelescopePrompt",
       },
     },
   },
