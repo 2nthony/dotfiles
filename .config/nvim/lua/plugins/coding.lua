@@ -3,6 +3,7 @@ local icons_ui = icons.get("ui")
 local icons_kinds = icons.get("kinds")
 
 return {
+  { import = "plugins.extras.coding.autopairs" },
   -- cmp
   { import = "plugins.extras.coding.supertab" },
   { import = "plugins.extras.coding.esc-unlink-snippet" },
