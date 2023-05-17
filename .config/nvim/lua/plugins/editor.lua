@@ -187,6 +187,7 @@ return {
         "DressingInput",
         "lspinfo",
         "TelescopePrompt",
+        "neo-tree-popup",
       },
     },
   },
