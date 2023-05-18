@@ -130,12 +130,15 @@ return {
       "svelte",
       "css",
     },
-    opts = {
-      user_default_options = {
-        RRGGBBAA = true,
-        tailwind = true,
-      },
-    },
+    opts = function(self, opts)
+      return vim.tbl_deep_extend("force", opts, {
+        filetypes = self.ft,
+        user_default_options = {
+          RRGGBBAA = true,
+          tailwind = true,
+        },
+      })
+    end,
   },
 
   {
