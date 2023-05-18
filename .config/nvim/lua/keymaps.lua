@@ -171,7 +171,9 @@ M.plugins = {
       -- { "<c-j>", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
       -- { "J", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
       { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
-      { "<leader>co", ":Lspsaga outline<cr>", desc = "Code outline" },
+      { "<leader>cs", ":Lspsaga outline<cr>", desc = "Code outline" },
+      { "<leader>ci", ":Lspsaga incoming_calls<cr>", desc = "Incoming calls" },
+      { "<leader>co", ":Lspsaga outgoing_calls<cr>", desc = "Outgoing calls" },
       { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
     },
     init = function(self)
