@@ -69,7 +69,7 @@ return {
       },
       outline = {
         keys = {
-          jump = "<cr>",
+          expand_or_jump = "<cr>",
         },
       },
       finder = {
