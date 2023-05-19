@@ -139,9 +139,10 @@ M.plugins = {
   {
     "telescope.nvim",
     keys = {
-      { "<leader>ff", telescope("files", { cwd = false }), desc = "Find Files" },
+      { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
       { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
       { "<leader>fF", false },
+      { "<leader>gf", telescope("files", { cwd = false }), desc = "Git Files" },
       { "<leader>sg", telescope("live_grep", { cwd = false }), desc = "Grep" },
       { "<leader>/", "<leader>sg", remap = true, desc = "Grep" },
       { "<leader>sG", false },
