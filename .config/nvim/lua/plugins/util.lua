@@ -1,3 +1,5 @@
+local skip_features_filetypes = require("util.ft").skip_features_filetypes
+
 return {
   { import = "plugins.extras.util.project" },
 
@@ -35,13 +37,6 @@ return {
         "globals",
       },
       pre_save = function()
-        local skip_filetypes = {
-          "neo-tree",
-          "alpha",
-          "NvimTree",
-          "gitcommit",
-        }
-
         -- https://github.com/rmagatti/auto-session/issues/176#issuecomment-1278384005
         -- https://github.com/rmagatti/auto-session/blob/1d3dd70a2d48e0f3441128eb4fb0b437a0bf2cc4/lua/auto-session.lua#L196
         local buffers = vim.api.nvim_list_bufs()
@@ -56,8 +51,8 @@ return {
           end
 
           if not should_wipeout then
-            for _, skip_filetype in ipairs(skip_filetypes) do
-              if buf_filetype == skip_filetype then
+            for _, skip_features_filetype in ipairs(skip_features_filetypes) do
+              if buf_filetype == skip_features_filetype then
                 should_wipeout = true
                 break
               end
