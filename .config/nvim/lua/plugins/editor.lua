@@ -2,6 +2,7 @@ local icons = require("config.icons")
 local icons_ui = icons.get("ui")
 local icons_ui_space = icons.get("ui", { "space" })
 local icons_diagnostics_space = icons.get("diagnostics", { "space" })
+local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
   { "echasnovski/mini.bufremove", enabled = false },
@@ -179,28 +180,7 @@ return {
   {
     "RRethy/vim-illuminate",
     opts = {
-      filetypes_denylist = {
-        "",
-        "DressingInput",
-        "DressingSelect",
-        "NvimTree",
-        "Outline",
-        "OverseerList",
-        "OverseerForm",
-        "TelescopePrompt",
-        "Trouble",
-        "alpha",
-        "dashboard",
-        "dirvish",
-        "fugitive",
-        "help",
-        "lsgsagaoutline",
-        "lspinfo",
-        "neo-tree-popup",
-        "neogitstatus",
-        "norg",
-        "toggleterm",
-      },
+      filetypes_denylist = skip_features_filetypes,
     },
   },
 }

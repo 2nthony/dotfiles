@@ -49,11 +49,4 @@ return {
       }
     end,
   },
-
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    opts = {
-      filetype_exclude = { "bigfile" },
-    },
-  },
 }

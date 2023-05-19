@@ -5,6 +5,7 @@ local icons_diagnostics_lower_space = icons.get("diagnostics", { "lower_case", "
 local icons_ui_space = icons.get("ui", { "space" })
 local icons_misc_space = icons.get("misc", { "space" })
 local float = require("util.opts").float
+local skip_features_filetypes = require("util.ft").skip_features_filetypes
 local throttle = 100
 
 return {
@@ -142,5 +143,12 @@ return {
       -- no top gap
       dashboard.opts.layout[1].val = 0
     end,
+  },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      filetype_exclude = skip_features_filetypes,
+    },
   },
 }
