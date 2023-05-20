@@ -1,7 +1,3 @@
-local icons = require("config.icons")
-local icons_ui = icons.get("ui")
-local icons_ui_space = icons.get("ui", { "space" })
-local icons_diagnostics_space = icons.get("diagnostics", { "space" })
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
@@ -25,15 +21,6 @@ return {
 
       return {
         enhanced_diff_hl = true,
-        icons = {
-          folder_closed = icons_ui.Folder,
-          folder_open = icons_ui.FolderOpened,
-        },
-        signs = {
-          fold_closed = icons_ui.ChevronRight,
-          fold_open = icons_ui.ChevronDown,
-          done = icons_ui.Check,
-        },
         keymaps = {
           view = {
             keymap_q_close,
@@ -110,21 +97,6 @@ return {
           ["?"] = "", --default search above
         },
       },
-      default_component_configs = {
-        indent = {
-          expander_collapsed = icons_ui.ChevronRight,
-          expander_expanded = icons_ui.ChevronDown,
-        },
-        icon = {
-          folder_closed = icons_ui.Folder,
-          folder_open = icons_ui.FolderOpened,
-          folder_empty = icons_ui.FolderOpened,
-          default = icons_ui.Text,
-        },
-        git_status = {
-          symbols = icons.get("git_symbol", { "lower_case" }),
-        },
-      },
     },
     dependencies = {
       -- https://github.com/s1n7ax/nvim-window-picker
@@ -143,35 +115,6 @@ return {
               buftype = { "terminal", "quickfix" },
             },
           },
-        },
-      },
-    },
-  },
-
-  {
-    "folke/todo-comments.nvim",
-    opts = {
-      keywords = {
-        FIX = {
-          icon = icons_ui_space.Bug,
-        },
-        TODO = {
-          icon = icons_ui_space.Check,
-        },
-        HACK = {
-          icon = icons_ui_space.Skull,
-        },
-        WARN = {
-          icon = icons_diagnostics_space.Warn,
-        },
-        PERF = {
-          icon = icons_ui_space.Dashboard,
-        },
-        NOTE = {
-          icon = icons_ui_space.Comment,
-        },
-        TEST = {
-          icon = icons_ui_space.Beaker,
         },
       },
     },

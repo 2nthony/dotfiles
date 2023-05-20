@@ -1,5 +1,3 @@
-local icons = require("config.icons")
-local icons_ui_space = icons.get("ui", { "space" })
 local actions = require("telescope.actions")
 
 local grep_picker = {
@@ -15,8 +13,6 @@ return {
     opts = {
       theme = "dropdown",
       defaults = {
-        prompt_prefix = icons_ui_space.Telescope,
-        selection_caret = icons_ui_space.ChevronRight,
         preview = false,
         mappings = {
           i = {
@@ -56,9 +52,6 @@ return {
               ["<C-d>"] = actions.delete_buffer,
             },
           },
-        },
-        git_status = {
-          git_icons = icons.get("git_symbol", { "lower_case" }),
         },
       },
     },

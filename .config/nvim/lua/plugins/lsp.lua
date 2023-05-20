@@ -1,9 +1,6 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
 local float = require("util.opts").float
-local icons = require("config.icons")
-local icons_ui = icons.get("ui")
-local icons_kinds_space = icons.get("kinds", { "space" })
 local timeout = require("util.lsp").timeout
 local get_setting = require("util.vscode").get_setting
 
@@ -22,12 +19,6 @@ return {
     lazy = true,
     opts = {
       autoformat = get_setting("editor.formatOnSave"),
-      diagnostics = {
-        virtual_text = {
-          prefix = icons_ui.CircleFilled,
-        },
-        severity_sort = true,
-      },
       format = {
         timeout_ms = timeout,
       },
@@ -55,16 +46,6 @@ return {
         colors = {
           normal_bg = "none",
           title_bg = "none",
-        },
-        expand = icons_ui.ChevronRight,
-        collapse = icons_ui.ChevronDown,
-        kind = {
-          ["Array"] = { icons_kinds_space.Array, "Type" },
-          ["Function"] = { icons_kinds_space.Function, "Function" },
-          ["Interface"] = { icons_kinds_space.Interface, "Interface" },
-          ["Object"] = { icons_kinds_space.Object, "Type" },
-          ["Folder"] = { icons_ui.FolderOpened .. " ", "Folder" },
-          ["String"] = { icons_kinds_space.String, "String" },
         },
       },
       outline = {
@@ -95,8 +76,6 @@ return {
       -- https://github.com/glepnir/lspsaga.nvim#lspsaga-symbols-in-winbar
       symbol_in_winbar = {
         enable = false,
-        separator = " " .. icons_ui.ChevronRight .. " ",
-        color_mode = false,
       },
       beacon = {
         enable = false,
