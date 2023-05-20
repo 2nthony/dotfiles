@@ -1,5 +1,4 @@
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
-local throttle = 100
 
 return {
   { "rcarriga/nvim-notify", enabled = false },
@@ -39,10 +38,9 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      throttle = throttle,
       presets = {
         -- command_palette = false,
-        bottom_search = false,
+        -- bottom_search = false,
       },
       health = {
         checker = false,
@@ -53,7 +51,6 @@ return {
       lsp = {
         progress = {
           enabled = false,
-          throttle = throttle,
         },
         signature = {},
         hover = {
@@ -70,15 +67,6 @@ return {
         enabled = false,
       },
     },
-    config = function(_, opts)
-      local defaults = require("noice.config").defaults()
-      -- hide cmdheight if cmdline enabled
-      if opts.cmdline.enabled or defaults.cmdline.enabled then
-        vim.opt.cmdheight = 0
-      end
-
-      require("noice").setup(opts)
-    end,
   },
 
   {

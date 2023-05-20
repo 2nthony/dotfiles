@@ -1,7 +1,6 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
 local float = require("util.opts").float
-local timeout = require("util.lsp").timeout
 local get_setting = require("util.vscode").get_setting
 
 vim.lsp.set_log_level(vim.log.levels.ERROR)
@@ -19,9 +18,6 @@ return {
     lazy = true,
     opts = {
       autoformat = get_setting("editor.formatOnSave"),
-      format = {
-        timeout_ms = timeout,
-      },
       servers = {
         unocss = {},
       },
@@ -39,7 +35,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      request_timeout = timeout,
       ui = {
         title = false,
         border = float.border,
@@ -108,17 +103,16 @@ return {
     lazy = true,
     opts = function(_, opts)
       local nls = require("null-ls")
+      opts.log_level = "error"
 
-      return vim.tbl_extend("force", opts, {
-        log_level = "error",
-        sources = vim.list_extend(opts.sources, {
-          nls.builtins.formatting.prettier.with({
-            condition = function(utils)
-              return utils.root_has_file_matches(".prettier*")
-            end,
-          }),
-        }),
-      })
+      table.insert(
+        opts.sources,
+        nls.builtins.formatting.prettier.with({
+          condition = function(utils)
+            return utils.root_has_file_matches(".prettier*")
+          end,
+        })
+      )
     end,
   },
 }
