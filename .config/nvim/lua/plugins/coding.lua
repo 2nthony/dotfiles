@@ -30,6 +30,9 @@ return {
       completion = {
         completeopt = "menu,menuone,noselect",
       },
+      formatting = {
+        fields = { "abbr", "menu" },
+      },
       types = {
         {
           type = ":",
