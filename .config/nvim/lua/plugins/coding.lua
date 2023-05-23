@@ -12,6 +12,14 @@ return {
       local cmp = require("cmp")
 
       opts.completion.keyword_length = 1
+      opts.formatting.fields = { "kind", "abbr", "menu" }
+      opts.formatting.format = function(_, item)
+        local icons = require("lazyvim.config").icons.kinds
+        if icons[item.kind] then
+          item.kind = icons[item.kind]
+        end
+        return item
+      end
 
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
