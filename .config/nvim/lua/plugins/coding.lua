@@ -70,6 +70,7 @@ return {
     init = function()
       require("util.cmp").duplicates.codeium = 0
     end,
+    opts = {},
     dependencies = {
       "hrsh7th/nvim-cmp",
       opts = function(_, opts)
