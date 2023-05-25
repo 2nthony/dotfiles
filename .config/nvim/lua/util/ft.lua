@@ -17,6 +17,7 @@ M.skip_features_filetypes = {
   "fugitive",
   "gitcommit",
   "help",
+  "lazy",
   "lsgsagaoutline",
   "lspinfo",
   "neo-tree",
