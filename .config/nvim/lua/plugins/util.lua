@@ -15,12 +15,13 @@ return {
   {
     "echasnovski/mini.indentscope",
     lazy = true,
-    opts = function(_, opts)
-      opts.draw = {
-        animation = require("mini.indentscope").gen_animation.none(),
-      }
-      return opts
-    end,
+    opts = {
+      draw = {
+        animation = function()
+          return 0
+        end,
+      },
+    },
   },
 
   {
