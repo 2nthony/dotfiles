@@ -9,6 +9,7 @@ return {
     opts = {
       transparent_background = true,
       transparent_float_background = true,
+      telescope_border_follow_float_background = false,
     },
   },
 
