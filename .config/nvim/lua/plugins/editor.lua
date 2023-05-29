@@ -42,9 +42,6 @@ return {
     cmd = { "Gitsigns" },
     opts = {
       current_line_blame = true,
-      preview_config = {
-        border = "none",
-      },
     },
   },
 

@@ -1,6 +1,5 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
-local float = require("util.opts").float
 local get_setting = require("util.vscode").get_setting
 
 vim.lsp.set_log_level(vim.log.levels.ERROR)
@@ -37,11 +36,6 @@ return {
     opts = {
       ui = {
         title = false,
-        border = float.border,
-        colors = {
-          normal_bg = "none",
-          title_bg = "none",
-        },
       },
       outline = {
         keys = {

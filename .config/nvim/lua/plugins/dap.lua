@@ -17,16 +17,6 @@ return {
       "OverseerTaskAction",
       "OverseerClearAction",
     },
-    opts = {
-      form = {
-        border = "none",
-      },
-      confirm = {
-        border = "none",
-      },
-      task_win = {
-        border = "none",
-      },
-    },
+    opts = {},
   },
 }
