@@ -11,8 +11,3 @@ opt.formatoptions:append({ "r" })
 opt.mouse = ""
 opt.relativenumber = false
 opt.diffopt = "filler,iwhite,internal,linematch:60,algorithm:patience"
-
--- popup, float
-opt.winblend = 0
-opt.pumblend = 5
-opt.pumheight = 10
