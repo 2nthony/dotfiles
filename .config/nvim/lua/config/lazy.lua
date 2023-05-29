@@ -17,6 +17,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "plugins.extras.ui.transparent" },
     pcall(require, "local") and { import = "local" } or nil,
   },
   defaults = {
@@ -44,5 +45,8 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
+  },
+  ui = {
+    border = require("util.opts").float.border,
   },
 })
