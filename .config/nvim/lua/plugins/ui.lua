@@ -25,7 +25,7 @@ return {
       local location = { "location", padding = { left = 0, right = 1 } }
 
       opts.sections.lualine_b = { branch }
-      opts.sections.lualine_x = { location }
+      opts.sections.lualine_x = { "bo:filetype", location }
       opts.sections.lualine_y = {}
       opts.sections.lualine_z = {}
     end,
