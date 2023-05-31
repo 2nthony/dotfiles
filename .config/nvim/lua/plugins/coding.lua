@@ -4,6 +4,7 @@ return {
   -- cmp
   { import = "plugins.extras.coding.supertab" },
   { import = "plugins.extras.coding.esc-unlink-snippet" },
+  { import = "plugins.extras.coding.load-vscode-snippets" },
   {
     "hrsh7th/nvim-cmp",
     lazy = true,
