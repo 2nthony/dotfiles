@@ -58,27 +58,6 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 - `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
 - `<C-k>` LSP signature help
 
-### Code Snippets ([luasnip](https://github.com/L3MON4D3/LuaSnip))
-
-I use [Dropcode](https://github.com/egoist/dropcode) to manage my code snippets.
-
-```json
-// ~/Library/Application Support/Code/User/snippets/package.json
-{
-  "name": "my-snippets",
-  "contributes": {
-    "snippets": [
-      {
-        "language": [
-          "all"
-        ],
-        "path": "./dropcode.code-snippets"
-      }
-    ]
-  }
-}
-```
-
 ## Shell
 
 - [Fish shell](https://fishshell.com/)
