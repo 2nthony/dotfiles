@@ -167,4 +167,14 @@ return {
       },
     },
   },
+
+  -- util
+  {
+    "toggleterm.nvim",
+    opts = {
+      float_opts = {
+        border = float.border,
+      },
+    },
+  },
 }
