@@ -6,9 +6,10 @@ local float = require("util.opts").float
 return {
   {
     "vitesse.nvim",
-    opts = function()
-      return {}
-    end,
+    opts = {
+      transparent_background = true,
+      transparent_float_background = true,
+    },
   },
 
   -- editor
