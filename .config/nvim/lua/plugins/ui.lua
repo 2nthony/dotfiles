@@ -24,8 +24,11 @@ return {
       local branch = { "branch", icon = "󰘬" }
       local location = { "location", padding = { left = 0, right = 1 } }
 
+      -- remove lualine_c filetype
+      table.remove(opts.sections.lualine_c, 2)
+
       opts.sections.lualine_b = { branch }
-      opts.sections.lualine_x = { "bo:filetype", location }
+      opts.sections.lualine_x = { "filetype", location }
       opts.sections.lualine_y = {}
       opts.sections.lualine_z = {}
     end,
