@@ -1,6 +1,6 @@
 ---@diagnostic disable: assign-type-mismatch
 
-local telescope = require("lazyvim.util").telescope
+local Util = require("lazyvim.util")
 
 local function override_lsp_keymaps(keymaps)
   local keys = require("lazyvim.plugins.lsp.keymaps").get()
@@ -142,11 +142,11 @@ M.plugins = {
       { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
       { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
       { "<leader>fF", false },
-      { "<leader>gf", telescope("files", { cwd = false }), desc = "Git Files" },
-      { "<leader>sg", telescope("live_grep", { cwd = false }), desc = "Grep" },
+      { "<leader>gf", Util.telescope("files", { cwd = false }), desc = "Git Files" },
+      { "<leader>sg", Util.telescope("live_grep", { cwd = false }), desc = "Grep" },
       { "<leader>/", "<leader>sg", remap = true, desc = "Grep" },
       { "<leader>sG", false },
-      { "<leader>sw", telescope("grep_string", { cwd = false }), desc = "Word" },
+      { "<leader>sw", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
       { "<leader>sW", false },
       { "<leader>fR", false },
     },
