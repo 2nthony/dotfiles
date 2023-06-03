@@ -19,18 +19,39 @@ M.generals = {
   { "gT", "<nop>" },
 
   -- reset window navigation
-  { "<c-h>", "<nop>" },
-  { "<c-j>", "<nop>" },
-  { "<c-k>", "<nop>" },
-  { "<c-l>", "<nop>" },
+  { "<c-h>", "<nop>", mode = { "n", "t" } },
+  { "<c-j>", "<nop>", mode = { "n", "t" } },
+  { "<c-k>", "<nop>", mode = { "n", "t" } },
+  { "<c-l>", "<nop>", mode = { "n", "t" } },
+
+  -- reset terminal navigation
+  { "<c-w>", "<c-w>", mode = { "t" } },
 
   -- reset lazyvim lazygit
-  { "<leader>gg", false },
+  {
+    "<leader>gg",
+    function()
+      Util.float_term("lazygit", {
+        esc_esc = false,
+        border = "none",
+        size = { width = 1, height = 1 },
+      })
+    end,
+    desc = "Lazygit",
+  },
   { "<leader>gG", false },
 
   -- reset lazyvim float term
   { "<leader>ft", false },
   { "<leader>fT", false },
+  { "<c-/>", false, mode = { "n", "t" } },
+  {
+    "<c-\\>",
+    function()
+      Util.float_term(nil)
+    end,
+  },
+  { "<c-\\>", "<cmd>close<cr>", mode = { "t" } },
 
   -- remap macrp record key
   { "Q", "q" },
@@ -180,12 +201,6 @@ M.plugins = {
     init = function(self)
       override_lsp_keymaps(self.keys)
     end,
-  },
-  {
-    "akinsho/toggleterm.nvim",
-    keys = {
-      { "<leader>gg", require("util.git").lazygit, desc = "Lazygit" },
-    },
   },
   {
     "ggandor/leap.nvim",

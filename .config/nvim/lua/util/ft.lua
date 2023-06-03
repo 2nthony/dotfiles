@@ -18,6 +18,7 @@ M.skip_features_filetypes = {
   "gitcommit",
   "help",
   "lazy",
+  "lazyterm",
   "lsgsagaoutline",
   "lspinfo",
   "neo-tree",
@@ -25,7 +26,6 @@ M.skip_features_filetypes = {
   "neogitstatus",
   "noice",
   "norg",
-  "toggleterm",
 }
 
 return M
