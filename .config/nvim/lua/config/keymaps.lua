@@ -13,6 +13,7 @@ if ok then
     local rhs = keymap[2]
     local opts = {
       desc = keymap.desc,
+      remap = keymap.remap,
     }
 
     map(mode, lhs, rhs, opts)
