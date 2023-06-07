@@ -80,38 +80,14 @@ return {
           ["s"] = "",
           ["S"] = "",
           ["<C-x>"] = "",
-          -- ["o"] = "open",
-          -- ["<cr>"] = "open",
-          -- ["<C-s>"] = "open_split",
-          -- ["<C-v>"] = "open_vsplit",
-          ["o"] = "open_with_window_picker",
-          ["<cr>"] = "open_with_window_picker",
-          ["<C-s>"] = "split_with_window_picker",
-          ["<C-v>"] = "vsplit_with_window_picker",
+          ["o"] = "open",
+          ["<cr>"] = "open",
+          ["<C-s>"] = "open_split",
+          ["<C-v>"] = "open_vsplit",
           ["<C-f>"] = "clear_filter",
           ["g?"] = "show_help",
           ["/"] = "", -- default search down
           ["?"] = "", --default search above
-        },
-      },
-    },
-    dependencies = {
-      -- https://github.com/s1n7ax/nvim-window-picker
-      {
-        "s1n7ax/nvim-window-picker",
-        opts = {
-          autoselect_one = true,
-          include_current = false,
-          filter_rules = {
-            -- filter using buffer options
-            bo = {
-              -- if the file type is one of following, the window will be ignored
-              filetype = { "neo-tree", "neo-tree-popup", "notify" },
-
-              -- if the buffer type is one of following, the window will be ignored
-              buftype = { "terminal", "quickfix" },
-            },
-          },
         },
       },
     },
