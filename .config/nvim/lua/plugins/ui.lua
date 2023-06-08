@@ -4,8 +4,6 @@ return {
   { "rcarriga/nvim-notify", enabled = false },
   { "SmiteshP/nvim-navic", enabled = false },
 
-  { import = "plugins.extras.ui.edgy" },
-
   {
     "akinsho/bufferline.nvim",
     opts = {
