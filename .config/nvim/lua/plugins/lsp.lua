@@ -1,14 +1,12 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
-local get_setting = require("util.vscode").get_setting
-
 vim.lsp.set_log_level(vim.log.levels.ERROR)
 
 return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
   { import = "lazyvim.plugins.extras.lang.tailwind" },
-  { import = "lazyvim.plugins.extras.linting.eslint" },
+  { import = "plugins.extras.linting.eslint" },
   { import = "plugins.extras.lang.vue" },
 
   -- lspconfig
@@ -16,7 +14,6 @@ return {
     "neovim/nvim-lspconfig",
     lazy = true,
     opts = {
-      autoformat = get_setting("editor.formatOnSave"),
       servers = {
         unocss = {},
       },
