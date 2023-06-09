@@ -28,7 +28,12 @@ return {
       table.remove(opts.sections.lualine_c, 2)
 
       opts.sections.lualine_b = { branch }
-      opts.sections.lualine_x = { "filetype", location }
+
+      -- remove lualine_x last command status
+      table.remove(opts.sections.lualine_x, 1)
+      table.insert(opts.sections.lualine_x, "filetype")
+      table.insert(opts.sections.lualine_x, location)
+
       opts.sections.lualine_y = {}
       opts.sections.lualine_z = {}
     end,
