@@ -21,6 +21,7 @@ lazy with extra features:
 - [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse.nvim))
 - [x] Transparent friendly
 - [x] Git Integration(LazyGit)
+- [x] Vue supported([vue.lua](.config/nvim/lua/plugins/lang/vue.lua))
 - [x] ...
 
 ### Setup
