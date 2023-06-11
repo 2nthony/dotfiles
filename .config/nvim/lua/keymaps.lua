@@ -107,6 +107,11 @@ M.generals = {
 
   -- new file
   { "<leader>fn", ":tabnew<cr>", desc = "New File" },
+
+  -- scroll window one line up/down
+  -- https://stackoverflow.com/a/14308057
+  { "<c-e>", "<c-x><c-e>", mode = "i" },
+  { "<c-y>", "<c-x><c-y>", mode = "i" },
 }
 
 ---@type LazyPluginSpec[]
