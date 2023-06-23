@@ -4,9 +4,6 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-[git_branch]
-symbol = '󰘬 '
-
 [git_status]
 conflicted = '×${count}'
 ahead = '⇡${count}'
