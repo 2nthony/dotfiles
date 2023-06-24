@@ -60,7 +60,9 @@ return {
         progress = {
           enabled = false,
         },
-        signature = {},
+        signature = {
+          enabled = false,
+        },
         hover = {
           silent = true,
         },
