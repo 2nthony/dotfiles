@@ -109,7 +109,7 @@ return {
 
   {
     "ray-x/lsp_signature.nvim",
-    event = { "LspAttach" },
+    event = { "VeryLazy" },
     opts = {
       hint_prefix = "",
     },
