@@ -102,8 +102,7 @@ M.generals = {
   { "<c-s-h>", "<home>", mode = { "n", "i", "v" } },
 
   -- better $
-  { "<c-l>", "<end>", mode = { "n", "i" } },
-  { "<c-l>", "<end><left>", mode = { "v" } },
+  { "<c-l>", "g_", mode = { "n", "i", "i" } },
 
   -- new file
   { "<leader>fn", ":tabnew<cr>", desc = "New File" },
