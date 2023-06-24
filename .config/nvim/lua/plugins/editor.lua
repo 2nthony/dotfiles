@@ -2,6 +2,7 @@ local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
   { import = "lazyvim.plugins.extras.editor.mini-files" },
+  { import = "plugins.extras.editor.flash" },
 
   { "echasnovski/mini.bufremove", enabled = false },
   { "ggandor/flit.nvim", enabled = false },
