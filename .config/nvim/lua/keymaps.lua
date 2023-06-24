@@ -136,6 +136,7 @@ M.plugins = {
     end,
     keys = {
       { "gK", false },
+      { "gi", "gI", remap = true, desc = "Goto Implement" },
       { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
       { "<c-j>", "]d", remap = true },
       { "J", "[d", remap = true },
