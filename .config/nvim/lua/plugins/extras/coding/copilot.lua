@@ -16,6 +16,6 @@ return {
   {
     "copilot-cmp",
     pin = true,
-    config = false,
+    config = function() end,
   },
 }
