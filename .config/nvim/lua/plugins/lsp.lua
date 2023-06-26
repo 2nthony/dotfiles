@@ -13,7 +13,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
+    event = { "VeryLazy" },
     opts = {
+      diagnostics = {
+        virtual_text = {
+          source = false,
+        },
+      },
       servers = {
         unocss = {},
       },
