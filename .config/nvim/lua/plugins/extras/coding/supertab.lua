@@ -7,6 +7,26 @@ return {
   },
 
   {
+    "copilot.lua",
+    keys = {
+      {
+        "<tab>",
+        function()
+          local suggestion = require("copilot.suggestion")
+          if suggestion.is_visible() then
+            return '<cmd>lua require("copilot.suggestion").accept()<cr>'
+          else
+            return "<Tab>"
+          end
+        end,
+        mode = { "i" },
+        expr = true,
+        silent = true,
+      },
+    },
+  },
+
+  {
     "nvim-cmp",
     opts = function(_, opts)
       local cmp = require("cmp")
