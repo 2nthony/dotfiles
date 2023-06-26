@@ -17,6 +17,7 @@
 
 lazy with extra features:
 
+- [x] Supertab
 - [x] AI-Powered Autocomplete([Codeium](https://codeium.com))
 - [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse.nvim))
 - [x] Transparent friendly
