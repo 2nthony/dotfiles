@@ -21,9 +21,6 @@ return {
         end
         return item
       end
-
-      opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
-      opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
     end,
   },
   {
