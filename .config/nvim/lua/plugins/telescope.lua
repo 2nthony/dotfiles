@@ -20,8 +20,8 @@ return {
             ["<S-Tab>"] = actions.move_selection_previous,
           },
           n = {
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
+            ["<Tab>"] = actions.move_selection_next,
+            ["<S-Tab>"] = actions.move_selection_previous,
           },
         },
         file_ignore_patterns = {
