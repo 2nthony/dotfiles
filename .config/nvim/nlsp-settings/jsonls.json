@@ -86,6 +86,15 @@
         "rome.json"
       ],
       "url": "https://cdn.jsdelivr.net/gh/rome/tools@main/npm/rome/configuration_schema.json"
+    },
+    {
+      "fileMatch": [
+        ".cspell.json",
+        "cspell.json",
+        ".cSpell.json",
+        "cSpell.json"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/streetsidesoftware/cspell@main/cspell.schema.json"
     }
   ]
 }
