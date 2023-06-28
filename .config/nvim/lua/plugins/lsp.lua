@@ -2,11 +2,12 @@
 
 vim.lsp.set_log_level(vim.log.levels.ERROR)
 
+local vscode = require("util.vscode")
+
 return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
   { import = "lazyvim.plugins.extras.lang.tailwind" },
-  { import = "plugins.extras.linting.eslint" },
   { import = "plugins.extras.lang.vue" },
 
   -- lspconfig
@@ -20,6 +21,7 @@ return {
           source = false,
         },
       },
+      autoformat = vscode.get_setting("editor.formatOnSave"),
       servers = {
         unocss = {},
       },

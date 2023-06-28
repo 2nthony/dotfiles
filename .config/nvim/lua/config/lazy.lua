@@ -18,6 +18,7 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
     { import = "plugins.extras.lang.cspell" },
+    { import = "plugins.extras.linting.eslint" },
     { import = "plugins.extras.ui.transparent" },
     pcall(require, "local") and { import = "local" } or nil,
   },
