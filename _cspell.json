@@ -2,6 +2,7 @@
   "useGitignore": true,
   "allowCompoundWords": true,
   "ignorePaths": [
-    ".config/nvim"
+    ".config/nvim",
+    "**/*.lua"
   ]
 }
