@@ -13,7 +13,7 @@ end
 return {
   M,
   {
-    "copilot.lua",
+    "zbirenbaum/copilot.lua",
     event = "VeryLazy",
     opts = {
       suggestion = {
