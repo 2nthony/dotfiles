@@ -12,7 +12,7 @@ return {
     "ChatGPT",
     "ChatGPTRun",
     "ChatGPTActAs",
-    "ChatGPTCompletecode",
+    "ChatGPTCompleteCode",
     "ChatGPTEditwithInstructions",
   },
   dependencies = {
