@@ -9,6 +9,7 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
     pin = true,
+    ft = { "markdown" },
     cmd = {
       "MarkdownPreview",
       "MarkdownPreviewStop",
