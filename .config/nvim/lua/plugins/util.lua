@@ -137,4 +137,15 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+
+  {
+    "2nthony/sortjson.nvim",
+    cmd = {
+      "SortJSONByAlphaNum",
+      "SortJSONByAlphaNumReverse",
+      "SortJSONByKeyLength",
+      "SortJSONByKeyLengthReverse",
+    },
+    config = true,
+  },
 }
