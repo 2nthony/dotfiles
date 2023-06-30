@@ -23,6 +23,7 @@ lazy with extra features:
 - [x] Transparent friendly
 - [x] Git Integration(LazyGit)
 - [x] Vue supported([vue.lua](.config/nvim/lua/plugins/extras/lang/vue.lua))
+- [x] Partially support vscode workspace settings
 - [x] ...
 
 ### Setup
