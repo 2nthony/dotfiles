@@ -10,8 +10,6 @@ return {
     lazy = true,
     event = { "InsertEnter" },
     opts = function(_, opts)
-      local cmp = require("cmp")
-
       opts.completion.keyword_length = 1
       opts.formatting.fields = { "kind", "abbr", "menu" }
       opts.formatting.format = function(_, item)

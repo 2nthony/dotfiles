@@ -14,12 +14,11 @@ require("lazy").setup({
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
-    { import = "plugins.extras.lang.cspell" },
-    { import = "plugins.extras.linting.eslint" },
+
+    -- ensure at last
     { import = "plugins.extras.ui.transparent" },
     pcall(require, "local") and { import = "local" } or nil,
   },
