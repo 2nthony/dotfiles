@@ -148,4 +148,22 @@ return {
     },
     config = true,
   },
+
+  {
+    "folke/zen-mode.nvim",
+    cmd = { "ZenMode" },
+    opts = {
+      window = {
+        width = 0.8,
+        options = {
+          number = false,
+        },
+      },
+      plugins = {
+        gitsigns = {
+          enabled = true, -- true to disable...
+        },
+      },
+    },
+  },
 }

@@ -249,6 +249,12 @@ M.plugins = {
       { "<leader>ddi", ":OverseerInfo<cr>", desc = "Overseer Info" },
     },
   },
+  {
+    "folke/zen-mode.nvim",
+    keys = {
+      { "<leader>wo", ":ZenMode<cr>", desc = "Zen Mode" },
+    },
+  },
 }
 
 return M
