@@ -28,7 +28,7 @@ return {
         name = "mini_indentscope",
         opts = { defer = true },
         disable = function()
-          vim.b.miniindentscope_disable = false
+          vim.b.miniindentscope_disable = true
         end,
       }
 
