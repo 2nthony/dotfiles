@@ -95,19 +95,9 @@ return {
   {
     "jose-elias-alvarez/null-ls.nvim",
     lazy = true,
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      opts.log_level = "error"
-
-      table.insert(
-        opts.sources,
-        nls.builtins.formatting.prettier.with({
-          condition = function(utils)
-            return utils.root_has_file_matches(".prettier*")
-          end,
-        })
-      )
-    end,
+    opts = {
+      log_level = "error",
+    },
   },
 
   {
