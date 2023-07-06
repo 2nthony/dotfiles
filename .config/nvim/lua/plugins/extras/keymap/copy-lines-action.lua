@@ -1,4 +1,5 @@
 --FIXME: the 'down' not working and weird
+local lazykeys = require("util.keymap").lazykeys
 
 ---@param direction 'up'|'down'
 local function duplicate_lines(direction)
@@ -19,18 +20,17 @@ local function duplicate_lines(direction)
   end
 end
 
-return {
-  "LazyVim",
-  keys = {
-    { "<s-a-j>", ":copy.<cr>" },
-    { "<s-a-k>", ":copy.-1<cr>" },
-    { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
-    {
-      "<s-a-k>",
-      function()
-        duplicate_lines("up")
-      end,
-      mode = { "v" },
-    },
+lazykeys({
+  { "<s-a-j>", ":copy.<cr>" },
+  { "<s-a-k>", ":copy.-1<cr>" },
+  { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
+  {
+    "<s-a-k>",
+    function()
+      duplicate_lines("up")
+    end,
+    mode = { "v" },
   },
-}
+})
+
+return {}
