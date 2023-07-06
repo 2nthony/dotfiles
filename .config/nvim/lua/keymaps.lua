@@ -93,8 +93,24 @@ M.generals = {
   { "<leader>bD", ":bdelete!<cr>", desc = "Delete buffer (force)" },
 
   -- enhance enter
-  { "<c-enter>", "o<esc>" },
-  { "<c-enter>", "<esc>o", mode = { "i" } },
+  {
+    "<c-enter>",
+    function()
+      local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+      vim.api.nvim_put({ "" }, "l", true, true)
+      vim.api.nvim_win_set_cursor(0, { row + 1, col })
+    end,
+    mode = { "n", "i" },
+  },
+  {
+    "<s-c-enter>",
+    function()
+      local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+      vim.api.nvim_put({ "" }, "l", false, true)
+      vim.api.nvim_win_set_cursor(0, { row, col })
+    end,
+    mode = { "n", "i" },
+  },
 
   -- better ^, move cursor to start of line
   { "<c-h>", "^", mode = { "n", "v" } },
