@@ -206,6 +206,7 @@ M.plugins = {
   -- extra plugins
   {
     "nvimdev/lspsaga.nvim",
+    vscode = false,
     keys = {
       { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
       { "gh", ":Lspsaga lsp_finder<cr>", desc = "LSP finder" },

@@ -3,6 +3,7 @@ return {
 
   {
     "flash.nvim",
+    vscode = true,
     keys = {
       {
         "f",

@@ -20,6 +20,7 @@ require("lazy").setup({
 
     -- ensure at last
     { import = "plugins.extras.ui.transparent" },
+    { import = "plugins.extras.vscode" },
     pcall(require, "local") and { import = "local" } or nil,
   },
   defaults = {
