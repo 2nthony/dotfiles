@@ -17,6 +17,7 @@ return {
   {
     "numToStr/Comment.nvim",
     lazy = true,
+    vscode = true,
     event = { "VeryLazy" },
     opts = function(_, opts)
       opts.ignore = "^$"
