@@ -7,5 +7,6 @@ foo.*
 *.log
 data
 
-# local plugins
-local.lua
+# private plugins
+/lua/private.lua
+/lua/private/**/*.lua

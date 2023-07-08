@@ -21,7 +21,7 @@ require("lazy").setup({
     -- ensure at last
     { import = "plugins.extras.ui.transparent" },
     { import = "plugins.extras.vscode" },
-    pcall(require, "local") and { import = "local" } or nil,
+    pcall(require, "private") and { import = "private" } or nil,
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
