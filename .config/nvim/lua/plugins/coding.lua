@@ -24,6 +24,19 @@ return {
           silent = true,
           expr = true,
         },
+        {
+          "<bs>",
+          function()
+            if luasnip.locally_jumpable(1) then
+              vim.cmd("startinsert")
+            end
+
+            return "<bs>"
+          end,
+          mode = { "s" },
+          silent = true,
+          expr = true,
+        },
       }
     end,
   },
