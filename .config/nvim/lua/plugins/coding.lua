@@ -3,8 +3,31 @@ return {
   { import = "plugins.extras.coding.comment" },
   -- cmp
   { import = "plugins.extras.coding.supertab" },
-  { import = "plugins.extras.coding.esc-unlink-snippet" },
   { import = "plugins.extras.coding.load-vscode-snippets" },
+
+  {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      local luasnip = require("luasnip")
+
+      return {
+        {
+          "<esc>",
+          function()
+            if luasnip.in_snippet() then
+              luasnip.unlink_current()
+            end
+
+            return "<esc>"
+          end,
+          mode = { "i", "s" },
+          silent = true,
+          expr = true,
+        },
+      }
+    end,
+  },
+
   {
     "hrsh7th/nvim-cmp",
     lazy = true,
