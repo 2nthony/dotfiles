@@ -1,8 +1,24 @@
 return {
   {
-    "LuaSnip",
+    "L3MON4D3/LuaSnip",
     keys = function()
-      return {}
+      local luasnip = require("luasnip")
+
+      return {
+        {
+          "<s-tab>",
+          function()
+            if luasnip.locally_jumpable(-1) then
+              luasnip.jump(-1)
+            end
+
+            return "<s-tab>"
+          end,
+          mode = { "i", "s" },
+          silent = true,
+          expr = true,
+        },
+      }
     end,
   },
 
@@ -24,14 +40,6 @@ return {
           end
         elseif cmp.visible() then
           pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"] or cmp.mapping.confirm({ select = true }))
-        else
-          fallback()
-        end
-      end, { "i", "s" })
-
-      opts.mapping["<S-Tab>"] = cmp.mapping(function(fallback)
-        if luasnip.locally_jumpable(-1) then
-          luasnip.jump(-1)
         else
           fallback()
         end
