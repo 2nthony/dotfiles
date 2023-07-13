@@ -69,6 +69,9 @@ return {
       beacon = {
         enable = false,
       },
+      implement = {
+        enable = false,
+      },
       -- diagnostic = {
       --   extend_relatedInformation = true,
       -- },
