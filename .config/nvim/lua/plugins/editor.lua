@@ -2,10 +2,8 @@ local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
   { import = "lazyvim.plugins.extras.editor.mini-files" },
-  { import = "plugins.extras.editor.flash" },
 
   { "echasnovski/mini.bufremove", enabled = false },
-  { "ggandor/flit.nvim", enabled = false },
 
   {
     "sindrets/diffview.nvim",
@@ -49,16 +47,16 @@ return {
   },
 
   {
-    "ggandor/leap.nvim",
+    "folke/flash.nvim",
+    vscode = true,
     opts = {
-      highlight_unlabeled_phase_one_targets = true,
+      modes = {
+        -- disable flit, I use `f` for search/find
+        char = {
+          enabled = false,
+        },
+      },
     },
-    config = function(_, opts)
-      local leap = require("leap")
-      for k, v in pairs(opts) do
-        leap.opts[k] = v
-      end
-    end,
   },
 
   {

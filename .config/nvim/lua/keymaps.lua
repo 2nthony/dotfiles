@@ -228,15 +228,38 @@ M.plugins = {
     end,
   },
   {
-    "ggandor/leap.nvim",
-    keys = function()
-      local mode = { "n", "x", "o" }
-      return {
-        { "f", mode = mode, "<Plug>(leap-forward-to)", desc = "Leap forward to" },
-        { "F", mode = mode, "<Plug>(leap-backward-to)", desc = "Leap backward to" },
-        { "gf", mode = mode, "<Plug>(leap-from-window)", desc = "Leap from windows" },
-      }
-    end,
+    "folke/flash.nvim",
+    keys = {
+      {
+        "f",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump({
+            search = { forward = true, wrap = false, multi_window = false },
+          })
+        end,
+        desc = "Flash forward",
+      },
+      {
+        "F",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump({
+            search = { forward = false, wrap = false, multi_window = false },
+          })
+        end,
+        desc = "Flash backward",
+      },
+      {
+        "gf",
+        function()
+          require("flash").jump({
+            search = { multi_window = true },
+          })
+        end,
+        desc = "Flash window",
+      },
+    },
   },
   {
     "sindrets/diffview.nvim",
