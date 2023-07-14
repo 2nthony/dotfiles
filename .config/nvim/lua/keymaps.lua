@@ -142,7 +142,7 @@ M.plugins = {
       defaults = {
         ["<leader>gd"] = { name = "+diffview" },
         ["<leader>v"] = { name = "+visual" },
-        ["<leader>dd"] = { name = "+overseer (Task Runner)" },
+        ["<leader>j"] = { name = "+job (Overseer)" },
       },
     },
   },
@@ -284,10 +284,10 @@ M.plugins = {
   {
     "stevearc/overseer.nvim",
     keys = {
-      { "<leader>ddl", ":OverseerToggle<cr>", desc = "Overseer List Toggle" },
-      { "<leader>ddr", ":OverseerRun<cr>", desc = "Overseer Run" },
-      { "<leader>ddc", ":OverseerRunCmd<cr>", desc = "Overseer Run Cmd" },
-      { "<leader>ddi", ":OverseerInfo<cr>", desc = "Overseer Info" },
+      { "<leader>jl", ":OverseerToggle<cr>", desc = "Overseer List Toggle" },
+      { "<leader>jr", ":OverseerRun<cr>", desc = "Overseer Run" },
+      { "<leader>jc", ":OverseerRunCmd<cr>", desc = "Overseer Run Cmd" },
+      { "<leader>ji", ":OverseerInfo<cr>", desc = "Overseer Info" },
     },
   },
   {
