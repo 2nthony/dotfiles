@@ -67,8 +67,6 @@ return {
         auto_trigger = true,
         keymap = {
           accept = false,
-          -- accept_word = "<m-right>",
-          -- accept_line = "<m-l>",
         },
       },
       filetypes = {
