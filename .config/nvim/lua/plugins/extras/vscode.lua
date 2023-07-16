@@ -24,6 +24,7 @@ local keys = {
   { "gi", ":call VSCodeNotify('editor.action.goToImplementation')<cr>" },
   { "gp", ":call VSCodeNotify('editor.action.peekDefinition')<cr>" },
   { "gP", ":call VSCodeNotify('editor.action.peekTypeDefinition')<cr>" },
+  { "gcc", ":call VSCodeNotify('editor.action.commentLine')<cr>" },
   { "<leader>e", ":call VSCodeNotify('workbench.view.explorer')<cr>" },
   { "<leader>fe", "<leader>e", remap = true },
   { "<leader>ff", ":call VSCodeNotify('workbench.action.quickOpen')<cr>" },
