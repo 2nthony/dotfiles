@@ -13,6 +13,8 @@ local keys = {
   { "u", ":call VSCodeNotify('undo')<cr>" },
   { "<c-r>", ":call VSCodeNotify('redo')<cr>" },
 
+  { "H", ":call VSCodeNotify('workbench.action.previousEditor')<cr>" },
+  { "L", ":call VSCodeNotify('workbench.action.nextEditor')<cr>" },
   { "ss", ":call VSCodeNotify('workbench.action.splitEditorDown')<cr>" },
   { "sv", ":call VSCodeNotify('workbench.action.splitEditor')<cr>" },
   { "sh", ":call VSCodeNotify('workbench.action.focusLeftGroup')<cr>" },
