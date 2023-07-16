@@ -113,4 +113,10 @@ return {
       hint_prefix = "",
     },
   },
+
+  {
+    "dmmulroy/tsc.nvim",
+    cmd = { "TSC" },
+    opts = {},
+  },
 }
