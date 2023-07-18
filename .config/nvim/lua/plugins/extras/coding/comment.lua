@@ -3,7 +3,7 @@
 -- https://github.com/ayamir/nvimdots/blob/main/lua/modules/configs/editor/comment.lua
 
 return {
-  { "echasnovski/mini.comment", enabled = false },
+  { "echasnovski/mini.comment", cond = vim.g.vscode },
 
   {
     "nvim-treesitter",
@@ -17,7 +17,6 @@ return {
   {
     "numToStr/Comment.nvim",
     lazy = true,
-    vscode = true,
     event = { "VeryLazy" },
     opts = function(_, opts)
       opts.ignore = "^$"
