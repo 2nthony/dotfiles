@@ -72,6 +72,13 @@ return {
       filetypes = {
         vue = true,
       },
+      server_opts_overrides = {
+        settings = {
+          advanced = {
+            inlineSuggestCount = 5, -- #completions for getCompletions
+          },
+        },
+      },
     },
   },
 }
