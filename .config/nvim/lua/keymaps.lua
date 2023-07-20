@@ -128,6 +128,14 @@ M.generals = {
   -- https://stackoverflow.com/a/14308057
   { "<c-e>", "<c-x><c-e>", mode = "i" },
   { "<c-y>", "<c-x><c-y>", mode = "i" },
+
+  {
+    "<c-z>",
+    function()
+      vim.cmd("undo")
+    end,
+    desc = "Undo",
+  },
 }
 
 ---@type LazyPluginSpec[]
