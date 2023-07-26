@@ -141,7 +141,7 @@ M.generals = {
 ---@type LazyPluginSpec[]
 M.plugins = {
   { import = "plugins.extras.keymap.copy-lines-action" },
-  { import = "plugins.extras.keymap.supertab" },
+  { import = "plugins.extras.keymap.superkey" },
 
   {
     "which-key.nvim",
@@ -303,42 +303,6 @@ M.plugins = {
     keys = {
       { "<leader>wo", ":ZenMode<cr>", desc = "Zen Mode" },
     },
-  },
-
-  {
-    "L3MON4D3/LuaSnip",
-    keys = function()
-      local luasnip = require("luasnip")
-
-      return {
-        {
-          "<esc>",
-          function()
-            if luasnip.in_snippet() then
-              luasnip.unlink_current()
-            end
-
-            return "<esc>"
-          end,
-          mode = { "i", "s" },
-          silent = true,
-          expr = true,
-        },
-        {
-          "<bs>",
-          function()
-            if luasnip.locally_jumpable(1) then
-              vim.cmd("startinsert")
-            end
-
-            return "<bs>"
-          end,
-          mode = { "s" },
-          silent = true,
-          expr = true,
-        },
-      }
-    end,
   },
 }
 

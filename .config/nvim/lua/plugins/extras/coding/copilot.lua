@@ -1,8 +1,9 @@
 local M = {}
 
-local copilot = require("lazyvim.plugins.extras.coding.copilot")
+local copilot_spec = require("lazyvim.plugins.extras.coding.copilot")
+local copilot = require("util.copilot")
 
-for _, spec in ipairs(copilot) do
+for _, spec in ipairs(copilot_spec) do
   if spec[1] == "nvim-cmp" then
     break
   end
@@ -17,28 +18,13 @@ return {
     event = "VeryLazy",
     keys = {
       {
-        "<tab>",
-        function()
-          local suggestion = require("copilot.suggestion")
-          if suggestion.is_visible() then
-            return '<cmd>lua require("copilot.suggestion").accept()<cr>'
-          else
-            return "<Tab>"
-          end
-        end,
-        mode = { "i" },
-        expr = true,
-        silent = true,
-      },
-      {
         "<m-right>",
         function()
-          local suggestion = require("copilot.suggestion")
-          if suggestion.is_visible() then
+          if copilot.suggestion_visible() then
             return '<cmd>lua require("copilot.suggestion").accept_word()<cr>'
-          else
-            return "<m-right>"
           end
+
+          return "<m-right>"
         end,
         mode = { "i" },
         expr = true,
@@ -48,17 +34,31 @@ return {
       {
         "<m-l>",
         function()
-          local suggestion = require("copilot.suggestion")
-          if suggestion.is_visible() then
+          if copilot.suggestion_visible() then
             return '<cmd>lua require("copilot.suggestion").accept_line()<cr>'
-          else
-            return "<m-l>"
           end
+
+          return "<m-l>"
         end,
         mode = { "i" },
         expr = true,
         silent = true,
         desc = "Copilot accept line",
+      },
+      {
+        "<c-]>",
+        function()
+          if copilot.suggestion_visible() then
+            require("copilot.suggestion").dismiss()
+            return
+          end
+
+          return "<c-]>"
+        end,
+        mode = { "i" },
+        expr = true,
+        silent = true,
+        desc = "Copilot dismiss",
       },
     },
     opts = {
@@ -67,6 +67,11 @@ return {
         auto_trigger = true,
         keymap = {
           accept = false,
+          accept_word = false,
+          accept_line = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+          dismiss = false,
         },
       },
       filetypes = {

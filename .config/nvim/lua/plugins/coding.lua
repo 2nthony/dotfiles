@@ -4,12 +4,6 @@ return {
   { import = "plugins.extras.coding.load-vscode-snippets" },
 
   {
-    "L3MON4D3/LuaSnip",
-    lazy = true,
-    event = { "InsertEnter" },
-  },
-
-  {
     "hrsh7th/nvim-cmp",
     lazy = true,
     event = { "InsertEnter" },
