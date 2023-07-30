@@ -54,6 +54,7 @@ return {
         checker = false,
       },
       cmdline = {
+        enabled = false,
         view = "cmdline", -- cmdline_popup, cmdline
       },
       lsp = {
@@ -71,7 +72,7 @@ return {
         },
       },
       messages = {
-        -- enabled = false,
+        enabled = false,
       },
       notify = {
         enabled = false,
