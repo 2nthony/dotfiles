@@ -14,10 +14,10 @@ return {
           local entry = cmp.get_selected_entry() or {}
           local entry_source_name = vim.tbl_get(entry, "source", "name")
 
-          if not cmp.visible() and copilot.suggestion_visible() then
+          if not cmp.visible() and copilot.suggestion_visible_nearby() then
             copilot.suggestion_accept()
           elseif luasnip.locally_jumpable(1) then
-            if copilot.suggestion_visible() then
+            if copilot.suggestion_visible_nearby() then
               copilot.suggestion_accept()
               return
             end
@@ -32,7 +32,7 @@ return {
           elseif cmp.visible() then
             pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"] or cmp.mapping.confirm({ select = true }))
           else
-            if copilot.suggestion_visible() then
+            if copilot.suggestion_visible_nearby() then
               copilot.suggestion_accept()
               return
             end
