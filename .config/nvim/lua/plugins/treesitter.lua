@@ -33,6 +33,7 @@ return {
       {
         "windwp/nvim-ts-autotag",
         opts = {
+          enable_close_on_slash = false, -- disable case: `<div /` become `<div /div>`
           filetypes = {
             "html",
             "javascript",
