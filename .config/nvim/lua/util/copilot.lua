@@ -29,7 +29,7 @@ function M.suggestion_visible_nearby()
     local source = virt_text[2]
 
     if source == "CopilotSuggestion" then
-      return string.sub(text, 1, 1) ~= " "
+      return string.sub(text, 1, 1) ~= "  "
     end
   end
 
