@@ -27,8 +27,7 @@ return {
   {
     "nvimdev/lspsaga.nvim",
     lazy = true,
-    -- event = { "LspAttach" },
-    cmd = { "Lspsaga" },
+    event = { "LspAttach" },
     dependencies = {
       "neovim/nvim-lspconfig",
       "nvim-treesitter/nvim-treesitter",
