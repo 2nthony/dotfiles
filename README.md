@@ -69,7 +69,7 @@ All plugins [plugins/](.config/nvim/lua/plugins).
   - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
   - [fzf for fish](https://github.com/PatrickF1/fzf.fish) - requires `fzf`
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-- [Exa](https://the.exa.website/) - `ls` replacement
+- [eza](https://github.com/eza-community/eza) - `ls` replacement
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
