@@ -63,47 +63,15 @@ return {
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    lazy = true,
-    cmd = "Neotree",
-    opts = {
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_by_name = {
-            ".git",
-          },
-          never_show = {
-            ".DS_Store",
-          },
-          always_show = {
-            ".env",
-          },
-        },
-      },
-      window = {
-        width = 35,
-        mappings = {
-          ["s"] = "",
-          ["S"] = "",
-          ["<C-x>"] = "",
-          ["o"] = "open",
-          ["<cr>"] = "open",
-          ["<C-s>"] = "open_split",
-          ["<C-v>"] = "open_vsplit",
-          ["<C-f>"] = "clear_filter",
-          ["g?"] = "show_help",
-          ["/"] = "", -- default search down
-          ["?"] = "", --default search above
-        },
-      },
-    },
-  },
-
-  {
     "RRethy/vim-illuminate",
     opts = {
       filetypes_denylist = skip_features_filetypes,
     },
+  },
+
+  {
+    "abecodes/tabout.nvim",
+    events = { "VeryLazy" },
+    opts = {},
   },
 }
