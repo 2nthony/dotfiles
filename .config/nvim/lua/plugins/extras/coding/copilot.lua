@@ -18,7 +18,7 @@ return {
     event = "VeryLazy",
     keys = {
       {
-        "<m-right>",
+        "<a-right>",
         function()
           if copilot.suggestion_visible() then
             return '<cmd>lua require("copilot.suggestion").accept_word()<cr>'
@@ -30,20 +30,6 @@ return {
         expr = true,
         silent = true,
         desc = "Copilot accept word",
-      },
-      {
-        "<m-l>",
-        function()
-          if copilot.suggestion_visible() then
-            return '<cmd>lua require("copilot.suggestion").accept_line()<cr>'
-          end
-
-          return "<m-l>"
-        end,
-        mode = { "i" },
-        expr = true,
-        silent = true,
-        desc = "Copilot accept line",
       },
       {
         "<c-]>",
