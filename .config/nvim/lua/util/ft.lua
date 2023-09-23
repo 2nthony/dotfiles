@@ -3,6 +3,7 @@ local M = {}
 -- these filetypes should skip some features
 M.skip_features_filetypes = {
   "",
+  "bigfile",
   "DressingInput",
   "DressingSelect",
   "NvimTree",
