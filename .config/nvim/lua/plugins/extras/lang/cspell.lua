@@ -30,7 +30,7 @@ return {
   },
 
   {
-    "null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = function(_, opts)
       local cspell = require("cspell")
       local path = require("null-ls.utils").path

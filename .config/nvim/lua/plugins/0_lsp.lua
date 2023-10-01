@@ -99,7 +99,7 @@ return {
   },
 
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     lazy = true,
     opts = {
       log_level = "error",
