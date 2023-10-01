@@ -14,7 +14,7 @@ return {
       diagnostics = {
         virtual_text = {
           source = false,
-          prefix = ''
+          prefix = "",
         },
       },
       autoformat = vscode.get_setting("editor.formatOnSave"),
