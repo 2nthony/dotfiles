@@ -68,14 +68,14 @@ return {
     end,
     dependencies = {
       "davidmh/cspell.nvim",
-      config = function()
+      --[[ config = function()
         vim.api.nvim_create_autocmd("FileType", {
           pattern = { "gitcommit", "markdown" },
           callback = function()
             vim.opt_local.spell = false
           end,
         })
-      end,
+      end, ]]
     },
   },
 }
