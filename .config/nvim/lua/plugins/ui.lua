@@ -96,7 +96,9 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
-      filetype_exclude = skip_features_filetypes,
+      exclude = {
+        filetypes = skip_features_filetypes,
+      },
     },
   },
 }
