@@ -65,4 +65,16 @@ return {
       end
     end,
   },
+
+  {
+    "Wansmer/treesj",
+    keys = {
+      { "<leader>cj", ":TSJToggle<CR>", desc = "Code splitting / joining blocks", silent = true },
+    },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      use_default_keymaps = false,
+      max_join_length = 999,
+    },
+  },
 }
