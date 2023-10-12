@@ -31,7 +31,7 @@ M.generals = {
   {
     "<leader>gg",
     function()
-      Util.float_term("lazygit", {
+      Util.terminal.open("lazygit", {
         esc_esc = false,
         border = "none",
         size = { width = 1, height = 1 },
