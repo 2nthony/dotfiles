@@ -1,3 +1,5 @@
+local path = require("util").path
+
 return {
   {
     "mason.nvim",
@@ -30,52 +32,30 @@ return {
   },
 
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local cspell = require("cspell")
-      local path = require("null-ls.utils").path
+    "nvim-lint",
+    init = function()
+      local cspell = require("lint").linters.cspell
 
       local config_file_name = ".cspell.json"
-      local config = {
-        config_file_preferred_name = config_file_name,
-        find_json = function(cwd)
-          local workspace_cspell_json_file_path = path.join(cwd, config_file_name)
-          local global_cspell_json_file_path = path.join(vim.loop.os_homedir(), config_file_name)
+      local function find_json(cwd)
+        local workspace_cspell_json_file_path = path.join(cwd, config_file_name)
+        local global_cspell_json_file_path = path.join(vim.loop.os_homedir(), config_file_name)
 
-          if vim.fn.filereadable(workspace_cspell_json_file_path) == 1 then
-            return workspace_cspell_json_file_path
-          elseif vim.fn.filereadable(global_cspell_json_file_path) == 1 then
-            return global_cspell_json_file_path
-          end
-        end,
-      }
+        if vim.fn.filereadable(workspace_cspell_json_file_path) == 1 then
+          return workspace_cspell_json_file_path
+        elseif vim.fn.filereadable(global_cspell_json_file_path) == 1 then
+          return global_cspell_json_file_path
+        end
+      end
 
-      table.insert(
-        opts.sources,
-        cspell.diagnostics.with({
-          config = config,
-          diagnostics_postprocess = function(diagnostic)
-            diagnostic.severity = vim.diagnostic.severity.INFO
-          end,
-        })
-      )
-      table.insert(
-        opts.sources,
-        cspell.code_actions.with({
-          config = config,
-        })
-      )
+      table.insert(cspell.args, "-c")
+      table.insert(cspell.args, find_json(vim.fn.getcwd()))
     end,
-    dependencies = {
-      "davidmh/cspell.nvim",
-      --[[ config = function()
-        vim.api.nvim_create_autocmd("FileType", {
-          pattern = { "gitcommit", "markdown" },
-          callback = function()
-            vim.opt_local.spell = false
-          end,
-        })
-      end, ]]
+    opts = {
+      linters_by_ft = {
+        javascript = { "cspell" },
+        typescript = { "cspell" },
+      },
     },
   },
 }
