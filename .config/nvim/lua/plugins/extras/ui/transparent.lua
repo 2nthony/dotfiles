@@ -97,12 +97,6 @@ return {
       },
     },
   },
-  {
-    "none-ls.nvim",
-    opts = {
-      border = float.border,
-    },
-  },
 
   -- dap
   {

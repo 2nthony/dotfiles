@@ -99,14 +99,6 @@ return {
     opts = {},
   },
 
-  --[[ {
-    "nvimtools/none-ls.nvim",
-    lazy = true,
-    opts = {
-      log_level = "error",
-    },
-  }, ]]
-
   {
     "dmmulroy/tsc.nvim",
     cmd = { "TSC" },
