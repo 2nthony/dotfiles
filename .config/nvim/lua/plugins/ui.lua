@@ -81,16 +81,12 @@ return {
   },
 
   {
-    "goolord/alpha-nvim",
-    lazy = true,
-    opts = function(_, dashboard)
-      local logo = " "
-
-      dashboard.section.header.val = logo
-
-      -- no top gap
-      dashboard.opts.layout[1].val = 0
-    end,
+    "dashboard-nvim",
+    opts = {
+      config = {
+        header = {},
+      },
+    },
   },
 
   {

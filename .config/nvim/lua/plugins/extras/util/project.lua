@@ -1,7 +1,8 @@
 -- https://www.lazyvim.org/plugins/extras/util.project
 -- https://github.com/coffebar/project.nvim
 
-local cmd = ":Telescope projects<cr>"
+local action = "Telescope projects"
+local cmd = ":" .. action .. "<cr>"
 
 return {
   {
@@ -46,12 +47,14 @@ return {
     },
   },
   {
-    "alpha-nvim",
+    "dashboard-nvim",
     opts = function(_, dashboard)
-      local button = dashboard.button("p", " " .. " Projects", cmd)
-      button.opts.hl = "AlphaButtons"
-      button.opts.hl_shortcut = "AlphaShortcut"
-      table.insert(dashboard.section.buttons.val, 4, button)
+      table.insert(dashboard.config.center, 4, {
+        action = action,
+        desc = " Projects",
+        icon = " ",
+        key = "p",
+      })
     end,
   },
 }

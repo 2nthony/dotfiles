@@ -177,25 +177,4 @@ return {
       },
     },
   },
-  {
-    "goolord/alpha-nvim",
-    lazy = true,
-    opts = function(_, dashboard)
-      dashboard.section.buttons.val = {
-        dashboard.button("n", ui_space.NewFile .. " New File", ":ene! <cr>"),
-        dashboard.button("f", ui_space.GoToFile .. " Find File", ":Telescope find_files<cr>"),
-        dashboard.button("r", ui_space.Files .. " Recent files", ":Telescope oldfiles<cr>"),
-        dashboard.button("s", ui_space.History .. " Restore sessions", ":lua require('persistence').load()<cr>"),
-        dashboard.button("l", misc_space.Lazy .. " Lazy", ":Lazy<cr>"),
-        dashboard.button("c", ui_space.Gear .. " Config", ":e $MYVIMRC <cr>"),
-        dashboard.button("q", ui_space.SignOut .. " Quit", ":q<cr>"),
-        dashboard.button("x", ui_space.CloseAll .. " Exit (Quit all)", ":qa<cr>"),
-      }
-
-      for _, button in ipairs(dashboard.section.buttons.val) do
-        button.opts.hl = "AlphaButton"
-        button.opts.hl_shortcut = "AlphaShortcut"
-      end
-    end,
-  },
 }

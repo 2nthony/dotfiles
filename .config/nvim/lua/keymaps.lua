@@ -205,10 +205,10 @@ M.plugins = {
     },
   },
   {
-    "alpha-nvim",
+    "dashboard-nvim",
     keys = {
-      { "<leader>;", ":Alpha<cr>", desc = "Alpha" },
-      { "<leader><tab>n", ":tabnew<cr>:Alpha<cr>", desc = "New Tab (Alpha)" },
+      { "<leader>;", ":Dashboard<cr>", desc = "Dashboard" },
+      { "<leader><tab>n", ":tabnew<cr>:Dashboard<cr>", desc = "New Tab (Dashboard)" },
     },
   },
 
