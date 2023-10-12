@@ -10,13 +10,14 @@ local formatOnSave = settings["editor.formatOnSave"]
 local codeActionsOnSave = settings["editor.codeActionsOnSave"] or {}
 local eslintFixAllOnSave = codeActionsOnSave["source.fixAll.eslint"]
 
+vim.g.autoformat = formatOnSave
+
 return {
   { import = "lazyvim.plugins.extras.linting.eslint" },
   {
     "neovim/nvim-lspconfig",
     lazy = true,
     opts = {
-      autoformat = formatOnSave,
       setup = {
         eslint = function()
           vim.api.nvim_create_autocmd("BufWritePre", {

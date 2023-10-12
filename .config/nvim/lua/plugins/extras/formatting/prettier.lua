@@ -1,26 +1,15 @@
-return {
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "prettier",
-      },
+-- i don't use prettierd
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/formatting/prettier.lua
+
+local prettier = require("lazyvim.plugins.extras.formatting.prettier")
+
+prettier[1] = {
+  "williamboman/mason.nvim",
+  opts = {
+    ensure_installed = {
+      "prettier",
     },
   },
-
-  {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-
-      table.insert(
-        opts.sources,
-        nls.builtins.formatting.prettier.with({
-          condition = function(utils)
-            return utils.root_has_file_matches(".prettier*")
-          end,
-        })
-      )
-    end,
-  },
 }
+
+return prettier
