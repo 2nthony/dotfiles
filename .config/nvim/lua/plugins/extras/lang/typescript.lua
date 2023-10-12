@@ -10,7 +10,7 @@ return {
         tsserver = {
           settings = {
             completions = {
-              completeFunctionCalls = false,
+              completeFunctionCalls = true,
             },
           },
         },
