@@ -39,15 +39,6 @@ return {
   },
 
   {
-    "lewis6991/gitsigns.nvim",
-    lazy = true,
-    cmd = { "Gitsigns" },
-    opts = {
-      current_line_blame = true,
-    },
-  },
-
-  {
     "folke/flash.nvim",
     vscode = true,
     opts = {
