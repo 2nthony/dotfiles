@@ -34,6 +34,9 @@ require("lazy").setup({
   },
   install = { colorscheme = { "vitesse" } },
   checker = { enabled = false }, -- automatically check for plugin updates
+  change_detection = {
+    notify = false,
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
