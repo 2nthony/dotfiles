@@ -136,9 +136,6 @@ M.generals = {
     end,
     desc = "Undo",
   },
-
-  -- https://github.com/LazyVim/LazyVim/commit/23e2b073e6fa75dacaa58dc1fe63392af7f54598
-  { "gw", "*N", desc = "Search word under cursor", mode = { "n", "x" } },
 }
 
 ---@type LazyPluginSpec[]
@@ -313,6 +310,23 @@ M.plugins = {
       { "<a-l>", "<Plug>(TaboutMulti)", desc = "Goto end of pair", mode = { "i" } },
       { "<a-h>", "<Plug>(TaboutBackMulti)", desc = "Goto start of pair", mode = { "i" } },
     },
+  },
+  {
+    "backdround/improved-search.nvim",
+    event = { "VeryLazy" },
+    keys = function()
+      local search = require("improved-search")
+
+      return {
+        { "n", search.stable_next, mode = { "n", "x", "o" }, desc = "Search next" },
+        { "N", search.stable_previous, mode = { "n", "x", "o" }, desc = "Search previous" },
+        -- https://github.com/LazyVim/LazyVim/commit/23e2b073e6fa75dacaa58dc1fe63392af7f54598
+        { "gw", search.current_word, mode = { "n", "x" }, desc = "Search current word" },
+        { "!", search.in_place, mode = { "x" }, desc = "Search selection without moving" },
+        { "*", search.forward, mode = { "x" }, desc = "Search selection forward" },
+        { "#", search.forward, mode = { "x" }, desc = "Search selection backward" },
+      }
+    end,
   },
 }
 
