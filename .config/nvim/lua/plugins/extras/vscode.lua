@@ -40,6 +40,9 @@ local keys = {
   { "<leader>cA", ":call VSCodeNotify('editor.action.sourceAction')<cr>" },
   { "<leader>cr", ":call VSCodeNotify('editor.action.rename')<cr>" },
   { "<leader>cf", ":call VSCodeNotify('editor.action.formatDocument')<cr>" },
+
+  { "[h", ":call VSCodeNotify('workbench.action.editor.previousChange')<cr>" },
+  { "]h", ":call VSCodeNotify('workbench.action.editor.nextChange')<cr>" },
 }
 
 vim.api.nvim_create_autocmd("User", {
