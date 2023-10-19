@@ -136,6 +136,9 @@ M.generals = {
     end,
     desc = "Undo",
   },
+
+  -- https://github.com/LazyVim/LazyVim/commit/23e2b073e6fa75dacaa58dc1fe63392af7f54598
+  { "gw", "*N", desc = "Search word under cursor", mode = { "n", "x" } },
 }
 
 ---@type LazyPluginSpec[]
