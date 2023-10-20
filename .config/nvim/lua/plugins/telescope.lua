@@ -1,4 +1,5 @@
 local actions = require("telescope.actions")
+local entry_display = require("telescope.pickers.entry_display")
 
 local grep_picker = {
   preview = true,
@@ -50,6 +51,28 @@ return {
               ["<C-d>"] = actions.delete_buffer,
             },
           },
+        },
+        commands = {
+          entry_maker = function(entry)
+            local displayer = entry_display.create({
+              separator = " ",
+              items = {
+                { remaining = true },
+                { remaining = true },
+              },
+            })
+
+            ---@diagnostic disable-next-line: unused-local
+            local function make_display(_entry)
+              return displayer({ entry.name, { entry.definition:gsub("\n", " "), "Comment" } })
+            end
+
+            return {
+              value = entry,
+              ordinal = entry.name,
+              display = make_display,
+            }
+          end,
         },
       },
     },

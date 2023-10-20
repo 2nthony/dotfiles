@@ -202,6 +202,7 @@ M.plugins = {
       { "<leader>sw", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
       { "<leader>sW", false },
       { "<leader>fR", false },
+      { "<leader><space>", ":Telescope commands<cr>", desc = "Commad palette" },
     },
   },
   {
