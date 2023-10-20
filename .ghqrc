@@ -1,4 +1,3 @@
 {
-  "root": "~/ghq",
-  "shallow": true
+  "root": "~/ghq"
 }
