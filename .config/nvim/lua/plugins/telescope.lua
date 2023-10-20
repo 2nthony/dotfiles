@@ -3,7 +3,7 @@ local actions = require("telescope.actions")
 local grep_picker = {
   preview = true,
   only_sort_text = true, -- don't include the filename in the search results
-  path_display = { "shorten" },
+  path_display = { shorten = { len = 3 } },
 }
 
 return {
