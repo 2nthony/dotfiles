@@ -1,7 +1,8 @@
 return {
   {
-    "tpope/vim-fugitive",
-    cmd = "G",
+    "NeogitOrg/neogit",
+    cmd = { "Neogit", "NeogitResetState" },
+    opts = {},
   },
 
   {
