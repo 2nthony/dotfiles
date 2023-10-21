@@ -9,6 +9,7 @@ local settings = vscode.get_settings()
 local formatOnSave = settings["editor.formatOnSave"]
 local codeActionsOnSave = settings["editor.codeActionsOnSave"] or {}
 local eslintFixAllOnSave = codeActionsOnSave["source.fixAll.eslint"]
+local useFlatConfig = settings["eslint.experimental.useFlatConfig"]
 
 vim.g.autoformat = formatOnSave
 
@@ -18,6 +19,15 @@ return {
     "neovim/nvim-lspconfig",
     lazy = true,
     opts = {
+      servers = {
+        eslint = {
+          settings = {
+            experimental = {
+              useFlatConfig = useFlatConfig,
+            },
+          },
+        },
+      },
       setup = {
         eslint = function()
           vim.api.nvim_create_autocmd("BufWritePre", {
