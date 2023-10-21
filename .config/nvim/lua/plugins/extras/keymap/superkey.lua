@@ -29,6 +29,8 @@ return {
             else
               cmp.confirm({ select = true })
             end
+          elseif cmp.visible() and copilot.suggestion_visible_nearby() then
+            copilot.suggestion_accept_word()
           elseif cmp.visible() then
             pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"] or cmp.mapping.confirm({ select = true }))
           else

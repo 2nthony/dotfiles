@@ -43,4 +43,11 @@ function M.suggestion_accept()
   end
 end
 
+function M.suggestion_accept_word()
+  if M.suggestion_visible() then
+    local suggestion = require("copilot.suggestion")
+    suggestion.accept_word()
+  end
+end
+
 return M
