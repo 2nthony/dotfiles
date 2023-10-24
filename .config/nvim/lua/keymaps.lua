@@ -48,7 +48,7 @@ M.generals = {
   {
     "<c-\\>",
     function()
-      Util.float_term(nil)
+      Util.terminal.open(nil)
     end,
   },
   { "<c-\\>", "<cmd>close<cr>", mode = { "t" } },
