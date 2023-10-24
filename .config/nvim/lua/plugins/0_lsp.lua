@@ -16,7 +16,6 @@ return {
       diagnostics = {
         virtual_text = {
           source = false,
-          prefix = "",
         },
       },
       servers = {
