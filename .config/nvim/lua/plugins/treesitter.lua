@@ -5,7 +5,6 @@ return {
       ensure_installed = {
         "comment",
         "lua",
-        "help",
         "javascript",
         "jsdoc",
         "typescript",
