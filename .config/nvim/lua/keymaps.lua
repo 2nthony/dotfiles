@@ -212,6 +212,28 @@ M.plugins = {
       { "<leader><tab>n", ":tabnew<cr>:Dashboard<cr>", desc = "New Tab (Dashboard)" },
     },
   },
+  {
+    "nvim-spectre",
+    keys = {
+      {
+        "<leader>sr",
+        ':lua require("spectre").open_visual({select_word = true})<CR>',
+        desc = "Replace in files (Spectre)",
+        mode = { "v" },
+      },
+      {
+        "<leader>sf",
+        ':lua require("spectre").open_file_search()<CR>',
+        desc = "Search on current file (Spectre)",
+      },
+      {
+        "<leader>sf",
+        ':lua require("spectre").open_file_search({select_word = true})<CR>',
+        desc = "Search on current file (Spectre)",
+        mode = { "v" },
+      },
+    },
+  },
 
   -- extra plugins
   {
