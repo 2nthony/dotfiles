@@ -314,7 +314,6 @@ M.plugins = {
   },
   {
     "backdround/improved-search.nvim",
-    event = { "VeryLazy" },
     keys = function()
       local search = require("improved-search")
 
