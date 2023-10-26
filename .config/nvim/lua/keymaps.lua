@@ -91,6 +91,8 @@ M.generals = {
   -- buffer
   { "<leader>bd", ":bdelete<cr>", desc = "Delete buffer" },
   { "<leader>bD", ":bdelete!<cr>", desc = "Delete buffer (force)" },
+  { "[b", ":bprevious<cr>", desc = "Back buffer" },
+  { "]b", ":bnext<cr>", desc = "Forward buffer" },
 
   -- enhance enter
   {
