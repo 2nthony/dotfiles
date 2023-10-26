@@ -336,6 +336,7 @@ M.plugins = {
   },
   {
     "backdround/improved-search.nvim",
+    vscode = true,
     keys = function()
       local search = require("improved-search")
 
