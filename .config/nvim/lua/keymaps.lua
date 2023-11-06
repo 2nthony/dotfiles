@@ -338,6 +338,7 @@ M.plugins = {
   },
   {
     "backdround/improved-search.nvim",
+    event = "VeryLazy",
     vscode = true,
     keys = function()
       local search = require("improved-search")
@@ -352,6 +353,7 @@ M.plugins = {
         { "#", search.forward, mode = { "x" }, desc = "Search selection backward" },
       }
     end,
+    config = function() end,
   },
 }
 
