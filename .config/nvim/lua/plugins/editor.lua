@@ -31,7 +31,7 @@ return {
 
   {
     "abecodes/tabout.nvim",
-    events = { "VeryLazy" },
+    event = { "VeryLazy" },
     opts = {},
   },
   {
