@@ -6,14 +6,15 @@ return {
   { "echasnovski/mini.comment", cond = vim.g.vscode },
 
   {
-    "nvim-treesitter",
-    opts = {
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-      },
-    },
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    lazy = true,
+    event = { "VeryLazy" },
+    init = function()
+      vim.g.skip_ts_context_commentstring_module = true
+    end,
+    opts = {},
   },
+
   {
     "numToStr/Comment.nvim",
     lazy = true,
