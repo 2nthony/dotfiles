@@ -91,4 +91,13 @@ return {
       },
     },
   },
+
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    opts = {
+      input_buffer_type = "dressing",
+    },
+    dependencies = "stevearc/dressing.nvim",
+  },
 }
