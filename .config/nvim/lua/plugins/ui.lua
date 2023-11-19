@@ -21,20 +21,14 @@ return {
       opts.options.component_separators = { left = "", right = "" }
       opts.options.section_separators = { left = "", right = "" }
 
-      local branch = { "branch", icon = "󰘬" }
       local location = { "location", padding = { left = 0, right = 1 } }
 
-      -- remove lualine_c filetype
-      table.remove(opts.sections.lualine_c, 2)
-
-      opts.sections.lualine_b = { branch }
-
-      -- remove lualine_x last command status
-      table.remove(opts.sections.lualine_x, 1)
-      table.insert(opts.sections.lualine_x, "filetype")
       table.insert(opts.sections.lualine_x, location)
+      table.insert(opts.sections.lualine_x, "filetype")
 
+      -- location
       opts.sections.lualine_y = {}
+      -- time
       opts.sections.lualine_z = {}
     end,
   },
