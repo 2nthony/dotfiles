@@ -1,10 +1,12 @@
 local actions = require("telescope.actions")
 local entry_display = require("telescope.pickers.entry_display")
 
+local path_display = { shorten = { len = 3 } }
+
 local grep_picker = {
   preview = true,
   only_sort_text = true, -- don't include the filename in the search results
-  path_display = { shorten = { len = 3 } },
+  path_display = path_display,
 }
 
 return {
@@ -39,13 +41,16 @@ return {
         find_files = {
           no_ignore = false,
           hidden = true,
+          path_display = path_display,
         },
         oldfiles = {
           cwd_only = true,
+          path_display = path_display,
         },
         live_grep = grep_picker,
         grep_string = grep_picker,
         buffers = {
+          path_display = path_display,
           mappings = {
             i = {
               ["<C-d>"] = actions.delete_buffer,
