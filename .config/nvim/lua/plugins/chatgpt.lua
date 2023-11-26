@@ -7,13 +7,13 @@ end
 
 return {
   "jackmort/chatgpt.nvim",
-  enabled = chatgpt_enabled,
+  cond = chatgpt_enabled,
   cmd = {
     "ChatGPT",
     "ChatGPTRun",
     "ChatGPTActAs",
     "ChatGPTCompleteCode",
-    "ChatGPTEditwithInstructions",
+    "ChatGPTEditWithInstructions",
   },
   dependencies = {
     "MunifTanjim/nui.nvim",
