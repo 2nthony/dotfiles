@@ -6,7 +6,6 @@ local path_display = { shorten = { len = 3 } }
 local grep_picker = {
   preview = true,
   only_sort_text = true, -- don't include the filename in the search results
-  path_display = path_display,
 }
 
 return {
@@ -36,21 +35,19 @@ return {
           -- yarn
           ".yarn/*",
         },
+        path_display = path_display,
       },
       pickers = {
         find_files = {
           no_ignore = false,
           hidden = true,
-          path_display = path_display,
         },
         oldfiles = {
           cwd_only = true,
-          path_display = path_display,
         },
         live_grep = grep_picker,
         grep_string = grep_picker,
         buffers = {
-          path_display = path_display,
           mappings = {
             i = {
               ["<C-d>"] = actions.delete_buffer,

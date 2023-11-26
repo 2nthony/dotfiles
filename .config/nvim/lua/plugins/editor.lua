@@ -4,8 +4,6 @@ local float = require("util.opts").float
 return {
   { import = "lazyvim.plugins.extras.editor.mini-files" },
 
-  { "echasnovski/mini.bufremove", enabled = false },
-
   {
     "folke/flash.nvim",
     vscode = true,

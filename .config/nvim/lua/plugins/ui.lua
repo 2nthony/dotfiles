@@ -1,3 +1,4 @@
+local has = require("lazyvim.util").has
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
@@ -8,11 +9,22 @@ return {
     "akinsho/bufferline.nvim",
     opts = {
       options = {
-        mode = "tabs",
+        -- mode = "tabs",
         show_buffer_close_icons = false,
         show_close_icon = false,
+        separator_style = "slant",
+        -- separator_style = { "", "" },
+        sort_by = "insert_after_current",
       },
     },
+  },
+  {
+    "bufferline.nvim",
+    opts = function(_, opts)
+      if has("vitesse.nvim") then
+        opts.highlights = require("vitesse.plugins.bufferline")
+      end
+    end,
   },
 
   {
@@ -43,6 +55,7 @@ return {
       presets = {
         -- command_palette = false,
         -- bottom_search = false,
+        long_message_to_split = true,
       },
       health = {
         checker = false,
@@ -53,7 +66,7 @@ return {
       },
       lsp = {
         progress = {
-          enabled = false,
+          -- enabled = false,
         },
         signature = {
           enabled = false,
@@ -70,6 +83,13 @@ return {
       },
       notify = {
         enabled = false,
+      },
+      commands = {
+        all = {
+          view = "split",
+          opts = { enter = true, format = "details" },
+          filter = {},
+        },
       },
     },
   },
@@ -99,5 +119,34 @@ return {
       input_buffer_type = "dressing",
     },
     dependencies = "stevearc/dressing.nvim",
+  },
+
+  {
+    "b0o/incline.nvim",
+    event = { "BufReadPost" },
+    opts = {
+      highlight = {
+        groups = {
+          InclineNormal = {
+            default = true,
+            group = "CursorLine",
+          },
+          InclineNormalNC = {
+            default = true,
+            group = "TermCursorNC",
+          },
+        },
+      },
+      hide = {
+        cursorline = true,
+      },
+      window = {
+        margin = {
+          vertical = 0,
+          horizontal = 1,
+        },
+        zindex = 29, -- less than zen mode defualt, 40, 40 - 10
+      },
+    },
   },
 }

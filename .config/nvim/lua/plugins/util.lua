@@ -33,7 +33,7 @@ return {
     "folke/persistence.nvim",
     opts = {
       options = {
-        -- "buffers",
+        "buffers",
         "curdir",
         "folds",
         "tabpages",
@@ -70,6 +70,23 @@ return {
           end
         end
       end,
+    },
+  },
+
+  {
+    "smoka7/multicursors.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "smoka7/hydra.nvim",
+    },
+    opts = {},
+    cmd = {
+      "MCstart",
+      "MCvisual",
+      "MCclear",
+      "MCpattern",
+      "MCvisualPattern",
+      "MCunderCursor",
     },
   },
 

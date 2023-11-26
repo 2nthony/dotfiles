@@ -89,8 +89,6 @@ M.generals = {
   { "<c-a>", "gg<s-v>G", desc = "Select all" },
 
   -- buffer
-  { "<leader>bd", ":bdelete<cr>", desc = "Delete buffer" },
-  { "<leader>bD", ":bdelete!<cr>", desc = "Delete buffer (force)" },
   { "[b", ":bprevious<cr>", desc = "Back buffer" },
   { "]b", ":bnext<cr>", desc = "Forward buffer" },
 
@@ -242,7 +240,7 @@ M.plugins = {
     "nvimdev/lspsaga.nvim",
     vscode = false,
     keys = {
-      { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
+      -- { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
       { "gh", ":Lspsaga finder<cr>", desc = "LSP finder" },
       -- { "gd", ":Lspsaga goto_definition<cr>", desc = "Goto definition" },
       { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
@@ -338,8 +336,9 @@ M.plugins = {
   },
   {
     "backdround/improved-search.nvim",
-    event = "VeryLazy",
+    lazy = false,
     vscode = true,
+    enabled = true,
     keys = function()
       local search = require("improved-search")
 
@@ -354,6 +353,13 @@ M.plugins = {
       }
     end,
     config = function() end,
+  },
+  {
+    "NeogitOrg/neogit",
+    optional = true,
+    keys = {
+      { "<leader>gn", ":Neogit<cr>", desc = "Neogit" },
+    },
   },
 }
 

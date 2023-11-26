@@ -17,6 +17,10 @@ return {
       "OverseerTaskAction",
       "OverseerClearAction",
     },
-    opts = {},
+    opts = {
+      task_list = {
+        direction = "bottom",
+      },
+    },
   },
 }
