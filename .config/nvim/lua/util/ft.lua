@@ -7,6 +7,7 @@ M.skip_features_filetypes = {
   "DressingInput",
   "DressingSelect",
   "NeogitCommitMessage",
+  "NeogitCommitView",
   "NeogitConsole",
   "NeogitStatus",
   "NeogitPopup",
