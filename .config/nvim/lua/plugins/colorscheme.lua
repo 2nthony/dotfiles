@@ -5,7 +5,6 @@ return {
 
   {
     "2nthony/vitesse.nvim",
-    lazy = true,
     dependencies = {
       "tjdevries/colorbuddy.nvim",
     },
