@@ -29,8 +29,6 @@ return {
             else
               cmp.confirm({ select = true })
             end
-          elseif cmp.visible() and copilot.suggestion_visible_nearby() then
-            copilot.suggestion_accept_word()
           elseif cmp.visible() then
             pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"] or cmp.mapping.confirm({ select = true }))
           else
@@ -76,6 +74,23 @@ return {
           fallback()
         end, { "n", "i" }),
       })
+    end,
+  },
+
+  -- vscode like
+  -- for copilot, if cmp visible, then hide copilot suggestions
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local cmp = require("cmp")
+
+      cmp.event:on("menu_opened", function()
+        vim.b.copilot_suggestion_hidden = true
+      end)
+
+      cmp.event:on("menu_closed", function()
+        vim.b.copilot_suggestion_hidden = false
+      end)
     end,
   },
 

@@ -18,9 +18,6 @@ return {
           source = false,
         },
       },
-      servers = {
-        unocss = {},
-      },
     },
   },
 
