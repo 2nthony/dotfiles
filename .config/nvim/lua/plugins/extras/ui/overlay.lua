@@ -1,13 +1,12 @@
--- craftzdog like
--- background transparent, but popup(float) like a mask without border
-
 return {
+  -- colorscheme
   {
     "vitesse.nvim",
     opts = {
       -- transparent_background = false,
       transparent_float_background = false,
       telescope_border_follow_float_background = true,
+      lspsaga_border_follow_float_background = true,
     },
   },
 
