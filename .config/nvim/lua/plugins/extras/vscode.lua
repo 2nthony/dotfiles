@@ -2,6 +2,8 @@ if not vim.g.vscode then
   return {}
 end
 
+vim.opt.timeoutlen = 1000
+
 local lazykeys = require("util.keymap").lazykeys
 
 local keys = {
