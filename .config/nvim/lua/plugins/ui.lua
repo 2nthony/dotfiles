@@ -14,7 +14,7 @@ return {
         show_close_icon = false,
         separator_style = "slant",
         -- separator_style = { "", "" },
-        sort_by = "insert_after_current",
+        -- sort_by = "insert_after_current",
       },
     },
   },
