@@ -113,8 +113,13 @@ M.generals = {
   },
 
   -- better ^, move cursor to start of line
-  { "<c-h>", "^", mode = { "n", "v" } },
-  { "<c-h>", "<esc>^i", mode = { "i" } },
+  {
+    "<c-h>",
+    function()
+      vim.cmd("normal! ^")
+    end,
+    mode = { "n", "i", "v" },
+  },
   { "<c-s-h>", "<home>", mode = { "n", "i", "v" } },
 
   -- better $
