@@ -11,7 +11,7 @@ end
 
 local M = {}
 
----@type LazyKeys[]
+---@type LazyKeysSpec[]
 M.generals = {
   -- reset
   { "q", "<nop>" },
