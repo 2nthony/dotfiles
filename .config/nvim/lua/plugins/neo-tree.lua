@@ -23,7 +23,6 @@ return {
         ["s"] = "",
         ["S"] = "",
         ["<C-x>"] = "",
-        ["<tab>"] = "open",
         ["<C-s>"] = "open_split",
         ["<C-v>"] = "open_vsplit",
         ["<C-f>"] = "clear_filter",
