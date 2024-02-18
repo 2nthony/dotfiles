@@ -20,6 +20,25 @@ return {
     },
   },
 
+  -- ui
+  {
+    "dressing.nvim",
+    optional = true,
+    opts = {
+      input = {
+        border = "none",
+      },
+      select = {
+        nui = {
+          border = "none",
+        },
+        builtin = {
+          border = "none",
+        },
+      },
+    },
+  },
+
   -- dap
   {
     "overseer.nvim",
