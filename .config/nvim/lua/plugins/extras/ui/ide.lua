@@ -14,19 +14,11 @@ return {
         },
         presets = {
           bottom_search = false,
-          inc_rename = true,
         },
         messages = {
           enabled = true,
         },
       })
-    end,
-  },
-
-  {
-    "smjonas/inc-rename.nvim",
-    opts = function(_, opts)
-      opts.input_buffer_type = nil
     end,
   },
 }

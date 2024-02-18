@@ -113,15 +113,6 @@ return {
   },
 
   {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    opts = {
-      input_buffer_type = "dressing",
-    },
-    dependencies = "stevearc/dressing.nvim",
-  },
-
-  {
     "b0o/incline.nvim",
     event = { "BufReadPost" },
     opts = {
