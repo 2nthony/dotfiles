@@ -61,6 +61,15 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 - `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
 - `<C-k>` LSP signature help
 
+## [Zed](https://github.com/zed-industries/zed)
+
+Settings and Keymaps
+
+```bash
+ln -s ~/yourpath/.config/zed/settings.json ~/.config/zed
+ln -s ~/yourpath/.config/zed/keymap.json ~/.config/zed
+```
+
 ## Shell
 
 - [Fish shell](https://fishshell.com/)

@@ -1,0 +1,16 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      // VSCode
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+      "cmd-shift-k": "editor::DeleteLine",
+      "cmd-ctrl-shift-right": "editor::SelectLargerSyntaxNode",
+      "cmd-ctrl-shift-left": "editor::SelectSmallerSyntaxNode",
+
+      // User
+      "ctrl-w": "editor::DeleteToPreviousWordStart"
+    }
+  }
+]

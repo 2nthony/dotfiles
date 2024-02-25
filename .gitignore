@@ -82,3 +82,8 @@ lazy-lock.json
 
 # cspell
 .cspell.json
+
+# zed editor
+.config/zed/*
+!.config/zed/keymap.json
+!.config/zed/settings.json
