@@ -1,16 +1,43 @@
 [
+  // reset
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-enter": null
+    }
+  },
+
+  // VSCode
   {
     "context": "Editor",
     "bindings": {
-      // VSCode
       "alt-up": "editor::MoveLineUp",
       "alt-down": "editor::MoveLineDown",
+      "alt-shift-down": "editor::DuplicateLine",
       "cmd-shift-k": "editor::DeleteLine",
       "cmd-ctrl-shift-right": "editor::SelectLargerSyntaxNode",
-      "cmd-ctrl-shift-left": "editor::SelectSmallerSyntaxNode",
+      "cmd-ctrl-shift-left": "editor::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-i": "assistant::InlineAssist"
+    }
+  },
 
-      // User
-      "ctrl-w": "editor::DeleteToPreviousWordStart"
+  // User
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+      "ctrl-c r": "editor::Rename"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-\\": "workspace::NewTerminal"
     }
   }
 ]
