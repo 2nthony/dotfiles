@@ -1,8 +1,6 @@
 local actions = require("telescope.actions")
 local entry_display = require("telescope.pickers.entry_display")
 
-local path_display = { shorten = { len = 3 } }
-
 local grep_picker = {
   preview = true,
   only_sort_text = true, -- don't include the filename in the search results
@@ -15,6 +13,7 @@ return {
     opts = {
       theme = "dropdown",
       defaults = {
+        wrap_results = true,
         preview = false,
         mappings = {
           i = {
@@ -35,7 +34,6 @@ return {
           -- yarn
           ".yarn/*",
         },
-        path_display = path_display,
       },
       pickers = {
         find_files = {
