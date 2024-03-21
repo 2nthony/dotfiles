@@ -4,9 +4,10 @@
 return {
   "nvim-lspconfig",
   opts = function(_, opts)
-    local cwd = vim.fn.getcwd()
+    -- get path from current buffer
+    local current_path = vim.fn.expand("%:p:h")
     local util = require("lspconfig.util")
-    local project_root = util.find_node_modules_ancestor(cwd)
+    local project_root = util.find_node_modules_ancestor(current_path)
 
     local vue_path = util.path.join(project_root, "node_modules", "vue")
     local is_vue = vim.fn.isdirectory(vue_path) == 1
