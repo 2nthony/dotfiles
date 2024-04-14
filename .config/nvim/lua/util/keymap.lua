@@ -22,11 +22,12 @@ M.lazykey = function(key)
   local mode = key.mode or "n"
   local lhs = key[1]
   local rhs = key[2]
-  local opts = {
-    desc = key.desc,
-    remap = key.remap,
-    expr = key.expr,
-  }
+
+  -- the rest of the key is the options
+  local opts = vim.tbl_extend("force", {}, key)
+  opts.mode = nil
+  opts[1] = nil
+  opts[2] = nil
 
   M.map(mode, lhs, rhs, opts)
 end
