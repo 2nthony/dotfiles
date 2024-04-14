@@ -19,8 +19,8 @@ require("lazy").setup({
     { import = "plugins" },
 
     -- ensure at last
-    -- { import = "plugins.extras.ui.transparent" },
-    { import = "plugins.extras.ui.overlay" },
+    { import = "plugins.extras.ui.transparent" },
+    -- { import = "plugins.extras.ui.overlay" },
     { import = "plugins.extras.ui.ide" },
     { import = "plugins.extras.vscode" },
     pcall(require, "private") and { import = "private" } or nil,
