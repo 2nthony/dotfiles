@@ -29,7 +29,12 @@ M.lazykey = function(key)
   opts[1] = nil
   opts[2] = nil
 
+  -- if `nil` then delete
+  if rhs == nil then
+    M.del(mode, lhs, opts)
+  else
   M.map(mode, lhs, rhs, opts)
+  end
 end
 
 ---@param keys LazyKeys[]
