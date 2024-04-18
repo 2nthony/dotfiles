@@ -11,10 +11,17 @@ return {
     "nvim-telescope/telescope.nvim",
     lazy = true,
     opts = {
-      theme = "dropdown",
+      -- theme = "vscode", -- custom field
       defaults = {
         wrap_results = true,
-        preview = false,
+        sorting_strategy = "ascending",
+        layout_config = {
+          horizontal = { prompt_position = "top", preview_width = 0.5 },
+          vertical = { mirror = false },
+          width = 0.87,
+          height = 0.80,
+          preview_cutoff = 100,
+        },
         mappings = {
           i = {
             ["<Tab>"] = actions.move_selection_next,
@@ -77,9 +84,13 @@ return {
       },
     },
     config = function(_, opts)
-      local theme = require("telescope.themes")["get_" .. (opts.theme or "dropdown")]
-      if theme then
-        opts.defaults = theme(opts.defaults)
+      -- vscode like find files
+      if opts.theme == "vscode" then
+        local theme = require("telescope.themes")["get_dropdown"]
+        if theme then
+          opts.defaults = theme(opts.defaults)
+          opts.defaults.preview = false
+        end
       end
 
       if vim.fn.executable("rg") then
