@@ -33,7 +33,7 @@ M.lazykey = function(key)
   if rhs == nil then
     M.del(mode, lhs, opts)
   else
-  M.map(mode, lhs, rhs, opts)
+    M.map(mode, lhs, rhs, opts)
   end
 end
 
