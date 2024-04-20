@@ -173,32 +173,21 @@ M.plugins = {
     },
   },
   {
-    "neo-tree.nvim",
+    "nvim-tree.lua",
+    optional = true,
     keys = {
-      { "<leader>fE", false },
-      { "<leader>E", false },
       {
         "<leader>fe",
-        function()
-          require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
-        end,
+        "<cmd>NvimTreeToggle<cr>",
         desc = "File Explorer",
       },
-      { "<leader>e", "<leader>fe", remap = true, desc = "File Explorer" },
-      {
-        "<leader>fd",
-        function()
-          require("neo-tree.command").execute({ reveal = true, dir = vim.loop.cwd() })
-        end,
-        desc = "File Explorer reveal",
-      },
+      { "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", desc = "File Explorer" },
     },
   },
   {
     "telescope.nvim",
     keys = {
       { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
-      { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
       { "<leader>fF", false },
       { "<leader>gf", Util.telescope("files", { cwd = false }), desc = "Git Files" },
       { "<leader>sg", Util.telescope("live_grep", { cwd = false }), desc = "Grep" },
