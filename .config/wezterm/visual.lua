@@ -25,4 +25,6 @@ return function(config)
 	config.animation_fps = 0
 	config.cursor_blink_ease_in = "Constant"
 	config.cursor_blink_ease_out = "Constant"
+
+	config.use_resize_increments = true
 end
