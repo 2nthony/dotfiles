@@ -1,0 +1,30 @@
+# vitesse
+[colors]
+foreground = "rgba(219, 215, 202, 0.93)"
+background = "#121212"
+cursor_bg = "rgba(219, 215, 202, 0.93)"
+cursor_border = "rgba(219, 215, 202, 0.93)"
+cursor_fg = "#111111"
+selection_bg = "rgba(238, 238, 238, 0.09)"
+selection_fg = "rgba(219, 215, 202, 0.93)"
+
+ansi = [
+  "#121212",
+  "#cb7676",
+  "#4d9375",
+  "#e6cc77",
+  "#6394bf",
+  "#d9739f",
+  "#5eaab5",
+  "rgba(219, 215, 202, 0.93)",
+]
+brights = [
+  "#777777",
+  "#cb7676",
+  "#4d9375",
+  "#e6cc77",
+  "#6394bf",
+  "#d9739f",
+  "#5eaab5",
+  "#ffffff",
+]

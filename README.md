@@ -7,7 +7,6 @@
 <p align="center">
   <sub>
     <samp>
-      <a href="https://github.com/2nthony/vitesse.iterm">vitesse.iterm</a> •
       <a href="https://github.com/2nthony/vitesse.nvim">vitesse.nvim</a>
     </samp>
   </sub>
@@ -18,10 +17,10 @@
 lazy with extra features:
 
 - [x] Supertab(VS Code like)
-- [x] AI-Powered Autocomplete(Copilot)
+- [x] AI-Powered Autocomplete(Copilot, with hints, not cmp)
 - [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse.nvim))
 - [x] Transparent friendly
-- [x] Git Integration(LazyGit)
+- [x] Git Integration(LazyGit, Neogit)
 - [x] Vue supported([vue.lua](.config/nvim/lua/plugins/extras/lang/vue.lua))
 - [x] Partially support vscode workspace settings
 - [x] ...
@@ -32,8 +31,8 @@ lazy with extra features:
 2. Clone this repo and link `nvim` to `~/.config`
 
 ```bash
-git clone https://github.com/2nthony/dotfiles.git ~/yourpath
-ln -s ~/yourpath/.config/nvim ~/.config
+git clone https://github.com/2nthony/dotfiles.git ~/yourclonedpath
+ln -s ~/yourclonedpath/.config/nvim ~/.config
 ```
 
 ### Plugins
@@ -61,13 +60,18 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 - `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
 - `<C-k>` LSP signature help
 
-## [Zed](https://github.com/zed-industries/zed)
+## [WezTerm](https://wezfurlong.org/wezterm/)
 
-Settings and Keymaps
+Link config
 
 ```bash
-ln -s ~/yourpath/.config/zed/settings.json ~/.config/zed
-ln -s ~/yourpath/.config/zed/keymap.json ~/.config/zed
+ln -s ~/yourclonedpath/.config/wezterm ~/.config
+```
+
+Load config
+
+```bash
+echo 'return require("config")' > ~/.wezterm.lua
 ```
 
 ## Shell
@@ -77,24 +81,21 @@ ln -s ~/yourpath/.config/zed/keymap.json ~/.config/zed
   - [Tide](https://github.com/IlanCosman/tide) - Shell theme
   - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
   - [fzf for fish](https://github.com/PatrickF1/fzf.fish) - requires `fzf`
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-- [eza](https://github.com/eza-community/eza) - `ls` replacement
+- [Maple Font](https://github.com/subframe7536/maple-font)
+  - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
+- [eza](https://github.com/eza-community/eza) - `ls` replacement
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
   - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
-- [zellij](https://github.com/zellij-org/zellij) - Workspace management, tmux alternative
-- [vitesse.iterm](https://github.com/2nthony/vitesse.iterm) - Vitesse theme for iTerm2
 
-## Troubleshootings
+## [Zed](https://github.com/zed-industries/zed)
 
-### Modifier keys(`<c-*>`, `<a-*>`) not working in tmux
+Settings and Keymaps
 
-#### iTerm2
-
-Details from: https://github.com/tmux/tmux/wiki/Modifier-Keys#extended-keys
-
-- [x] `<c-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Report modifiers using CSI u`
-- [x] `<a-*>`: `Preferences` -> `Profiles` -> `Keys` -> `Left Option Key: Meta/Esc+`
+```bash
+ln -s ~/yourclonedpath/.config/zed/settings.json ~/.config/zed
+ln -s ~/yourclonedpath/.config/zed/keymap.json ~/.config/zed
+```
 
 ## Credit
 
