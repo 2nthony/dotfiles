@@ -18,7 +18,7 @@ return {
     event = "VeryLazy",
     keys = {
       {
-        "<a-right>",
+        "<m-right>",
         function()
           if copilot.suggestion_visible() then
             return '<cmd>lua require("copilot.suggestion").accept_word()<cr>'
@@ -72,4 +72,20 @@ return {
       },
     },
   },
+  --[[ {
+    "noice.nvim",
+    optional = true,
+    opts = {
+      routes = {
+        {
+          opts = { skip = true },
+          filter = {
+            any = {
+              {},
+            },
+          },
+        },
+      },
+    },
+  } ]]
 }

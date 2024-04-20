@@ -21,11 +21,11 @@ local function duplicate_lines(direction)
 end
 
 lazykeys({
-  { "<s-a-j>", ":copy.<cr>" },
-  { "<s-a-k>", ":copy.-1<cr>" },
-  { "<s-a-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
+  { "<s-m-j>", ":copy.<cr>" },
+  { "<s-m-k>", ":copy.-1<cr>" },
+  { "<s-m-j>", ":copy.-v:count<cr>gv", mode = { "v" } },
   {
-    "<s-a-k>",
+    "<s-m-k>",
     function()
       duplicate_lines("up")
     end,

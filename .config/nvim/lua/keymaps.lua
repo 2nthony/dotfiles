@@ -335,8 +335,8 @@ M.plugins = {
   {
     "abecodes/tabout.nvim",
     keys = {
-      { "<a-l>", "<Plug>(TaboutMulti)", desc = "Goto end of pair", mode = { "i" } },
-      { "<a-h>", "<Plug>(TaboutBackMulti)", desc = "Goto start of pair", mode = { "i" } },
+      { "<m-l>", "<Plug>(TaboutMulti)", desc = "Goto end of pair", mode = { "i" } },
+      { "<m-h>", "<Plug>(TaboutBackMulti)", desc = "Goto start of pair", mode = { "i" } },
     },
   },
   {

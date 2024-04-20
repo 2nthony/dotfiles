@@ -51,8 +51,8 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 - `<C-l>` better `$`
 - `<C-a>` select all text
 - `<C-\>` open a float terminal
-- `<s-a-j>` copy line(s) down
-- `<s-a-k>` copy line(s) up
+- `<s-m-j>` copy line(s) down
+- `<s-m-k>` copy line(s) up
 
 #### LSP
 
