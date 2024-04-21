@@ -2,8 +2,6 @@ local skip_features_filetypes = require("util.ft").skip_features_filetypes
 local float = require("util.opts").float
 
 return {
-  { import = "lazyvim.plugins.extras.editor.mini-files" },
-
   {
     "folke/flash.nvim",
     vscode = true,
@@ -56,15 +54,6 @@ return {
         replace_confirm = "<cr>",
         replace_all = "<leader><cr>",
       },
-    },
-  },
-
-  {
-    "LintaoAmons/easy-commands.nvim",
-    event = "VeryLazy",
-    opts = {},
-    dependencies = {
-      "NeogitOrg/neogit",
     },
   },
 }
