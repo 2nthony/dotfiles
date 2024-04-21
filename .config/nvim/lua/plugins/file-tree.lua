@@ -25,9 +25,16 @@ return {
         },
         mappings = {
           { "s", nil },
-          { "P", nil },
           { "<c-x>", nil },
           { "<c-s>", api.node.open.horizontal, desc = "Open: Horizontal Split" },
+          {
+            "<c-t>",
+            function()
+              api.node.open.tab()
+              api.tree.close_in_all_tabs()
+            end,
+            desc = "",
+          },
         },
       }
     end,
