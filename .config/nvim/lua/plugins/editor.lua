@@ -28,7 +28,9 @@ return {
   {
     "abecodes/tabout.nvim",
     event = { "VeryLazy" },
-    opts = {},
+    opts = {
+      exclude = skip_features_filetypes,
+    },
   },
   {
     "cshuaimin/ssr.nvim",
