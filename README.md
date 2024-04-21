@@ -71,7 +71,7 @@ ln -s ~/yourclonedpath/.config/wezterm ~/.config
 Load config
 
 ```bash
-echo 'return require("config")' > ~/.wezterm.lua
+echo 'return require("2nthony")' > ~/.wezterm.lua
 ```
 
 ## Shell
