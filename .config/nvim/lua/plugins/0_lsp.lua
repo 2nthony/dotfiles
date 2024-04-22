@@ -1,6 +1,6 @@
 -- https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
 
-vim.lsp.set_log_level(vim.log.levels.ERROR)
+vim.lsp.set_log_level(vim.log.levels.OFF)
 
 local vscode = require("util.vscode")
 
@@ -92,7 +92,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
     opts = {
-      log_level = vim.log.levels.ERROR,
+      log_level = vim.log.levels.OFF,
       ensure_installed = {
         "stylua",
       },

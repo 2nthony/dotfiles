@@ -8,6 +8,7 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       local luasnip = require("luasnip")
+      luasnip.log.set_loglevel("error")
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
