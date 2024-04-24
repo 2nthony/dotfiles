@@ -105,10 +105,4 @@ return {
     cmd = "LspSettings",
     opts = {},
   },
-
-  {
-    "dmmulroy/tsc.nvim",
-    cmd = { "TSC" },
-    opts = {},
-  },
 }
