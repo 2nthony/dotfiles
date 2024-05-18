@@ -19,13 +19,6 @@ return {
   },
 
   {
-    "RRethy/vim-illuminate",
-    opts = {
-      filetypes_denylist = skip_features_filetypes,
-    },
-  },
-
-  {
     "abecodes/tabout.nvim",
     event = { "VeryLazy" },
     opts = {

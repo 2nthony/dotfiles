@@ -104,15 +104,6 @@ return {
   },
 
   {
-    "lukas-reineke/indent-blankline.nvim",
-    opts = {
-      exclude = {
-        filetypes = skip_features_filetypes,
-      },
-    },
-  },
-
-  {
     "b0o/incline.nvim",
     event = { "BufReadPost" },
     opts = {

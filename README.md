@@ -12,7 +12,7 @@
   </sub>
 </p>
 
-## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.9.x-29BC9B)
+## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.10.x-29BC9B)
 
 lazy with extra features:
 
