@@ -78,12 +78,38 @@ return {
   {
     "Wansmer/treesj",
     keys = {
-      { "<leader>cj", ":TSJToggle<CR>", desc = "Code splitting / joining blocks", silent = true },
+      { "<leader>cjj", ":TSJToggle<CR>", desc = "Code splitting / joining blocks", silent = true },
     },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
       use_default_keymaps = false,
       max_join_length = 999,
+    },
+  },
+
+  {
+    "gaelph/logsitter.nvim",
+    cmd = { "LogsitterClearBuf", "LogsitterClearAll" },
+    keys = {
+      {
+        "<leader>cjl",
+        function()
+          require("logsitter").log()
+        end,
+        desc = "Log display",
+        mode = { "n" },
+      },
+      {
+        "<leader>cjl",
+        ":'<,'>lua require('logsitter').log_visual()<cr>",
+        desc = "Log display",
+        mode = { "v" },
+      },
+      { "<leader>cjC", ":LogsitterClearBuf<CR>", desc = "Log clear buf" },
+    },
+    opts = {
+      path_format = "fileonly",
+      prefix = "🚀",
     },
   },
 }
