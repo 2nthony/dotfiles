@@ -21,7 +21,6 @@ return function(config)
 	}
 
 	-- performance
-	config.max_fps = 24
 	config.animation_fps = 0
 	config.cursor_blink_ease_in = "Constant"
 	config.cursor_blink_ease_out = "Constant"
