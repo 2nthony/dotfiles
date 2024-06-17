@@ -24,5 +24,11 @@
   "hard_tabs": true,
   "inlay_hints": {
     "enabled": true
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
   }
 }
