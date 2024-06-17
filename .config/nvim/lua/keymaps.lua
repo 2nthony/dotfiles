@@ -1,7 +1,5 @@
 ---@diagnostic disable: assign-type-mismatch
 
-local Util = require("lazyvim.util")
-
 local function override_lsp_keymaps(keymaps)
   local keys = require("lazyvim.plugins.lsp.keymaps").get()
   for _, keymap in ipairs(keymaps or {}) do
@@ -31,7 +29,7 @@ M.generals = {
   {
     "<leader>gg",
     function()
-      Util.terminal.open("lazygit", {
+      LazyVim.terminal.open("lazygit", {
         esc_esc = false,
         border = "none",
         size = { width = 1, height = 1 },
@@ -48,7 +46,7 @@ M.generals = {
   {
     "<c-\\>",
     function()
-      Util.terminal.open(nil)
+      LazyVim.terminal.open(nil)
     end,
   },
   { "<c-\\>", "<cmd>close<cr>", mode = { "t" } },
@@ -200,11 +198,11 @@ M.plugins = {
       { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
       { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
       { "<leader>fF", false },
-      { "<leader>gf", Util.telescope("files", { cwd = false }), desc = "Git Files" },
-      { "<leader>sg", Util.telescope("live_grep", { cwd = false }), desc = "Grep" },
+      { "<leader>gf", LazyVim.telescope("files", { cwd = false }), desc = "Git Files" },
+      { "<leader>sg", LazyVim.telescope("live_grep", { cwd = false }), desc = "Grep" },
       { "<leader>/", "<leader>sg", remap = true, desc = "Grep" },
       { "<leader>sG", false },
-      { "<leader>sw", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
+      { "<leader>sw", LazyVim.telescope("grep_string", { cwd = false }), desc = "Word" },
       { "<leader>sW", false },
       { "<leader>fR", false },
       { "<leader><space>", ":Telescope commands<cr>", desc = "Commad palette" },
