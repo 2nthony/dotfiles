@@ -72,20 +72,4 @@ return {
       },
     },
   },
-  --[[ {
-    "noice.nvim",
-    optional = true,
-    opts = {
-      routes = {
-        {
-          opts = { skip = true },
-          filter = {
-            any = {
-              {},
-            },
-          },
-        },
-      },
-    },
-  } ]]
 }
