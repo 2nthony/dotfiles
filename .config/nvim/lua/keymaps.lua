@@ -348,6 +348,7 @@ M.plugins = {
         { "N", search.stable_previous, mode = { "n", "x", "o" }, desc = "Search previous" },
         -- https://github.com/LazyVim/LazyVim/commit/23e2b073e6fa75dacaa58dc1fe63392af7f54598
         { "gw", search.current_word, mode = { "n", "x" }, desc = "Search current word" },
+        { "gW", search.current_word_strict, mode = { "n", "x" }, desc = "Search current word (strict)" },
         { "!", search.in_place, mode = { "x" }, desc = "Search selection without moving" },
         { "*", search.forward, mode = { "x" }, desc = "Search selection forward" },
         { "#", search.forward, mode = { "x" }, desc = "Search selection backward" },
