@@ -1,7 +1,7 @@
 return {
+  { import = "lazyvim.plugins.extras.coding.mini-surround" },
   { import = "plugins.extras.coding.autopairs" },
   { import = "plugins.extras.coding.comment" },
-  { import = "lazyvim.plugins.extras.coding.mini-surround" },
 
   {
     "hrsh7th/nvim-cmp",
