@@ -150,10 +150,13 @@ M.plugins = {
     "which-key.nvim",
     lazy = false,
     opts = {
-      defaults = {
+      spec = {
         ["<leader>gd"] = { name = "+diffview" },
         ["<leader>v"] = { name = "+visual" },
         ["<leader>j"] = { name = "+job (Overseer)" },
+      },
+      win = {
+        title = false,
       },
     },
   },

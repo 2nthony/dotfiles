@@ -24,9 +24,9 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      window = {
+      win = {
         border = float.border,
-        winblend = float.winblend,
+        wo = float,
       },
     },
   },
