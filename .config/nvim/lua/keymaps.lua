@@ -217,23 +217,17 @@ M.plugins = {
     },
   },
   {
-    "nvim-spectre",
+    "grug-far.nvim",
     keys = {
       {
-        "<leader>sr",
-        ':lua require("spectre").open_visual({select_word = true})<CR>',
-        desc = "Replace in files (Spectre)",
-        mode = { "v" },
+        "<leader>sf",
+        ':lua require("grug-far").grug_far({ prefills = { flags = vim.fn.expand("%") } })<CR>',
+        desc = "Search on current file",
       },
       {
         "<leader>sf",
-        ':lua require("spectre").open_file_search()<CR>',
-        desc = "Search on current file (Spectre)",
-      },
-      {
-        "<leader>sf",
-        ':lua require("spectre").open_file_search({select_word = true})<CR>',
-        desc = "Search on current file (Spectre)",
+        ':<C-u>lua require("grug-far").with_visual_selection({ prefills = { flags = vim.fn.expand("%") } })<CR>',
+        desc = "Search on current file",
         mode = { "v" },
       },
     },
