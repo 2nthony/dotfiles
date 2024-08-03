@@ -162,14 +162,43 @@ M.plugins = {
   },
   {
     "nvim-lspconfig",
-    init = function(self)
-      override_lsp_keymaps(self.keys)
+    opts = function()
+      local opts = {
+        jump_type = "tab",
+      }
+
+      local keys = {
+        { "gK", false },
+        { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
+        { "gD", false },
+        { "gi", "gI", remap = true, desc = "Goto Implementation" },
+
+        {
+          "gd",
+          function()
+            require("telescope.builtin").lsp_definitions(opts)
+          end,
+          desc = "Goto Definition",
+          has = "definition",
+        },
+        {
+          "gI",
+          function()
+            require("telescope.builtin").lsp_implementations(opts)
+          end,
+          desc = "Goto Implementation",
+        },
+        {
+          "gy",
+          function()
+            require("telescope.builtin").lsp_type_definitions(opts)
+          end,
+          desc = "Goto T[y]pe Definition",
+        },
+      }
+
+      override_lsp_keymaps(keys)
     end,
-    keys = {
-      { "gK", false },
-      { "gi", "gI", remap = true, desc = "Goto Implement" },
-      { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
-    },
   },
   {
     "neo-tree.nvim",
@@ -238,21 +267,15 @@ M.plugins = {
     "nvimdev/lspsaga.nvim",
     vscode = false,
     keys = {
-      -- { "K", ":Lspsaga hover_doc ++quiet<cr>", desc = "Hover" },
       { "gh", ":Lspsaga finder<cr>", desc = "LSP finder" },
-      -- { "gd", ":Lspsaga goto_definition<cr>", desc = "Goto definition" },
-      { "gD", ":Lspsaga goto_type_definition<cr>", desc = "Goto type definition" },
       { "gp", ":Lspsaga peek_definition<cr>", desc = "Peek definition" },
       { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
       { "]d", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
       { "[d", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
-      { "<leader>cd", ":Lspsaga show_line_diagnostics<cr>", desc = "Line diagnostics" },
       { "<leader>cs", ":Lspsaga outline<cr>", desc = "Code outline" },
-      { "<leader>ci", ":Lspsaga incoming_calls<cr>", desc = "Incoming calls" },
-      { "<leader>co", ":Lspsaga outgoing_calls<cr>", desc = "Outgoing calls" },
       { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
     },
-    init = function(self)
+    opts = function(self)
       override_lsp_keymaps(self.keys)
     end,
   },
