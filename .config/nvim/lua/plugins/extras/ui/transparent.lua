@@ -26,7 +26,9 @@ return {
     opts = {
       win = {
         border = float.border,
-        wo = float,
+        wo = {
+          winblend = float.winblend,
+        },
       },
     },
   },
