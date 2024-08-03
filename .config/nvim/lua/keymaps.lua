@@ -325,15 +325,6 @@ M.plugins = {
     },
   },
   {
-    "mg979/vim-visual-multi",
-    keys = {
-      { "<leader>vd", "<Plug>(VM-Find-Under)", desc = "select multi word, `n` next" },
-      { "<leader>vc", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "add cursor" },
-      { "<leader>vj", "<Plug>(VM-Add-Cursor-Down)", desc = "add cursor down" },
-      { "<leader>vk", "<Plug>(VM-Add-Cursor-Up)", desc = "add cursor up" },
-    },
-  },
-  {
     "stevearc/overseer.nvim",
     keys = {
       { "<leader>jl", ":OverseerToggle<cr>", desc = "Overseer List Toggle" },
