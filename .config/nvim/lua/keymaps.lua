@@ -1,10 +1,8 @@
 ---@diagnostic disable: assign-type-mismatch
 
-local function override_lsp_keymaps(keymaps)
+local function lsp_keymaps(keymaps)
   local keys = require("lazyvim.plugins.lsp.keymaps").get()
-  for _, keymap in ipairs(keymaps or {}) do
-    keys[#keys + 1] = keymap
-  end
+  vim.list_extend(keys, keymaps)
 end
 
 local M = {}
@@ -167,7 +165,7 @@ M.plugins = {
         jump_type = "tab",
       }
 
-      local keys = {
+      lsp_keymaps({
         { "gK", false },
         { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
         { "gD", false },
@@ -195,9 +193,7 @@ M.plugins = {
           end,
           desc = "Goto T[y]pe Definition",
         },
-      }
-
-      override_lsp_keymaps(keys)
+      })
     end,
   },
   {
@@ -276,7 +272,7 @@ M.plugins = {
       { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
     },
     opts = function(self)
-      override_lsp_keymaps(self.keys)
+      lsp_keymaps(self.keys)
     end,
   },
   {
