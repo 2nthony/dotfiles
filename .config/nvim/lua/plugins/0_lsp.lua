@@ -101,7 +101,6 @@ return {
   { import = "lazyvim.plugins.extras.lang.yaml" },
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.vue" },
-  { import = "plugins.extras.lang.cspell" },
 
   { import = "plugins.extras.linting.eslint" },
   { import = "plugins.extras.formatting.prettier" },

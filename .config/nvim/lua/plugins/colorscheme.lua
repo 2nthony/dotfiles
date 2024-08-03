@@ -1,5 +1,3 @@
-local has = require("lazyvim.util").has
-
 return {
   { "catppuccin", enabled = false },
 
@@ -18,7 +16,7 @@ return {
   {
     "LazyVim",
     opts = function(_, opts)
-      if has("vitesse.nvim") then
+      if LazyVim.has("vitesse.nvim") then
         opts.colorscheme = "vitesse"
       end
     end,

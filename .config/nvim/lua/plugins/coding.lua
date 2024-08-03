@@ -5,7 +5,6 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
-    lazy = true,
     event = { "InsertEnter" },
     opts = {
       fields = { "kind", "abbr", "menu" },

@@ -31,8 +31,5 @@ return {
         ["?"] = "", --default search above
       },
     },
-    nesting_rules = {
-      ["js"] = { "js.map" },
-    },
   },
 }
