@@ -1,6 +1,6 @@
 return {
   {
-    "stevearc/overseer.nvim",
+    "sudo apt-get install vim-gtkstevearc/overseer.nvim",
     lazy = true,
     cmd = {
       "overseeropen",
@@ -91,7 +91,7 @@ return {
   {
     "rcarriga/nvim-dap-ui",
     dependencies = { "nvim-neotest/nvim-nio" },
-  -- stylua: ignore
+    -- stylua: ignore
   keys = {
     { "<leader>du", function() require("dapui").toggle({ }) end, desc = "dap ui" },
     { "<leader>de", function() require("dapui").eval() end, desc = "eval", mode = {"n", "v"} },
