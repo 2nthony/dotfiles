@@ -161,38 +161,11 @@ M.plugins = {
   {
     "nvim-lspconfig",
     opts = function()
-      local opts = {
-        jump_type = "tab",
-      }
-
       lsp_keymaps({
         { "gK", false },
         { "<c-k>", vim.lsp.buf.signature_help, desc = "Signature help" },
         { "gD", false },
         { "gi", "gI", remap = true, desc = "Goto Implementation" },
-
-        {
-          "gd",
-          function()
-            require("telescope.builtin").lsp_definitions(opts)
-          end,
-          desc = "Goto Definition",
-          has = "definition",
-        },
-        {
-          "gI",
-          function()
-            require("telescope.builtin").lsp_implementations(opts)
-          end,
-          desc = "Goto Implementation",
-        },
-        {
-          "gy",
-          function()
-            require("telescope.builtin").lsp_type_definitions(opts)
-          end,
-          desc = "Goto T[y]pe Definition",
-        },
       })
     end,
   },
