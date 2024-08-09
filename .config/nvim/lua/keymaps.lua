@@ -115,12 +115,13 @@ M.generals = {
       vim.cmd("normal! ^")
     end,
     mode = { "n", "i", "v" },
+    desc = "Better ^",
   },
   { "<c-s-h>", "<home>", mode = { "n", "i", "v" } },
 
   -- better $
-  { "<c-l>", "g_", mode = { "n", "v" } },
-  { "<c-l>", "<end>", mode = { "i" } },
+  { "<c-l>", "g_", mode = { "n", "v" }, desc = "Better $" },
+  { "<c-l>", "<end>", mode = { "i" }, desc = "Better $" },
 
   -- new file
   { "<leader>fn", ":tabnew<cr>", desc = "New File" },
