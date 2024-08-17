@@ -81,9 +81,6 @@ M.generals = {
   -- changed to `x(visual)` only, see https://github.com/L3MON4D3/LuaSnip/issues/748#issuecomment-1407325131
   { "p", '"_dP', mode = "x" },
 
-  -- Select all
-  { "<c-a>", "gg<s-v>G", desc = "Select all" },
-
   -- enhance enter
   {
     "<c-enter>",
