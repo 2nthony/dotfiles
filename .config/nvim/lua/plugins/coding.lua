@@ -1,5 +1,6 @@
 return {
   { import = "lazyvim.plugins.extras.coding.mini-surround" },
+  { import = "lazyvim.plugins.extras.coding.neogen" },
   { import = "plugins.extras.coding.autopairs" },
   { import = "plugins.extras.coding.comment" },
 
