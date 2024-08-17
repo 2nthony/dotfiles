@@ -1,9 +1,9 @@
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
-local float = require("util.opts").float
 
 return {
   { import = "plugins.extras.editor.overseer" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },
+
   {
     "folke/flash.nvim",
     vscode = true,
@@ -39,7 +39,6 @@ return {
       },
     },
     opts = {
-      border = float.border,
       min_width = 50,
       min_height = 5,
       max_width = 120,

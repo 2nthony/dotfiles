@@ -1,9 +1,5 @@
-local has = require("lazyvim.util").has
-local skip_features_filetypes = require("util.ft").skip_features_filetypes
-
 return {
   { "rcarriga/nvim-notify", enabled = false },
-  { "SmiteshP/nvim-navic", enabled = false },
 
   {
     "akinsho/bufferline.nvim",
@@ -21,7 +17,7 @@ return {
   {
     "bufferline.nvim",
     opts = function(_, opts)
-      if has("vitesse.nvim") then
+      if LazyVim.has("vitesse.nvim") then
         opts.highlights = require("vitesse.plugins.bufferline")
       end
     end,

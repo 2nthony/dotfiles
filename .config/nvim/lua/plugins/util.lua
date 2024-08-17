@@ -73,23 +73,6 @@ return {
     },
   },
 
-  {
-    "smoka7/multicursors.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "smoka7/hydra.nvim",
-    },
-    opts = {},
-    cmd = {
-      "MCstart",
-      "MCvisual",
-      "MCclear",
-      "MCpattern",
-      "MCvisualPattern",
-      "MCunderCursor",
-    },
-  },
-
   { "wakatime/vim-wakatime", event = "BufReadPost" },
 
   {
