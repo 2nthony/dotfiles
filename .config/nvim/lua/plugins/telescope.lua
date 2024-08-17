@@ -24,8 +24,9 @@ return {
           },
         },
         file_ignore_patterns = {
-          "node_modules/",
           ".git/",
+          -- node
+          "node_modules/",
           -- rust
           "**/debug/",
           "target/release/",
