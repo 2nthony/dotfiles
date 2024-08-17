@@ -2,6 +2,7 @@ local skip_features_filetypes = require("util.ft").skip_features_filetypes
 local float = require("util.opts").float
 
 return {
+  { import = "plugins.extras.editor.overseer" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },
   {
     "folke/flash.nvim",

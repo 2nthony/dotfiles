@@ -1,7 +1,7 @@
 return {
+  { import = "lazyvim.plugins.extras.editor.overseer" },
   {
     "stevearc/overseer.nvim",
-    lazy = true,
     cmd = {
       "OverseerOpen",
       "OverseerClose",
