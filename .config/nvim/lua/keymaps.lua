@@ -144,7 +144,6 @@ M.plugins = {
     opts = {
       spec = {
         ["<leader>gd"] = { name = "+diffview" },
-        ["<leader>v"] = { name = "+visual" },
         ["<leader>j"] = { name = "+job (Overseer)" },
       },
       win = {
@@ -183,21 +182,6 @@ M.plugins = {
         end,
         desc = "File Explorer reveal",
       },
-    },
-  },
-  {
-    "telescope.nvim",
-    keys = {
-      { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
-      { "<leader>fF", false },
-      { "<leader>gf", LazyVim.pick("files", { cwd = false }), desc = "Git Files" },
-      { "<leader>sg", LazyVim.pick("live_grep", { cwd = false }), desc = "Grep" },
-      { "<leader>/", "<leader>sg", remap = true, desc = "Grep" },
-      { "<leader>sG", false },
-      { "<leader>sw", LazyVim.pick("grep_string", { cwd = false }), desc = "Word" },
-      { "<leader>sW", false },
-      { "<leader>fR", false },
-      { "<leader><space>", ":Telescope commands<cr>", desc = "Commad palette" },
     },
   },
   {
