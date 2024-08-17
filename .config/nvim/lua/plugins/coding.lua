@@ -74,7 +74,8 @@ return {
     "echasnovski/mini.bracketed",
     event = "BufReadPost",
     opts = {
-      treesitter = { suffix = "n" },
+      file = { suffix = "" },
+      window = { suffix = "" },
     },
   },
 }
