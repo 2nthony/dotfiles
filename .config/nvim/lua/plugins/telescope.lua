@@ -34,6 +34,9 @@ return {
         },
       },
       pickers = {
+        oldfiles = {
+          cwd_only = true,
+        },
         buffers = {
           mappings = {
             i = {
