@@ -54,7 +54,9 @@ return {
     opts = {
       linters_by_ft = {
         javascript = { "cspell" },
+        javascriptreact = { "cspell" },
         typescript = { "cspell" },
+        typescriptreact = { "cspell" },
       },
     },
   },
