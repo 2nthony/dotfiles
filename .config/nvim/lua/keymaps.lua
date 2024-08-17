@@ -84,10 +84,6 @@ M.generals = {
   -- Select all
   { "<c-a>", "gg<s-v>G", desc = "Select all" },
 
-  -- buffer
-  { "[b", ":bprevious<cr>", desc = "Back buffer" },
-  { "]b", ":bnext<cr>", desc = "Forward buffer" },
-
   -- enhance enter
   {
     "<c-enter>",

@@ -94,4 +94,12 @@ return {
       prefix = "🚀",
     },
   },
+
+  {
+    "echasnovski/mini.bracketed",
+    event = "BufReadPost",
+    opts = {
+      treesitter = { suffix = "n" },
+    },
+  },
 }
