@@ -1,16 +1,5 @@
 local M = {}
 
-M.float = {
-  winblend = vim.o.winblend,
-  pumblend = vim.o.pumblend,
-  border = "rounded",
-  style = "minimal",
-  size = {
-    width = 0.8,
-    height = 0.8,
-  },
-}
-
 ---@param width 'full'|number
 ---@param height? 'full'|number
 M.float.get_size = function(width, height)
