@@ -1,8 +1,8 @@
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/linting/eslint.lua
 -- inherit vscode workspace settings
 
--- if `editor.codeActionsOnSave.source.fixAll.eslint` is true,
--- then run `:EslintFixAll` on save
+-- if `editor.codeActionsOnSave.source.fixAll.eslint` has value,
+-- then run `LazyVim.lsp.format()` on save
 
 local vscode = require("util.vscode")
 local settings = vscode.get_settings()
@@ -15,76 +15,40 @@ vim.g.autoformat = formatOnSave
 return {
   { import = "lazyvim.plugins.extras.linting.eslint" },
   {
-    "neovim/nvim-lspconfig",
-    lazy = true,
+    "nvim-lspconfig",
     opts = function(_, opts)
-      local root = LazyVim.root.cwd()
-      local util = require("lspconfig.util")
-      local useFlatConfig = false
+      if eslintFixAllOnSave then
+        local root = LazyVim.root.cwd()
+        local util = require("lspconfig.util")
+        local useFlatConfig = false
 
-      local flat_config_file_patterns = {
-        "eslint.config.mjs",
-        "eslint.config.cjs",
-        "eslint.config.js",
-      }
-      for _, file in ipairs(flat_config_file_patterns) do
-        local path = util.path.join(root, file)
-        local match = util.path.is_file(path)
+        local flat_config_file_patterns = {
+          "eslint.config.mjs",
+          "eslint.config.cjs",
+          "eslint.config.js",
+        }
+        for _, file in ipairs(flat_config_file_patterns) do
+          local path = util.path.join(root, file)
+          local match = util.path.is_file(path)
 
-        if match then
-          useFlatConfig = true
-          break
+          if match then
+            useFlatConfig = true
+            break
+          end
         end
-      end
-      useFlatConfig = useFlatConfig or settings["eslint.useFlatConfig"] or settings["eslint.experimental.useFlatConfig"]
 
-      opts.servers.eslint = {
-        settings = {
-          useFlatConfig = useFlatConfig,
-        },
-      }
-      opts.setup.eslint = function()
+        useFlatConfig = useFlatConfig
+          or settings["eslint.useFlatConfig"]
+          or settings["eslint.experimental.useFlatConfig"]
+
+        opts.servers.eslint.settings.useFlatConfig = useFlatConfig
+
         vim.api.nvim_create_autocmd("BufWritePre", {
-          callback = function(event)
-            if eslintFixAllOnSave then
-              local client = vim.lsp.get_active_clients({ bufnr = event.buf, name = "eslint" })[1]
-              if client then
-                local diag = vim.diagnostic.get(event.buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id) })
-                if #diag > 0 then
-                  vim.cmd("EslintFixAll")
-                end
-              end
-            end
+          callback = function()
+            LazyVim.lsp.format()
           end,
         })
       end
     end,
-    -- opts = {
-    --   servers = {
-    --     eslint = {
-    --       settings = {
-    --         useFlatConfig = useFlatConfig,
-    --       },
-    --     },
-    --   },
-    --   setup = {
-    --     eslint = function()
-    --       vim.api.nvim_create_autocmd("BufWritePre", {
-    --         callback = function(event)
-    --           if eslintFixAllOnSave then
-    --             local client = vim.lsp.get_active_clients({ bufnr = event.buf, name = "eslint" })[1]
-    --             if client then
-    --               local diag =
-    --                 vim.diagnostic.get(event.buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id) })
-    --               if #diag > 0 then
-    --                 vim.cmd("EslintFixAll")
-    --               end
-    --             end
-    --           end
-    --         end,
-    --       })
-    --     end,
-    --   },
-    -- },
   },
 }
