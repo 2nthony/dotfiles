@@ -189,7 +189,6 @@ M.plugins = {
     "telescope.nvim",
     keys = {
       { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
-      -- { "<leader><space>", "<leader>ff", remap = true, desc = "Find Files" },
       { "<leader>fF", false },
       { "<leader>gf", LazyVim.pick("files", { cwd = false }), desc = "Git Files" },
       { "<leader>sg", LazyVim.pick("live_grep", { cwd = false }), desc = "Grep" },
