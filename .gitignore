@@ -79,6 +79,7 @@ Pods/
 packer_compiled.lua
 .luarc.json
 lazy-lock.json
+.avante_chat_history/
 
 # cspell
 .cspell.json
