@@ -225,23 +225,6 @@ M.plugins = {
     },
   },
 
-  -- extra plugins
-  {
-    "nvimdev/lspsaga.nvim",
-    vscode = false,
-    keys = {
-      { "gh", ":Lspsaga finder<cr>", desc = "LSP finder" },
-      { "gp", ":Lspsaga peek_definition<cr>", desc = "Peek definition" },
-      { "gP", ":Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
-      { "]d", ":Lspsaga diagnostic_jump_next<cr>", desc = "Next Diagnostic" },
-      { "[d", ":Lspsaga diagnostic_jump_prev<cr>", desc = "Prev Diagnostic" },
-      { "<leader>cs", ":Lspsaga outline<cr>", desc = "Code outline" },
-      { "<leader>ca", ":Lspsaga code_action<cr>", desc = "Code action", mode = { "n", "v" } },
-    },
-    opts = function(self)
-      lsp_keymaps(self.keys)
-    end,
-  },
   {
     "folke/flash.nvim",
     keys = {
