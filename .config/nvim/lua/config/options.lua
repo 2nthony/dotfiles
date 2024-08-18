@@ -2,6 +2,10 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+vim.g.bigfile_size = 1024 * 1024 * 0.5
+--- hide document symbols
+vim.g.trouble_lualine = false
+
 local opt = vim.opt
 
 opt.backup = false
