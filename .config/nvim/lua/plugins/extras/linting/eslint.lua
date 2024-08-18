@@ -45,7 +45,7 @@ return {
 
         vim.api.nvim_create_autocmd("BufWritePre", {
           callback = function()
-            LazyVim.lsp.format()
+            LazyVim.lsp.format({ name = "eslint" })
           end,
         })
       end
