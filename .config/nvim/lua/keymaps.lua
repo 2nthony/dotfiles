@@ -143,11 +143,7 @@ M.plugins = {
     lazy = false,
     opts = {
       spec = {
-        ["<leader>gd"] = { name = "+diffview" },
-        ["<leader>j"] = { name = "+job (Overseer)" },
-      },
-      win = {
-        title = false,
+        { "<leader>gd", group = "+diffview" },
       },
     },
   },
