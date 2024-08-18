@@ -61,7 +61,14 @@ return {
   {
     "Wansmer/treesj",
     keys = {
-      { "<leader>cjj", ":TSJToggle<CR>", desc = "Code splitting / joining blocks", silent = true },
+      {
+        "<leader>usj",
+        function()
+          require("treesj").toggle()
+        end,
+        desc = "Code splitting / joining blocks",
+        silent = true,
+      },
     },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
