@@ -4,7 +4,9 @@ return {
     event = "VeryLazy",
     opts = {
       provider = "openai",
-      model = "gpt-4o-mini",
+      openai = {
+        model = "gpt-4o-mini",
+      },
     },
     build = "make",
     dependencies = {
