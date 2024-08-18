@@ -250,15 +250,6 @@ M.plugins = {
     },
   },
   {
-    "stevearc/overseer.nvim",
-    keys = {
-      { "<leader>jl", ":OverseerToggle<cr>", desc = "Overseer List Toggle" },
-      { "<leader>jr", ":OverseerRun<cr>", desc = "Overseer Run" },
-      { "<leader>jc", ":OverseerRunCmd<cr>", desc = "Overseer Run Cmd" },
-      { "<leader>ji", ":OverseerInfo<cr>", desc = "Overseer Info" },
-    },
-  },
-  {
     "folke/zen-mode.nvim",
     keys = {
       { "<leader>wo", ":ZenMode<cr>", desc = "Zen Mode" },
