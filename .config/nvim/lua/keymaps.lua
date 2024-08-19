@@ -44,10 +44,16 @@ M.generals = {
   {
     "<c-\\>",
     function()
-      LazyVim.terminal.open(nil)
+      LazyVim.terminal(nil)
     end,
   },
-  { "<c-\\>", "<cmd>close<cr>", mode = { "t" } },
+  {
+    "<c-\\>",
+    function()
+      LazyVim.terminal(nil)
+    end,
+    mode = { "t" },
+  },
 
   -- remap macrp record key
   { "Q", "q" },
