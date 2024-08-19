@@ -2,7 +2,7 @@
 
 <video src="https://user-images.githubusercontent.com/19513289/219951812-42953edf-2ab2-43d9-91fa-7bb546c3006c.mp4" width="100%"></video>
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
-![](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19mxUvCj.jpg)
+![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19mxUvCj.jpg)
 
 <p align="center">
   <sub>
@@ -14,15 +14,12 @@
 
 ## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.10.x-29BC9B)
 
-lazy with extra features:
+Features:
 
 - [x] Supertab(VS Code like)
-- [x] AI-Powered Autocomplete(Copilot, with hints, not cmp)
+- [x] Copilot(modified, display hints, not CMP)
 - [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse.nvim))
-- [x] Transparent friendly
-- [x] Git Integration(LazyGit, Neogit)
-- [x] Partially support vscode workspace settings
-- [x] ...
+- [x] Partially support VS Code workspace settings
 
 ### Setup
 
@@ -48,16 +45,9 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 
 - `<C-h>` better `^`
 - `<C-l>` better `$`
-- `<C-a>` select all text
 - `<C-\>` open a float terminal
 - `<s-m-j>` copy line(s) down
 - `<s-m-k>` copy line(s) up
-
-#### LSP
-
-- `K` LSP hover
-- `<C-j>` LSP diagnostic next, `J` LSP diagnostic prev
-- `<C-k>` LSP signature help
 
 ## [WezTerm](https://wezfurlong.org/wezterm/)
 

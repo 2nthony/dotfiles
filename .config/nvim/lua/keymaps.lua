@@ -35,7 +35,6 @@ M.generals = {
     end,
     desc = "Lazygit",
   },
-  { "<leader>gG", nil },
 
   -- reset lazyvim float term
   { "<leader>ft", nil },
