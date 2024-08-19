@@ -15,10 +15,10 @@ M.generals = {
   { "gT", "<nop>" },
 
   -- reset window navigation
-  { "<c-h>", "<nop>", mode = { "n", "t" } },
-  { "<c-j>", "<nop>", mode = { "n", "t" } },
-  { "<c-k>", "<nop>", mode = { "n", "t" } },
-  { "<c-l>", "<nop>", mode = { "n", "t" } },
+  { "<c-h>", nil, mode = { "n", "t" } },
+  { "<c-j>", nil, mode = { "n", "t" } },
+  { "<c-k>", nil, mode = { "n", "t" } },
+  { "<c-l>", nil, mode = { "n", "t" } },
 
   -- reset terminal navigation
   { "<c-w>", "<c-w>", mode = { "t" } },
@@ -35,12 +35,12 @@ M.generals = {
     end,
     desc = "Lazygit",
   },
-  { "<leader>gG", false },
+  { "<leader>gG", nil },
 
   -- reset lazyvim float term
-  { "<leader>ft", false },
-  { "<leader>fT", false },
-  { "<c-/>", false, mode = { "n", "t" } },
+  { "<leader>ft", nil },
+  { "<leader>fT", nil },
+  { "<c-/>", nil, mode = { "n", "t" } },
   {
     "<c-\\>",
     function()
