@@ -1,12 +1,10 @@
 return {
   {
     "yetone/avante.nvim",
-    event = "VeryLazy",
-    opts = {
-      provider = "openai",
-      openai = {
-        model = "gpt-4o-mini",
-      },
+    keys = {
+      { "<leader>aa", desc = "Toggle (Avante)" },
+      { "<leader>ar", desc = "Refresh (Avante)" },
+      { "<leader>ae", desc = "Edit (Avante)" },
     },
     build = "make",
     dependencies = {
@@ -33,9 +31,6 @@ return {
     opts = {
       spec = {
         { "<leader>a", group = "+ai" },
-        { "<leader>aa", desc = "Toggle (Avante)" },
-        { "<leader>ar", desc = "Refresh (Avante)" },
-        { "<leader>ae", desc = "Edit (Avante)" },
       },
     },
   },
