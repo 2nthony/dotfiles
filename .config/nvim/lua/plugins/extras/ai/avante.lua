@@ -11,12 +11,7 @@ return {
       "nvim-tree/nvim-web-devicons",
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
-      {
-        "grapp-dev/nui-components.nvim",
-        dependencies = {
-          "MunifTanjim/nui.nvim",
-        },
-      },
+      "MunifTanjim/nui.nvim",
       {
         "MeanderingProgrammer/render-markdown.nvim",
         opts = {
