@@ -63,19 +63,23 @@ Load config
 echo 'return require("2nthony")' > ~/.wezterm.lua
 ```
 
-## Shell
+## Zsh
 
-- [Fish shell](https://fishshell.com/)
-- [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
-  - [Tide](https://github.com/IlanCosman/tide) - Shell theme
-  - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
-  - [fzf for fish](https://github.com/PatrickF1/fzf.fish) - requires `fzf`
+```bash
+ln -s ~/yourclonedpath/.zshrc ~
+```
+
+- [antigen](https://github.com/zsh-users/antigen) - Plugin manager
+  - [zsh-z](https://github.com/agkozak/zsh-z) - Jump directory
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  - [fzf-zsh-plugin](https://github.com/unixorn/fzf-zsh-plugin#antigen)
 - [Maple Font](https://github.com/subframe7536/maple-font)
   - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
 - [eza](https://github.com/eza-community/eza) - `ls` replacement
 - [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
-  - [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Fish nvm
+- [Starship](https://starship.rs) - Shell prompt UI
 
 ## [Zed](https://github.com/zed-industries/zed)
 
