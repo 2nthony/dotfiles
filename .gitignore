@@ -58,20 +58,6 @@ Pods/
 .atom/compile-cache
 .atom/storage
 
-# Fish
-.config/fish/fish_variables.x86_64
-.config/fish/completions/
-.config/fish/conf.d/
-!.config/fish/conf.d/android-studio-java-home-env.fish
-!.config/fish/conf.d/nvm-default-version.fish
-!.config/fish/conf.d/pnpm-setup.fish
-!.config/fish/conf.d/brew-setup.fish
-!.config/fish/conf.d/rust-setup.fish
-.config/fish/functions/
-.config/fish/fish_plugins
-.config/fish/fish_variables
-.fishd.tmp*
-
 # Karabiner
 .config/karabiner/automatic_backups
 
