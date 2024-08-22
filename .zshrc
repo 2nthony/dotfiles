@@ -122,8 +122,7 @@ antigen apply
 
 export EDITOR=nvim
 
-# aliases
-
+# alias
 alias ls="ls -p -G"
 alias la="ls -A"
 alias ll="ls -l"
@@ -138,6 +137,7 @@ if type eza &>/dev/null; then
   alias ll='eza -l -g --icons'
   alias lla='ll -a'
 fi
+# alias end
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
