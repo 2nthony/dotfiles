@@ -295,6 +295,20 @@ M.plugins = {
       { "<leader>gn", ":Neogit<cr>", desc = "Neogit" },
     },
   },
+
+  {
+    "Wansmer/treesj",
+    keys = {
+      {
+        "<leader>ut",
+        function()
+          require("treesj").toggle()
+        end,
+        desc = "Treesitter split/join blocks",
+        silent = true,
+      },
+    },
+  },
 }
 
 return M

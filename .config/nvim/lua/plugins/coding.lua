@@ -60,16 +60,6 @@ return {
 
   {
     "Wansmer/treesj",
-    keys = {
-      {
-        "<leader>usj",
-        function()
-          require("treesj").toggle()
-        end,
-        desc = "Code splitting / joining blocks",
-        silent = true,
-      },
-    },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
       use_default_keymaps = false,
