@@ -69,6 +69,7 @@ echo 'return require("2nthony")' > ~/.wezterm.lua
 ln -s ~/yourclonedpath/.zshrc ~
 ```
 
+- [oh my zsh](https://ohmyz.sh)
 - [antigen](https://github.com/zsh-users/antigen) - Plugin manager
   - [zsh-z](https://github.com/agkozak/zsh-z) - Jump directory
   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
