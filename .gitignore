@@ -74,3 +74,6 @@ lazy-lock.json
 .config/zed/*
 !.config/zed/keymap.json
 !.config/zed/settings.json
+
+# fish
+.config/fish
