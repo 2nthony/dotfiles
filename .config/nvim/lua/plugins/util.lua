@@ -73,8 +73,6 @@ return {
     },
   },
 
-  { "wakatime/vim-wakatime", event = "BufReadPost" },
-
   {
     "rainbowhxch/accelerated-jk.nvim",
     lazy = true,
