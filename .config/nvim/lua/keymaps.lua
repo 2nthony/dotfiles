@@ -254,19 +254,7 @@ M.plugins = {
       { "<leader>gdr", ":DiffviewRefresh<cr>", desc = "Diffview Refresh" },
     },
   },
-  {
-    "folke/zen-mode.nvim",
-    keys = {
-      { "<leader>wo", ":ZenMode<cr>", desc = "Zen Mode" },
-    },
-  },
-  {
-    "abecodes/tabout.nvim",
-    keys = {
-      { "<m-l>", "<Plug>(TaboutMulti)", desc = "Goto end of pair", mode = { "i" } },
-      { "<m-h>", "<Plug>(TaboutBackMulti)", desc = "Goto start of pair", mode = { "i" } },
-    },
-  },
+
   {
     "backdround/improved-search.nvim",
     lazy = false,
