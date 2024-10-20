@@ -1,10 +1,14 @@
 return {
   {
     "yetone/avante.nvim",
-    keys = {
-      { "<leader>aa", desc = "Toggle (Avante)" },
-      { "<leader>ar", desc = "Refresh (Avante)" },
-      { "<leader>ae", desc = "Edit (Avante)" },
+    event = "VeryLazy",
+    lazy = false,
+    opts = {
+      mappings = {
+        submit = {
+          insert = "<C-CR>",
+        },
+      },
     },
     build = "make",
     dependencies = {
@@ -12,6 +16,23 @@ return {
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
+      {
+        -- support for image pasting
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          -- recommended settings
+          default = {
+            embed_image_as_base64 = false,
+            prompt_for_file_name = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+            -- required for Windows users
+            use_absolute_path = true,
+          },
+        },
+      },
       {
         "MeanderingProgrammer/render-markdown.nvim",
         opts = {
