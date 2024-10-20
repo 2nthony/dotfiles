@@ -8,6 +8,16 @@ return {
       local cmp = require("cmp")
 
       local keys = {
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if vim.snippet.active({ direction = 1 }) then
+            vim.snippet.jump(1)
+          elseif cmp.visible() then
+            pcall(opts.mapping["<CR>"] or opts.mapping["<cr>"] or cmp.mapping.confirm({ select = true }))
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+
         ["<esc>"] = cmp.mapping(function(fallback)
           if vim.snippet.active() then
             vim.snippet.stop()
