@@ -16,9 +16,7 @@
 
 Features:
 
-- [x] Supertab(VS Code like)
-- [x] Copilot(modified, display hints, not CMP)
-- [x] Good Looking Theme([vitesse](https://github.com/2nthony/vitesse.nvim))
+- [x] Refined keymaps for snippet(VS Code like)
 - [x] Partially support VS Code workspace settings
 
 ### Setup

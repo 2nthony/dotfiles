@@ -141,7 +141,7 @@ M.generals = {
 ---@type LazyPluginSpec[]
 M.plugins = {
   { import = "plugins.extras.keymap.copy-lines-action" },
-  { import = "plugins.extras.keymap.superkey" },
+  { import = "plugins.extras.keymap.snippet" },
 
   {
     "which-key.nvim",
