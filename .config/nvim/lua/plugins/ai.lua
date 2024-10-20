@@ -6,7 +6,8 @@ return {
     opts = {
       provider = "openai",
       openai = {
-        model = "gpt-4o-mini",
+        model = "deepseek-chat",
+        endpoint = "https://api.deepseek.com",
       },
       windows = {
         width = 40,
