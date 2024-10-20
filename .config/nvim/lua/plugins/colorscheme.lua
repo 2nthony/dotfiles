@@ -2,25 +2,27 @@ return {
   { "catppuccin", enabled = false },
 
   {
-    "2nthony/vitesse.nvim",
-    dependencies = {
-      "tjdevries/colorbuddy.nvim",
-    },
+    "f-person/auto-dark-mode.nvim",
+    cond = false,
+    event = "VeryLazy",
     opts = {
-      reverse_visual = true,
-      dim_nc = true,
-      cmp_cmdline_disable_search_highlight_group = true,
-      diagnostic_virtual_text_background = true,
-      -- transparent_background = false,
-      transparent_float_background = false,
+      update_interval = 1000,
+      set_dark_mode = function()
+        vim.o.background = "dark"
+      end,
+      set_light_mode = function()
+        vim.o.background = "light"
+      end,
     },
   },
+
   {
-    "LazyVim",
-    opts = function(_, opts)
-      if LazyVim.has("vitesse.nvim") then
-        opts.colorscheme = "vitesse"
-      end
-    end,
+    "tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+      },
+    },
   },
 }

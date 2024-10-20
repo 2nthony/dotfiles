@@ -8,19 +8,11 @@ return {
         mode = "tabs",
         show_buffer_close_icons = false,
         show_close_icon = false,
-        separator_style = "slant",
-        -- separator_style = { "", "" },
+        -- separator_style = "slant",
+        separator_style = { "", "" },
         -- sort_by = "insert_after_current",
       },
     },
-  },
-  {
-    "bufferline.nvim",
-    opts = function(_, opts)
-      if LazyVim.has("vitesse.nvim") then
-        opts.highlights = require("vitesse.plugins.bufferline")
-      end
-    end,
   },
 
   {
