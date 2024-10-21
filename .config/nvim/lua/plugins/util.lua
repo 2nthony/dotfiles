@@ -1,8 +1,6 @@
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
-  { import = "plugins.extras.util.project" },
-
   {
     "iamcco/markdown-preview.nvim",
     build = function()
