@@ -41,33 +41,15 @@ return {
     },
     opts = {
       presets = {
-        -- command_palette = false,
-        -- bottom_search = false,
-        long_message_to_split = true,
+        bottom_search = false,
       },
       health = {
         checker = false,
       },
-      cmdline = {
-        enabled = false,
-        view = "cmdline", -- cmdline_popup, cmdline
-      },
       lsp = {
-        progress = {
-          -- enabled = false,
-        },
-        signature = {
-          enabled = false,
-        },
         hover = {
           silent = true,
         },
-        message = {
-          enabled = false,
-        },
-      },
-      messages = {
-        enabled = false,
       },
       notify = {
         enabled = false,
