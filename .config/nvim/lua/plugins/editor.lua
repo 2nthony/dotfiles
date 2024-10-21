@@ -1,3 +1,5 @@
+local skip_features_filetypes = require("util.ft").skip_features_filetypes
+
 return {
   { import = "plugins.extras.editor.overseer" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },
@@ -19,6 +21,14 @@ return {
     },
   },
 
+  {
+    "abecodes/tabout.nvim",
+    event = { "VeryLazy" },
+    opts = {
+      exclude = skip_features_filetypes,
+      completion = true,
+    },
+  },
   {
     "cshuaimin/ssr.nvim",
     keys = {

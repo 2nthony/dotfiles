@@ -256,6 +256,13 @@ M.plugins = {
   },
 
   {
+    "abecodes/tabout.nvim",
+    keys = {
+      { "<m-l>", "<Plug>(TaboutMulti)", desc = "Goto end of pair", mode = { "i" } },
+      { "<m-h>", "<Plug>(TaboutBackMulti)", desc = "Goto start of pair", mode = { "i" } },
+    },
+  },
+  {
     "backdround/improved-search.nvim",
     lazy = false,
     vscode = true,
