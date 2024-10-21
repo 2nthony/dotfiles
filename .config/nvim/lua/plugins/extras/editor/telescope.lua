@@ -1,4 +1,3 @@
-local actions = require("telescope.actions")
 local entry_display = require("telescope.pickers.entry_display")
 
 return {
@@ -12,16 +11,6 @@ return {
         layout_config = {
           horizontal = { prompt_position = "top", preview_width = 0.5 },
           vertical = { mirror = false },
-        },
-        mappings = {
-          i = {
-            ["<Tab>"] = actions.move_selection_next,
-            ["<S-Tab>"] = actions.move_selection_previous,
-          },
-          n = {
-            ["<Tab>"] = actions.move_selection_next,
-            ["<S-Tab>"] = actions.move_selection_previous,
-          },
         },
         file_ignore_patterns = {
           ".git/",
@@ -37,13 +26,6 @@ return {
       pickers = {
         oldfiles = {
           cwd_only = true,
-        },
-        buffers = {
-          mappings = {
-            i = {
-              ["<C-d>"] = actions.delete_buffer,
-            },
-          },
         },
         commands = {
           entry_maker = function(entry)
