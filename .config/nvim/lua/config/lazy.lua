@@ -36,6 +36,7 @@ require("lazy").setup({
   dev = {
     path = "~/.ghq/github.com",
   },
+  install = { colorscheme = { "tokyonight" } },
   checker = { enabled = false }, -- automatically check for plugin updates
   change_detection = {
     notify = false,
