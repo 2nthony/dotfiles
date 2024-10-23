@@ -3,7 +3,6 @@ return {
 
   {
     "f-person/auto-dark-mode.nvim",
-    cond = false,
     event = "VeryLazy",
     opts = {
       update_interval = 1000,
