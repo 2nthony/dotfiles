@@ -19,6 +19,9 @@ return {
       buffer = {
         cwd_only = true,
       },
+      grep = {
+        multiline = 1,
+      },
     },
   },
 }
