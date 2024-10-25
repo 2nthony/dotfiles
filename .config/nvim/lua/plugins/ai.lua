@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.coding.copilot" },
   { import = "plugins.extras.ai.avante" },
   {
     "yetone/avante.nvim",
