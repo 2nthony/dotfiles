@@ -3,7 +3,8 @@
 
 return {
   {
-    "hrsh7th/nvim-cmp",
+    "nvim-cmp",
+    optional = true,
     keys = {
       {
         "<esc>",
