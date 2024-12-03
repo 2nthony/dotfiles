@@ -2,7 +2,6 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-vim.g.bigfile_size = 1024 * 1024 * 0.5
 --- hide document symbols
 vim.g.trouble_lualine = false
 
@@ -16,8 +15,6 @@ opt.formatoptions:append({ "r" })
 opt.relativenumber = false
 opt.diffopt = "filler,iwhite,internal,linematch:60,algorithm:patience"
 opt.splitkeep = "cursor"
-opt.splitbelow = true -- Put new windows below current
-opt.splitright = true -- Put new windows right of current
 
 opt.foldmethod = "expr"
 
