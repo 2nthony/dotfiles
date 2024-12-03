@@ -15,20 +15,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   command = "setfiletype json",
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = skip_features_filetypes,
-  callback = function()
-    -- cmp
-    local ok, cmp = pcall(require, "cmp")
-    if ok then
-      cmp.setup.buffer({ enabled = false })
-    end
-
-    -- mini.indentscope
-    vim.b.miniindentscope_disable = true
-  end,
-})
-
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
 vim.api.nvim_create_autocmd({ "FileType" }, {
