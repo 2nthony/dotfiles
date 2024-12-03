@@ -65,15 +65,6 @@ return {
   },
 
   {
-    "dashboard-nvim",
-    opts = {
-      config = {
-        header = {},
-      },
-    },
-  },
-
-  {
     "b0o/incline.nvim",
     event = { "BufReadPost" },
     opts = {

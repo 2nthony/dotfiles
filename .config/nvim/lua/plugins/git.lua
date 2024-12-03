@@ -4,6 +4,9 @@ return {
   {
     "NeogitOrg/neogit",
     cmd = { "Neogit", "NeogitResetState" },
+    keys = {
+      { "<leader>gn", ":Neogit<cr>", desc = "Neogit" },
+    },
     opts = {},
   },
 
@@ -17,8 +20,25 @@ return {
   },
 
   {
+    "which-key.nvim",
+    lazy = false,
+    opts = {
+      spec = {
+        { "<leader>gd", group = "+diffview" },
+      },
+    },
+  },
+  {
     "sindrets/diffview.nvim",
     lazy = true,
+    keys = {
+      { "<leader>gdo", ":DiffviewOpen<cr>", desc = "Diffview Open" },
+      { "<leader>gdc", ":DiffviewClose<cr>", desc = "Diffview Close" },
+      { "<leader>gdf", ":DiffviewFocusFiles<cr>", desc = "Diffview Focus files" },
+      { "<leader>gdh", ":DiffviewFileHistory<cr>", desc = "Diffview File history" },
+      { "<leader>gdt", ":DiffviewToggleFiles<cr>", desc = "Diffview Toggle files" },
+      { "<leader>gdr", ":DiffviewRefresh<cr>", desc = "Diffview Refresh" },
+    },
     cmd = {
       "DiffviewOpen",
       "DiffviewClose",
