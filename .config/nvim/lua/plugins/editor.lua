@@ -1,11 +1,6 @@
 local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
-  { import = "plugins.extras.editor.overseer" },
-  { import = "plugins.extras.editor.refactoring" },
-  { import = "lazyvim.plugins.extras.editor.dial" },
-  { import = "lazyvim.plugins.extras.editor.harpoon2" },
-
   {
     "folke/flash.nvim",
     vscode = true,

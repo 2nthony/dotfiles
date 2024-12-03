@@ -1,6 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.util.octo" },
-
   {
     "NeogitOrg/neogit",
     cmd = { "Neogit", "NeogitResetState" },
