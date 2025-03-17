@@ -1,49 +1,62 @@
 [
-	// reset
-	{
-		"context": "Editor && mode == full",
-		"bindings": {
-			"ctrl-enter": null
-		}
-	},
+  // VSCode
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+      "cmd-shift-k": "editor::DeleteLine",
+      "cmd-ctrl-shift-right": "editor::SelectLargerSyntaxNode",
+      "cmd-ctrl-shift-left": "editor::SelectSmallerSyntaxNode"
+    }
+  },
 
-	// VSCode
-	{
-		"context": "Editor",
-		"bindings": {
-			"alt-up": "editor::MoveLineUp",
-			"alt-down": "editor::MoveLineDown",
-			"cmd-shift-k": "editor::DeleteLine",
-			"cmd-ctrl-shift-right": "editor::SelectLargerSyntaxNode",
-			"cmd-ctrl-shift-left": "editor::SelectSmallerSyntaxNode"
-		}
-	},
-	{
-		"context": "Editor && mode == full",
-		"bindings": {
-			"cmd-i": "assistant::InlineAssist"
-		}
-	},
-	{
-		"context": "Terminal",
-		"bindings": {
-			"cmd-i": "assistant::InlineAssist"
-		}
-	},
-
-	// User
-	{
-		"context": "Editor",
-		"bindings": {
-			"ctrl-w": "editor::DeleteToPreviousWordStart",
-			"ctrl-c r": "editor::Rename",
-			"cmd-enter": "editor::NewlineBelow"
-		}
-	},
-	{
-		"context": "Workspace",
-		"bindings": {
-			"ctrl-\\": "workspace::NewTerminal"
-		}
-	}
+  // User
+  // ----------------------------------------
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-c r": "editor::Rename"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-b": "workspace::ToggleRightDock"
+    }
+  },
+  // prediction
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-cmd-i": null
+    }
+  },
+  // assistant(chat)
+  {
+    "bindings": {
+      "cmd-?": null,
+      "ctrl-cmd-i": "assistant::ToggleFocus"
+    }
+  },
+  // assistant(inline)
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-enter": null,
+      "cmd-i": "assistant::InlineAssist"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-enter": null,
+      "cmd-i": "assistant::InlineAssist"
+    }
+  }
 ]
