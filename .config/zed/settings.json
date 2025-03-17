@@ -7,59 +7,62 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"ssh_connections": [
-		{
-			"host": "raspberrypi.local",
-			"username": "pi",
-			"projects": [
-				{
-					"paths": ["~/ghq/github.com/opensquare-network/subsquare"]
-				}
-			]
-		}
-	],
-	"languages": {
-		"JavaScript": {
-			"show_inline_completions": true
-		}
-	},
-	"features": {
-		// "inline_completion_provider": "supermaven"
-	},
-	"proxy": "http://127.0.0.1:7890",
-	"assistant": {
-		"version": "2",
-		"default_open_ai_model": "gpt-4o-mini",
-		"default_model": {
-			"provider": "openai",
-			"model": "gpt-4o-mini"
-		}
-	},
-	"telemetry": {
-		"metrics": false
-	},
-	"theme": {
-		"light": "One Dark",
-		"dark": "One Dark"
-	},
-	"base_keymap": "VSCode",
-	"vim_mode": false,
-	"ui_font_size": 16,
-	"buffer_font_size": 16,
-	"ui_font_family": "Maple Mono",
-	"buffer_font_family": "Maple Mono",
-	"terminal": {
-		"font_family": "Hack Nerd Font Mono"
-	},
-	"tab_size": 2,
-	"hard_tabs": true,
-	"inlay_hints": {
-		"enabled": true
-	},
-	"collaboration_panel": {
-		"button": false
-	},
-	"chat_panel": {
-		"button": false
-	}
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "grok-2"
+    },
+    "version": "2"
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": false,
+
+  "language_models": {
+    "openai": {
+      "api_url": "https://api.x.ai/v1",
+      "available_models": [
+        {
+          "name": "grok-2",
+          "display_name": "Grok 2",
+          "max_tokens": 131072
+        }
+      ],
+      "version": "1"
+    }
+  },
+
+  "git_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "ssh_connections": [
+    {
+      "host": "raspberrypi.local",
+      "username": "pi",
+      "projects": [
+        {
+          "paths": ["~/ghq"]
+        }
+      ]
+    }
+  ],
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+  "ui_font_family": "Maple Mono",
+  "buffer_font_family": "Maple Mono",
+  "terminal": {
+    "font_family": "Hack Nerd Font Mono"
+  },
+  "tab_size": 2
 }
