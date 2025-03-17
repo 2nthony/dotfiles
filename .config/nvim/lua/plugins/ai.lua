@@ -25,6 +25,7 @@ return {
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
+      "ibhagwan/fzf-lua",
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
