@@ -23,15 +23,4 @@ return {
     cmd = "LspSettings",
     opts = {},
   },
-
-  -- stop inactive lsp clients
-  {
-    "zeioth/garbage-day.nvim",
-    event = "VeryLazy",
-    opts = {
-      excluded_lsp_clients = {
-        "copilot",
-      },
-    },
-  },
 }
