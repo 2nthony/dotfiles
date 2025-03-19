@@ -59,10 +59,13 @@
   },
   "ui_font_size": 15,
   "buffer_font_size": 15,
-  "ui_font_family": "Maple Mono",
-  "buffer_font_family": "Maple Mono",
+  "ui_font_family": "Maple Mono NF",
+  "buffer_font_family": "Maple Mono NF",
   "terminal": {
-    "font_family": "Hack Nerd Font Mono"
+    "font_family": "Maple Mono NF"
   },
-  "tab_size": 2
+  "tab_size": 2,
+  "tabs": {
+    "file_icons": true
+  }
 }
