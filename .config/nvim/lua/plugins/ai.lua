@@ -1,4 +1,8 @@
+vim.g.ai_cmp = false
+
 return {
+  { import = "lazyvim.plugins.extras.ai.codeium" },
+
   {
     "which-key.nvim",
     opts = {

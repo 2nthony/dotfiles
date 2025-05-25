@@ -2,32 +2,6 @@ local skip_features_filetypes = require("util.ft").skip_features_filetypes
 
 return {
   {
-    "iamcco/markdown-preview.nvim",
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-    pin = true,
-    ft = { "markdown" },
-    cmd = {
-      "MarkdownPreview",
-      "MarkdownPreviewStop",
-      "MarkdownPreviewToggle",
-    },
-  },
-
-  {
-    "echasnovski/mini.indentscope",
-    lazy = true,
-    opts = {
-      draw = {
-        animation = function()
-          return 0
-        end,
-      },
-    },
-  },
-
-  {
     "folke/persistence.nvim",
     opts = {
       options = {
@@ -87,31 +61,6 @@ return {
       -- when 'enable_deceleration = true', 'deceleration_table = { {200, 3}, {300, 7}, {450, 11}, {600, 15}, {750, 21}, {900, 9999} }'
       deceleration_table = { { 150, 9999 } },
     },
-  },
-
-  {
-    "NvChad/nvim-colorizer.lua",
-    lazy = true,
-    ft = {
-      "lua",
-      "html",
-      "vue",
-      "javascript",
-      "typescript",
-      "javascriptreact",
-      "typescriptreact",
-      "svelte",
-      "css",
-    },
-    opts = function(self, opts)
-      return vim.tbl_deep_extend("force", opts, {
-        filetypes = self.ft,
-        user_default_options = {
-          RRGGBBAA = true,
-          tailwind = true,
-        },
-      })
-    end,
   },
 
   {

@@ -17,13 +17,4 @@ return {
     },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
-
-  {
-    "echasnovski/mini.bracketed",
-    event = "BufReadPost",
-    opts = {
-      file = { suffix = "" },
-      window = { suffix = "" },
-    },
-  },
 }
