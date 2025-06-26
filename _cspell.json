@@ -1,9 +1,0 @@
-{
-  "useGitignore": true,
-  "allowCompoundWords": true,
-  "ignorePaths": [
-    ".config/nvim",
-    ".vscode",
-    "**/*.lua"
-  ]
-}
