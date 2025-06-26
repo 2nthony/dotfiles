@@ -4,6 +4,7 @@
 
 --- hide document symbols
 vim.g.trouble_lualine = false
+vim.g.lazyvim_check_order = false
 
 local opt = vim.opt
 
