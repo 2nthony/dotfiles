@@ -48,6 +48,11 @@ return {
         hover = {
           silent = true,
         },
+        signature = {
+          auto_open = {
+            enabled = false,
+          },
+        },
       },
       notify = {
         enabled = false,
