@@ -25,10 +25,8 @@ return {
     },
     build = "make",
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
+      "folke/snacks.nvim",
       "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
       "ibhagwan/fzf-lua",
       {
         -- support for image pasting
@@ -61,9 +59,11 @@ return {
     "yetone/avante.nvim",
     opts = {
       provider = "openai",
-      openai = {
-        model = "deepseek-chat",
-        endpoint = "https://api.deepseek.com",
+      providers = {
+        openai = {
+          model = "deepseek-chat",
+          endpoint = "https://api.deepseek.com",
+        },
       },
       windows = {
         width = 40,
