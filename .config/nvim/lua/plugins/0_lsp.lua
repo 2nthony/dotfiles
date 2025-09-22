@@ -8,9 +8,9 @@ vim.g.autoformat = vscode.get_setting("editor.formatOnSave")
 
 return {
   {
-    "williamboman/mason.nvim",
+    "mason.nvim",
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
+      "mason-lspconfig.nvim",
     },
     opts = {
       log_level = vim.log.levels.OFF,

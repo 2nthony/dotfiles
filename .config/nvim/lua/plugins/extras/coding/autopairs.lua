@@ -1,7 +1,7 @@
 -- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/autopairs.lua
 
 return {
-  { "echasnovski/mini.pairs", enabled = false },
+  { "mini.pairs", enabled = false },
   {
     "windwp/nvim-autopairs",
     lazy = true,

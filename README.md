@@ -1,5 +1,7 @@
 # 2nthony's dotfiles
 
+## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.11.x-29BC9B)
+
 <video src="https://user-images.githubusercontent.com/19513289/219951812-42953edf-2ab2-43d9-91fa-7bb546c3006c.mp4" width="100%"></video>
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
 ![cover2](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2023-01-18_20-41-19mxUvCj.jpg)
@@ -11,8 +13,6 @@
     </samp>
   </sub>
 </p>
-
-## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.10.x-29BC9B)
 
 Features:
 
@@ -46,6 +46,12 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 - `<C-\>` open a float terminal
 - `<s-m-j>` copy line(s) down
 - `<s-m-k>` copy line(s) up
+
+### Credit
+
+- [打造 neovim IDE (Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788)
+- [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
+- [ayamir/nvimdots](https://github.com/ayamir/nvimdots)
 
 ## [WezTerm](https://wezfurlong.org/wezterm/)
 
@@ -88,12 +94,6 @@ Settings and Keymaps
 ln -s ~/yourclonedpath/.config/zed/settings.json ~/.config/zed
 ln -s ~/yourclonedpath/.config/zed/keymap.json ~/.config/zed
 ```
-
-## Credit
-
-- [打造 neovim IDE (Chinese)](https://www.bilibili.com/video/BV1WY411P736/?spm_id_from=333.788)
-- [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
-- [ayamir/nvimdots](https://github.com/ayamir/nvimdots)
 
 ## About
 
