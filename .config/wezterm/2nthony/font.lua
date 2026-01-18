@@ -4,7 +4,7 @@ return function(config)
 	config.font_size = 16
 	config.font = wezterm.font_with_fallback({
 		{
-			family = "Maple Mono",
+			family = "Maple Mono NF",
 		},
 		{
 			family = "Hack Nerd Font",
