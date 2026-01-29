@@ -17,7 +17,7 @@
 Features:
 
 - [x] Refined keymaps for snippet(VS Code like)
-- [x] Partially support VS Code workspace settings
+- [x] Partially support VS Code workspace settings[(vscode.lua)](.config/nvim/lua/vscode.lua)
 
 ### Setup
 
@@ -43,9 +43,8 @@ All plugins [plugins/](.config/nvim/lua/plugins).
 
 - `<C-h>` better `^`
 - `<C-l>` better `$`
-- `<C-\>` open a float terminal
-- `<s-m-j>` copy line(s) down
-- `<s-m-k>` copy line(s) up
+- `<s-(opt/alt)-j>` copy line(s) down
+- `<s-(opt/alt)-k>` copy line(s) up
 
 ### Credit
 
@@ -83,7 +82,7 @@ ln -s ~/yourclonedpath/.zshrc ~
   - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 - [ghq](https://github.com/2nthony/ghq) - GitHub repositories manager
 - [eza](https://github.com/eza-community/eza) - `ls` replacement
-- [nvm](https://github.com/nvm-sh/nvm) - Node.js version manager
+- [Volta](https://github.com/volta-cli/volta) - Node.js package manager
 - [Starship](https://starship.rs) - Shell prompt UI
 
 ## [Zed](https://github.com/zed-industries/zed)
@@ -97,4 +96,4 @@ ln -s ~/yourclonedpath/.config/zed/keymap.json ~/.config/zed
 
 ## About
 
-> GitHub [2nthony](https://github.com/2nthony) · Twitter [\_2nthony](https://twitter.com/_2nthony)
+> GitHub [2nthony](https://github.com/2nthony) · X [\_2nthony](https://x.com/_2nthony)
