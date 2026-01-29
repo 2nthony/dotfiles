@@ -36,7 +36,7 @@ require("lazy").setup({
     { import = "plugins.extras.editor.refactoring" },
     { import = "plugins.extras.editor.fzf" },
     { import = "plugins.extras.linting.eslint" },
-    { import = "plugins.extras.linting.oxlint" },
+
 
     -- import/override with your plugins
     { import = "plugins" },
