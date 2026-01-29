@@ -37,7 +37,6 @@ require("lazy").setup({
     { import = "plugins.extras.editor.fzf" },
     { import = "plugins.extras.linting.eslint" },
 
-
     -- import/override with your plugins
     { import = "plugins" },
 
