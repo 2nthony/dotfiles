@@ -9,7 +9,6 @@ return {
         "jsdoc",
         "typescript",
         "tsx",
-        "fish",
         "json",
         "yaml",
         "html",
