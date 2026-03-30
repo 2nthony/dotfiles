@@ -33,10 +33,6 @@ return {
 
   {
     "folke/noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
     opts = {
       presets = {
         bottom_search = false,
