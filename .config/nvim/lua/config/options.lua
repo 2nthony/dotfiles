@@ -5,6 +5,7 @@
 --- hide document symbols
 vim.g.trouble_lualine = false
 vim.g.lazyvim_check_order = false
+vim.g.lazyvim_ts_lsp = "tsgo"
 
 local opt = vim.opt
 
