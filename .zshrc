@@ -139,14 +139,6 @@ if type eza &>/dev/null; then
 fi
 # alias end
 
-# pnpm
-export PNPM_HOME="/Users/$USER/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # starship
 eval "$(starship init zsh)"
 # starship end
