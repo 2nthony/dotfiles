@@ -137,10 +137,6 @@ if type eza &>/dev/null; then
   alias ll='eza -l -g --icons'
   alias lla='ll -a'
 fi
-
-if type cursor &>/dev/null; then
-  alias c='cursor .'
-fi
 # alias end
 
 # pnpm
