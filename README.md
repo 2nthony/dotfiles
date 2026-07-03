@@ -1,6 +1,6 @@
 # 2nthony's dotfiles
 
-## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.11.x-29BC9B)
+## [💤 LazyVim](https://lazyvim.org) ![](https://img.shields.io/badge/-0.12.x-29BC9B)
 
 <video src="https://user-images.githubusercontent.com/19513289/219951812-42953edf-2ab2-43d9-91fa-7bb546c3006c.mp4" width="100%"></video>
 ![cover1](https://cdn.jsdelivr.net/gh/2nthony/statics@main/uPic/Xnip2022-08-11_10-37-20y0XQlQ.jpg)
