@@ -16,8 +16,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.blink" },
     { import = "lazyvim.plugins.extras.editor.dial" },
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.typescript.oxc" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
@@ -34,7 +34,6 @@ require("lazy").setup({
     { import = "plugins.extras.editor.overseer" },
     { import = "plugins.extras.editor.refactoring" },
     { import = "plugins.extras.editor.fzf" },
-    { import = "plugins.extras.linting.eslint" },
 
     -- import/override with your plugins
     { import = "plugins" },
